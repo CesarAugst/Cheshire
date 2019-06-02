@@ -6,6 +6,7 @@
         <title>Tela de Login</title>
     </head>
     <body>
+        <h2>Clique para retornar a <a href="../index.html" title="Pagina principal">página principal</a></h2>
         <form method="POST">
             Usuário:<input type="text" name="txtu"><br>
             Senha:<input type="text" name="txts"><br>
