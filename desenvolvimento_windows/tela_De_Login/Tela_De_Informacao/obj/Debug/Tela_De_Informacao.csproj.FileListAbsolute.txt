@@ -1,0 +1,8 @@
+E:\etec TDT\tela_De_Login\Tela_De_Informacao\bin\Debug\Tela_De_Informacao.exe.config
+E:\etec TDT\tela_De_Login\Tela_De_Informacao\bin\Debug\Tela_De_Informacao.exe
+E:\etec TDT\tela_De_Login\Tela_De_Informacao\bin\Debug\Tela_De_Informacao.pdb
+E:\etec TDT\tela_De_Login\Tela_De_Informacao\obj\Debug\Tela_De_Informacao.Form1.resources
+E:\etec TDT\tela_De_Login\Tela_De_Informacao\obj\Debug\Tela_De_Informacao.Properties.Resources.resources
+E:\etec TDT\tela_De_Login\Tela_De_Informacao\obj\Debug\Tela_De_Informacao.csproj.GenerateResource.Cache
+E:\etec TDT\tela_De_Login\Tela_De_Informacao\obj\Debug\Tela_De_Informacao.exe
+E:\etec TDT\tela_De_Login\Tela_De_Informacao\obj\Debug\Tela_De_Informacao.pdb
