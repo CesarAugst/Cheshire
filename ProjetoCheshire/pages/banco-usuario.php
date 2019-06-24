@@ -1,8 +1,8 @@
 <?php
 
 function efetuarLogin($conexao,$user,$senha){
-    $sql = "select * from usuario where user='{$user}'"
-            . "and senha='{$senha}'";
+    $sql = "select * from tblRegistro where identificador='{$user}'"
+            . "and cpf='{$senha}'";
 $resultado = mysqli_query($conexao, $sql);
 
 return mysqli_fetch_assoc($resultado);

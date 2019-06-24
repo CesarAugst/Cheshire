@@ -6,12 +6,13 @@
         <title>Tela de Login</title>
     </head>
     <body>
-        <h2>Clique para retornar a <a href="../index.html" title="Pagina principal">página principal</a></h2>
+        <h1>Essa é a página de login</h1>
         <form method="POST">
-            Usuário:<input type="text" name="txtu"><br>
-            Senha:<input type="text" name="txts"><br>
+            <label>Usuário:<br><input type="text" name="txtu"><br></label>
+            <label>Senha:<br><input type="text" name="txts"><br></label>
             <input type="submit" value="Logar"><br>
         </form>
+        <p>Clique para retornar a <a href="../index.html" title="Pagina principal">página principal</a></p>
         <?php
             include("conexao.php");
             include("banco-usuario.php");
