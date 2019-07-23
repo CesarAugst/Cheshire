@@ -53,20 +53,19 @@
 			      </div>
 			      <nav id="nav-menu-container">
 			        <ul class="nav-menu">
-			          <li><a href="?i=Cadastro">Cadastro</a></li>
+			          <li><a href="?i=home">Cadastro</a></li>
 			          <li><a href="?i=about"></a></li>
 			          <li><a href="?i=features">Aluno</a></li>
 			          <li><a href="?i=doctors">Orientador</a></li>
 			          <li><a href="?i=departments">Contatro</a></li>
 			          <li class="menu-has-children"><a href="">Blog</a>
 			            <ul>
-			              <li><a href="blog-home.html">Blog Home</a></li>
-			              <li><a href="blog-single.html">Blog Single</a></li>
+			              <li><a href="?i=blog-single">Blog Single</a></li>
 			            </ul>
 			          </li>	
 			          <li class="menu-has-children"><a href="">Pages</a>
 			            <ul>
-			            	  <li><a href="elements.html">Elements</a></li>
+			            	  <li><a href="elements">Elements</a></li>
 			            	  <li><a href="#">Item One</a></li>
 			            	  <li><a href="#">Item Two</a></li>
 					          <li class="menu-has-children"><a href="">Level 2 </a>

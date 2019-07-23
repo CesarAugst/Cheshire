@@ -53,20 +53,19 @@
 			      </div>
 			      <nav id="nav-menu-container">
 			        <ul class="nav-menu">
-			          <li><a href="index.html">Home</a></li>
-			          <li><a href="about.html">About</a></li>
-			          <li><a href="features.html">Features</a></li>
-			          <li><a href="doctors.html">Doctors</a></li>
-			          <li><a href="departments.html">Departments</a></li>
+			          <li><a href="?i=home">Home</a></li>
+			          <li><a href="?i=about">About</a></li>
+			          <li><a href="?i=features">Features</a></li>
+			          <li><a href="?i=doctors">Doctors</a></li>
+			          <li><a href="?i=departments">Departments</a></li>
 			          <li class="menu-has-children"><a href="">Blog</a>
 			            <ul>
-			              <li><a href="blog-home.html">Blog Home</a></li>
-			              <li><a href="blog-single.html">Blog Single</a></li>
+			              <li><a href="?i=blog-single">Blog Single</a></li>
 			            </ul>
 			          </li>	
 			          <li class="menu-has-children"><a href="">Pages</a>
 			            <ul>
-			            	  <li><a href="elements.html">Elements</a></li>
+			            	  <li><a href="?i=elements">Elements</a></li>
 			            	  <li><a href="#">Item One</a></li>
 			            	  <li><a href="#">Item Two</a></li>
 					          <li class="menu-has-children"><a href="">Level 2 </a>
@@ -77,7 +76,7 @@
 					          </li>					                		
 			            </ul>
 			          </li>					          					          		          
-			          <li><a href="contact.html">Contact</a></li>
+			          <li><a href="?i=contact">Contact</a></li>
 			        </ul>
 			      </nav><!-- #nav-menu-container -->		    		
 		    	</div>
