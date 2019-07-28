@@ -46,7 +46,7 @@ session_destroy();
 			  		<div class="row align-items-center">
 			  			<div class="col-lg-6 col-sm-6 col-4 header-top-left">
 			  				<a href="tel:+9530123654896"><span class="lnr lnr-phone-handset"></span> <span class="text"><span class="text">+55 11 4148-2099</span></span></a>
-				  			<a href="mailto:support@colorlib.com"><span class="lnr lnr-envelope"></span> <span class="text"><span class="text">faleconosco@etecdecotia.com.br</span></span></a>			
+				  			<a href="mailto:faleconosco@etecdecotia.com.br"><span class="lnr lnr-envelope"></span> <span class="text"><span class="text">faleconosco@etecdecotia.com.br</span></span></a>			
 			  			</div>
 			  			<div class="col-lg-6 col-sm-6 col-8 header-top-right">
                                                     <?php
