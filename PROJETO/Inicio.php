@@ -49,10 +49,10 @@ session_destroy();
 				  			<a href="mailto:support@colorlib.com"><span class="lnr lnr-envelope"></span> <span class="text"><span class="text">faleconosco@etecdecotia.com.br</span></span></a>			
 			  			</div>
 			  			<div class="col-lg-6 col-sm-6 col-8 header-top-right">
-                                                    <?php
-                                                        echo "Bem Vindo! <b>" . $_SESSION['rm'] . " </b>";
-                                                    ?>
-                                                    <a href="logout.php" class="primary-btn text-uppercase">Logout</a>
+                            <?php
+                                echo "Bem Vindo! <b>" . $_SESSION['rm'] . " </b>";
+                            ?>
+                            <a href="logout.php" class="primary-btn text-uppercase">Logout</a>
 			  			</div>
 			  		</div>			  					
 	  			</div>
@@ -71,11 +71,11 @@ session_destroy();
 			              <li><a href="blog-single.html">Psicoses</a></li>
 			            </ul>
 			          </li>	
-                                  <li><a href="Defasagem.php">Defasagem</a></li>
+                      <li><a href="Defasagem.php">Defasagem</a></li>
 			          <li><a href="about.html">Desmotivação</a></li>
 			          <li><a href="about.html">Problemas familiares</a></li>			        
 			          <li><a href="departments.html">Contato</a></li>
-                                </ul>		          				          					          		          			        			        
+                    </ul>		          				          					          		          			        			        
 			      </nav><!-- #nav-menu-container -->		    		
 		    	</div>
 		    </div>
