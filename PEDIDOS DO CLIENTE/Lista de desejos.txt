@@ -1,0 +1,16 @@
+A tela de login deve conter aba de informações (assim como após o login)
+As abas estão focadas apenas na parte de transtornos, poderiamos fazer assim:
+	Aquela aba rolante de transtornos abrogar todos os problemas educacionais (Aba informativa)
+Ainda precisamos fazer aparecer o nome do aluno ao inves do rm
+Aumentar o tamanho do Logo, e acho que mudar o roxo pra verde pra combinar com o resto do site
+Os textos ainda estão grandes. Temos que torna-los mais dinâmicos
+Aquele gfráfico em defasagem não é nosso neh? acho que teremos que tirar ou substituir
+Ilustrar a aba de problemas familiares, ainda ta sem texto e imagens assim como outras abas
+
+Ai gente, ta boa, porém é apenas uma versão, ainda temos que criar pelo menos uma outrapara o orientador
+Para isso temos que descobrir como faz pra mostrar um conteúdo diferente para cada usuário
+Acho que vamos ter que acrescentar no banco de dados uma coluna pra "tipo de usuário" e no php usar o include
+(é um palpite)
+
+Lembrando que teremos que criar uma espécie de agenda pra organizar a rotina do aluno e uma parte para cadastrar
+a ficha de anamnése dele, acho que por enquanto esses são nossos principais desafios
