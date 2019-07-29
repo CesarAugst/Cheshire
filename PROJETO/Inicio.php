@@ -60,7 +60,7 @@ session_destroy();
 		    <div class="container main-menu">
 		    	<div class="row align-items-center justify-content-between d-flex">
 			      <div id="logo">
-                                  <a href="Inicio.php"><img src="img/cheshire1.png" width="100px" height="70px" alt="" title="" /></a>
+                    <a href="Inicio.php"><img src="img/cheshire1.png" width="100px" height="70px" alt="" title="" /></a>
 			      </div>
 			      <nav id="nav-menu-container">
 			        <ul class="nav-menu">
