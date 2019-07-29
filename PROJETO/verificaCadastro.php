@@ -15,8 +15,7 @@ $end=($_POST['txtend']);
 if(cadastro($conexao, $login, $senha, $nome, $sobrenome, $funcao, $tel, $cel, $end)){
     header("location: Login.php");
     die();
-}
-else{
+}else{
     $msg=mysqli_errno($conexao);
     echo $msg;
 }
