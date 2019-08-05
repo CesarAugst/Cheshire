@@ -1,7 +1,7 @@
 login (usuario, senha)
 telefone(fixo, celular)
-endereco(rua, cidade, bairro)
-registro(nome, sobrenome, dt_registro, dt_nascimento, tipo_de_usuario)
+endereco(logradouro, cidade, bairro)
+cadastro(nome, sobrenome, dt_registro, dt_nascimento, tipo_de_usuario)
 texto(conteudo, tipo_de_usuario)
 turma(nome, periodo, prof_coordenador, modulo)
 
