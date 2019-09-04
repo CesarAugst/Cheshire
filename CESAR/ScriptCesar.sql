@@ -23,6 +23,8 @@ CREATE TABLE tblcadastro (
 insert into tblcadastro values(53,'teste','primeiro','20190811','1','1');
 
 
+insert into tbllogin values (default, '17308','42942544830');
+
 CREATE TABLE tbllogin (
     idusuario INT,
     usuario VARCHAR(20),
@@ -84,7 +86,7 @@ primary key (idmensagem),
 foreign key (remetente) references id(tblcadastro),
 foreign key (destinatario) references id(tblcadastro)
 );
-
+/*
 CREATE VIEW ver_tudo_cadastro AS SELECT * FROM tblcadastro;
 CREATE VIEW ver_tudo_login AS SELECT * FROM tbllogin;
 CREATE VIEW ver_tudo_contatos AS SELECT * FROM tblcontato;
@@ -95,7 +97,7 @@ CREATE VIEW ver_periodo_noturno AS SELECT nome FROM tblturma where periodo = not
 CREATE VIEW ver_periodo_diurno AS SELECT nome FROM tblturma where periodo = diurno;
 CREATE VIEW ver_alunos_menores AS SELECT id,nome,sobrenome FROM tblcadastro where (timestampdiff(year,dt_nascimento,now)<18);
 CREATE VIEW ver_alunos_terceiristas AS SELECT id,nome,sobrenome FROM tblcadastro where (timestampdiff(year,dt_nascimento,now())>18);
-
+*/
 
 delimiter //
 
