@@ -108,7 +108,7 @@
                                                     <form method="post" class="form-wrap" action="verificaLogin.php">
 								<h3 class="pb-20 text-center mb-30">Acesse sua conta</h3>		
 								<input type="text" class="form-control" name="txtlogin" placeholder="RM" onfocus="this.placeholder = ''" onblur="this.placeholder = 'RM'" >
-								<input type="text" class="form-control" name="txtsenha" placeholder="Senha" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Senha'" >
+                                                                <input type="password" class="form-control" name="txtsenha" placeholder="Senha" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Senha'" >
                                                                 <button type="submit" class="primary-btn text-uppercase">Confirmar</button>
                                                                 <center><a href="Cadastro.php" class="primary-btn text-uppercase">Não possui uma conta?</a></center>
 							</form>

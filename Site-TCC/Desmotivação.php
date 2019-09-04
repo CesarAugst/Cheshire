@@ -180,25 +180,8 @@ Uma pequena dose disso todos os dias não só elimina a desmotivação, como ain
 			</section>
 			<!-- End our-mission Area -->				
 
-			<!-- Start info Area -->
-			<section class="info-area">
-				<div class="container-fluid">
-					<div class="row align-items-center">
-						<div class="col-lg-6 no-padding info-area-left">
-							<img class="img-fluid" src="img/about/about-img.jpg" alt="">
-						</div>
-						<div class="col-lg-6 info-area-right">
-							<h1>Who we are
-							to Serave the nation</h1>
-							<p>inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.</p>
-							<br>
-							<p>
-								inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach. inappropriate behavior is often laughed off as “boys will be boys,” women face higher conduct standards especially in the workplace. That’s why it’s crucial that, as women, our behavior on the job is beyond reproach.
-							</p>
-						</div>
-					</div>
-				</div>	
-			</section>
+			<!-- Parte das frases motivacionais -->
+			
 			<!-- End info Area -->				
 
 			<!-- Start team Area -->
@@ -230,23 +213,16 @@ Uma pequena dose disso todos os dias não só elimina a desmotivação, como ain
 			<!-- Start feedback Area -->
 			<section class="feedback-area section-gap aboutpage-feedback-area">
 				<div class="container">
-					<div class="row justify-content-center">
-						<div class="col-md-12 pb-60 header-text text-center">
-							<h1 class="mb-10 ">Enjoy our Client’s Feedback</h1>
-							<p>
-								Who are in extremely love with eco friendly system..
-							</p>
-						</div>
-					</div>			
+								
 					<div class="row feedback-contents justify-content-center align-items-center">
-						<div class="col-lg-6 feedback-left relative d-flex justify-content-center align-items-center">
+						<div class="col-lg-6 feedback-right relative d-flex justify-content-center align-items-center">
 							<div class="overlay overlay-bg"></div>
 							<a class="play-btn" href="https://www.youtube.com/watch?v=__HwFRsW5L0"><img class="img-fluid" src="img/play-btn.png" alt=""></a>
 						</div>
-						<div class="col-lg-6 feedback-right">
+						<div class="col-lg-6 feedback-left">
 							<div class="active-review-carusel">
 								<div class="single-feedback-carusel">
-                                                                    <img src="img/Flavio.jpg" height="160px" width="300px"alt="">
+                                                                    <img src="img/Flavio.jpg" height="307px" width="300px"alt="">
 									<div class="title d-flex flex-row">
 				 						<h4 class="pb-10">Flávio Augusto</h4>
 																			
@@ -256,7 +232,7 @@ Uma pequena dose disso todos os dias não só elimina a desmotivação, como ain
 									</p>
 								</div>
 								<div class="single-feedback-carusel">
-									<img src="img/Rick.jpg" height="160px" width="300px" alt="">
+									<img src="img/Rick.jpg" height="307px" width="300px" alt="">
 									<div class="title d-flex flex-row">
 										<h4 class="pb-10">Rick Chesther</h4>
 																				
@@ -266,7 +242,7 @@ Uma pequena dose disso todos os dias não só elimina a desmotivação, como ain
 									</p>
 								</div>
 								<div class="single-feedback-carusel">
-									<img src="img/Ayrton.jpeg" height="160px" width="300px" alt="">
+									<img src="img/Ayrton.jpeg" height="265px" width="280px" alt="">
 									<div class="title d-flex flex-row">
 										<h4 class="pb-10">Ayrton Senna</h4>
 																			

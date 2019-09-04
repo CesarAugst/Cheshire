@@ -1,6 +1,6 @@
 <?php
 
-$conexao=mysqli_connect('localhost','root','','bdCheshire','3306');
+$conexao=mysqli_connect('localhost','root','','bdCheshire','3307');
 
 ?>
 

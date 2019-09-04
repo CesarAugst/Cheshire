@@ -104,7 +104,7 @@
                                                     <center><form method="post" class="form-wrap" action="verificaCadastro.php">
 								<h3 class="pb-20 text-center mb-30">Cadastre-se</h3>	
                                                                 <input type="text" class="form-control" name="txtlogin" placeholder="RM" onfocus="this.placeholder = ''" onblur="this.placeholder = 'RM'" >
-                                                                <input type="text" class="form-control" name="txtsenha" placeholder="Senha" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Senha'" >
+                                                                <input type="password" class="form-control" name="txtsenha" placeholder="Senha" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Senha'" >
 								<input type="text" class="form-control" name="txtnome" placeholder="Nome" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome'" >
 								<input type="text" class="form-control" name="txtsobrenome" placeholder="Sobrenome" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Sobrenome'" >
                                                                <!--<input type="text" class="form-control" name="txtfuncao" placeholder="Função" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Funcao'" > -->

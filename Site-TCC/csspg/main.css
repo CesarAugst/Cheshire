@@ -2474,7 +2474,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /*-------- Start Banner Area ------------*/
 .banner-area {
-  background: url(../img/hero-bg.jpg) right;
+  background: url(../img/solidarios.jpg) right;
   background-size: cover;
 }
 
@@ -2832,50 +2832,50 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-color: rgba(4, 9, 30, 0.7);
 }
 
-.feedback-left {
+.feedback-right {
     
-  background: url(../img/Motivação.jpg) center;
+  background: url(../img/Motivação2.jpg) center;
   background-size: cover;
-  padding: 130px 0;
+  padding: 200px 0;
 }
 
 @media (max-width: 575px) {
-  .feedback-left {
+  .feedback-right {
     margin: 15px;
   }
 }
 
-.feedback-left .play-btn {
+.feedback-right .play-btn {
   z-index: 2;
 }
 
-.feedback-left .overlay-bg {
-  background-color: rgba(105, 190, 0, 0.85);
+.feedback-right .overlay-bg {
+  background-color: transparent;
 }
 
 @media (max-width: 991px) {
-  .feedback-left {
+  .feedback-right {
     margin-bottom: 30px;
   }
 }
 
-.feedback-right .star {
+.feedback-left .star {
   margin-left: 20px;
 }
 
-.feedback-right .star .checked {
+.feedback-left .star .checked {
   color: orange;
 }
 
-.feedback-right img {
-  margin-bottom: 20px;
+.feedback-left img {
+  margin-bottom: 10px;
 }
 
-.feedback-right .owl-carousel .owl-item img {
+.feedback-left .owl-carousel .owl-item img {
   width: auto !important;
 }
 
-.feedback-right .owl-dots {
+.feedback-left .owl-dots {
   text-align: left;
   bottom: 5px;
   margin-top: 20px;
@@ -2886,7 +2886,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   backface-visibility: hidden;
 }
 
-.feedback-right .owl-dot {
+.feedback-left .owl-dot {
   height: 10px;
   width: 10px;
   display: inline-block;
@@ -2899,7 +2899,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   transition: all 0.3s ease 0s;
 }
 
-.feedback-right .owl-dot.active {
+.feedback-left .owl-dot.active {
   -webkit-transition: all 0.3s ease 0s;
   -moz-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
@@ -3076,6 +3076,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* =================================== */
 .aboutpage-feedback-area {
   background: #f9f9ff !important;
+  border-color: thistle;
+  
 }
 
 /*-------- Start Info area Style  -------------*/
