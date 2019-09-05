@@ -207,7 +207,7 @@ session_destroy();
 								</div>
 								
 								<div class="single-sidebar-widget ads-widget">
-									<a href="#"><img class="img-fluid" src="img/blog/ads-banner.jpg" alt=""></a>
+                                                                    <a href="#"><img class="img-fluid" src="img/Etec-Cotia.jpg" alt=""></a>
 								</div>
 								
 								<d

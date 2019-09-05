@@ -89,7 +89,7 @@ session_destroy();
 							<h1 class="text-white">
 								Desmotivação				
 							</h1>	
-							<p class="text-white link-nav"><a href="inicio.php">Inicio </a>  <span class="lnr lnr-arrow-right"></span>  <a href="about.html"> About Us</a></p>
+                                                    <p class="text-white link-nav"><a href="inicio.php">Inicio </a>  <span class="lnr lnr-arrow-right"></span>  <a href="Desmotivação.php"> Desmotivação</a></p>
 						</div>	
 					</div>
 				</div>
@@ -103,7 +103,7 @@ session_destroy();
 						<div class="menu-content pb-70 col-lg-8">
 							<div class="title text-center">
 								<h1 class="mb-10">É melhor você tentar algo,
-                                                                vê-lo não funcionar e aprender e aprender com isso, do que não fazer nada.</h1>
+                                                                vê-lo não funcionar e aprender com isso, do que não fazer nada.</h1>
 								<p>Mark zuckerberg</p>
 							</div>
 						</div>
