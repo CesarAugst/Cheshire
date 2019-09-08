@@ -34,23 +34,10 @@
 					<h3>Cadastre-se</h3>
 					<input type="text" name="txtlogin" placeholder="Login" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Login'">
 					<input type="text" name="txtsenha" placeholder="Senha" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Senha'">
-					<input type="text" name="txtnome" placeholder="Nome" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome'">
-					<input type="text" name="txtsobrenome" placeholder="Sobrenome" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Sobrenome'">
 
-					<select name="optfuncao">
-						<option data-display="">Função</option>
-						<option value="1">aluno</option>
-						<option value="2">funcionario</option>
-						<option value="3">orientador</option>
-					</select>
-
-					<input type="text" name="txttel" placeholder="Telefone" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Telefone'">
-
-					<input type="text" name="txtcel" placeholder="Celular" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Celular'">
-
-					<input type="text" name="txtend" placeholder="Endereço" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Endereço'">
-					<button type="submit">Confirmar</button>
+					<input type="submit" value="Cadastrar">
 				</form>
+			</center>
 		</section>
 
 	</body>

@@ -7,6 +7,7 @@ if ($_SESSION['log'] != 'ativo') {
 	header("location: Login.php");
 }
 ?>
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +20,13 @@ if ($_SESSION['log'] != 'ativo') {
 	echo "Bem Vindo! <b>" . $_SESSION['rm'] . " </b>";
 	?>
 
-	
+	<nav>
+		<ul>
+			<li>Logout</li>
+			<li>Informativo</li>
+			<li><a href="pags/anamnese.php">Anamnese</a></li>
+		</ul>
+	</nav>
 
 </body>
 
