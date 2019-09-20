@@ -73,7 +73,7 @@ session_destroy();
                                   <li><a href="Defasagem.php">Defasagem</a></li>
 			          <li><a href="Desmotivação.php">Desmotivação</a></li>
 			          <li><a href="about.html">Problemas familiares</a></li>			        
-                                  <li><a href="contact.php">Contato</a></li>
+                                  <li><a href="contato.php">Contato</a></li>
                                 </ul>		          				          					          		          			        			        
 			      </nav><!-- #nav-menu-container -->		    		
 		    	</div>

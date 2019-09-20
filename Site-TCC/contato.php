@@ -14,7 +14,7 @@
         <!-- meta character set -->
         <meta charset="UTF-8">
         <!-- Site Title -->
-        <title>Medical</title>
+        <title>Contato</title>
 
         <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
         <!--
@@ -62,8 +62,7 @@
 			          </li>	
                                   <li><a href="Defasagem.php">Defasagem</a></li>
 			          <li><a href="Desmotivação.php">Desmotivação</a></li>
-			          <li><a href="about.html">Problemas familiares</a></li>			        
-                                  <li><a href="contact.php">Contato</a></li>
+			          <li><a href="about.html">Problemas familiares</a></li>			                                
                                 </ul>		          				          					          		          			        			        
 			      </nav><!-- #nav-menu-container -->	    		
                 </div>
@@ -186,7 +185,7 @@
 </footer>
 <!-- End footer Area -->
 <div id="mapa"> </div>
-<script async=""  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHHaysil4UeTJ4i6Dkp1aja9thmQYyYoI&callback=initMap"></script>
+<script async=""  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCuAMgQ-Nd7FFZv1s_j2UP02WjBlbkY6aA&callback=initMap"></script>
 <script>
 
 
@@ -194,6 +193,7 @@
 
                         var coordenadas = new google.maps.LatLng(-23.605167, -46.913035);
                         var coordenadas2 = new google.maps.LatLng(-23.602031, -46.908571);
+                        var coordenadas3 = new google.maps.LatLng(-23.603826, -46.910426);
 
                         var posicao = {
                             zoom: 15,
@@ -205,14 +205,21 @@
                         var marcador = new google.maps.Marker({
                             position: coordenadas,
                             map: map,
-                            title: 'Marcador'
+                                title: 'Etec de cotia'
 
                         });
 
                         var marcador2 = new google.maps.Marker({
                             position: coordenadas2,
                             map: map,
-                            title: 'Marcador'
+                            title: 'CAPS alcoól e drogas'
+                        }
+                        );
+                        
+                        var marcador3 = new google.maps.Marker({
+                            position: coordenadas3,
+                            map: map,
+                            title: 'CAPS psicossocial'
                         }
                         );
                     }
