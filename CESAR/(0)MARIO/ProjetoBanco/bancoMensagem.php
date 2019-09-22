@@ -4,7 +4,7 @@
         return mysqli_query($conexao, $sql);
     }
     
-    function alterar($conexao, $nome, $tel, $end, $email, $idade, $sal, $cod_cliente){
+    function alterar($conexao, $remetente, $destinatario, $conteudo, $anonimato, $cod_mensagem){
         $sql = "update cliente set nome='$nome',"
                 . "telefone='$tel',"
                 . "endereco='$end',"
@@ -19,14 +19,14 @@
         return mysqli_query($conexao,$sql);
     }
     
-    function listaClientes($conexao) {
-        $clientes = array();
-        $resultado = mysqli_query($conexao, "select * from cliente");
+    function listaMensagens($conexao) {
+        $mensagens = array();
+        $resultado = mysqli_query($conexao, "select * from mensagem");
         
-        while ($cliente = mysqli_fetch_assoc($resultado)) {
-            array_push($clientes, $cliente);
+        while ($mensagem = mysqli_fetch_assoc($resultado)) {
+            array_push($mensagens, $mensagem);
         }
-        return $clientes;
+        return $mensagens;
     }
     
     function busca($conexao, $cod_cliente) {

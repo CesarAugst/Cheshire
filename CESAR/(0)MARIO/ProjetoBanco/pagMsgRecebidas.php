@@ -7,7 +7,7 @@ and open the template in the editor.
 <html>
 <?php
 include("conexao.php");
-include("banco-mensagem.php");
+include("bancoMensagem.php");
 ?>
     <head>
         <meta charset="UTF-8">
@@ -24,32 +24,30 @@ include("banco-mensagem.php");
                 <td>id da Mensagem</td>
                 <td>Remetente</td>
                 <td>Destinatario</td>
-                <td>Endereço</td>
-                <td>Email</td>
-                <td>Idade</td>
-                <td>Salario</td>
+                <td>Conteudo</td>
+                <td>Anonimato</td>
+                <td>Quando</td>
                 <td>Exlcuir</td>
                 <td>Alterar</td>
             </tr>
             
             <?php
-                $clientes = listaClientes($conexao);
-                foreach ($clientes as $cliente):
+                $mensagens = listaMensagens($conexao);
+                foreach ($mensagens as $mensagem):
             ?>
             
             <tr>
-                <td><?php echo $cliente['cod_cliente'] ?></td>
-                <td><?php echo $cliente['nome'] ?></td>
-                <td><?php echo $cliente['telefone'] ?></td>
-                <td><?php echo $cliente['endereco'] ?></td>
-                <td><?php echo $cliente['email'] ?></td>
-                <td><?php echo $cliente['idade'] ?></td>
-                <td><?php echo $cliente['salario'] ?></td>
+                <td><?php echo $mensagem['cod_mensagem'] ?></td>
+                <td><?php echo $mensagem['remetente'] ?></td>
+                <td><?php echo $mensagem['destinatario'] ?></td>
+                <td><?php echo $mensagem['conteudo'] ?></td>
+                <td><?php echo $mensagem['anonimato'] ?></td>
+                <td><?php echo $mensagem['data'] ?></td>
                 <td><a href="pag_excluir_cliente.php?cod_cliente=
-                       <?php echo $cliente['cod_cliente'] ?>">excluir</a> 
+                       <?php echo $mensagem['cod_cliente'] ?>">excluir</a> 
                 </td>
                 <td><a href="pag_alterar_cliente.php?cod_cliente=
-                       <?php echo $cliente['cod_cliente'] ?>">alterar</a></td>
+                       <?php echo $mensagem['cod_cliente'] ?>">alterar</a></td>
             </tr>
             <?php
                 endforeach;

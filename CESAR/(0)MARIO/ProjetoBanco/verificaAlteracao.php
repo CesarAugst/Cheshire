@@ -1,15 +1,13 @@
 <?php
 include("conexao.php");
-include("banco-cliente.php");
-$cod_cliente = $_POST['txtcod'];
-$nome = $_POST['txtnome'];
-$tel = $_POST['txttel'];
-$end = $_POST['txtend'];
-$email = $_POST['txtemail'];
-$idade = $_POST['txtidade'];
-$sal = $_POST['txtsal'];
+include("bancoMensagem.php");
+$cod_mensagem = $_POST['txtcod'];
+$remetente = $_POST['txtnome'];
+$destinatario = $_POST['txttel'];
+$conteudo = $_POST['txtend'];
+$anonimato = $_POST['txtemail'];
 
-if (alterar($conexao, $nome, $tel, $end, $email, $idade, $sal, $cod_cliente )){
+if (alterar($conexao, $remetente, $destinatario, $conteudo, $anonimato, $cod_mensagem)){
     echo "Cliente Alterado com sucesso!";
     header("location: pag_listar_cliente.php");
     
