@@ -7,23 +7,23 @@ and open the template in the editor.
 <html>
 <?php
 include("conexao.php");
-include("banco-cliente.php");
+include("banco-mensagem.php");
 ?>
     <head>
         <meta charset="UTF-8">
         <title></title>
     </head>
     <body>
-        <a href="pag_cadastrar_cliente" title="Bora cadastrar vagabundo" >cadastrar</a>
-        <a href="pag_menu" title="Voltando ao menu" >menu</a>
-        <h1>Clientes cadastrados</h1><br>
+        <a href="pagEnviar" title="Clique para enviar uma mensagem" >Enviar mensagem</a>
+        <a href="pag_menu" title="Retornar ao menu principal" >menu</a>
+        <h1>Menagens recebidas</h1><br>
         
         
         <table border="1">
             <tr>
-                <td>Id</td>
-                <td>Nome</td>
-                <td>Telefone</td>
+                <td>id da Mensagem</td>
+                <td>Remetente</td>
+                <td>Destinatario</td>
                 <td>Endereço</td>
                 <td>Email</td>
                 <td>Idade</td>

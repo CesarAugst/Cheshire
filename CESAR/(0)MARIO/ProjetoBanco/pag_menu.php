@@ -16,8 +16,7 @@ echo "<a href='logout.php'>SAIR</a>"
     </head>
     <body>
         <h1>Bem vindo ao sistema</h1>
-    <li><a href="#">Cadastro</a>
-        <ul> <li><a href="pag_cadastrar_cliente.php">Cliente</a></li>
+    <li><a href="pagEnviar.php">Enviar mensagem</a>
             <?php
             $_SESSION['verifica'] = 'ativo';
             ?>     

@@ -1,9 +1,6 @@
 <?php
-    function inserir($conexao, $nome, $tel, $end, $email, $idade, $sal) {
-        $sql = "insert into cliente"
-                . "(nome, telefone, endereco, email, idade, salario)"
-                . " values ('$nome', '$tel', '$end', '$email', $idade, $sal)"; // tava faltando fechar o ")"
-        
+    function inserir($conexao, $remetente, $destinatario, $conteudo, $anonimato) {
+        $sql = "insert into mensagem values ('default,'$remetente', '$destinatario', '$conteudo', '$anonimato', default)";
         return mysqli_query($conexao, $sql);
     }
     
