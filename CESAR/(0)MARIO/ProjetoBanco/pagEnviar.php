@@ -10,8 +10,7 @@
         <a href="pag_menu" title="Voltar ao menu principal" >menu</a>
         <form method="POST" action="verificaEnvio.php">
             <pre>
-                Nome: <input type="text" name="txtRem"><br> 
-                Destinatário: <input type="text" name="txtDes"><br>
+                Remetente: <input type="text" name="txtRem"><br> 
                 Conteúdo: <input type="text" name="txtCon"><br>
                 Anonimato: <input type="text" name="txtAno"><br>
                 <input type="submit" value="Cadastrar" name="btn"><br>

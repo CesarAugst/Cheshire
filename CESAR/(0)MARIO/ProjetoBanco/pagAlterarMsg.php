@@ -2,9 +2,9 @@
 
 <?php       
     include("conexao.php");
-    include("banco-cliente.php");
-    $cod_cliente=$_GET['cod_cliente'];
-    $cliente= busca($conexao, $cod_cliente);
+    include("bancoMensagem.php");
+    $cod_mensagem=$_GET['cod_mensagem'];
+    $mensagem= busca($conexao, $cod_mensagem);
 ?>
 <html>
     <head>
@@ -12,16 +12,14 @@
         <title></title>
     </head>
     <body>
-        <a href="pag_listar_cliente" title="Bora listar vagabundo" >Lista</a>
+        <a href="pagMsgRecebidas" title="Clique para abrir a caixa de entrada" >Lista</a>
         <form method="POST" action="verificaAlteracao.php">
             <pre>
-                Codigo: <input type="text" name="txtcod" value="<?php echo $cliente['cod_cliente'] ?>"><br>"
-                Nome: <input type="text" name="txtnome" value="<?php echo $cliente['nome'] ?>"><br> 
-                Telefone: <input type="text" name="txttel" value="<?php echo $cliente['telefone'] ?>"><br>
-                Endereço: <input type="text" name="txtend" value="<?php echo $cliente['endereco'] ?>"><br>
-                Email: <input type="text" name="txtemail" value="<?php echo $cliente['email'] ?>"><br>
-                Idade: <input type="text" name="txtidade" value="<?php echo $cliente['idade'] ?>"><br>
-                Salário: <input type="text" name="txtsal" value="<?php echo $cliente['salario'] ?>"><br>
+                Codigo: <input type="number" name="txtcod" value="<?php echo $mensagem['cod_mensagem'] ?>"><br>"
+                Remetente: <input type="text" name="txtRem" value="<?php echo $mensagem['remetente'] ?>"><br> 
+                Destinatario: <input type="text" name="txtDes" value="<?php echo $mensagem['destinatario'] ?>"><br>
+                Conteudo: <input type="text" name="txtCon" value="<?php echo $mensagem['conteudo'] ?>"><br>
+                Anonimato: <input type="text" name="txtAno" value="<?php echo $mensagem['anonimato'] ?>"><br>
                 <input type="submit" value="Cadastrar" name="btn"><br>
             </pre>
         </form>

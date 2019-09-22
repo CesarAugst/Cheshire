@@ -2,14 +2,14 @@
 include("conexao.php");
 include("bancoMensagem.php");
 $cod_mensagem = $_POST['txtcod'];
-$remetente = $_POST['txtnome'];
-$destinatario = $_POST['txttel'];
-$conteudo = $_POST['txtend'];
-$anonimato = $_POST['txtemail'];
+$remetente = $_POST['txtRem'];
+$destinatario = $_POST['txtDes'];
+$conteudo = $_POST['txtCon'];
+$anonimato = $_POST['txtAno'];
 
 if (alterar($conexao, $remetente, $destinatario, $conteudo, $anonimato, $cod_mensagem)){
-    echo "Cliente Alterado com sucesso!";
-    header("location: pag_listar_cliente.php");
+    echo "Mensagem Alterada com sucesso!";
+    header("location: pagMsgRecebidas.php");
     
     die();
 }else{

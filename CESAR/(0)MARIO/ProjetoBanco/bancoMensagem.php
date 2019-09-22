@@ -1,16 +1,15 @@
 <?php
-    function inserir($conexao, $remetente, $destinatario, $conteudo, $anonimato) {
-        $sql = "insert into mensagem values ('default,'$remetente', '$destinatario', '$conteudo', '$anonimato', default)";
+    function inserir($conexao, $remetente, $conteudo, $anonimato) {
+        $sql = "insert into mensagem values (default,'$remetente', default, '$conteudo', '$anonimato', default);";
         return mysqli_query($conexao, $sql);
     }
     
     function alterar($conexao, $remetente, $destinatario, $conteudo, $anonimato, $cod_mensagem){
-        $sql = "update cliente set nome='$nome',"
-                . "telefone='$tel',"
-                . "endereco='$end',"
-                . "email='$email',"
-                . "idade=$idade,"
-                . "salario=$sal where cod_cliente=$cod_cliente";
+        $sql = "update mensagem set remetente='$remetente',"
+                . "destinatario='$destinatario',"
+                . "conteudo='$conteudo',"
+                . "data = default, "
+                . "anonimato='$anonimato' where cod_mensagem=$cod_mensagem";
         return mysqli_query($conexao, $sql);
     }
     
@@ -29,9 +28,9 @@
         return $mensagens;
     }
     
-    function busca($conexao, $cod_cliente) {
+    function busca($conexao, $cod_mensagem) {
         $resultado = mysqli_query($conexao,
-                "select * from cliente where cod_client=$cod_cliente");
+                "select * from mensagem where cod_mensagem=$cod_mensagem");
         return mysqli_fetch_assoc($resultado);
     }
     
