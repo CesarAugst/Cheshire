@@ -9,8 +9,9 @@ include("bancoMensagem.php");
         <title></title>
     </head>
     <body>
-        <a href="pagEnviar" title="Clique para enviar uma mensagem" >Enviar mensagem</a>
-        <a href="pag_menu" title="Retornar ao menu principal" >menu</a>
+        <a href="pagEnviar" title="Clique para enviar uma mensagem" >Enviar mensagem</a><br>
+        <a href="pagMenuPrincipal" title="Retornar ao menu principal" >menu</a><br>
+        <a href="pagMsgLida" title="Visualizar mensagens lidas" >Mensagens lidas</a><br>
         <h1>Menagens recebidas</h1><br>
         
         

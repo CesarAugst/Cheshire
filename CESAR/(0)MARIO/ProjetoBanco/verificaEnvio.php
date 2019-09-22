@@ -6,7 +6,7 @@ $remetente = ($_POST['txtRem']);
 $conteudo = ($_POST['txtCon']);
 $anonimato = ($_POST['txtAno']);
 
-if (inserir($conexao, $remetente, $conteudo, $anonimato)) {
+if (enviar($conexao, $remetente, $conteudo, $anonimato)) {
     echo "mensagem enviada com sucesso!! <br>";
     echo "<a href='pagMsgRecebidas'>Verificar</a>";
 }else{

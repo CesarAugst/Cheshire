@@ -17,6 +17,7 @@ echo "<a href='logout.php'>SAIR</a>"
     <body>
         <h1>Bem vindo ao sistema</h1>
     <li><a href="pagEnviar.php">Enviar mensagem</a>
+    
             <?php
             $_SESSION['verifica'] = 'ativo';
             ?>     

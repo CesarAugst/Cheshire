@@ -1,5 +1,5 @@
 <?php
-    function inserir($conexao, $remetente, $conteudo, $anonimato) {
+    function enviar($conexao, $remetente, $conteudo, $anonimato) {
         $sql = "insert into mensagem values (default,'$remetente', default, '$conteudo', '$anonimato', default);";
         return mysqli_query($conexao, $sql);
     }
@@ -13,7 +13,7 @@
         return mysqli_query($conexao, $sql);
     }
     
-    function excluir($conexao, $cod_mensagem) {
+    function ler($conexao, $cod_mensagem) {
         $sql = "delete from mensagem where cod_mensagem = $cod_mensagem";
         return mysqli_query($conexao,$sql);
     }
