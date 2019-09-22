@@ -43,10 +43,10 @@ include("bancoMensagem.php");
                 <td><?php echo $mensagem['conteudo'] ?></td>
                 <td><?php echo $mensagem['anonimato'] ?></td>
                 <td><?php echo $mensagem['data'] ?></td>
-                <td><a href="pag_excluir_cliente.php?cod_cliente=
+                <td><a href="pag_excluir_cliente.php?cod_mensagem=
                        <?php echo $mensagem['cod_mensagem'] ?>">excluir</a> 
                 </td>
-                <td><a href="pagAlterarMsg.php?cod_cliente=
+                <td><a href="pagAlterarMsg.php?cod_mensagem=
                        <?php echo $mensagem['cod_mensagem'] ?>">alterar</a></td>
             </tr>
             <?php
