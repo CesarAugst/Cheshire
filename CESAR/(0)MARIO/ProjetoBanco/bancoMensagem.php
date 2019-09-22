@@ -13,8 +13,8 @@
         return mysqli_query($conexao, $sql);
     }
     
-    function excluir($conexao, $cod_cliente) {
-        $sql = "delete from cliente where cod_cliente = $cod_cliente";
+    function excluir($conexao, $cod_mensagem) {
+        $sql = "delete from mensagem where cod_mensagem = $cod_mensagem";
         return mysqli_query($conexao,$sql);
     }
     

@@ -1,9 +1,4 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
 <html>
 <?php
 include("conexao.php");
@@ -43,8 +38,8 @@ include("bancoMensagem.php");
                 <td><?php echo $mensagem['conteudo'] ?></td>
                 <td><?php echo $mensagem['anonimato'] ?></td>
                 <td><?php echo $mensagem['data'] ?></td>
-                <td><a href="pag_excluir_cliente.php?cod_mensagem=
-                       <?php echo $mensagem['cod_mensagem'] ?>">excluir</a> 
+                <td><a href="pagLidas.php?cod_mensagem=
+                       <?php echo $mensagem['cod_mensagem'] ?>">Marcar como lida</a> 
                 </td>
                 <td><a href="pagAlterarMsg.php?cod_mensagem=
                        <?php echo $mensagem['cod_mensagem'] ?>">alterar</a></td>
