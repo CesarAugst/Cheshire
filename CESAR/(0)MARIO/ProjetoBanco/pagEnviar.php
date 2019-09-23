@@ -7,13 +7,13 @@
     </head>
     <body>
         <a href="pagMsgRecebidas.php" title="Listar as mensagens" >Lista</a>
-        <a href="pag_menu" title="Voltar ao menu principal" >menu</a>
+        <a href="pagMenuPrincipal" title="Voltar ao menu principal" >menu</a>
         <form method="POST" action="verificaEnvio.php">
             <pre>
                 Remetente: <input type="text" name="txtRem"><br> 
                 Conteúdo: <input type="text" name="txtCon"><br>
                 Anonimato: <input type="text" name="txtAno"><br>
-                <input type="submit" value="Cadastrar" name="btn"><br>
+                <input type="submit" value="Enviar" name="btn"><br>
             </pre>
         </form>
     </body>

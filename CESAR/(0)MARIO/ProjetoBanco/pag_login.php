@@ -13,15 +13,18 @@
         </form>
         <?php
             include("conexao.php");
-            include("banco-usuario.php");
+            include("bancoUsuario.php");
             if ($_POST) {
                 $user = $_POST['txtu'];
-                $senha = $_POST['txts'];                
+                $senha = $_POST['txts'];
+                if(buscaNome($conexao, $user, $senha)){
+                    session_start();
+                    $_SESSION['nome'] = buscaNome($conexao, $user, $senha);
+                }             
                 if(efetuarLogin($conexao, $user, $senha)){
                     session_start();
-                    $_SESSION['nome'] = $user;
                     $_SESSION['log'] = 'ativo';
-                    header("location: pag_menu.php");
+                    header("location: pagMenuPrincipal.php");                    
                     die();
                 }else{
                     echo 'Usuario ou senha incorreto';

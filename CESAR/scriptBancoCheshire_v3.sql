@@ -50,8 +50,9 @@ dataExcluida datetime default(now())
 drop table if exists usuario;
 create table if not exists usuario(
 user varchar(255),
-senha varchar(255));
-insert into usuario values('cesar','4967');
+senha varchar(255),
+nome varchar(255));
+insert into usuario values('17308','4967','cesar');
 select * from usuario;
 describe usuario;
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------

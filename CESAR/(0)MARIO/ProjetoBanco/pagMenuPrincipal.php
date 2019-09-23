@@ -5,7 +5,7 @@ if ($_SESSION['log'] != "ativo"){
     session_destroy();
     header("location: pag_login.php");
 }
-echo "Olá, <b>" . $_SESSION['nome'].
+echo "Olá, <b>" .$_SESSION['nome']['nome']. 
         "</b>, bem vindo ao sistema. ";
 echo "<a href='logout.php'>SAIR</a>"
 ?>
