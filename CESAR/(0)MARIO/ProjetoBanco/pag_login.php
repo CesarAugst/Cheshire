@@ -20,6 +20,7 @@
                 session_start();
                 $_SESSION['rm'] = buscaRm($conexao, $user, $senha)['cod_usuario'];
                 $_SESSION['nome'] = buscaNome($conexao,$_SESSION['rm'])['nome'];
+                $_SESSION['tipo'] = buscaTipo($conexao,$_SESSION['rm'])['tipo'];
 
                 if(efetuarLogin($conexao, $user, $senha)){
                     $_SESSION['log'] = 'ativo';

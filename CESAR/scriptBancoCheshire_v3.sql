@@ -49,10 +49,13 @@ dataExcluida datetime default(now())
 -- Cria o banco de login -------------------------------------------------------------------------------------------------------------------------------
 drop table if exists usuario;
 create table if not exists usuario(
+cod_usuario int,
 user varchar(255),
 senha varchar(255),
-nome varchar(255));
-insert into usuario values('17308','4967','cesar');
+nome varchar(255),
+tipo enum('orientador','aluno'));
+insert into usuario values('17308','teste','4967','cesar','aluno');
+insert into usuario values('17305','outro','9669','monique','orientador');
 select * from usuario;
 describe usuario;
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------
