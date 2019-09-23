@@ -17,12 +17,11 @@
             if ($_POST) {
                 $user = $_POST['txtu'];
                 $senha = $_POST['txts'];
-                if(buscaNome($conexao, $user, $senha)){
-                    session_start();
-                    $_SESSION['nome'] = buscaNome($conexao, $user, $senha);
-                }             
+                session_start();
+                $_SESSION['rm'] = buscaRm($conexao, $user, $senha)['cod_usuario'];
+                $_SESSION['nome'] = buscaNome($conexao,$_SESSION['rm'])['nome'];
+
                 if(efetuarLogin($conexao, $user, $senha)){
-                    session_start();
                     $_SESSION['log'] = 'ativo';
                     header("location: pagMenuPrincipal.php");                    
                     die();
