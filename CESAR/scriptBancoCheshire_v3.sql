@@ -83,3 +83,6 @@ END //
 DELIMITER ;
 select * from mensagemRegistro;
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------
+select * from mensagem where remetente = 'cesar';
+select * from usuario;
+select * from mensagem;

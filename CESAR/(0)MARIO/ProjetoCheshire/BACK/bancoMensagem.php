@@ -1,6 +1,13 @@
 <?php
-    function enviar($conexao, $remetente, $conteudo, $anonimato) {
-        $sql = "insert into mensagem values (default,'$remetente', default, '$conteudo', '$anonimato', default);";
+    function enviarComum($conexao, $remetente, $conteudo, $anonimato) {
+        
+        $sql = "insert into mensagem values (default, '$remetente', default, '$conteudo', '$anonimato', default);";
+        return mysqli_query($conexao, $sql);
+    }
+
+    function enviarOrientador($conexao, $destinatario, $remetente, $conteudo, $anonimato) {
+        
+        $sql = "insert into mensagem values (default, '$remetente', '$destinatario', '$conteudo', '$anonimato', default);";
         return mysqli_query($conexao, $sql);
     }
     
@@ -23,9 +30,9 @@
         return mysqli_query($conexao,$sql);
     }
 
-    function listaMensagens($conexao) {
+    function listaMensagens($conexao, $cod) {
         $mensagens = array();
-        $resultado = mysqli_query($conexao, "select * from mensagem");
+        $resultado = mysqli_query($conexao, "select * from mensagem where remetente =  '$cod' or destinatario = '$cod'");
         
         while ($mensagem = mysqli_fetch_assoc($resultado)) {
             array_push($mensagens, $mensagem);

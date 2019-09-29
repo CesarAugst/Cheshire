@@ -3,6 +3,7 @@
 <?php
 include("../BACK/conexao.php");
 include("../BACK/bancoMensagem.php");
+session_start();
 ?>
     <head>
         <meta charset="UTF-8">
@@ -12,7 +13,7 @@ include("../BACK/bancoMensagem.php");
         <a href="pagEnviar" title="Clique para enviar uma mensagem" >Enviar mensagem</a><br>
         <a href="pagMenuPrincipal" title="Retornar ao menu principal" >menu</a><br>
         <a href="pagMsgLida" title="Visualizar mensagens lidas" >Mensagens lidas</a><br>
-        <h1>Mensagens recebidas</h1><br>
+        <h1>Caixa de entrada de <?php echo $_SESSION['nome'] ?></h1><br>
         
         
         <table border="1">
@@ -28,7 +29,9 @@ include("../BACK/bancoMensagem.php");
             </tr>
             
             <?php
-                $mensagens = listaMensagens($conexao);
+            
+                $mensagens = listaMensagens($conexao, $_SESSION['nome']);
+            
                 foreach ($mensagens as $mensagem):
             ?>
             

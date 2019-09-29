@@ -9,12 +9,14 @@
         <a href="pagMsgRecebidas.php" title="Listar as mensagens" >Lista</a>
         <a href="pagMenuPrincipal" title="Voltar ao menu principal" >menu</a>
         <form method="POST" action="../BACK/verificaEnvio.php">
-            <pre>
-                Remetente: <input type="text" name="txtRem"><br> 
-                Conteúdo: <input type="text" name="txtCon"><br>
-                Anonimato: <input type="text" name="txtAno"><br>
-                <input type="submit" value="Enviar" name="btn"><br>
-            </pre>
+            <?php
+            session_start();
+            if($_SESSION['tipo'] == 'orientador'){
+                include_once('includes/EnviarMensagem/envOri.inc');
+            }else{
+                include_once('includes/EnviarMensagem/envAlu.inc');
+            }
+             ?>
         </form>
     </body>
 </html>
