@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 
 <?php       
+    session_start();
     include("../BACK/conexao.php");
     include("../BACK/bancoMensagem.php");
     $cod_mensagem=$_GET['cod_mensagem'];
@@ -15,7 +16,7 @@
         <a href="pagCaixaMsg" title="Clique para abrir a caixa de entrada" >Lista</a>
         <form method="POST" action="../BACK/verificaEnvio.php">
             <pre>                
-                Remetente: <input type="text" name="txtRem" value="<?php echo $mensagem['remetente'] ?>"><br> 
+                Remetente: <input type="text" name="txtRem" value="<?php echo $mensagem['remetente'] ?>" disabled><br> 
                 Destinatario: <input type="text" name="txtDes" value="<?php echo $mensagem['destinatario'] ?>"><br>
                 Conteudo: <input type="text" name="txtCon"><br>
                 Anonimato: <input type="text" name="txtAno" value="<?php echo $mensagem['anonimato'] ?>"><br>
