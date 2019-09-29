@@ -1,7 +1,7 @@
 <?php
     function enviarComum($conexao, $remetente, $conteudo, $anonimato) {
         
-        $sql = "insert into mensagem values (default, '$remetente', default, '$conteudo', '$anonimato', default);";
+        $sql = "insert into mensagem values (default, '$remetente', default, '$conteudo', '$anonimato', default,'N',null,'N',null);";
         return mysqli_query($conexao, $sql);
     }
 
@@ -21,7 +21,7 @@
     } 
     
     function ler($conexao, $cod_mensagem) {
-        $sql = "delete from mensagem where cod_mensagem = $cod_mensagem";
+        $sql = "call marcaLida($cod_mensagem)";
         return mysqli_query($conexao,$sql);
     }
     
@@ -32,7 +32,7 @@
 
     function listaMensagens($conexao, $cod) {
         $mensagens = array();
-        $resultado = mysqli_query($conexao, "select * from mensagem where remetente =  '$cod' or destinatario = '$cod'");
+        $resultado = mysqli_query($conexao, "call caixaEntrada('$cod')");//select * from mensagem where (remetente =  '$cod' || destinatario = '$cod') && (stautsLida = 'N' && statusExcluida = 'N')"
         
         while ($mensagem = mysqli_fetch_assoc($resultado)) {
             array_push($mensagens, $mensagem);
@@ -40,9 +40,9 @@
         return $mensagens;
     }
     
-    function listaMensagensLidas($conexao) {
+    function listaMensagensLidas($conexao,$cod) {
         $mensagens = array();
-        $resultado = mysqli_query($conexao, "select * from mensagemLida");
+        $resultado = mysqli_query($conexao, "call mensagemLida('$cod')");//select * from mensagem where (remetente =  '$cod' || destinatario = '$cod') && (stautsLida = 'S' && statusExcluida = 'N')"
         
         while ($mensagem = mysqli_fetch_assoc($resultado)) {
             array_push($mensagens, $mensagem);

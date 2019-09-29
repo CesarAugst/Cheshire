@@ -12,38 +12,13 @@ remetente varchar(255),
 destinatario varchar(255) default ('orientador'),
 conteudo varchar(255),
 anonimato ENUM('S','N'),
-dataEnviada datetime default(now())
-);
-insert into mensagem values(default, 'Cesar',default,'Estou testando o chat com essa mensagem sem Lorem','N',default);
-select * from mensagem;
-describe mensagem;
--- -----------------------------------------------------------------------------------------------------------------------------------------------------
-
--- Cria a tabela das mensagens lidas -------------------------------------------------------------------------------------------------------------------
-drop table if exists mensagemLida;
-create table if not exists mensagemLida(
-cod_mensagem int,
-remetente varchar(255),
-destinatario varchar(255) default ('orientador'),
-conteudo varchar(255),
-anonimato ENUM('S','N'),
-dataEnviada datetime,
-dataLida datetime default(now())
-);
--- -----------------------------------------------------------------------------------------------------------------------------------------------------
-
--- Cria a tabela de mregiste de mensagens excluidas ----------------------------------------------------------------------------------------------------
-drop table if exists mensagemRegistro;
-create table if not exists mensagemRegistro(
-cod_mensagem int,
-remetente varchar(255),
-destinatario varchar(255) default ('orientador'),
-conteudo varchar(255),
-anonimato ENUM('S','N'),
-dataEnviada datetime,
+dataEnviada datetime default(now()),
+statusLida ENUM('S','N'),
 dataLida datetime,
-dataExcluida datetime default(now())
+statusExcluida enum('S','N'),
+excluida datetime
 );
+insert into mensagem values(default, 'Cesar',default,'Estou testando o chat com essa mensagem sem Lorem','N',default,'N',null,'N',null);
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Cria o banco de login -------------------------------------------------------------------------------------------------------------------------------
@@ -56,33 +31,38 @@ nome varchar(255),
 tipo enum('orientador','aluno'));
 insert into usuario values('17308','teste','4967','cesar','aluno');
 insert into usuario values('17305','outro','9669','monique','orientador');
-select * from usuario;
-describe usuario;
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------
 
--- Cria a trigger que irá armazenar as mensagens lidas -------------------------------------------------------------------------------------------------
+-- Cria a procedure que mostra as mensagens da caixa de enrada do usuario ------------------------------------------------------------------------------
 DELIMITER //
-drop trigger if exists mensagemLida ; //
-CREATE TRIGGER mensagemLida BEFORE delete ON mensagem
-FOR EACH ROW
-BEGIN
-	insert into mensagemLida values (old.cod_mensagem, old.remetente, old.destinatario, old.conteudo, old.anonimato,old.dataEnviada, default);
-END //
-DELIMITER ;
-select * from mensagemLida;
+drop procedure if exists caixaEntrada //
+create procedure caixaEntrada(id varchar(11))
+main:begin
+select * from mensagem where (remetente = id || destinatario = id) && (statusLida = 'N' && statusExcluida = 'N');
+end //
+delimiter ;
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------
 
--- Cria a trigger que irá armazenar as mensagens excluidas ---------------------------------------------------------------------------------------------
+-- Cria a procedure que mostra as mensagens marcadas omo lidas pelo usuario ----------------------------------------------------------------------------
 DELIMITER //
-drop trigger if exists mensagemExcluida ; //
-CREATE TRIGGER mensagemExcluida BEFORE delete ON mensagemLida
-FOR EACH ROW
-BEGIN
-	insert into mensagemRegistro values (old.cod_mensagem, old.remetente, old.destinatario, old.conteudo, old.anonimato,old.dataEnviada, old.dataLida ,default);
-END //
-DELIMITER ;
-select * from mensagemRegistro;
+drop procedure if exists mensagemLida //
+create procedure mensagemLida(id varchar(11))
+main:begin
+select * from mensagem where (remetente = id || destinatario = id) && (statusLida = 'S' && statusExcluida = 'N');
+end //
+delimiter ;
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------
-select * from mensagem where remetente = 'cesar';
-select * from usuario;
+
+-- Cria a procedure que marca as mensagens como lidas --------------------------------------------------------------------------------------------------
+DELIMITER //
+drop procedure if exists marcaLida //
+create procedure marcaLida(id varchar(11))
+main:begin
+update mensagem set statusLida = 'S' where cod_mensagem = id;
+update mensagem set dataLida = now() where cod_mensagem = id;
+end //
+DELIMITER ;
+-- -----------------------------------------------------------------------------------------------------------------------------------------------------
 select * from mensagem;
+call marcaLida(1);
+call mensagemLida('cesar');

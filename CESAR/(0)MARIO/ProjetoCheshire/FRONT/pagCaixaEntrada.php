@@ -1,22 +1,21 @@
 <!DOCTYPE html>
-<html lang="pt-Br">
+<html>
 <?php
-session_start();
 include("../BACK/conexao.php");
 include("../BACK/bancoMensagem.php");
+session_start();
 ?>
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mensagens lidas</title>
+    <title></title>
 </head>
 
 <body>
     <a href="pagEnviar" title="Clique para enviar uma mensagem">Enviar mensagem</a><br>
     <a href="pagMenuPrincipal" title="Retornar ao menu principal">menu</a><br>
     <a href="pagMsgLida" title="Visualizar mensagens lidas">Mensagens lidas</a><br>
-    <h1>Mensagens lidas</h1><br>
+    <h1>Caixa de entrada de <?php echo $_SESSION['nome'] ?></h1><br>
 
 
     <table border="1">
@@ -28,12 +27,16 @@ include("../BACK/bancoMensagem.php");
             <td>Anonimato</td>
             <td>Enviada</td>
             <td>Lida</td>
+            <td>Quando foi lida</td>
             <td>Exlcuir</td>
             <td>Alterar</td>
+
         </tr>
 
         <?php
-        $mensagens = listaMensagensLidas($conexao,$_SESSION['nome']);
+
+        $mensagens = listaMensagens($conexao, $_SESSION['nome']);
+
         foreach ($mensagens as $mensagem) :
             ?>
 
@@ -44,9 +47,10 @@ include("../BACK/bancoMensagem.php");
                 <td><?php echo $mensagem['conteudo'] ?></td>
                 <td><?php echo $mensagem['anonimato'] ?></td>
                 <td><?php echo $mensagem['dataEnviada'] ?></td>
+                <td><?php echo $mensagem['statusLida'] ?></td>
                 <td><?php echo $mensagem['dataLida'] ?></td>
-                <td><a href="../BACK/pagExcluida.php?cod_mensagem=
-                       <?php echo $mensagem['cod_mensagem'] ?>">Excluir</a>
+                <td><a href="../BACK/lida.php?cod_mensagem=
+                       <?php echo $mensagem['cod_mensagem'] ?>">Marcar como lida</a>
                 </td>
                 <td><a href="pagAlterarMsg.php?cod_mensagem=
                        <?php echo $mensagem['cod_mensagem'] ?>">alterar</a></td>

@@ -6,7 +6,7 @@
         <title></title>
     </head>
     <body>
-        <a href="pagMsgRecebidas.php" title="Listar as mensagens" >Lista</a>
+        <a href="pagCaixaEntrada.php" title="Listar as mensagens" >Lista</a>
         <a href="pagMenuPrincipal" title="Voltar ao menu principal" >menu</a>
         <form method="POST" action="../BACK/verificaEnvio.php">
             <?php
