@@ -2839,10 +2839,16 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding: 200px 0;
 }
 
+.feedback-right { 
+  border-style: inset;
+  border-width: 5px;
+}
+
 @media (max-width: 575px) {
   .feedback-right {
     margin: 15px;
   }
+
 }
 
 .feedback-right .play-btn {
@@ -2857,6 +2863,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   .feedback-right {
     margin-bottom: 30px;
   }
+  
 }
 
 .feedback-left .star {
@@ -2869,6 +2876,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .feedback-left img {
   margin-bottom: 10px;
+  border-style: solid;
+  border-width: 1px;
+  color: #008000;
 }
 
 .feedback-left .owl-carousel .owl-item img {
@@ -3039,6 +3049,16 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .about-banner {
   background: url(../img/contato.jpg) right no-repeat;
+  background-size: cover;
+}
+
+.defasagem-banner {
+  background: url(../img/defasagem.jpg) right no-repeat;
+  background-size: cover;
+}
+
+.desmotiva-banner {
+  background: url(../img/desmotivação.jpeg) right no-repeat;
   background-size: cover;
 }
 

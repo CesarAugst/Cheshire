@@ -81,7 +81,7 @@ if ($_SESSION['log'] != 'ativo') {
             </header><!-- #header -->
 
             <!-- start banner Area -->
-            <section class="banner-area relative about-banner" id="home">	
+            <section class="banner-area relative desmotiva-banner" id="home">	
                 <div class="overlay overlay-bg"></div>
                 <div class="container">				
                     <div class="row d-flex align-items-center justify-content-center">

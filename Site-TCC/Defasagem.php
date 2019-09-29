@@ -82,14 +82,18 @@ if ($_SESSION['log'] != 'ativo') {
         </header><!-- #header -->
 
         <!-- start banner Area -->
-        <section class="banner-area relative about-banner" id="home">	
+        <section class="banner-area relative defasagem-banner" id="home">	
             <div class="overlay overlay-bg"></div>
             <div class="container">				
                 <div class="row d-flex align-items-center justify-content-center">
                     <div class="about-content col-lg-12">
                         <h1 class="text-white">
-                            <!-- tinha um titulo aqui -->				
+                            Defasagem
+                        </h1>
+                        
                         </h1>	
+                            <p class="text-white link-nav"><a href="inicio.php">Inicio </a>  <span class="lnr lnr-arrow-right"></span>  <a href="Defasagem.php"> Defasagem</a></p>
+                        </div>	
 
                     </div>	
                 </div>
