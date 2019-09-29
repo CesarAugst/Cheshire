@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-Br">
 <?php
-include("conexao.php");
-include("bancoMensagem.php");
+include("../BACK/conexao.php");
+include("../BACK/bancoMensagem.php");
 ?>
 <head>
     <meta charset="UTF-8">
@@ -44,7 +44,7 @@ include("bancoMensagem.php");
                 <td><?php echo $mensagem['anonimato'] ?></td>
                 <td><?php echo $mensagem['dataEnviada'] ?></td>
                 <td><?php echo $mensagem['dataLida'] ?></td>
-                <td><a href="pagExcluida.php?cod_mensagem=
+                <td><a href="../BACK/pagExcluida.php?cod_mensagem=
                        <?php echo $mensagem['cod_mensagem'] ?>">Excluir</a>
                 </td>
                 <td><a href="pagAlterarMsg.php?cod_mensagem=

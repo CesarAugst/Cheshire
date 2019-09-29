@@ -7,7 +7,7 @@ if ($_SESSION['log'] != "ativo"){
 }
 echo "Olá, <b>" .$_SESSION['nome']. 
         "</b>, bem vindo ao sistema. ";
-echo "<a href='logout.php'>SAIR</a>"
+echo "<a href='../BACK/logout.php'>SAIR</a>"
 ?>
 <html>
     <head>

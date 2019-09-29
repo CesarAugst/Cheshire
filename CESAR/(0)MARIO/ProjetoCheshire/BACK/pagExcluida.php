@@ -4,7 +4,7 @@ include("bancoMensagem.php");
 
 $cod_mensagem=$_GET['cod_mensagem'];
 if(excluir($conexao, $cod_mensagem)) {
-    header("Location: pagMsgLida.php");
+    header("Location: ../FRONT/pagMsgLida.php");
     die();
 }
 

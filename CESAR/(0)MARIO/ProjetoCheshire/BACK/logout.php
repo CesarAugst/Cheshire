@@ -5,5 +5,5 @@ session_start();
 session_destroy();
 //Redireciona
 //o utilizador depois da destruição da sessão...
-header("Location: pag_login.php");
+header("Location: ../FRONT/pag_login.php");
 

@@ -9,7 +9,7 @@ $anonimato = $_POST['txtAno'];
 
 if (alterar($conexao, $remetente, $destinatario, $conteudo, $anonimato, $cod_mensagem)){
     echo "Mensagem Alterada com sucesso!";
-    header("location: pagMsgRecebidas.php");
+    header("location: ../FRONT/pagMsgRecebidas.php");
     
     die();
 }else{

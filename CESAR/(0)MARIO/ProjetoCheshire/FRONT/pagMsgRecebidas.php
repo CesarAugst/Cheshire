@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <?php
-include("conexao.php");
-include("bancoMensagem.php");
+include("../BACK/conexao.php");
+include("../BACK/bancoMensagem.php");
 ?>
     <head>
         <meta charset="UTF-8">
@@ -39,7 +39,7 @@ include("bancoMensagem.php");
                 <td><?php echo $mensagem['conteudo'] ?></td>
                 <td><?php echo $mensagem['anonimato'] ?></td>
                 <td><?php echo $mensagem['dataEnviada'] ?></td>
-                <td><a href="pagLida.php?cod_mensagem=
+                <td><a href="../BACK/pagLida.php?cod_mensagem=
                        <?php echo $mensagem['cod_mensagem'] ?>">Marcar como lida</a> 
                 </td>
                 <td><a href="pagAlterarMsg.php?cod_mensagem=

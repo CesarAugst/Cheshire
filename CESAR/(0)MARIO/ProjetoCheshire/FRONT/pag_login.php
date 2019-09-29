@@ -12,8 +12,8 @@
             <input type="submit" value="Logar"><br>
         </form>
         <?php
-            include("conexao.php");
-            include("bancoUsuario.php");
+            include("../BACK/conexao.php");
+            include("../BACK/bancoUsuario.php");
             if ($_POST) {
                 $user = $_POST['txtu'];
                 $senha = $_POST['txts'];

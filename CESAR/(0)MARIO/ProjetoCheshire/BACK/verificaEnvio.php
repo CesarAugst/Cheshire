@@ -8,9 +8,9 @@ $anonimato = ($_POST['txtAno']);
 
 if (enviar($conexao, $remetente, $conteudo, $anonimato)) {
     echo "mensagem enviada com sucesso!! <br>";
-    echo "<a href='pagMsgRecebidas'>Verificar</a>";
+    echo "<a href='../FRONT/pagMsgRecebidas'>Verificar</a>";
 }else{
     $msg = mysqli_errno($conexao);
     echo $msg;
-    echo "<a href='pagEnviar.php'>Voltar</a>";
+    echo "<a href='../FRONT/pagEnviar.php'>Voltar</a>";
 }
