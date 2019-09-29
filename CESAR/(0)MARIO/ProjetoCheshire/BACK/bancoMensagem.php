@@ -5,9 +5,9 @@
         return mysqli_query($conexao, $sql);
     }
 
-    function enviarOrientador($conexao, $destinatario, $remetente, $conteudo, $anonimato) {
+    function enviarOrientador($conexao, $destinatario, $remetente, $conteudo) {
         
-        $sql = "insert into mensagem values (default, '$remetente', '$destinatario', '$conteudo', '$anonimato', default);";
+        $sql = "insert into mensagem values (default, '$remetente', '$destinatario', '$conteudo', default, default,'N',null,'N',null);";
         return mysqli_query($conexao, $sql);
     }
     

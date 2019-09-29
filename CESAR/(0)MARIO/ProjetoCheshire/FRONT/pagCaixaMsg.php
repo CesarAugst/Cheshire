@@ -29,7 +29,7 @@ session_start();
             <td>Lida</td>
             <td>Quando foi lida</td>
             <td>Exlcuir</td>
-            <td>Alterar</td>
+            <td>Responder</td>
 
         </tr>
 
@@ -52,8 +52,8 @@ session_start();
                 <td><a href="../BACK/lida.php?cod_mensagem=
                        <?php echo $mensagem['cod_mensagem'] ?>">Marcar como lida</a>
                 </td>
-                <td><a href="pagAlterarMsg.php?cod_mensagem=
-                       <?php echo $mensagem['cod_mensagem'] ?>">alterar</a></td>
+                <td><a href="pagResponderMsg.php?cod_mensagem=
+                       <?php echo $mensagem['cod_mensagem'] ?>">Responder</a></td>
             </tr>
         <?php
         endforeach;

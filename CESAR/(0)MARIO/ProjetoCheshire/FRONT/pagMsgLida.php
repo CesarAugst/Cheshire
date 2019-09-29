@@ -29,7 +29,7 @@ include("../BACK/bancoMensagem.php");
             <td>Enviada</td>
             <td>Lida</td>
             <td>Exlcuir</td>
-            <td>Alterar</td>
+            <td>Responder</td>
         </tr>
 
         <?php
@@ -48,8 +48,8 @@ include("../BACK/bancoMensagem.php");
                 <td><a href="../BACK/pagExcluida.php?cod_mensagem=
                        <?php echo $mensagem['cod_mensagem'] ?>">Excluir</a>
                 </td>
-                <td><a href="pagAlterarMsg.php?cod_mensagem=
-                       <?php echo $mensagem['cod_mensagem'] ?>">alterar</a></td>
+                <td><a href="pagResponderMsg.php?cod_mensagem=
+                       <?php echo $mensagem['cod_mensagem'] ?>">Responder</a></td>
             </tr>
         <?php
         endforeach;

@@ -9,9 +9,9 @@ $conteudo = ($_POST['txtCon']);
 $anonimato = ($_POST['txtAno']);
 
 if ($_SESSION['tipo'] == 'orientador') {
-    if (enviarOrientador($conexao, $destinatario, $remetente, $conteudo, $anonimato)) {
+    if (enviarOrientador($conexao, $destinatario, $remetente, $conteudo)) {
         echo "mensagem enviada com sucesso!! <br>";
-        echo "<a href='../FRONT/pagCaixaEntrada.php'>Verificar</a>";
+        echo "<a href='../FRONT/pagCaixaMsg.php'>Verificar</a>";
     } else {
         $msg = mysqli_errno($conexao);
         echo $msg;
@@ -20,7 +20,7 @@ if ($_SESSION['tipo'] == 'orientador') {
 } else {
     if (enviarComum($conexao, $remetente, $conteudo, $anonimato)) {
         echo "mensagem enviada com sucesso!! <br>";
-        echo "<a href='../FRONT/pagCaixaEntrada'>Verificar</a>";
+        echo "<a href='../FRONT/pagCaixaMsg'>Verificar</a>";
     } else {
         $msg = mysqli_errno($conexao);
         echo $msg;

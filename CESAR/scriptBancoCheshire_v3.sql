@@ -9,9 +9,9 @@ drop table if exists mensagem;
 create table if not exists mensagem(
 cod_mensagem int auto_increment primary key,
 remetente varchar(255),
-destinatario varchar(255) default ('orientador'),
+destinatario varchar(255) default ('monique'),
 conteudo varchar(255),
-anonimato ENUM('S','N'),
+anonimato ENUM('S','N') default('N'),
 dataEnviada datetime default(now()),
 statusLida ENUM('S','N'),
 dataLida datetime,
@@ -63,6 +63,3 @@ update mensagem set dataLida = now() where cod_mensagem = id;
 end //
 DELIMITER ;
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------
-select * from mensagem;
-call marcaLida(1);
-call mensagemLida('cesar');
