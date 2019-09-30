@@ -72,7 +72,7 @@ session_destroy();
 			          </li>	
                                   <li><a href="Defasagem.php">Defasagem</a></li>
 			          <li><a href="Desmotivação.php">Desmotivação</a></li>
-			          <li><a href="about.html">Problemas familiares</a></li>			        
+			          <li><a href="ProblemasFamiliares">Problemas familiares</a></li>			        
                                   <li><a href="contato.php">Contato</a></li>
                                 </ul>		          				          					          		          			        			        
 			      </nav><!-- #nav-menu-container -->		    		
@@ -142,7 +142,7 @@ session_destroy();
 							<div class="single-cat-widget">
 								<div class="content relative">
 									<div class="overlay overlay-bg"></div>
-								    <a href="#" target="_blank">
+								    <a href="ProblemasFamiliares.php" target="_blank">
 								      <div class="thumb">
                                                                           <img class="content-image img-fluid d-block mx-auto" src="img/Problemas.jpg"  alt="">
 								  	  </div>

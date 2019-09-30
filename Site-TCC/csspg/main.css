@@ -3062,6 +3062,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-size: cover;
 }
 
+.problemas-banner {
+  background: url(../img/Problemas.jpg) right no-repeat;
+  background-size: cover;
+}
 .about-content {
   margin-top: 110px;
   padding: 90px 0px;
