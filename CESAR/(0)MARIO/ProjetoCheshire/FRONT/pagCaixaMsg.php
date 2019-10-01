@@ -58,10 +58,10 @@ session_start();
                     <td><?php echo $mensagem['dataEnviada'] ?></td>
                     <td><?php echo $mensagem['statusLida'] ?></td>
                     <td><?php echo $mensagem['dataLida'] ?></td>
-                    <td><a href="../BACK/lida.php?cod_mensagem=
+                    <td><a class = "btn btn-info" href="../BACK/lida.php?cod_mensagem=
                         <?php echo $mensagem['cod_mensagem'] ?>">Marcar como lida</a>
                     </td>
-                    <td><a href="pagResponderMsg.php?cod_mensagem=
+                    <td><a class = "btn btn-info" href="pagResponderMsg.php?cod_mensagem=
                         <?php echo $mensagem['cod_mensagem'] ?>">Responder</a></td>
                 </tr>
             <?php
