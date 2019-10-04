@@ -878,6 +878,8 @@ td, th {
 .section-top-border {
   padding: 50px 0;
   border-top: 1px dotted #eee;
+  border-bottom-color:10px  #75cf0d;
+  border-bottom-style: outset;
 }
 
 .switch-wrap {
@@ -3063,7 +3065,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .problemas-banner {
-  background: url(../img/Problemas.jpg) right no-repeat;
+  background: url(../img/Problemas.jpg)  no-repeat;
   background-size: cover;
 }
 .about-content {

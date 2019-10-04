@@ -21,7 +21,7 @@ if ($_SESSION['log'] != 'ativo') {
             <!-- meta character set -->
             <meta charset="UTF-8">
             <!-- Site Title -->
-            <title>Desmotivação</title>
+            <title>Problemas familiares</title>
 
             <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
             <!--
@@ -70,7 +70,8 @@ if ($_SESSION['log'] != 'ativo') {
                                         <li><a href="blog-single.html">Psicoses</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="Defasagem.php">Defasagem</a></li>
+								<li><a href="Defasagem.php">Defasagem</a></li>
+								<li><a href="Desmotivação.php">Desmotivação</a></li>
                                 <li><a href="ProblemasFamiliares.php">Problemas familiares</a></li>			        
                                 <li><a href="contato.php">Contato</a></li>
 
@@ -94,444 +95,120 @@ if ($_SESSION['log'] != 'ativo') {
 					</div>
 				</div>
 			</section>
-			<!-- End banner Area -->					  
-			
-			<!-- Start post-content Area -->
-			<section class="post-content-area single-post-area">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-8 posts-list">
-							<div class="single-post row">
-								<div class="col-lg-12">
-									<div class="feature-img">
-										<img class="img-fluid" src="img/blog/feature-img1.jpg" alt="">
-									</div>									
-								</div>
-								<div class="col-lg-3  col-md-3 meta-details">
-									<ul class="tags">
-										<li><a href="#">Food,</a></li>
-										<li><a href="#">Technology,</a></li>
-										<li><a href="#">Politics,</a></li>
-										<li><a href="#">Lifestyle</a></li>
-									</ul>
-									<div class="user-details row">
-										<p class="user-name col-lg-12 col-md-12 col-6"><a href="#">Mark wiens</a> <span class="lnr lnr-user"></span></p>
-										<p class="date col-lg-12 col-md-12 col-6"><a href="#">12 Dec, 2017</a> <span class="lnr lnr-calendar-full"></span></p>
-										<p class="view col-lg-12 col-md-12 col-6"><a href="#">1.2M Views</a> <span class="lnr lnr-eye"></span></p>
-										<p class="comments col-lg-12 col-md-12 col-6"><a href="#">06 Comments</a> <span class="lnr lnr-bubble"></span></p>
-										<ul class="social-links col-lg-12 col-md-12 col-6">
-											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-											<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-											<li><a href="#"><i class="fa fa-github"></i></a></li>
-											<li><a href="#"><i class="fa fa-behance"></i></a></li>
-										</ul>																				
-									</div>
-								</div>
-								<div class="col-lg-9 col-md-9">
-									<h3 class="mt-20 mb-20">Astronomy Binoculars A Great Alternative</h3>
-									<p class="excert">
-										MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction.
-									</p>
-									<p>
-										Boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through a self-imposed
-									</p>
-									<p>
-										Boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training. who has the willpower to actually sit through a self-imposed
-									</p>
-								</div>
-								<div class="col-lg-12">
-									<div class="quotes">
-										MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower to actually sit through a self-imposed MCSE training.										
-									</div>
-									<div class="row mt-30 mb-30">
-										<div class="col-6">
-											<img class="img-fluid" src="img/blog/post-img1.jpg" alt="">
-										</div>
-										<div class="col-6">
-											<img class="img-fluid" src="img/blog/post-img2.jpg" alt="">
-										</div>	
-										<div class="col-lg-12 mt-30">
-											<p>
-												MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower.
-											</p>
-											<p>
-												MCSE boot camps have its supporters and its detractors. Some people do not understand why you should have to spend money on boot camp when you can get the MCSE study materials yourself at a fraction of the camp price. However, who has the willpower.
-											</p>											
-										</div>									
-									</div>
-								</div>
-							</div>
-							<div class="navigation-area">
-								<div class="row">
-									<div class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
-										<div class="thumb">
-											<a href="#"><img class="img-fluid" src="img/blog/prev.jpg" alt=""></a>
-										</div>
-										<div class="arrow">
-											<a href="#"><span class="lnr text-white lnr-arrow-left"></span></a>
-										</div>
-										<div class="detials">
-											<p>Prev Post</p>
-											<a href="#"><h4>Space The Final Frontier</h4></a>
-										</div>
-									</div>
-									<div class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
-										<div class="detials">
-											<p>Next Post</p>
-											<a href="#"><h4>Telescopes 101</h4></a>
-										</div>
-										<div class="arrow">
-											<a href="#"><span class="lnr text-white lnr-arrow-right"></span></a>
-										</div>
-										<div class="thumb">
-											<a href="#"><img class="img-fluid" src="img/blog/next.jpg" alt=""></a>
-										</div>										
-									</div>									
-								</div>
-							</div>
-							<div class="comments-area">
-								<h4>05 Comments</h4>
-								<div class="comment-list">
-                                    <div class="single-comment justify-content-between d-flex">
-                                        <div class="user justify-content-between d-flex">
-                                            <div class="thumb">
-                                                <img src="img/blog/c1.jpg" alt="">
-                                            </div>
-                                            <div class="desc">
-                                                <h5><a href="#">Emilly Blunt</a></h5>
-                                                <p class="date">December 4, 2017 at 3:12 pm </p>
-                                                <p class="comment">
-                                                    Never say goodbye till the end comes!
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="reply-btn">
-                                               <a href="" class="btn-reply text-uppercase">reply</a> 
-                                        </div>
-                                    </div>
-                                </div>	
-								<div class="comment-list left-padding">
-                                    <div class="single-comment justify-content-between d-flex">
-                                        <div class="user justify-content-between d-flex">
-                                            <div class="thumb">
-                                                <img src="img/blog/c2.jpg" alt="">
-                                            </div>
-                                            <div class="desc">
-                                                <h5><a href="#">Elsie Cunningham</a></h5>
-                                                <p class="date">December 4, 2017 at 3:12 pm </p>
-                                                <p class="comment">
-                                                    Never say goodbye till the end comes!
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="reply-btn">
-                                               <a href="" class="btn-reply text-uppercase">reply</a> 
-                                        </div>
-                                    </div>
-                                </div>	
-								<div class="comment-list left-padding">
-                                    <div class="single-comment justify-content-between d-flex">
-                                        <div class="user justify-content-between d-flex">
-                                            <div class="thumb">
-                                                <img src="img/blog/c3.jpg" alt="">
-                                            </div>
-                                            <div class="desc">
-                                                <h5><a href="#">Annie Stephens</a></h5>
-                                                <p class="date">December 4, 2017 at 3:12 pm </p>
-                                                <p class="comment">
-                                                    Never say goodbye till the end comes!
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="reply-btn">
-                                               <a href="" class="btn-reply text-uppercase">reply</a> 
-                                        </div>
-                                    </div>
-                                </div>	
-								<div class="comment-list">
-                                    <div class="single-comment justify-content-between d-flex">
-                                        <div class="user justify-content-between d-flex">
-                                            <div class="thumb">
-                                                <img src="img/blog/c4.jpg" alt="">
-                                            </div>
-                                            <div class="desc">
-                                                <h5><a href="#">Maria Luna</a></h5>
-                                                <p class="date">December 4, 2017 at 3:12 pm </p>
-                                                <p class="comment">
-                                                    Never say goodbye till the end comes!
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="reply-btn">
-                                               <a href="" class="btn-reply text-uppercase">reply</a> 
-                                        </div>
-                                    </div>
-                                </div>	
-								<div class="comment-list">
-                                    <div class="single-comment justify-content-between d-flex">
-                                        <div class="user justify-content-between d-flex">
-                                            <div class="thumb">
-                                                <img src="img/blog/c5.jpg" alt="">
-                                            </div>
-                                            <div class="desc">
-                                                <h5><a href="#">Ina Hayes</a></h5>
-                                                <p class="date">December 4, 2017 at 3:12 pm </p>
-                                                <p class="comment">
-                                                    Never say goodbye till the end comes!
-                                                </p>
-                                            </div>
-                                        </div>
-                                        <div class="reply-btn">
-                                               <a href="" class="btn-reply text-uppercase">reply</a> 
-                                        </div>
-                                    </div>
-                                </div>	                                             				
-							</div>
-							<div class="comment-form">
-								<h4>Leave a Comment</h4>
-								<form>
-									<div class="form-group form-inline">
-									  <div class="form-group col-lg-6 col-md-12 name">
-									    <input type="text" class="form-control" id="name" placeholder="Enter Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Name'">
-									  </div>
-									  <div class="form-group col-lg-6 col-md-12 email">
-									    <input type="email" class="form-control" id="email" placeholder="Enter email address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'">
-									  </div>										
-									</div>
-									<div class="form-group">
-										<input type="text" class="form-control" id="subject" placeholder="Subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Subject'">
-									</div>
-									<div class="form-group">
-										<textarea class="form-control mb-10" rows="5" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
-									</div>
-									<a href="#" class="primary-btn text-uppercase">Post Comment</a>	
-								</form>
-							</div>
-						</div>
-						<div class="col-lg-4 sidebar-widgets">
-							<div class="widget-wrap">
-								<div class="single-sidebar-widget search-widget">
-									<form class="search-form" action="#">
-			                            <input placeholder="Search Posts" name="search" type="text" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Search Posts'" >
-			                            <button type="submit"><i class="fa fa-search"></i></button>
-			                        </form>
-								</div>
-								<div class="single-sidebar-widget user-info-widget">
-									<img src="img/blog/user-info.png" alt="">
-									<a href="#"><h4>Charlie Barber</h4></a>
-									<p>
-										Senior blog writer
-									</p>
-									<ul class="social-links">
-										<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-										<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-										<li><a href="#"><i class="fa fa-github"></i></a></li>
-										<li><a href="#"><i class="fa fa-behance"></i></a></li>
-									</ul>
-									<p>
-										Boot camps have its supporters andit sdetractors. Some people do not understand why you should have to spend money on boot camp when you can get. Boot camps have itssuppor ters andits detractors.
-									</p>
-								</div>
-								<div class="single-sidebar-widget popular-post-widget">
-									<h4 class="popular-title">Popular Posts</h4>
-									<div class="popular-post-list">
-										<div class="single-post-list d-flex flex-row align-items-center">
-											<div class="thumb">
-												<img class="img-fluid" src="img/blog/pp1.jpg" alt="">
-											</div>
-											<div class="details">
-												<a href="blog-single.html"><h6>Space The Final Frontier</h6></a>
-												<p>02 Hours ago</p>
-											</div>
-										</div>
-										<div class="single-post-list d-flex flex-row align-items-center">
-											<div class="thumb">
-												<img class="img-fluid" src="img/blog/pp2.jpg" alt="">
-											</div>
-											<div class="details">
-												<a href="blog-single.html"><h6>The Amazing Hubble</h6></a>
-												<p>02 Hours ago</p>
-											</div>
-										</div>
-										<div class="single-post-list d-flex flex-row align-items-center">
-											<div class="thumb">
-												<img class="img-fluid" src="img/blog/pp3.jpg" alt="">
-											</div>
-											<div class="details">
-												<a href="blog-single.html"><h6>Astronomy Or Astrology</h6></a>
-												<p>02 Hours ago</p>
-											</div>
-										</div>
-										<div class="single-post-list d-flex flex-row align-items-center">
-											<div class="thumb">
-												<img class="img-fluid" src="img/blog/pp4.jpg" alt="">
-											</div>
-											<div class="details">
-												<a href="blog-single.html"><h6>Asteroids telescope</h6></a>
-												<p>02 Hours ago</p>
-											</div>
-										</div>															
-									</div>
-								</div>
-								<div class="single-sidebar-widget ads-widget">
-									<a href="#"><img class="img-fluid" src="img/blog/ads-banner.jpg" alt=""></a>
-								</div>
-								<div class="single-sidebar-widget post-category-widget">
-									<h4 class="category-title">Post Catgories</h4>
-									<ul class="cat-list">
-										<li>
-											<a href="#" class="d-flex justify-content-between">
-												<p>Technology</p>
-												<p>37</p>
-											</a>
-										</li>
-										<li>
-											<a href="#" class="d-flex justify-content-between">
-												<p>Lifestyle</p>
-												<p>24</p>
-											</a>
-										</li>
-										<li>
-											<a href="#" class="d-flex justify-content-between">
-												<p>Fashion</p>
-												<p>59</p>
-											</a>
-										</li>
-										<li>
-											<a href="#" class="d-flex justify-content-between">
-												<p>Art</p>
-												<p>29</p>
-											</a>
-										</li>
-										<li>
-											<a href="#" class="d-flex justify-content-between">
-												<p>Food</p>
-												<p>15</p>
-											</a>
-										</li>
-										<li>
-											<a href="#" class="d-flex justify-content-between">
-												<p>Architecture</p>
-												<p>09</p>
-											</a>
-										</li>
-										<li>
-											<a href="#" class="d-flex justify-content-between">
-												<p>Adventure</p>
-												<p>44</p>
-											</a>
-										</li>															
-									</ul>
-								</div>	
-								<div class="single-sidebar-widget newsletter-widget">
-									<h4 class="newsletter-title">Newsletter</h4>
-									<p>
-										Here, I focus on a range of items and features that we use in life without
-										giving them a second thought.
-									</p>
-									<div class="form-group d-flex flex-row">
-									   <div class="col-autos">
-									      <div class="input-group">
-									        <div class="input-group-prepend">
-									          <div class="input-group-text"><i class="fa fa-envelope" aria-hidden="true"></i>
-											</div>
-									        </div>
-									        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email'" >
-									      </div>
-									    </div>
-									    <a href="#" class="bbtns">Subcribe</a>
-									</div>	
-									<p class="text-bottom">
-										You can unsubscribe at any time
-									</p>								
-								</div>
-								<div class="single-sidebar-widget tag-cloud-widget">
-									<h4 class="tagcloud-title">Tag Clouds</h4>
-									<ul>
-										<li><a href="#">Technology</a></li>
-										<li><a href="#">Fashion</a></li>
-										<li><a href="#">Architecture</a></li>
-										<li><a href="#">Fashion</a></li>
-										<li><a href="#">Food</a></li>
-										<li><a href="#">Technology</a></li>
-										<li><a href="#">Lifestyle</a></li>
-										<li><a href="#">Art</a></li>
-										<li><a href="#">Adventure</a></li>
-										<li><a href="#">Food</a></li>
-										<li><a href="#">Lifestyle</a></li>
-										<li><a href="#">Adventure</a></li>
-									</ul>
-								</div>								
-							</div>
-						</div>
-					</div>
-				</div>	
-			</section>
-			<!-- End post-content Area -->
-			
-			<!-- start footer Area -->		
-			<footer class="footer-area section-gap">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-2  col-md-6">
-							<div class="single-footer-widget">
-								<h6>Top Products</h6>
-								<ul class="footer-nav">
-									<li><a href="#">Managed Website</a></li>
-									<li><a href="#">Manage Reputation</a></li>
-									<li><a href="#">Power Tools</a></li>
-									<li><a href="#">Marketing Service</a></li>
-								</ul>
-							</div>
-						</div>
-						<div class="col-lg-4  col-md-6">
-							<div class="single-footer-widget mail-chimp">
-								<h6 class="mb-20">Contact Us</h6>
-								<p>
-									56/8, Santa bullevard, Rocky beach, San fransisco, Los angeles, USA
-								</p>
-								<h3>012-6532-568-9746</h3>
-								<h3>012-6532-568-97468</h3>
-							</div>
-						</div>							
-						<div class="col-lg-6  col-md-12">
-							<div class="single-footer-widget newsletter">
-								<h6>Newsletter</h6>
-								<p>You can trust us. we only send promo offers, not a single spam.</p>
-								<div id="mc_embed_signup">
-									<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
+			<!-- End banner Area -->	
 
-										<div class="form-group row" style="width: 100%">
-											<div class="col-lg-8 col-md-12">
-												<input name="EMAIL" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '" required="" type="email">
-											</div> 
-										
-											<div class="col-lg-4 col-md-12">
-												<button class="nw-btn primary-btn circle">Subscribe<span class="lnr lnr-arrow-right"></span></button>
-											</div> 
-										</div>		
-										<div class="info"></div>
-									</form>
-								</div>		
-							</div>
-						</div>					
-					</div>
+			<!-- Start Sample Area -->
+			<section class="sample-text-area">
+				<div class="container">
+					<center><h1> É necessário enteder!</h1>
+					<img  height="260px" width="320px" src="img/Compreender.png" alt=""></center>
+					<p class="sample-text text-black" >
+					<dd class="text-black">Os problemas familiares podem interferir no andamento do aluno no ambiente escolar, ainda mais em sua capacidade de interação social, uma vez que um ambiente violento em certos estimula o aluno a reproduzir esse comportamento na escola, e em outros casos estimula a reproduzir comportamentos apáticos.
+Segundo um estudo  realizado pela USP, foram acompanhados os casos de 3 alunos diferentes que possuíam dificuldade de letramento em uma escola estadual. Nos casos apresentados foi apontado pela coordenação do colégio que os pais se encontravam em de certa forma ausentes no processo de aprendizagem de seus filhos, sendo questionados pelas razões, eles apontaram que sentiam dificuldade de se aproximar ao contexto escolar de seus filhos. A partir desse estudo, entende-se que o ambiente familiar conturbado ou mesmo ausente influencia negativamente no aluno.
+Como as atribuições e a própria formação do orientador não o permitem adentrar muito nesse contexto, quando o aluno lhe apresenta dificuldades de relacionamento familiar, o máximo que a orientação pode fazer é ouvi-lo sem apresentar críticas ou objeções, nesse caso melhorando o laço de confiança que o aluno cultiva, sendo essencial para o sucesso da conversa e de bons retornos para o mesmo. Nesse aspecto a aplicação seria útil apresentando orientações ao orientador de como atender o aluno, evitando equívocos e incidentes que poderiam causar danos para o aluno.</dd>
 
-					<div class="row footer-bottom d-flex justify-content-between">
-						<p class="col-lg-8 col-sm-12 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-						<div class="col-lg-4 col-sm-12 footer-social">
-							<a href="#"><i class="fa fa-facebook"></i></a>
-							<a href="#"><i class="fa fa-twitter"></i></a>
-							<a href="#"><i class="fa fa-dribbble"></i></a>
-							<a href="#"><i class="fa fa-behance"></i></a>
-						</div>					
-					</div>
+
+					</p>
 				</div>
-			</footer>
-			<!-- End footer Area -->
+			</section>
+			<!-- End Sample Area -->
 
+			<!-- Start Align Area -->
+			<div class="whole-wrap">
+				<div class="container">
+					<div class="section-top-border">
+						<h3 class="mb-30">Tenha tempo para a sua familia</h3>
+						<div class="row">
+							<div class="col-md-3">
+								<img src="img/tempo-familia.jpg" alt=""  class="img-fluid">
+							</div>
+							<div class="col-md-9 mt-sm-20 left-align-p">
+								<p>Tenha tempo para a família
+O cuidado com as relações familiares deve ser similar ao dispensado a uma planta, que precisa de atenção diariamente. Dedique parte do seu tempo para o convívio familiar e esteja atento para a qualidade desses momentos: quando estiver com sua família, esteja realmente com ela — e não com a televisão, celular ou amigos das redes sociais. 
+<p>Há momentos únicos em nossa familia e a presença ou não sua pode fazer toda a diferença. Compartilhar momentos em família é fundamental para estreitar os laços e colecionar boas lembranças. Além de gerar aproximação, fugir da rotina da casa é uma excelente maneira de amenizar o estresse do dia a dia.</p>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="section-top-border text-right">
+						<h3 class="mb-30">Aceite e entenda</h3>
+						<div class="row">
+							<div class="col-md-9">
+								<p class="text-right">Compartilhar momentos em família é fundamental para estreitar os laços e colecionar boas lembranças. Além de gerar aproximação, fugir da rotina da casa é uma excelente maneira de amenizar o estresse do dia a dia.Guardar mágoas ou sentimentos negativos em relação aos pais, filhos ou irmãos só serve para prolongar uma situação que poderia ser resolvida de maneira mais rápida. Caso tenha alguma situação ou sentimento pendente, abra seu coração e fale a respeito de como você se sente em relação a determinado assunto.</p>
+								<p class="text-right">Entenda que as pessoas acertam, erram, decepcionam e despertam orgulho. Não exija perfeição de seus familiares e, acima de tudo, ame-os incondicionalmente.</p>
+							</div>
+							<div class="col-md-3">
+								<img src="img/entendimento.jpg" alt="" height="164px" width="250px" >
+							</div>
+						</div>
+					</div>
+					<div class="section-top-border">
+						<h2 class="mb-30">Tipos de familia:</h2>
+						<div class="row">
+							<div class="col-md-4">
+								<div class="single-defination">
+									<h4 class="mb-20">Familia monoparental</h4>
+									<p>Família monoparental: composta por apenas um dos progenitores: pai ou mãe. Os motivos que possibilitam essa estrutura são diversos. Englobam causas circunstanciais (morte, abandono ou divórcio) ou ainda, a decisão (na maior parte dos casos, uma decisão da mulher) de ter um filho de forma independente.</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="single-defination">
+									<h4 class="mb-20">Familia contemporânea</h4>
+									<p>Família contemporânea: é caracterizada pela inversão dos papéis do homem e da mulher na estrutura familiar passando a ser a mulher a chefe de família. Abrange a família monoparental, constituída por mãe solteira ou divorciada.</p>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="single-defination">
+									<h4 class="mb-20">Familia pais</h4>
+									<p>Família Pais :. Consiste de um dos pais (na maioria das vezes a mãe) e seus filhos. Você pode ter diferentes origens. Pais separados ou divorciados, onde as crianças vivem com um dos pais, por gravidez precoce, onde a família de uma mãe solteira é formado e, finalmente, a morte de um dos cônjuges</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="section-top-border">
+						<h2 class="mb-30">A importância da familia na sociedade</h2>
+						<div class="row">
+							<div class="col-lg-12 text-black">
+								<blockquote class="generic-blockquote">
+								À medida que o tempo passa, as transformações se dão cada vez mais rápido em nossas vidas. Tais mudanças não estão apenas associadas aos produtos ou à tecnologia, a rapidez com que este processo acontece também influencia na nossa percepção sobre a sociedade e como as relações interpessoais ocorrem no dia a dia.
+
+A maneira como enxergamos a família também está se transformando. Não precisamos voltar muito no tempo para lembrarmos que o casamento entre duas pessoas de cores diferentes era algo abominável para uns e em certos lugares até proibido.
+
+A relação da família sempre teve grande importância no desenvolvimento da sociedade. O núcleo familiar, pais e filhos, é responsável pela forma como veremos o mundo no futuro. A escola tem o objetivo de difundir conhecimento e não de educar, dar limites ou moralidade.
+
+Não podemos permitir que a influência da família na sociedade seja desvalorizada, ela é quem define nossos princípios, o que entendemos por certo e errado e, principalmente, como nos relacionaremos com os integrantes de outras famílias. É a partir da nossa casa que aprendemos como administrar os nossos sentimentos e tudo isso contribui completamente como será o comportamento da sociedade futuramente
+								</blockquote>
+							</div>
+						</div>
+					</div>
+					
+					
+					
+			</div>
+			<!-- End Align Area -->
+
+			<!-- start footer Area -->		
+            <footer class="footer-area section-gap">
+                <div class="container">
+
+
+                    <footer class="footer-area section-gap">
+                        <div class="container">
+                            <img src="img/logo_cps.png">
+                            <div class="row footer-bottom d-flex justify-content-between">
+                                <p class="col-lg-8 col-sm-12 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Etec de Cotia <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.cps.sp.gov.br" target="_blank">Centro Paula Souza</a>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                                <div class="col-lg-4 col-sm-12 footer-social">
+                                    <a href="https://www.facebook.com/etecdecotia"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://twitter.com/etecdecotia"><i class="fa fa-twitter"></i></a>
+                                </div>					
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </footer>
+            <!-- End footer Area -->
 
 			<script src="js/vendor/jquery-2.2.4.min.js"></script>
 			<script src="js/popper.min.js"></script>

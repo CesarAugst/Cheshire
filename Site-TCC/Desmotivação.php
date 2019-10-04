@@ -71,7 +71,7 @@ if ($_SESSION['log'] != 'ativo') {
                                     </ul>
                                 </li>
                                 <li><a href="Defasagem.php">Defasagem</a></li>
-                                <li><a href="about.html">Problemas familiares</a></li>			        
+                                <li><a href="ProblemasFamiliares.php">Problemas familiares</a></li>			        
                                 <li><a href="contato.php">Contato</a></li>
 
                             </ul>
