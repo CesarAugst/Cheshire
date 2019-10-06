@@ -1,7 +1,6 @@
 <pre>                
-    Remetente: <input type="text" name="txtRem" value="<?php echo $mensagem['remetente'] ?>"><br> 
-    Destinatario: <input type="text" name="txtDes" value="<?php echo $mensagem['destinatario'] ?>"><br>
     Conteudo: <input type="text" name="txtCon"><br>
-    Anonimato: <input type="text" name="txtAno" value="<?php echo $mensagem['anonimato'] ?>"><br>
-    <input type="submit" value="Cadastrar" name="btn"><br>
+    <input type="radio" name="txtAno" value="N" checked> Me identificar<br>
+    <input type="radio" name="txtAno" value="S"> Não me identificar<br>
+    <input type="submit" value="Enviar" name="btn"><br>
 </pre>

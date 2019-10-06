@@ -1,6 +1,6 @@
 <pre>                
-    Remetente: <input type="text" name="txtRem" value="<?php echo $mensagem['remetente'] ?>"><br> 
-    Destinatario: <input type="text" name="txtDes" value="<?php echo $mensagem['destinatario'] ?>"><br>
-    Conteudo: <input type="text" name="txtCon"><br>
-    <input type="submit" value="Cadastrar" name="btn"><br>
+    Destinatario: 
+    <input class="form-control" type="text" name="txtDes" value="<?php echo $mensagem['destinatario'] ?>"><br>
+    Conteudo: <input class="form-control" type="text" name="txtCon"><br>
+    <input class="btn btn-success btn-block btn-lg" type="submit" value="Enviar" name="btn"><br><br>
 </pre>
