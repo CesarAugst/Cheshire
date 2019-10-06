@@ -6,6 +6,7 @@ include("../BACK/conexao.php");
 include("../BACK/bancoMensagem.php");
 ?>
 <head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -13,13 +14,21 @@ include("../BACK/bancoMensagem.php");
 </head>
 
 <body>
-    <a href="pagEnviar" title="Clique para enviar uma mensagem">Enviar mensagem</a><br>
-    <a href="pagMenuPrincipal" title="Retornar ao menu principal">menu</a><br>
-    <a href="pagMsgLida" title="Visualizar mensagens lidas">Mensagens lidas</a><br>
+<nav class="navbar navbar-light bg-dark text-light">
+    <table>
+        <tr>
+    <td><a class="btn btn-success" href="pagEnviar" title="Clique para enviar uma mensagem">Enviar mensagem</a></td>
+    <td><a class="btn btn-success" href="pagMenuPrincipal" title="Retornar ao menu principal">menu</a><td>  
+    <td><a class="btn btn-success" href="pagCaixaMsg.php" title="Visualizar mensagens lidas">Mensagens novas</a><td>
+</tr>
+</table>
+</nav>
+
+<div class="container text-center">
     <h1>Mensagens lidas</h1><br>
 
 
-    <table border="1">
+    <table class="table table-borderles table-hover">
         <tr>
             <td>id da Mensagem</td>
             <td>Remetente</td>
@@ -45,16 +54,17 @@ include("../BACK/bancoMensagem.php");
                 <td><?php echo $mensagem['anonimato'] ?></td>
                 <td><?php echo $mensagem['dataEnviada'] ?></td>
                 <td><?php echo $mensagem['dataLida'] ?></td>
-                <td><a href="../BACK/pagExcluida.php?cod_mensagem=
+                <td><a class="btn btn-outline-success" href="../BACK/pagExcluida.php?cod_mensagem=
                        <?php echo $mensagem['cod_mensagem'] ?>">Excluir</a>
                 </td>
-                <td><a href="pagResponderMsg.php?cod_mensagem=
+                <td><a class="btn btn-outline-success" href="pagResponderMsg.php?cod_mensagem=
                        <?php echo $mensagem['cod_mensagem'] ?>">Responder</a></td>
             </tr>
         <?php
         endforeach;
         ?>
     </table>
+    </div>
 
 </body>
 
