@@ -7,8 +7,16 @@
         <title></title>
     </head>
     <body>
-        <a href="pagCaixaMsg.php" title="Listar as mensagens" >Lista</a>
-        <a href="pagMenuPrincipal" title="Voltar ao menu principal" >menu</a>
+
+        <nav class="navbar navbar-light bg-dark text-light">
+            <table>
+                <tr>
+        <td><a class="btn btn-success" href="pagCaixaMsg.php" title="Listar as mensagens" >Lista</a></td>
+        <td><a class="btn btn-success" href="pagMenuPrincipal" title="Voltar ao menu principal" >menu</a></td>
+</tr>
+</table>
+</nav>
+X
         <form method="POST" action="../BACK/verificaEnvio.php">
             <?php
             session_start();
