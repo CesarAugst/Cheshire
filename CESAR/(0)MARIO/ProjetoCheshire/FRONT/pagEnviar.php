@@ -16,7 +16,7 @@
 </tr>
 </table>
 </nav>
-X
+
         <form method="POST" action="../BACK/verificaEnvio.php">
             <?php
             session_start();

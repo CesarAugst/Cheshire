@@ -35,8 +35,6 @@ session_start();
                 <td>Conteudo</td>
                 <td>Anonimato</td>
                 <td>Enviada</td>
-                <td>Lida</td>
-                <td>Quando foi lida</td>
                 <td>Exlcuir</td>
                 <td>Responder</td>
 
@@ -56,12 +54,10 @@ session_start();
                     <td><?php echo $mensagem['conteudo'] ?></td>
                     <td><?php echo $mensagem['anonimato'] ?></td>
                     <td><?php echo $mensagem['dataEnviada'] ?></td>
-                    <td><?php echo $mensagem['statusLida'] ?></td>
-                    <td><?php echo $mensagem['dataLida'] ?></td>
                     <td><a class = "btn btn-info" href="../BACK/lida.php?cod_mensagem=
                         <?php echo $mensagem['cod_mensagem'] ?>">Marcar como lida</a>
                     </td>
-                    <td><a class = "btn btn-info" href="pagResponderMsg.php?cod_mensagem=
+                    <td><a class = "btn btn-info" href="pagEnviar.php?cod_mensagem=
                         <?php echo $mensagem['cod_mensagem'] ?>">Responder</a></td>
                 </tr>
             <?php
