@@ -8,10 +8,10 @@
     </head>
 
     <body>
-    <div class = "container">
-       <div class = "form-group col-md-6 "> 
-        <form class = "mt-5 form-signin" method="POST">
-
+    <div class = "container" align="center">
+       <div class = "col-md-6 "> 
+        <form method="POST">
+<br><br><br><br><br>
             Usuário:<input class = "form-control" type="text" name="txtu"><br>
             Senha:<input class = "form-control" type="password" name="txts"><br>
             <input class = "btn btn-outline-success btn-block btn-lg" type="submit" value="Logar"><br>
