@@ -2,14 +2,19 @@
 
 <html>
     <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <meta charset="UTF-8">
         <title>Tela de Login</title>
     </head>
+
     <body>
-        <form method="POST">
-            Usuário:<input type="text" name="txtu"><br>
-            Senha:<input type="text" name="txts"><br>
-            <input type="submit" value="Logar"><br>
+    <div class = "container">
+       <div class = "form-group col-md-6 "> 
+        <form class = "mt-5 form-signin" method="POST">
+
+            Usuário:<input class = "form-control" type="text" name="txtu"><br>
+            Senha:<input class = "form-control" type="password" name="txts"><br>
+            <input class = "btn btn-outline-success btn-block btn-lg" type="submit" value="Logar"><br>
         </form>
         <?php
             include("../BACK/conexao.php");
@@ -32,4 +37,6 @@
             }
         ?>
     </body>
+    </div>
+ </div> 
 </html>
