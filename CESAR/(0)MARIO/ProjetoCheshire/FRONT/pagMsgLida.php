@@ -54,7 +54,7 @@ include("../BACK/bancoMensagem.php");
                 <td><?php echo $mensagem['anonimato'] ?></td>
                 <td><?php echo $mensagem['dataEnviada'] ?></td>
                 <td><?php echo $mensagem['dataLida'] ?></td>
-                <td><a class="btn btn-outline-success" href="../BACK/pagExcluida.php?cod_mensagem=
+                <td><a class="btn btn-outline-success" href="../BACK/excluida.php?cod_mensagem=
                        <?php echo $mensagem['cod_mensagem'] ?>">Excluir</a>
                 </td>
                 <td><a class="btn btn-outline-success" href="pagResponderMsg.php?cod_mensagem=
