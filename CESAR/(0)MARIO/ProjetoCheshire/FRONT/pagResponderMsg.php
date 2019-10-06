@@ -17,7 +17,7 @@ $mensagem = busca($conexao, $cod_mensagem);
 </head>
 
 <body>
-    <a class="btn btn-success" href="pagCaixaMsg" title="Clique para abrir a caixa de entrada">Lista</a>
+<?php include_once('includes/NavMensagens/listas.php'); ?>
 
     <div class="container form-group text-center col-md-6" align="center">
         <form method="POST" action="../BACK/verificaEnvio.php">

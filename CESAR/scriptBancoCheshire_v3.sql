@@ -38,17 +38,28 @@ DELIMITER //
 drop procedure if exists caixaEntrada //
 create procedure caixaEntrada(id varchar(11))
 main:begin
-select * from mensagem where (remetente = id || destinatario = id) && (statusLida = 'N' && statusExcluida = 'N');
+select * from mensagem where (destinatario = id) && (statusLida = 'N' && statusExcluida = 'N');
 end //
 delimiter ;
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------
+
+-- Cria a procedure que mostra as mensagens da caixa de saida do usuario ------------------------------------------------------------------------------
+DELIMITER //
+drop procedure if exists caixaEntrada //
+create procedure caixaEntrada(id varchar(11))
+main:begin
+select * from mensagem where (remetente = id ) && (statusLida = 'N' && statusExcluida = 'N');
+end //
+delimiter ;
+-- -----------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 -- Cria a procedure que mostra as mensagens marcadas omo lidas pelo usuario ----------------------------------------------------------------------------
 DELIMITER //
 drop procedure if exists mensagemLida //
 create procedure mensagemLida(id varchar(11))
 main:begin
-select * from mensagem where (remetente = id || destinatario = id) && (statusLida = 'S' && statusExcluida = 'N');
+select * from mensagem where (destinatario = id) && (statusLida = 'S' && statusExcluida = 'N');
 end //
 delimiter ;
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------
