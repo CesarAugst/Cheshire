@@ -11,14 +11,6 @@
         return mysqli_query($conexao, $sql);
     }
     
-    function alterar($conexao, $remetente, $destinatario, $conteudo, $anonimato, $cod_mensagem){
-        $sql = "update mensagem set remetente='$remetente',"
-                . "destinatario='$destinatario',"
-                . "conteudo='$conteudo',"
-                . "dataEnviada = default, "
-                . "anonimato='$anonimato' where cod_mensagem=$cod_mensagem";
-        return mysqli_query($conexao, $sql);
-    } 
     
     function ler($conexao, $cod_mensagem) {
         $sql = "call marcaLida($cod_mensagem)";
