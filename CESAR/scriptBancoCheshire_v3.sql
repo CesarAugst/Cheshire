@@ -45,8 +45,8 @@ delimiter ;
 
 -- Cria a procedure que mostra as mensagens da caixa de saida do usuario ------------------------------------------------------------------------------
 DELIMITER //
-drop procedure if exists caixaEntrada //
-create procedure caixaEntrada(id varchar(11))
+drop procedure if exists caixaEnviada //
+create procedure caixaEnviada(id varchar(11))
 main:begin
 select * from mensagem where (remetente = id ) && (statusLida = 'N' && statusExcluida = 'N');
 end //
