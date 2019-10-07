@@ -21,7 +21,6 @@ $mensagem = busca($conexao, $cod_mensagem);
 
     <div class="container form-group text-center col-md-6" align="center">
         <form method="POST" action="../BACK/verificaEnvio.php">
-            <pre>
                 <?php
                 if ($_SESSION['tipo'] == 'orientador') {
                     include_once('includes/ResponderMensagem/resOri.inc');
@@ -29,7 +28,6 @@ $mensagem = busca($conexao, $cod_mensagem);
                     include_once('includes/ResponderMensagem/resAlu.inc');
                 }
                 ?>
-            </pre>
         </form>
     </div>
 </body>

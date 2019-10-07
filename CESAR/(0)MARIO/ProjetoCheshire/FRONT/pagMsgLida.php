@@ -37,7 +37,7 @@ include("../BACK/bancoMensagem.php");
             </tr>
 
             <?php
-            $mensagens = listaMensagensLidas($conexao, $_SESSION['nome']);
+            $mensagens = listaMensagensLidas($conexao, $_SESSION['rm']);
             foreach ($mensagens as $mensagem) :
                 ?>
 

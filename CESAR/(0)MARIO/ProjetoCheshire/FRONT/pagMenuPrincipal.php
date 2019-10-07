@@ -27,6 +27,7 @@ echo "<a class = 'btn btn-success btn-lg' href='../BACK/logout.php'>SAIR</a>
             <div class="col-md-12">
                 <br><br>
                 <h1>Bem vindo ao sistema</h1><br><br>
+                <a class="btn btn-block btn-lg btn-success" href="pagCaixaMsg" title="Visualizar mensagens recebidas">Mensagens recebidas</a><br>
                 <a class="btn btn-block btn-lg btn-success" href="pagEnviar.php">Enviar mensagem</a><br>
                 <a class="btn btn-block btn-lg btn-success" href="pagMsgLida.php">Visualizar mensagens lidas</a><br>
                 <a class="btn btn-block btn-lg btn-success" href="pagCaixaMsgEnv.php">Visualizar mensagens enviadas</a><br>

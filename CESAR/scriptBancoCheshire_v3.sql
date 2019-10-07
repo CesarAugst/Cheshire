@@ -8,17 +8,19 @@ use bancoCheshireV3;
 drop table if exists mensagem;
 create table if not exists mensagem(
 cod_mensagem int auto_increment primary key,
-remetente varchar(255),
-destinatario varchar(255) default ('monique'),
+remetente int,
+destinatario int default ('17305'),
 conteudo varchar(255),
 anonimato ENUM('S','N') default('N'),
 dataEnviada datetime default(now()),
 statusLida ENUM('S','N'),
 dataLida datetime,
 statusExcluida enum('S','N'),
-excluida datetime
+excluida datetime,
+foreign key (remetente) references usuario (cod_usuario),
+foreign key (destinatario) references usuario (cod_usuario)
 );
-insert into mensagem values(default, 'Cesar',default,'Estou testando o chat com essa mensagem sem Lorem','N',default,'N',null,'N',null);
+insert into mensagem values(default, 17308,17305,'Estou testando o chat com essa mensagem sem Lorem','N',default,'N',null,'N',null);
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Cria o banco de login -------------------------------------------------------------------------------------------------------------------------------
@@ -28,7 +30,8 @@ cod_usuario int,
 user varchar(255),
 senha varchar(255),
 nome varchar(255),
-tipo enum('orientador','aluno'));
+tipo enum('orientador','aluno'),
+primary key (cod_usuario));
 insert into usuario values('17308','teste','4967','cesar','aluno');
 insert into usuario values('17305','outro','9669','monique','orientador');
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------
@@ -38,7 +41,9 @@ DELIMITER //
 drop procedure if exists caixaEntrada //
 create procedure caixaEntrada(id varchar(11))
 main:begin
-select * from mensagem where (destinatario = id) && (statusLida = 'N' && statusExcluida = 'N');
+
+select * from mensagem as men where ((men.destinatario = id) && (statusLida = 'N' && statusExcluida = 'N'));
+
 end //
 delimiter ;
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------

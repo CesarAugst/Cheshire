@@ -4,7 +4,7 @@ include("conexao.php");
 include("bancoMensagem.php");
 
 if ($_SESSION['tipo'] == 'orientador') $destinatario = ($_POST['txtDes']);
-$remetente = ($_SESSION['nome']);
+$remetente = ($_SESSION['rm']);
 $conteudo = ($_POST['txtCon']);
 if ($_SESSION['tipo'] == 'aluno') $anonimato = ($_POST['txtAno']);
 

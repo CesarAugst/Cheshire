@@ -29,14 +29,12 @@ session_start();
                 <td>Conteudo</td>
                 <td>Anonimato</td>
                 <td>Enviada</td>
-                <td>Exlcuir</td>
-                <td>Responder</td>
 
             </tr>
 
             <?php
 
-            $mensagens = listaMensagensEnviadas($conexao, $_SESSION['nome']);
+            $mensagens = listaMensagensEnviadas($conexao, $_SESSION['rm']);
 
             foreach ($mensagens as $mensagem) :
                 ?>
@@ -48,11 +46,6 @@ session_start();
                     <td><?php echo $mensagem['conteudo'] ?></td>
                     <td><?php echo $mensagem['anonimato'] ?></td>
                     <td><?php echo $mensagem['dataEnviada'] ?></td>
-                    <td><a class="btn btn-info" href="../BACK/lida.php?cod_mensagem=
-                        <?php echo $mensagem['cod_mensagem'] ?>">Marcar como lida</a>
-                    </td>
-                    <td><a class="btn btn-info" href="pagEnviar.php?cod_mensagem=
-                        <?php echo $mensagem['cod_mensagem'] ?>">Responder</a></td>
                 </tr>
             <?php
             endforeach;

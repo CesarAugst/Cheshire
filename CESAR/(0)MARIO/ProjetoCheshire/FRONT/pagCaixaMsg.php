@@ -3,6 +3,7 @@
 <?php
 include("../BACK/conexao.php");
 include("../BACK/bancoMensagem.php");
+include("../BACK/bancoUsuario.php");
 session_start();
 ?>
 
@@ -29,22 +30,21 @@ session_start();
                 <td>Conteudo</td>
                 <td>Anonimato</td>
                 <td>Enviada</td>
-                <td>Exlcuir</td>
-                <td>Responder</td>
+                <td> </td>
+                <td> </td>
 
             </tr>
 
             <?php
 
-            $mensagens = listaMensagensRecebidas($conexao, $_SESSION['nome']);
+            $mensagens = listaMensagensRecebidas($conexao, $_SESSION['rm']);
 
             foreach ($mensagens as $mensagem) :
                 ?>
-
                 <tr>
                     <td><?php echo $mensagem['cod_mensagem'] ?></td>
                     <td><?php echo $mensagem['remetente'] ?></td>
-                    <td><?php echo $mensagem['destinatario'] ?></td>
+                    <td><?php echo $mensagem['destinatario']?></td>
                     <td><?php echo $mensagem['conteudo'] ?></td>
                     <td><?php echo $mensagem['anonimato'] ?></td>
                     <td><?php echo $mensagem['dataEnviada'] ?></td>
@@ -52,7 +52,7 @@ session_start();
                         <?php echo $mensagem['cod_mensagem'] ?>">Marcar como lida</a>
                     </td>
                     <td><a class="btn btn-info" href="pagEnviar.php?cod_mensagem=
-                        <?php echo $mensagem['cod_mensagem'] ?>">Responder</a></td>
+                        <?php echo $mensagem['cod_mensagem'] ?>">Responder esta mensagem</a></td>
                 </tr>
             <?php
             endforeach;
