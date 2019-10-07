@@ -4,6 +4,23 @@ create database bancoCheshireV3;
 use bancoCheshireV3;
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------
 
+-- Cria a tabela de registro de usuarios ---------------------------------------------------------------------------------------------------------------
+drop table if exists usuario;
+create table if not exists usuario(
+cod_usuario int primary key,
+login int(11),
+senha int(11),
+nome varchar(20),
+sobrenome varchar(20),
+tipo enum('orientador','aluno','funcionario'),
+telefone int(10),
+celular int(11),
+endereco varchar(100));
+insert into usuario values('17308','17308','42942544830','Cesar','August','aluno','1142439058','11958681942','Olegario Maciel 10');
+insert into usuario values('17305','17305','14604818878','Monique','Rufino','orientador','1141482099','11946143093','Rua topazio/Jardim Nomura');
+-- -----------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 -- Cria a tabela das mensagens -------------------------------------------------------------------------------------------------------------------------
 drop table if exists mensagem;
 create table if not exists mensagem(
@@ -21,19 +38,6 @@ foreign key (remetente) references usuario (cod_usuario),
 foreign key (destinatario) references usuario (cod_usuario)
 );
 insert into mensagem values(default, 17308,17305,'Estou testando o chat com essa mensagem sem Lorem','N',default,'N',null,'N',null);
--- -----------------------------------------------------------------------------------------------------------------------------------------------------
-
--- Cria o banco de login -------------------------------------------------------------------------------------------------------------------------------
-drop table if exists usuario;
-create table if not exists usuario(
-cod_usuario int,
-user varchar(255),
-senha varchar(255),
-nome varchar(255),
-tipo enum('orientador','aluno'),
-primary key (cod_usuario));
-insert into usuario values('17308','teste','4967','cesar','aluno');
-insert into usuario values('17305','outro','9669','monique','orientador');
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Cria a procedure que mostra as mensagens da caixa de enrada do usuario ------------------------------------------------------------------------------
