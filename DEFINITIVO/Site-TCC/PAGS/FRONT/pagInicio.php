@@ -53,7 +53,7 @@
 							<?php
 							echo "Bem Vindo! <b>" . $_SESSION['nome'] . " </b>";
 							?>
-							<a href="logout.php" class="primary-btn text-uppercase">Logout</a>
+							<a href="pagLogout.php" class="primary-btn text-uppercase">Logout</a>
 						</div>
 					</div>
 				</div>
@@ -61,7 +61,7 @@
 			<div class="container main-menu">
 				<div class="row align-items-center justify-content-between d-flex">
 					<div id="logo">
-						<a href="Inicio.php"><img src="../../img/cheshire1.png" width="100px" height="70px" alt="" title="" /></a>
+						<a href="pagInicio.php"><img src="../../img/cheshire1.png" width="100px" height="70px" alt="" title="" /></a>
 					</div>
 					<nav id="nav-menu-container">
 						<ul class="nav-menu">
@@ -72,10 +72,10 @@
 									<li><a href="blog-single.html">Psicoses</a></li>
 								</ul>
 							</li>
-							<li><a href="Defasagem.php">Defasagem</a></li>
-							<li><a href="Desmotivação.php">Desmotivação</a></li>
-							<li><a href="ProblemasFamiliares">Problemas familiares</a></li>
-							<li><a href="contato.php">Contato</a></li>
+							<li><a href="pagDefasagem.php">Defasagem</a></li>
+							<li><a href="pagDesmotivação.php">Desmotivação</a></li>
+							<li><a href="pagProblemasFamiliares">Problemas familiares</a></li>
+							<li><a href="pagcontato.php">Contato</a></li>
 						</ul>
 					</nav><!-- #nav-menu-container -->
 				</div>
@@ -112,7 +112,7 @@
 						<div class="single-cat-widget">
 							<div class="content relative">
 								<div class="overlay overlay-bg"></div>
-								<a href="Defasagem.php">
+								<a href="pagDefasagem.php">
 									<!--target="_blank"> para abrir em outra guia-->
 									<div class="thumb">
 										<img class="content-image img-fluid d-block mx-auto" src="../../img/defasagem.jpg" alt="">
@@ -131,7 +131,7 @@
 						<div class="single-cat-widget">
 							<div class="content relative">
 								<div class="overlay overlay-bg"></div>
-								<a href="Desmotivação.php">
+								<a href="pagDesmotivacao.php">
 									<div class="thumb">
 										<img class="content-image img-fluid d-block mx-auto" src="../../img/desmotivação.jpeg" alt="">
 									</div>
@@ -148,7 +148,7 @@
 						<div class="single-cat-widget">
 							<div class="content relative">
 								<div class="overlay overlay-bg"></div>
-								<a href="ProblemasFamiliares.php" target="_blank">
+								<a href="pagProblemasFamiliares.php" target="_blank">
 									<div class="thumb">
 										<img class="content-image img-fluid d-block mx-auto" src="../../img/Problemas.jpg" alt="">
 									</div>

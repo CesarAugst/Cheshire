@@ -11,7 +11,7 @@ if ($_SESSION['log'] != 'ativo') {
             <!-- Mobile Specific Meta -->
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <!-- Favicon-->
-            <link rel="shortcut icon" href="img/fav.png">
+            <link rel="shortcut icon" href="../../img/fav.png">
             <!-- Author Meta -->
             <meta name="author" content="colorlib">
             <!-- Meta Description -->
@@ -27,16 +27,16 @@ if ($_SESSION['log'] != 'ativo') {
             <!--
             CSS
             ============================================= -->
-            <link rel="stylesheet" href="csspg/linearicons.css">
-            <link rel="stylesheet" href="csspg/font-awesome.min.css">
-            <link rel="stylesheet" href="csspg/bootstrap.css">
-            <link rel="stylesheet" href="csspg/magnific-popup.css">
-            <link rel="stylesheet" href="csspg/jquery-ui.css">				
-            <link rel="stylesheet" href="csspg/nice-select.css">							
-            <link rel="stylesheet" href="csspg/animate.min.css">
-            <link rel="stylesheet" href="csspg/owl.carousel.css">			
-            <link rel="stylesheet" href="csspg/jquery-ui.css">			
-            <link rel="stylesheet" href="csspg/main.css">
+            <link rel="stylesheet" href="../../csspg/linearicons.css">
+            <link rel="stylesheet" href="../../csspg/font-awesome.min.css">
+            <link rel="stylesheet" href="../../csspg/bootstrap.css">
+            <link rel="stylesheet" href="../../csspg/magnific-popup.css">
+            <link rel="stylesheet" href="../../csspg/jquery-ui.css">				
+            <link rel="stylesheet" href="../../csspg/nice-select.css">							
+            <link rel="stylesheet" href="../../csspg/animate.min.css">
+            <link rel="stylesheet" href="../../csspg/owl.carousel.css">			
+            <link rel="stylesheet" href="../../csspg/jquery-ui.css">			
+            <link rel="stylesheet" href="../../csspg/main.css">
         </head>
         <body>	
             <header id="header">
@@ -51,7 +51,7 @@ if ($_SESSION['log'] != 'ativo') {
                                 <?php
                                 echo "Bem Vindo! <b>" . $_SESSION['rm'] . " </b>";
                                 ?>
-                                <a href="logout.php" class="primary-btn text-uppercase">Logout</a>
+                                <a href="pagLogout.php" class="primary-btn text-uppercase">Logout</a>
                             </div>
                         </div>			  					
                     </div>
@@ -59,7 +59,7 @@ if ($_SESSION['log'] != 'ativo') {
                 <div class="container main-menu">
                     <div class="row align-items-center justify-content-between d-flex">
                         <div id="logo">
-                            <a href="Inicio."><img src="img/cheshire1.png" width="100px" height="70px" alt="" title="" /></a>
+                            <a href="Inicio."><img src="../../img/cheshire1.png" width="100px" height="70px" alt="" title="" /></a>
                         </div>
                         <nav id="nav-menu-container">
                             <ul class="nav-menu">
@@ -70,9 +70,9 @@ if ($_SESSION['log'] != 'ativo') {
                                         <li><a href="blog-single.html">Psicoses</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="Defasagem.php">Defasagem</a></li>
-                                <li><a href="ProblemasFamiliares.php">Problemas familiares</a></li>			        
-                                <li><a href="contato.php">Contato</a></li>
+                                <li><a href="pagDefasagem.php">Defasagem</a></li>
+                                <li><a href="pagProblemasFamiliares.php">Problemas familiares</a></li>			        
+                                <li><a href="pagContato.php">Contato</a></li>
 
                             </ul>
                         </nav><!-- #nav-menu-container -->		    		
@@ -89,7 +89,7 @@ if ($_SESSION['log'] != 'ativo') {
                             <h1 class="text-white">
                                 Desmotivação				
                             </h1>	
-                            <p class="text-white link-nav"><a href="inicio.php">Inicio </a>  <span class="lnr lnr-arrow-right"></span>  <a href="Desmotivação.php"> Desmotivação</a></p>
+                            <p class="text-white link-nav"><a href="pagInicio.php">Inicio </a>  <span class="lnr lnr-arrow-right"></span>  <a href="Desmotivação.php"> Desmotivação</a></p>
                         </div>	
                     </div>
                 </div>
@@ -173,7 +173,7 @@ if ($_SESSION['log'] != 'ativo') {
                         </div>
                         <div class="col-md-6 video-right justify-content-center align-items-center d-flex relative">
                             <div class="overlay overlay-bg"></div>
-                            <a class="play-btn" href="https://www.youtube.com/watch?v=vC0aA9hgHwI"><img class="img-fluid mx-auto" src="img/about/play.png" alt=""></a>
+                            <a class="play-btn" href="https://www.youtube.com/watch?v=vC0aA9hgHwI"><img class="img-fluid mx-auto" src="../../img/about/play.png" alt=""></a>
                         </div>
                     </div>
                 </div>	
@@ -217,12 +217,12 @@ if ($_SESSION['log'] != 'ativo') {
                     <div class="row feedback-contents justify-content-center align-items-center">
                         <div class="col-lg-6 feedback-right relative d-flex justify-content-center align-items-center">
                             <div class="overlay overlay-bg"></div>
-                            <a class="play-btn" href="https://www.youtube.com/watch?v=__HwFRsW5L0"><img class="img-fluid" src="img/play-btn.png" alt=""></a>
+                            <a class="play-btn" href="https://www.youtube.com/watch?v=__HwFRsW5L0"><img class="img-fluid" src="../../img/play-btn.png" alt=""></a>
                         </div>
                         <div class="col-lg-6 feedback-left">
                             <div class="active-review-carusel">
                                 <div class="single-feedback-carusel">
-                                    <img src="img/Flavio.jpg" height="307px" width="300px"alt="">
+                                    <img src="../../img/Flavio.jpg" height="307px" width="300px"alt="">
                                     <div class="title d-flex flex-row">
                                         <h4 class="pb-10">Flávio Augusto</h4>
 
@@ -232,7 +232,7 @@ if ($_SESSION['log'] != 'ativo') {
                                     </p>
                                 </div>
                                 <div class="single-feedback-carusel">
-                                    <img src="img/Rick.jpg" height="307px" width="300px" alt="">
+                                    <img src="../../img/Rick.jpg" height="307px" width="300px" alt="">
                                     <div class="title d-flex flex-row">
                                         <h4 class="pb-10">Rick Chesther</h4>
 
@@ -242,7 +242,7 @@ if ($_SESSION['log'] != 'ativo') {
                                     </p>
                                 </div>
                                 <div class="single-feedback-carusel">
-                                    <img src="img/Ayrton.jpeg" height="265px" width="280px" alt="">
+                                    <img src="../../img/Ayrton.jpeg" height="265px" width="280px" alt="">
                                     <div class="title d-flex flex-row">
                                         <h4 class="pb-10">Ayrton Senna</h4>
 
@@ -268,7 +268,7 @@ if ($_SESSION['log'] != 'ativo') {
 
                     <footer class="footer-area section-gap">
                         <div class="container">
-                            <img src="img/logo_cps.png">
+                            <img src="../../img/logo_cps.png">
                             <div class="row footer-bottom d-flex justify-content-between">
                                 <p class="col-lg-8 col-sm-12 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                     Copyright &copy;<script>document.write(new Date().getFullYear());</script> Etec de Cotia <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.cps.sp.gov.br" target="_blank">Centro Paula Souza</a>
@@ -285,20 +285,20 @@ if ($_SESSION['log'] != 'ativo') {
             <!-- End footer Area -->
 
 
-            <script src="js/vendor/jquery-2.2.4.min.js"></script>
-            <script src="js/popper.min.js"></script>
-            <script src="js/vendor/bootstrap.min.js"></script>			
+            <script src="../../js/vendor/jquery-2.2.4.min.js"></script>
+            <script src="../../js/popper.min.js"></script>
+            <script src="../../js/vendor/bootstrap.min.js"></script>			
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-            <script src="js/jquery-ui.js"></script>					
-            <script src="js/easing.min.js"></script>			
-            <script src="js/hoverIntent.js"></script>
-            <script src="js/superfish.min.js"></script>	
-            <script src="js/jquery.ajaxchimp.min.js"></script>
-            <script src="js/jquery.magnific-popup.min.js"></script>	
-            <script src="js/jquery.tabs.min.js"></script>						
-            <script src="js/jquery.nice-select.min.js"></script>	
-            <script src="js/owl.carousel.min.js"></script>									
-            <script src="js/mail-script.js"></script>	
-            <script src="js/main.js"></script>	
+            <script src="../../js/jquery-ui.js"></script>					
+            <script src="../../js/easing.min.js"></script>			
+            <script src="../../js/hoverIntent.js"></script>
+            <script src="../../js/superfish.min.js"></script>	
+            <script src="../../js/jquery.ajaxchimp.min.js"></script>
+            <script src="../../js/jquery.magnific-popup.min.js"></script>	
+            <script src="../../js/jquery.tabs.min.js"></script>						
+            <script src="../../js/jquery.nice-select.min.js"></script>	
+            <script src="../../js/owl.carousel.min.js"></script>									
+            <script src="../../js/mail-script.js"></script>	
+            <script src="../../js/main.js"></script>	
         </body>
     </html>

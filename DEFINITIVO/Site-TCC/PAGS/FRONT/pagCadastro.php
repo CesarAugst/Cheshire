@@ -15,7 +15,7 @@
 		<!-- meta character set -->
 		<meta charset="UTF-8">
 		<!-- Site Title -->
-		<title>Login</title>
+		<title>Cadastro</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 		<!--
@@ -43,7 +43,7 @@
 							<a href="mailto:support@colorlib.com"><span class="lnr lnr-envelope"></span> <span class="text"><span class="text">faleconosco@etecdecotia.com.br </span></span></a>
 						</div>
 						<div class="col-lg-6 col-sm-6 col-8 header-top-right">
-							<a href="pagCadastro.php" class="primary-btn text-uppercase">Cadastre-se</a>
+							<a href="pagLogin.php" class="primary-btn text-uppercase">Login</a>
 						</div>
 					</div>
 				</div>
@@ -53,12 +53,7 @@
 					<div id="logo">
 						<a href="pagInicio.php"><img src="../../img/cheshire1.png" width="100px" height="80px" alt="" title="" /></a>
 					</div>
-					<nav id="nav-menu-container">
-						<ul class="nav-menu">
 
-
-
-					</nav><!-- #nav-menu-container -->
 				</div>
 			</div>
 		</header><!-- #header -->
@@ -75,7 +70,7 @@
 						<p class="pt-10 pb-10 text-white">
 							Esta aplicação traz uma interação mais proxima entre orientador e aluno através de uma aplicação web
 						</p>
-
+						<a href="pagLogin.php" class="primary-btn text-uppercase">Ja possui uma conta?</a>
 					</div>
 				</div>
 			</div>
@@ -86,6 +81,7 @@
 		<section class="appointment-area">
 			<div class="container">
 				<div class="row justify-content-between align-items-center pb-120 appointment-wrap">
+
 					<div class="col-lg-5 col-md-6 appointment-left">
 						<h1>
 							Horário de atendimento
@@ -107,66 +103,49 @@
 					</div>
 
 					<div class="col-lg-6 col-md-6 appointment-right pt-60 pb-60">
-						<form method="post" class="form-wrap" action="../BACK/verificaLogin.php">
-							<h3 class="pb-20 text-center mb-30">Acesse sua conta</h3>
-							<input type="text" class="form-control" name="txtlogin" placeholder="RM" onfocus="this.placeholder = ''" onblur="this.placeholder = 'RM'">
-							<input type="password" class="form-control" name="txtsenha" placeholder="Senha" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Senha'">
-							<button type="submit" class="primary-btn text-uppercase">Confirmar</button>
-							<center><a href="pagCadastro.php" class="primary-btn text-uppercase">Não possui uma conta?</a></center>
-						</form>
-						<?php
-						include("../BACK/conexao.php");
-						include("../BACK/bancoUsuario.php");
-						if ($_POST) {
-							$user = $_POST['txtu'];
-							$senha = $_POST['txts'];
-							session_start();
-							$_SESSION['rm'] = buscaRm($conexao, $user, $senha)['cod_usuario'];
-							$_SESSION['nome'] = buscaNome($conexao, $_SESSION['rm'])['nome'];
-							$_SESSION['tipo'] = buscaTipo($conexao, $_SESSION['rm'])['tipo'];
+						<center>
+							<form method="post" class="form-wrap" action="verificaCadastro.php">
+								<h3 class="pb-20 text-center mb-30">Cadastre-se</h3>
+								<input type="text" class="form-control" name="txtlogin" placeholder="RM" onfocus="this.placeholder = ''" onblur="this.placeholder = 'RM'">
+								<input type="password" class="form-control" name="txtsenha" placeholder="Senha" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Senha'">
+								<input type="text" class="form-control" name="txtnome" placeholder="Nome" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Nome'">
+								<input type="text" class="form-control" name="txtsobrenome" placeholder="Sobrenome" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Sobrenome'">
+								<!--<input type="text" class="form-control" name="txtfuncao" placeholder="Função" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Funcao'" > -->
 
-							if (efetuarLogin($conexao, $user, $senha)) {
-								$_SESSION['log'] = 'ativo';
-								header("location: pagInicio.php");
-								die();
-							} else {
-								echo 'Usuario ou senha incorreto';
-							}
-						}
-						?>
+								<div class="form-select" id="service-select">
+									<select name="optfuncao">
+										<option data-display="">Função</option>
+										<option value="1">aluno</option>
+										<option value="2">funcionario</option>
+										<option value="3">orientador</option>
+									</select>
+								</div>
+
+								<input type="text" class="form-control" name="txttel" placeholder="Telefone" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Telefone'">
+
+								<input type="text" class="form-control" name="txtcel" placeholder="Celular" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Celular'">
+
+								<input type="text" class="form-control" name="txtend" placeholder="Endereço" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Endereço'">
+								<button type="submit" class="primary-btn text-uppercase">Confirmar</button>
+							</form>
+							<?php
+
+							?>
+
 					</div>
 				</div>
 			</div>
 		</section>
-		<!-- End appointment Area -->
-
-
-
-		<!-- Start offered-service Area -->
 		<section class="offered-service-area section-gap">
 			<div class="container">
 
 			</div>
 		</section>
-		<!-- End offered-service Area -->
 
-
-
-		<!-- start footer Area -->
 		<footer class="footer-area section-gap">
 			<div class="container">
-				<div class="row">
-					<div class="col-lg-2  col-md-6">
-
-					</div>
-
-					<div class="col-lg-6  col-md-12">
-
-					</div>
-				</div>
-
 				<div class="row footer-bottom d-flex justify-content-between">
-					<p class="col-lg-5 col-sm-05 footer-text m-0">
+				<p class="col-lg-5 col-sm-05 footer-text m-0">
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						Copyright &copy;<script>
 							document.write(new Date().getFullYear());
