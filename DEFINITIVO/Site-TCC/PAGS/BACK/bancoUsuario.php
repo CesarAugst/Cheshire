@@ -1,7 +1,7 @@
 <?php
 
-function efetuarLogin($conexao,$user,$senha){
-    $sql = "select * from usuario where login='{$user}'"
+function efetuarLogin($conexao,$login,$senha){
+    $sql = "select * from usuario where login='{$login}'"
             . "and senha='{$senha}'";
     $resultado = mysqli_query($conexao, $sql);
 return mysqli_fetch_assoc($resultado);
@@ -13,9 +13,9 @@ function cadastro($conexao,$rm,$login,$senha,$nome,$sobrenome,$tipo,$tel,$cel,$e
     return mysqli_query($conexao, $sql);
 }
 
-function buscaRm($conexao, $user,$senha) {
-    $sql = "select cod_usuario from usuario where user='{$user}'"
-    . "and senha='{$senha}'";
+function buscaRm($conexao, $login,$senha) {
+    $sql = "select cod_usuario from usuario where login='{$login}'"
+    . "and senha='$senha'";
     $resultado = mysqli_query($conexao,$sql);
     return mysqli_fetch_assoc($resultado);
 }

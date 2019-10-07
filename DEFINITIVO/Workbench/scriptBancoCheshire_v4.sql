@@ -1,6 +1,6 @@
 -- Berçario --------------------------------------------------------------------------------------------------------------------------------------------
-drop database bancoCheshireV3;
-create database bancoCheshireV3;
+drop database bancoCheshireV4;
+create database bancoCheshireV4;
 use bancoCheshireV3;
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -9,17 +9,16 @@ drop table if exists usuario;
 create table if not exists usuario(
 cod_usuario int primary key,
 login int(11),
-senha int(12),
+senha varchar(11),
 nome varchar(20),
 sobrenome varchar(20),
 tipo enum('orientador','aluno','funcionario'),
-telefone int(10),
-celular int(11),
+telefone varchar(10),
+celular varchar(11),
 endereco varchar(100));
 insert into usuario values('17308','17308','42942544830','Cesar','August','aluno','1142439058','11958681942','Olegario Maciel 10');
 insert into usuario values('17305','17305','14604818878','Monique','Rufino','orientador','1141482099','11946143093','Rua topazio/Jardim Nomura');
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------
-select * from usuario where login='17308' and senha='42942544830';
 
 -- Cria a tabela das mensagens -------------------------------------------------------------------------------------------------------------------------
 drop table if exists mensagem;
@@ -37,7 +36,8 @@ excluida datetime,
 foreign key (remetente) references usuario (cod_usuario),
 foreign key (destinatario) references usuario (cod_usuario)
 );
-insert into mensagem values(default, 17308,17305,'Estou testando o chat com essa mensagem sem Lorem','N',default,'N',null,'N',null);
+insert into mensagem values(default, 17308,17305,'Estou enviando uma mensagem para o orientador','N',default,'N',null,'N',null);
+insert into mensagem values(default, 17305,17308,'Estou enviando uma mensagem para o aluno','N',default,'N',null,'N',null);
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Cria a procedure que mostra as mensagens da caixa de enrada do usuario ------------------------------------------------------------------------------
@@ -51,7 +51,7 @@ select * from mensagem as men where ((men.destinatario = id) && (statusLida = 'N
 end //
 delimiter ;
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------
-select nome from usuario where cod_usuario = '17308';
+
 -- Cria a procedure que mostra as mensagens da caixa de saida do usuario ------------------------------------------------------------------------------
 DELIMITER //
 drop procedure if exists caixaEnviada //

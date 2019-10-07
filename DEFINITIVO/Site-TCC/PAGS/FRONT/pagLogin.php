@@ -118,14 +118,14 @@
 						include("../BACK/conexao.php");
 						include("../BACK/bancoUsuario.php");
 						if ($_POST) {
-							$user = $_POST['txtu'];
+							$login = $_POST['txtu'];
 							$senha = $_POST['txts'];
 							session_start();
-							$_SESSION['rm'] = buscaRm($conexao, $user, $senha)['cod_usuario'];
-							$_SESSION['nome'] = buscaNome($conexao, $_SESSION['rm'])['nome'];
-							$_SESSION['tipo'] = buscaTipo($conexao, $_SESSION['rm'])['tipo'];
+							$_SESSION['rm'] = (buscaRm($conexao, $login, $senha)['cod_usuario']);
+							$_SESSION['nome'] = (buscaNome($conexao, $_SESSION['rm'])['nome']);
+							$_SESSION['tipo'] = (buscaTipo($conexao, $_SESSION['rm'])['tipo']);
 
-							if (efetuarLogin($conexao, $user, $senha)) {
+							if (efetuarLogin($conexao, $login, $senha)) {
 								$_SESSION['log'] = 'ativo';
 								header("location: pagInicio.php");
 								die();

@@ -62,7 +62,7 @@
                                 <li><a href="blog-single.html">Psicoses</a></li>
                             </ul>
                         </li>
-                        <li><a href="Defasagem.php">Defasagem</a></li>
+                        <li><a href="pagDefasagem.php">Defasagem</a></li>
                         <li><a href="pagDesmotivacao.php">Desmotivação</a></li>
                         <li><a href="pagProblemasFamiliares.php">Problemas familiares</a></li>
                     </ul>

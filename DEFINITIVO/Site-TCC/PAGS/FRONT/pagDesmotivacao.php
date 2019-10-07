@@ -3,7 +3,7 @@
 session_start();
 if ($_SESSION['log'] != 'ativo') {
     session_destroy();
-    header("location: Login.php");
+    header("location: pagLogin.php");
 }
 ?>
 <h<html lang="zxx" class="no-js">
@@ -51,7 +51,7 @@ if ($_SESSION['log'] != 'ativo') {
                                 <?php
                                 echo "Bem Vindo! <b>" . $_SESSION['nome'] . " </b>";
                                 ?>
-                                <a href="pagLogout.php" class="primary-btn text-uppercase">Logout</a>
+                                <a href="../BACK/Logout.php" class="primary-btn text-uppercase">Logout</a>
                             </div>
                         </div>			  					
                     </div>
@@ -59,7 +59,7 @@ if ($_SESSION['log'] != 'ativo') {
                 <div class="container main-menu">
                     <div class="row align-items-center justify-content-between d-flex">
                         <div id="logo">
-                            <a href="Inicio."><img src="../../img/cheshire1.png" width="100px" height="70px" alt="" title="" /></a>
+                            <a href="pagInicio.php"><img src="../../img/cheshire1.png" width="100px" height="70px" alt="" title="" /></a>
                         </div>
                         <nav id="nav-menu-container">
                             <ul class="nav-menu">
