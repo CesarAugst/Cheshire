@@ -49,7 +49,7 @@ if ($_SESSION['log'] != 'ativo') {
                             </div>
                             <div class="col-lg-6 col-sm-6 col-8 header-top-right">
                                 <?php
-                                echo "Bem Vindo! <b>" . $_SESSION['rm'] . " </b>";
+                                echo "Bem Vindo! <b>" . $_SESSION['nome'] . " </b>";
                                 ?>
                                 <a href="pagLogout.php" class="primary-btn text-uppercase">Logout</a>
                             </div>
@@ -89,7 +89,7 @@ if ($_SESSION['log'] != 'ativo') {
                             <h1 class="text-white">
                                 Desmotivação				
                             </h1>	
-                            <p class="text-white link-nav"><a href="pagInicio.php">Inicio </a>  <span class="lnr lnr-arrow-right"></span>  <a href="Desmotivação.php"> Desmotivação</a></p>
+                            <p class="text-white link-nav"><a href="pagInicio.php">Inicio </a>  <span class="lnr lnr-arrow-right"></span>  <a href="Desmotivacao.php"> Desmotivação</a></p>
                         </div>	
                     </div>
                 </div>

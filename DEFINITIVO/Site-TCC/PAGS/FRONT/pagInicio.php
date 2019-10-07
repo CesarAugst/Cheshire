@@ -73,7 +73,7 @@
 								</ul>
 							</li>
 							<li><a href="pagDefasagem.php">Defasagem</a></li>
-							<li><a href="pagDesmotivação.php">Desmotivação</a></li>
+							<li><a href="pagDesmotivacao.php">Desmotivação</a></li>
 							<li><a href="pagProblemasFamiliares">Problemas familiares</a></li>
 							<li><a href="pagcontato.php">Contato</a></li>
 						</ul>
@@ -133,7 +133,7 @@
 								<div class="overlay overlay-bg"></div>
 								<a href="pagDesmotivacao.php">
 									<div class="thumb">
-										<img class="content-image img-fluid d-block mx-auto" src="../../img/desmotivação.jpeg" alt="">
+										<img class="content-image img-fluid d-block mx-auto" src="../../img/desmotivacao.jpeg" alt="">
 									</div>
 									<div class="content-details">
 										<h4 class="content-title mx-auto text-uppercase">Desmotivação</h4>

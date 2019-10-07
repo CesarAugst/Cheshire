@@ -12,7 +12,7 @@ if ($_SESSION['log'] != 'ativo') {
 		<!-- Mobile Specific Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- Favicon-->
-		<link rel="shortcut icon" href="img/fav.png">
+		<link rel="shortcut icon" href="../../img/fav.png">
 		<!-- Author Meta -->
 		<meta name="author" content="colorlib">
 		<!-- Meta Description -->
@@ -51,9 +51,9 @@ if ($_SESSION['log'] != 'ativo') {
 						</div>
 						<div class="col-lg-6 col-sm-6 col-8 header-top-right">
 							<?php
-							echo "Bem Vindo! <b>" . $_SESSION['rm'] . " </b>";
+							echo "Bem Vindo! <b>" . $_SESSION['nome'] . " </b>";
 							?>
-							<a href="logout.php" class="primary-btn text-uppercase">Logout</a>
+							<a href="pagLogout.php" class="primary-btn text-uppercase">Logout</a>
 						</div>
 					</div>
 				</div>
@@ -61,7 +61,7 @@ if ($_SESSION['log'] != 'ativo') {
 			<div class="container main-menu">
 				<div class="row align-items-center justify-content-between d-flex">
 					<div id="logo">
-						<a href="Inicio."><img src="../../img/cheshire1.png" width="100px" height="70px" alt="" title="" /></a>
+						<a href="pagInicio."><img src="../../img/cheshire1.png" width="100px" height="70px" alt="" title="" /></a>
 					</div>
 					<nav id="nav-menu-container">
 						<ul class="nav-menu">
@@ -72,10 +72,10 @@ if ($_SESSION['log'] != 'ativo') {
 									<li><a href="blog-single.html">Psicoses</a></li>
 								</ul>
 							</li>
-							<li><a href="Defasagem.php">Defasagem</a></li>
-							<li><a href="Desmotivação.php">Desmotivação</a></li>
-							<li><a href="ProblemasFamiliares.php">Problemas familiares</a></li>
-							<li><a href="contato.php">Contato</a></li>
+							<li><a href="pagDefasagem.php">Defasagem</a></li>
+							<li><a href="pagDesmotivacao.php">Desmotivação</a></li>
+							<li><a href="pagProblemasFamiliares.php">Problemas familiares</a></li>
+							<li><a href="pagContato.php">Contato</a></li>
 
 						</ul>
 					</nav><!-- #nav-menu-container -->
@@ -92,7 +92,7 @@ if ($_SESSION['log'] != 'ativo') {
 						<h1 class="text-white">
 							Problemas familiares
 						</h1>
-						<p class="text-white link-nav"><a href="inicio.php">Inicio </a> <span class="lnr lnr-arrow-right"></span><a href="ProblemasFamiliares.php">Problemas familiares </a>
+						<p class="text-white link-nav"><a href="pagInicio.php">Inicio </a> <span class="lnr lnr-arrow-right"></span><a href="ProblemasFamiliares.php">Problemas familiares </a>
 					</div>
 				</div>
 			</div>
@@ -104,7 +104,7 @@ if ($_SESSION['log'] != 'ativo') {
 			<div class="container">
 				<center>
 					<h1> É necessário enteder!</h1>
-					<img height="260px" width="320px" src="img/Compreender.png" alt="">
+					<img height="260px" width="320px" src="../../img/Compreender.png" alt="">
 				</center>
 				<p class="sample-text text-black">
 					<dd class="text-black">Os problemas familiares podem interferir no andamento do aluno no ambiente escolar, ainda mais em sua capacidade de interação social, uma vez que um ambiente violento em certos estimula o aluno a reproduzir esse comportamento na escola, e em outros casos estimula a reproduzir comportamentos apáticos.
