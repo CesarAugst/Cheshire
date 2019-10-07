@@ -9,7 +9,7 @@ drop table if exists usuario;
 create table if not exists usuario(
 cod_usuario int primary key,
 login int(11),
-senha int(11),
+senha int(12),
 nome varchar(20),
 sobrenome varchar(20),
 tipo enum('orientador','aluno','funcionario'),
@@ -19,7 +19,7 @@ endereco varchar(100));
 insert into usuario values('17308','17308','42942544830','Cesar','August','aluno','1142439058','11958681942','Olegario Maciel 10');
 insert into usuario values('17305','17305','14604818878','Monique','Rufino','orientador','1141482099','11946143093','Rua topazio/Jardim Nomura');
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------
-
+select * from usuario where login='17308' and senha='42942544830';
 
 -- Cria a tabela das mensagens -------------------------------------------------------------------------------------------------------------------------
 drop table if exists mensagem;

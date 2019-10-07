@@ -29,7 +29,7 @@
 
                 if(efetuarLogin($conexao, $user, $senha)){
                     $_SESSION['log'] = 'ativo';
-                    header("location: pagMenuPrincipal.php");                    
+                    header("location: pagInicio.php");                    
                     die();
                 }else{
                     echo 'Usuario ou senha incorreto';
