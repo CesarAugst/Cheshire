@@ -11,7 +11,7 @@ if ($_SESSION['log'] != 'ativo') {
             <!-- Mobile Specific Meta -->
             <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
             <!-- Favicon-->
-            <link rel="shortcut icon" href="img/fav.png">
+            <link rel="shortcut icon" href="../../img/fav.png">
             <!-- Author Meta -->
             <meta name="author" content="colorlib">
             <!-- Meta Description -->
@@ -27,16 +27,16 @@ if ($_SESSION['log'] != 'ativo') {
             <!--
             CSS
             ============================================= -->
-            <link rel="stylesheet" href="csspg/linearicons.css">
-            <link rel="stylesheet" href="csspg/font-awesome.min.css">
-            <link rel="stylesheet" href="csspg/bootstrap.css">
-            <link rel="stylesheet" href="csspg/magnific-popup.css">
-            <link rel="stylesheet" href="csspg/jquery-ui.css">				
-            <link rel="stylesheet" href="csspg/nice-select.css">							
-            <link rel="stylesheet" href="csspg/animate.min.css">
-            <link rel="stylesheet" href="csspg/owl.carousel.css">			
-            <link rel="stylesheet" href="csspg/jquery-ui.css">			
-            <link rel="stylesheet" href="csspg/main.css">
+            <link rel="stylesheet" href="../../csspg/linearicons.css">
+            <link rel="stylesheet" href="../../csspg/font-awesome.min.css">
+            <link rel="stylesheet" href="../../csspg/bootstrap.css">
+            <link rel="stylesheet" href="../../csspg/magnific-popup.css">
+            <link rel="stylesheet" href="../../csspg/jquery-ui.css">				
+            <link rel="stylesheet" href="../../csspg/nice-select.css">							
+            <link rel="stylesheet" href="../../csspg/animate.min.css">
+            <link rel="stylesheet" href="../../csspg/owl.carousel.css">			
+            <link rel="stylesheet" href="../../csspg/jquery-ui.css">			
+            <link rel="stylesheet" href="../../csspg/main.css">
         </head>
         <body>	
             <header id="header">
@@ -51,7 +51,7 @@ if ($_SESSION['log'] != 'ativo') {
                                 <?php
                                 echo "Bem Vindo! <b>" . $_SESSION['rm'] . " </b>";
                                 ?>
-                                <a href="logout.php" class="primary-btn text-uppercase">Logout</a>
+                                <a href="pagLogout.php" class="primary-btn text-uppercase">Logout</a>
                             </div>
                         </div>			  					
                     </div>
@@ -59,21 +59,21 @@ if ($_SESSION['log'] != 'ativo') {
                 <div class="container main-menu">
                     <div class="row align-items-center justify-content-between d-flex">
                         <div id="logo">
-                            <a href="Inicio."><img src="img/cheshire1.png" width="100px" height="70px" alt="" title="" /></a>
+                            <a href="pagInicio."><img src="../../img/cheshire1.png" width="100px" height="70px" alt="" title="" /></a>
                         </div>
                         <nav id="nav-menu-container">
                             <ul class="nav-menu">
                                 <li class="menu-has-children"><a href="">Transtornos</a>
                                     <ul>
-                                        <li><a href="blog-home.html">Emocionais</a></li>
-                                        <li><a href="blog-single.html">Alimentares</a></li>
-                                        <li><a href="blog-single.html">Psicoses</a></li>
+                                        <li><a href="pagBlog-home.html">Emocionais</a></li>
+                                        <li><a href="pagBlog-single.html">Alimentares</a></li>
+                                        <li><a href="pagBlog-single.html">Psicoses</a></li>
                                     </ul>
                                 </li>
-								<li><a href="Defasagem.php">Defasagem</a></li>
-								<li><a href="Desmotivação.php">Desmotivação</a></li>
-                                <li><a href="ProblemasFamiliares.php">Problemas familiares</a></li>			        
-                                <li><a href="contato.php">Contato</a></li>
+								<li><a href="pagDefasagem.php">Defasagem</a></li>
+								<li><a href="pagDesmotivação.php">Desmotivação</a></li>
+                                <li><a href="pagProblemasFamiliares.php">Problemas familiares</a></li>			        
+                                <li><a href="pagContato.php">Contato</a></li>
 
                             </ul>
                         </nav><!-- #nav-menu-container -->		    		
@@ -90,7 +90,7 @@ if ($_SESSION['log'] != 'ativo') {
 							<h1 class="text-white">
 								Problemas familiares			
 							</h1>	
-							<p class="text-white link-nav"><a href="inicio.php">Inicio </a>  <span class="lnr lnr-arrow-right"></span><a href="ProblemasFamiliares.php">Problemas familiares </a> 
+							<p class="text-white link-nav"><a href="pagInicio.php">Inicio </a>  <span class="lnr lnr-arrow-right"></span><a href="ProblemasFamiliares.php">Problemas familiares </a> 
 						</div>	
 					</div>
 				</div>
@@ -101,7 +101,7 @@ if ($_SESSION['log'] != 'ativo') {
 			<section class="sample-text-area">
 				<div class="container">
 					<center><h1> É necessário enteder!</h1>
-					<img  height="260px" width="320px" src="img/Compreender.png" alt=""></center>
+					<img  height="260px" width="320px" src="../../img/Compreender.png" alt=""></center>
 					<p class="sample-text text-black" >
 					<dd class="text-black">Os problemas familiares podem interferir no andamento do aluno no ambiente escolar, ainda mais em sua capacidade de interação social, uma vez que um ambiente violento em certos estimula o aluno a reproduzir esse comportamento na escola, e em outros casos estimula a reproduzir comportamentos apáticos.
 Segundo um estudo  realizado pela USP, foram acompanhados os casos de 3 alunos diferentes que possuíam dificuldade de letramento em uma escola estadual. Nos casos apresentados foi apontado pela coordenação do colégio que os pais se encontravam em de certa forma ausentes no processo de aprendizagem de seus filhos, sendo questionados pelas razões, eles apontaram que sentiam dificuldade de se aproximar ao contexto escolar de seus filhos. A partir desse estudo, entende-se que o ambiente familiar conturbado ou mesmo ausente influencia negativamente no aluno.
@@ -120,7 +120,7 @@ Como as atribuições e a própria formação do orientador não o permitem aden
 						<h3 class="mb-30">Tenha tempo para a sua familia</h3>
 						<div class="row">
 							<div class="col-md-3">
-								<img src="img/tempo-familia.jpg" alt=""  class="img-fluid">
+								<img src="../../img/tempo-familia.jpg" alt=""  class="img-fluid">
 							</div>
 							<div class="col-md-9 mt-sm-20 left-align-p">
 								<p>Tenha tempo para a família
@@ -138,7 +138,7 @@ O cuidado com as relações familiares deve ser similar ao dispensado a uma plan
 								<p class="text-right">Entenda que as pessoas acertam, erram, decepcionam e despertam orgulho. Não exija perfeição de seus familiares e, acima de tudo, ame-os incondicionalmente.</p>
 							</div>
 							<div class="col-md-3">
-								<img src="img/entendimento.jpg" alt="" height="164px" width="250px" >
+								<img src="../../img/entendimento.jpg" alt="" height="164px" width="250px" >
 							</div>
 						</div>
 					</div>
@@ -194,7 +194,7 @@ Não podemos permitir que a influência da família na sociedade seja desvaloriz
 
                     <footer class="footer-area section-gap">
                         <div class="container">
-                            <img src="img/logo_cps.png">
+                            <img src="../../img/logo_cps.png">
                             <div class="row footer-bottom d-flex justify-content-between">
                                 <p class="col-lg-8 col-sm-12 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                                     Copyright &copy;<script>document.write(new Date().getFullYear());</script> Etec de Cotia <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.cps.sp.gov.br" target="_blank">Centro Paula Souza</a>
@@ -210,20 +210,20 @@ Não podemos permitir que a influência da família na sociedade seja desvaloriz
             </footer>
             <!-- End footer Area -->
 
-			<script src="js/vendor/jquery-2.2.4.min.js"></script>
-			<script src="js/popper.min.js"></script>
-			<script src="js/vendor/bootstrap.min.js"></script>			
+			<script src="../../js/vendor/jquery-2.2.4.min.js"></script>
+			<script src="../../js/popper.min.js"></script>
+			<script src="../../js/vendor/bootstrap.min.js"></script>			
 			<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
- 			<script src="js/jquery-ui.js"></script>					
-  			<script src="js/easing.min.js"></script>			
-			<script src="js/hoverIntent.js"></script>
-			<script src="js/superfish.min.js"></script>	
-			<script src="js/jquery.ajaxchimp.min.js"></script>
-			<script src="js/jquery.magnific-popup.min.js"></script>	
-    		<script src="js/jquery.tabs.min.js"></script>						
-			<script src="js/jquery.nice-select.min.js"></script>	
-			<script src="js/owl.carousel.min.js"></script>									
-			<script src="js/mail-script.js"></script>	
-			<script src="js/main.js"></script>	
+ 			<script src="../../js/jquery-ui.js"></script>					
+  			<script src="../../js/easing.min.js"></script>			
+			<script src="../../js/hoverIntent.js"></script>
+			<script src="../../js/superfish.min.js"></script>	
+			<script src="../../js/jquery.ajaxchimp.min.js"></script>
+			<script src="../../js/jquery.magnific-popup.min.js"></script>	
+    		<script src="../../js/jquery.tabs.min.js"></script>						
+			<script src="../../js/jquery.nice-select.min.js"></script>	
+			<script src="../../js/owl.carousel.min.js"></script>									
+			<script src="../../js/mail-script.js"></script>	
+			<script src="../../js/main.js"></script>	
 		</body>
 	</html>
