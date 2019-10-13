@@ -24,7 +24,7 @@
 
     function listaMensagensRecebidas($conexao, $cod) {
         $mensagens = array();
-        $resultado = mysqli_query($conexao, "call caixaEntrada('$cod');");//select * from mensagem where (remetente =  '$cod' || destinatario = '$cod') && (stautsLida = 'N' && statusExcluida = 'N')"
+        $resultado = mysqli_query($conexao, "call caixaEntrada('$cod')");//select * from mensagem where (remetente =  '$cod' || destinatario = '$cod') && (stautsLida = 'N' && statusExcluida = 'N')"
         
         while ($mensagem = mysqli_fetch_assoc($resultado)) {
             array_push($mensagens, $mensagem);

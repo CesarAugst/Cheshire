@@ -1,21 +1,15 @@
 <?php
 
-function efetuarLogin($conexao,$login,$senha){
-    $sql = "select * from usuario where login='{$login}'"
+function efetuarLogin($conexao,$user,$senha){
+    $sql = "select * from usuario where user='{$user}'"
             . "and senha='{$senha}'";
     $resultado = mysqli_query($conexao, $sql);
 return mysqli_fetch_assoc($resultado);
 }
 
-function cadastro($conexao,$rm,$login,$senha,$nome,$sobrenome,$tipo,$tel,$cel,$end ){
-    $sql = "insert into tblRegistro"
-            ."values ('$rm','$login', '$senha', '$nome', '$sobrenome', '$tipo', '$tel', '$cel','$end' )"; 
-    return mysqli_query($conexao, $sql);
-}
-
-function buscaRm($conexao, $login,$senha) {
-    $sql = "select cod_usuario from usuario where login='{$login}'"
-    . "and senha='$senha'";
+function buscaRm($conexao, $user,$senha) {
+    $sql = "select cod_usuario from usuario where user='{$user}'"
+    . "and senha='{$senha}'";
     $resultado = mysqli_query($conexao,$sql);
     return mysqli_fetch_assoc($resultado);
 }
@@ -41,10 +35,4 @@ if(preg_match('/(.*)?([!-//]|[:-@]|[^-`]|~)(.*)?/', $senha)){
 if(preg_match('1234567890', $senha)){
     $hard++;
 }
-
-// function usuario($conexao,$nome){
-//     $sql = "select nome from tblRegistro where login = '$login'";
-//     $resultado = mysqli_query($conexao, $sql);
-//     return mysql_fetch_assoc($resultado);
-// } Estava no do henrique, so copiei antes de excluir para ter certeza
 }
