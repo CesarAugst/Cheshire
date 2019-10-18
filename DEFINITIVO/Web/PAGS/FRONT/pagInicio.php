@@ -67,7 +67,7 @@
 						<ul class="nav-menu">
 							<li class="menu-has-children"><a href="">Transtornos</a>
 								<ul>
-									<li><a href="pagBlog-home.html">Emocionais</a></li>
+									<li><a href="pagTranstornoEmocional.php">Emocionais</a></li>
 									<li><a href="pagBlog-single.html">Alimentares</a></li>
 									<li><a href="pagBlog-single.html">Psicoses</a></li>
 								</ul>

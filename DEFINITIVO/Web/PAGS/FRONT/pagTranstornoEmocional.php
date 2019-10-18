@@ -21,7 +21,7 @@ if ($_SESSION['log'] != 'ativo') {
             <!-- meta character set -->
             <meta charset="UTF-8">
             <!-- Site Title -->
-            <title>Problemas familiares</title>
+            <title>Transtornos Emocionais</title>
 
             <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
             <!--
@@ -65,7 +65,7 @@ if ($_SESSION['log'] != 'ativo') {
                             <ul class="nav-menu">
                                 <li class="menu-has-children"><a href="">Transtornos</a>
                                     <ul>
-                                        <li><a href="pagTranstornoEmocional.php">Emocionais</a></li>
+                                        <li><a href="pagtranstornoEmocional.php">Emocionais</a></li>
                                         <li><a href="pagBlog-single.html">Alimentares</a></li>
                                         <li><a href="pagBlog-single.html">Psicoses</a></li>
                                     </ul>
@@ -82,15 +82,15 @@ if ($_SESSION['log'] != 'ativo') {
             </header><!-- #header -->
 		  
 			<!-- start banner Area -->
-			<section class="banner-area relative problemas-banner" id="home">	
+			<section class="banner-area relative TranstornoEmocional-banner" id="home">	
 				<div class="overlay overlay-bg"></div>
 				<div class="container">				
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
-								Problemas familiares			
+							Transtornos Emocionais		
 							</h1>	
-							<p class="text-white link-nav"><a href="pagInicio.php">Inicio </a>  <span class="lnr lnr-arrow-right"></span><a href="ProblemasFamiliares.php">Problemas familiares </a> 
+							<p class="text-white link-nav"><a href="pagInicio.php">Inicio </a>  <span class="lnr lnr-arrow-right"></span><a href="pagTranstornoEmocional.php">Transtornos Emocionais </a> 
 						</div>	
 					</div>
 				</div>
@@ -99,9 +99,10 @@ if ($_SESSION['log'] != 'ativo') {
 
 			<!-- Start Sample Area -->
 			<section class="sample-text-area">
-				<div class="container">
-					<center><h1> É necessário enteder!</h1>
-					<img  height="260px" width="320px" src="../../img/Compreender.png" alt=""></center>
+			<center><h1 class="text-black">Ansiedade É necessário enteder!</h1>
+				<div class="col-md-6 accordion-center">
+					
+					
 					<p class="sample-text text-black" >
 					<dd class="text-black">Os problemas familiares podem interferir no andamento do aluno no ambiente escolar, ainda mais em sua capacidade de interação social, uma vez que um ambiente violento em certos estimula o aluno a reproduzir esse comportamento na escola, e em outros casos estimula a reproduzir comportamentos apáticos.
 Segundo um estudo  realizado pela USP, foram acompanhados os casos de 3 alunos diferentes que possuíam dificuldade de letramento em uma escola estadual. Nos casos apresentados foi apontado pela coordenação do colégio que os pais se encontravam em de certa forma ausentes no processo de aprendizagem de seus filhos, sendo questionados pelas razões, eles apontaram que sentiam dificuldade de se aproximar ao contexto escolar de seus filhos. A partir desse estudo, entende-se que o ambiente familiar conturbado ou mesmo ausente influencia negativamente no aluno.
@@ -109,6 +110,11 @@ Como as atribuições e a própria formação do orientador não o permitem aden
 
 
 					</p>
+					<div class="col-lg-6 feedback-right2 relative d-flex justify-content-center align-items-center">
+                        <div class="overlay overlay-bg"></div>
+                        <a class="play-btn" href="https://www.youtube.com/watch?v=BsA2yN37cCg"><img class="img-fluid" src="../../img/play-btn.png" alt=""></a>
+                    </div>
+			</center>
 				</div>
 			</section>
 			<!-- End Sample Area -->

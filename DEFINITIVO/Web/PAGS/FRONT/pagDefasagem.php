@@ -68,7 +68,7 @@ if ($_SESSION['log'] != 'ativo') {
                     <ul class="nav-menu">
                         <li class="menu-has-children"><a href="">Transtornos</a>
                             <ul>
-                                <li><a href="blog-home.html">Emocionais</a></li>
+                                <li><a href="pagTranstornoEmocional.php">Emocionais</a></li>
                                 <li><a href="blog-single.html">Alimentares</a></li>
                                 <li><a href="blog-single.html">Psicoses</a></li>
                             </ul>

@@ -2846,6 +2846,16 @@ body.mobile-nav-active #mobile-nav-toggle {
   border-width: 5px;
 }
 
+.feedback-right2 {
+    
+  background: url(../img/ansiedade.jpg) center;
+  background-size: cover;
+  width: 400px;
+  padding: 100px 0;
+}
+
+
+
 @media (max-width: 575px) {
   .feedback-right {
     margin: 15px;
@@ -3066,6 +3076,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .problemas-banner {
   background: url(../img/Problemas.jpg)  no-repeat;
+  background-size: cover;
+}
+
+.TranstornoEmocional-banner {
+  background: url(../img/TranstornoEmocional.jpg) no-repeat;
   background-size: cover;
 }
 .about-content {

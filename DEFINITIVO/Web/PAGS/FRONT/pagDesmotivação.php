@@ -67,7 +67,7 @@ if ($_SESSION['log'] != 'ativo') {
                         <ul class="nav-menu">
                             <li class="menu-has-children"><a href="">Transtornos</a>
                                 <ul>
-                                    <li><a href="pagBlog-home.html">Emocionais</a></li>
+                                    <li><a href="pagTranstornoEmocional.php">Emocionais</a></li>
                                     <li><a href="pagBlog-single.html">Alimentares</a></li>
                                     <li><a href="pagBlog-single.html">Psicoses</a></li>
                                 </ul>
@@ -175,7 +175,7 @@ if ($_SESSION['log'] != 'ativo') {
                     </div>
                     <div class="col-md-6 video-right justify-content-center align-items-center d-flex relative">
                         <div class="overlay overlay-bg"></div>
-                        <a class="play-btn" href="https://www.youtube.com/watch?v=vC0aA9hgHwI"><img class="img-fluid mx-auto" src="img/about/play.png" alt=""></a>
+                        <a class="play-btn" href="https://www.youtube.com/watch?v=vC0aA9hgHwI"><img class="img-fluid mx-auto" src="../../img/about/play.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -219,7 +219,7 @@ if ($_SESSION['log'] != 'ativo') {
                 <div class="row feedback-contents justify-content-center align-items-center">
                     <div class="col-lg-6 feedback-right relative d-flex justify-content-center align-items-center">
                         <div class="overlay overlay-bg"></div>
-                        <a class="play-btn" href="https://www.youtube.com/watch?v=__HwFRsW5L0"><img class="img-fluid" src="img/play-btn.png" alt=""></a>
+                        <a class="play-btn" href="https://www.youtube.com/watch?v=__HwFRsW5L0"><img class="img-fluid" src="../../img/play-btn.png" alt=""></a>
                     </div>
                     <div class="col-lg-6 feedback-left">
                         <div class="active-review-carusel">
