@@ -853,7 +853,7 @@ td, th {
   font-size: 16px;
 }
 
-@media (max-width: 991.98px) {
+@media (max-width: 999.98px) {
   .generic-banner .generic-banner-content p br {
     display: none;
   }
@@ -3451,7 +3451,7 @@ dl.toggle.time-line:before {
 }
 
 .video-right .overlay-bg {
-  background-color: rgba(34, 34, 34, 0.2);
+  background-color: rgba(9, 158, 46, 0.2);
 }
 
 .video-right .play-btn {
@@ -3464,6 +3464,66 @@ dl.toggle.time-line:before {
   }
 }
 
+
+.video-left{
+  background: url(../img/ansiedade.jpg) no-repeat center;
+  background-size: cover;
+  height: 300px;
+}
+
+.video-left .overlay-bg {
+  background-color: rgba(106, 134, 113, 0.2);
+}
+
+.video-left .play-btn {
+  z-index: 2;
+}
+
+@media (max-width: 767px) {
+  .video-left {
+    margin-top: 50px;
+  }
+}
+
+.video-center{
+  background: url(../img/Síndrome-do-Panico.jpg) no-repeat center;
+  background-size: cover;
+  height: 300px;
+}
+
+.video-center .overlay-bg {
+  background-color: rgba(106, 134, 113, 0.2);
+}
+
+.video-center .play-btn {
+  z-index: 2;
+}
+
+@media (max-width: 767px) {
+  .video-center {
+    margin-top: 50px;
+  }
+}
+
+.video-right2{
+  background: url(../img/Estresse.jpg) no-repeat center;
+  background-size: cover;
+  height: 300px;
+}
+
+.video-right2 .overlay-bg {
+  background-color: rgba(106, 134, 113, 0.2);
+}
+
+.video-right2 .play-btn {
+  z-index: 2;
+}
+
+@media (max-width: 767px) {
+  .video-right2 {
+    margin-top: 50px;
+  }
+}
 /*--------  End our-mission area Style  -------------*/
 /* =================================== */
 /*  Departments Page Styles

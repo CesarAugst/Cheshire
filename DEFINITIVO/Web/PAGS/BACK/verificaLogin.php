@@ -10,7 +10,7 @@ if (login($conexao, $login, $senha)){
 session_start();
 $_SESSION['rm'] = $login;
 $_SESSION['log'] = 'ativo';
-header("location: Inicio.php");
+header("location: ../FRONT/pagInicio.php");
 die();
                                                            
 }
