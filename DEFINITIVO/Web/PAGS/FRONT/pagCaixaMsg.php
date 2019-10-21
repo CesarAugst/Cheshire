@@ -112,8 +112,6 @@
 		<section class="facilities-area section-gap">
 			<!-- Aqui fica o chat -->
 			<h1>Caixa de entrada de <?php echo $_SESSION['nome'] ?></h1><br>
-
-
 			<table class="table table-borderless table-hover" border="1">
 				<tr>
 					<td>id da Mensagem</td>
