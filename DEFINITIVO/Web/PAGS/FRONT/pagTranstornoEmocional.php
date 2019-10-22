@@ -200,7 +200,7 @@ Tratamento: O acompanhamento médico visa reduzir as ocorrências das crises, be
 									<h4 class="mb-20">Estresse</h4>
 										<div class=" video-right2 relative d-flex justify-content-center align-items-center" >
                       		  				<div class="overlay overlay-bg"></div>
-											<a class="play-btn" href="https://www.youtube.com/watch?v=thsBnZyUJns">
+											<a class="play-btn" href="https://www.youtube.com/watch?v=o7oTTckZPQA">
 											<img class="img-fluid mx-auto" src="../../img/play-btn.png" alt=""></a>
 										</div>
 								</div>
@@ -220,7 +220,7 @@ Tratamento: O acompanhamento médico visa reduzir as ocorrências das crises, be
 								</div>
 								<div class="table-row">
 									<div class="serial">01</div>
-									<div class="country"> <img src="../../img/elements/f1.jpg" alt="flag">Canada</div>
+									<div class="country"> <img src="../../img/elements/bandeira_ucrania.jpg" alt="flag">Ucrânia</div>
 									<div class="visit">645032</div>
 									<div class="percentage">
 										<div class="progress">
@@ -230,7 +230,7 @@ Tratamento: O acompanhamento médico visa reduzir as ocorrências das crises, be
 								</div>
 								<div class="table-row">
 									<div class="serial">02</div>
-									<div class="country"> <img src="../../img/elements/f2.jpg" alt="flag">Canada</div>
+									<div class="country"> <img src="../../img/elements/f5.jpg" alt="flag">Austrália</div>
 									<div class="visit">645032</div>
 									<div class="percentage">
 										<div class="progress">
