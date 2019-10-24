@@ -43,7 +43,7 @@
 							<a href="mailto:support@colorlib.com"><span class="lnr lnr-envelope"></span> <span class="text"><span class="text">faleconosco@etecdecotia.com.br </span></span></a>
 						</div>
 						<div class="col-lg-6 col-sm-6 col-8 header-top-right">
-							<a href="Cadastro.php" class="primary-btn text-uppercase">Cadastre-se</a>
+							<a href="pagCadastro.php" class="primary-btn text-uppercase">Cadastre-se</a>
 						</div>
 					</div>
 				</div>

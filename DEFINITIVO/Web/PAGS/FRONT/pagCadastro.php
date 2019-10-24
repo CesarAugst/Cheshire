@@ -104,7 +104,7 @@
 
 					<div class="col-lg-6 col-md-6 appointment-right pt-60 pb-60">
 						<center>
-							<form method="post" class="form-wrap" action="verificaCadastro.php">
+							<form method="post" class="form-wrap" action="../BACK/verificaCadastro.php">
 								<h3 class="pb-20 text-center mb-30">Cadastre-se</h3>
 								<input type="text" class="form-control" name="txtlogin" placeholder="RM" onfocus="this.placeholder = ''" onblur="this.placeholder = 'RM'">
 								<input type="password" class="form-control" name="txtsenha" placeholder="Senha" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Senha'">
