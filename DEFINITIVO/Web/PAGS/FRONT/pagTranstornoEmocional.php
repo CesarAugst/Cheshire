@@ -213,10 +213,10 @@ Tratamento: O acompanhamento médico visa reduzir as ocorrências das crises, be
 						<div class="progress-table-wrap">
 							<div class="progress-table">
 								<div class="table-head">
-									<div class="serial">#</div>
-									<div class="country">Countries</div>
+									<div class="serial"></div>
+									<div class="country">Paises</div>
 									<div class="visit">Visits</div>
-									<div class="percentage">Percentages</div>
+									<div class="percentage">Taxas</div>
 								</div>
 								<div class="table-row">
 									<div class="serial">01</div>
@@ -224,7 +224,7 @@ Tratamento: O acompanhamento médico visa reduzir as ocorrências das crises, be
 									<div class="visit">645032</div>
 									<div class="percentage">
 										<div class="progress">
-											<div class="progress-bar color-1" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+											<div class="progress-bar color-1" role="progressbar" style="width: 6.3%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
 										</div>
 									</div>
 								</div>
@@ -234,43 +234,43 @@ Tratamento: O acompanhamento médico visa reduzir as ocorrências das crises, be
 									<div class="visit">645032</div>
 									<div class="percentage">
 										<div class="progress">
-											<div class="progress-bar color-2" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
+											<div class="progress-bar color-2" role="progressbar" style="width: 6.1%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
 										</div>
 									</div>
 								</div>
 								<div class="table-row">
 									<div class="serial">03</div>
-									<div class="country"> <img src="../../img/elements/f3.jpg" alt="flag">Canada</div>
+									<div class="country"> <img src="../../img/elements/f3.jpg" alt="flag">Estados Unidos</div>
 									<div class="visit">645032</div>
 									<div class="percentage">
 										<div class="progress">
-											<div class="progress-bar color-3" role="progressbar" style="width: 55%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
+											<div class="progress-bar color-3" role="progressbar" style="width: 6%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
 										</div>
 									</div>
 								</div>
 								<div class="table-row">
 									<div class="serial">04</div>
-									<div class="country"> <img src="../../img/elements/f3.jpg" alt="flag">Estados Unidos</div>
+									<div class="country"> <img src="../../img/elements/Brasil.jpg" alt="flag">Brasil</div>
 									<div class="visit">645032</div>
 									<div class="percentage">
 										<div class="progress">
-											<div class="progress-bar color-4" role="progressbar" style="width: 60%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+											<div class="progress-bar color-4" role="progressbar" style="width: 5.9%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
 										</div>
 									</div>
 								</div>
 								<div class="table-row">
 									<div class="serial">05</div>
-									<div class="country"> <img src="../../img/elements/f5.jpg" alt="flag">Canada</div>
+									<div class="country"> <img src="../../img/elements/Portugual.jpg" alt="flag">Portugual</div>
 									<div class="visit">645032</div>
 									<div class="percentage">
 										<div class="progress">
-											<div class="progress-bar color-5" role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+											<div class="progress-bar color-5" role="progressbar" style="width: 5.7%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
 										</div>
 									</div>
 								</div>
 								<div class="table-row">
 									<div class="serial">06</div>
-									<div class="country"> <img src="../../img/elements/f6.jpg" alt="flag">Canada</div>
+									<div class="country"> <img src="../../img/elements/lituania.jpg" alt="flag">Lituânia</div>
 									<div class="visit">645032</div>
 									<div class="percentage">
 										<div class="progress">
@@ -280,7 +280,7 @@ Tratamento: O acompanhamento médico visa reduzir as ocorrências das crises, be
 								</div>
 								<div class="table-row">
 									<div class="serial">07</div>
-									<div class="country"> <img src="../../img/elements/f7.jpg" alt="flag">Canada</div>
+									<div class="country"> <img src="../../img/elements/nova_zelandia.png" alt="flag">Nova zelândia</div>
 									<div class="visit">645032</div>
 									<div class="percentage">
 										<div class="progress">
