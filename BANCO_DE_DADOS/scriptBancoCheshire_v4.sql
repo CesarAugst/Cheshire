@@ -24,6 +24,8 @@ CREATE TABLE IF NOT EXISTS MENSAGEM
     data_excluida_destinatario DATETIME
 );
 -- Tabela mensagem 1.0
+insert into MENSAGEM values(default,17308,17305,'Cesar enviando para Monique','n','n',null,'n',null,'n',null);
+insert into MENSAGEM values(default,17305,17308,'Monique enviando para Cesar','n','n',null,'n',null,'n',null);
 /*SESSÃO DE MENSAGENS#################################################################################################################################*/
 
 /*SESSAO DE USUARIOS##################################################################################################################################*/
@@ -41,7 +43,9 @@ CREATE TABLE IF NOT EXISTS PESSOA (
 		FOREIGN KEY (tipo_fk) references TIPO_USUARIO(id_tipo),
     anamnese_fk INT,
 		FOREIGN KEY (anamnese_fk) references ANAMNESE(id_anamnese)
-); 
+);
+insert into PESSOA values(17308,1,1,1,1);
+insert into PESSOA values(17305,2,2,2,2);
 -- Tabela pessoa 2.0
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela telefone 2.1
@@ -54,6 +58,8 @@ CREATE TABLE IF NOT EXISTS TELEFONE (
     tipo ENUM('movel', 'fixo'),
     numero VARCHAR(255)
 );
+insert into TELEFONE values(default,1,'17308',11,'movel','958681942');
+insert into TELEFONE values(default,2,'17305',11,'fixo','41482099');
 -- Tabela telefone 2.1
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela email 2.2
@@ -64,6 +70,8 @@ CREATE TABLE IF NOT EXISTS EMAIL (
 		FOREIGN KEY (pessoa_fk) references PESSOA(rm),
     endereco VARCHAR(255)
 );
+insert into EMAIL values(default, 17308,'cesarsilvasb@gmail.com');
+insert into EMAIL values(default, 17305,'faleconosco@etecdecotia.com.br');
 -- Tabela email 2.2
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela login 2.3
@@ -73,6 +81,8 @@ CREATE TABLE IF NOT EXISTS LOGIN (
     login VARCHAR(255),
     senha VARCHAR(255)
 );
+insert into LOGIN values(default,'teste','4967');
+insert into LOGIN values(default,'outro','9669');
 -- Tabela login 2.3
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela endereco 2.4
@@ -81,10 +91,13 @@ CREATE TABLE IF NOT EXISTS ENDERECO (
     id_endereco INT AUTO_INCREMENT PRIMARY KEY,
     cep VARCHAR(255),
     lograduro VARCHAR(255),
+    numero varchar(255),
     bairro VARCHAR(255),
     cidade VARCHAR(255),
     estado VARCHAR(2)
 );
+insert into ENDERECO values(default,'06730000','Rua Olegario Maciel','10','Sao Marcos','Vargem Grande Paulista','SP');
+insert into ENDERECO values(default,'06717235','Rua Topazio','555','Jardim Nomura','Cotia','SP');
 -- Tabela endereco 2.4
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela registro 2.5
@@ -94,8 +107,10 @@ CREATE TABLE IF NOT EXISTS REGISTRO (
     nome VARCHAR(255),
     sobrenome VARCHAR(255),
     dt_nascimento DATE,
-    dt_registro DATE
+    dt_registro DATE default (DATE(NOW()))
 );
+insert into REGISTRO values(default,default, 'Cesar', 'August','2000-04-16',default);
+insert into REGISTRO values(default,default, 'Monique', 'Rufino','1985-06-18',default);
 -- Tabela registro 2.5
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela tipo_usuario 2.6
@@ -104,6 +119,8 @@ CREATE TABLE IF NOT EXISTS TIPO_USUARIO (
     id_tipo INT AUTO_INCREMENT PRIMARY KEY,
     tipo ENUM('orientador', 'aluno')
 );
+insert into TIPO_USUARIO values(default,'Orientador');
+insert into TIPO_USUARIO values(default,'Aluno');
 -- Tabela tipo_usuario 2.6
 /*SESSAO DE USUARIOS##################################################################################################################################*/
 
@@ -123,6 +140,8 @@ CREATE TABLE IF NOT EXISTS ANAMNESE (
     escolarizacao_fk INT,
 		FOREIGN KEY (escolarizacao_fk) references ESCOLARIZACAO(id_escolarizacao)
 );
+insert into ANAMNESE values(default, 1,1,1,1,1);
+insert into ANAMNESE values(default, 2,2,2,2,2);
 -- Tabela anamnese 3.0
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela identificacao_aluno 3.1
@@ -133,11 +152,13 @@ CREATE TABLE IF NOT EXISTS IDENTIFICACAO_ALUNO (
     nome VARCHAR(255),
     sobrenome VARCHAR(255),
     dt_nascimento DATE,
-    naturalidade VARCHAR(255),
+    naturalidade VARCHAR(255) default ('Brasileiro'),
     sexo ENUM('m', 'f'),
     endereco_fk INT,
 		FOREIGN KEY (ENDERECO_fk) references endereco(id_endereco)
 );
+insert into IDENTIFICACAO_ALUNO values(17308,'42942544830','Cesar','August','2000-04-16',default,'M',1);
+insert into IDENTIFICACAO_ALUNO values(17308,'14604818878','Monique','Rufino','1985-06-18','Austriaco','F',2);
 -- Tabela identificacao_aluno 3.1
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela dados_familiares 3.2
@@ -154,6 +175,8 @@ CREATE TABLE IF NOT EXISTS DADOS_FAMILIARES (
     moram_juntos ENUM('sim', 'nao'),
     quem_mora VARCHAR(255)
 );
+insert into DADOS_FAMILIARES values(default, 1,1,1,'divorciados','nao','mae');
+insert into DADOS_FAMILIARES values(default, 2,2,2,'casados','sim','pai');
 -- Tabela dados_familiares 3.2
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela dados_mae 3.2.1
@@ -169,6 +192,8 @@ CREATE TABLE IF NOT EXISTS DADOS_MAE (
     endereco_mae_fk INT,
 		FOREIGN KEY (endereco_mae_fk) references ENDERECO(id_endereco)
 );
+insert into DADOS_MAE values(default, 'Noiva','Silva','1971-02-12','Cabeleireiro',1,1);
+insert into DADOS_MAE values(default, 'Maria','Sousa','1972-03-13','Hair designer',2,2);
 -- Tabela dados_mae 3.2.1
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela dados_pai 3.2.2
@@ -184,6 +209,8 @@ CREATE TABLE IF NOT EXISTS DADOS_PAI (
     endereco_pai_fk INT,
 		FOREIGN KEY (endereco_pai_fk) references ENDERECO(id_endereco)
 );
+insert into DADOS_PAI values(default, 'Celi','Barbosa','1970-01-11',1,1);
+insert into DADOS_PAI values(default, 'Celso','Baristo','1969-01-10',2,2);
 -- Tabela dados_pai 3.2.2
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela dados_responsavel 3.2.3
@@ -199,6 +226,8 @@ CREATE TABLE IF NOT EXISTS DADOS_RESPONSAVEL (
     endereco_responsavel_fk INT,
 		FOREIGN KEY (endereco_responsavel_fk) references ENDERECO(id_endereco)
 );
+insert into DADOS_RESPONSAVEL values(default, 'Noiva','Silva','1971-02-12','Cabeleireiro',1,1);
+insert into DADOS_PAI values(default, 'Celso','Baristo','1969-01-10',2,2);
 -- Tabela dados_responsavel 3.2.3
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela historico_saude 3.3
@@ -214,6 +243,8 @@ CREATE TABLE IF NOT EXISTS HISTORICO_SAUDE(
 	convulcoes VARCHAR(255) DEFAULT('nao'),
 	problemas_neurologicos VARCHAR(255) DEFAULT('nao')
 );
+insert into HISTORICO_SAUDE values(default, default, 'dipirona', default, default, default, default, default);
+insert into HISTORICO_SAUDE values(default, default, default, default, default, default, default, default);
 -- Tabela historico_saude 3.3
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela desenvolvimento 3.4
@@ -226,6 +257,8 @@ CREATE TABLE IF NOT EXISTS DESENVOLVIMENTO(
     audicao VARCHAR(255) DEFAULT('nao'),
     problemas_neurologicos VARCHAR(255) DEFAULT('nao')
 );
+insert into DESENVOLVIMENTO values(default,default, default, 'miopia', default,default);
+insert into DESENVOLVIMENTO values(default,default, default, default, default,default);
 -- Tabela desenvolvimento 3.4
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela escolarizacao 3.5
@@ -241,6 +274,8 @@ CREATE TABLE IF NOT EXISTS ESCOLARIZACAO (
     acompanhamento_profissional VARCHAR(255) DEFAULT('nao'),
     necessita_apoio VARCHAR(255) DEFAULT('nao')
 );
+insert into ESCOLARIZACAO values(default, 'Batista Cepelos', 'bom', 'bom', default, default, default, default, default);
+insert into ESCOLARIZACAO values(default, 'ETEC de Cotia', 'bom', 'bom', default, default, default, default, default);
 -- Tabela escolarizacao 3.5
 /*SESSAO DE ANAMNESE##################################################################################################################################*/
 
@@ -248,46 +283,6 @@ CREATE TABLE IF NOT EXISTS ESCOLARIZACAO (
 
 
 
-
-
-
-
-
--- Cria a tabela de registro de usuarios ---------------------------------------------------------------------------------------------------------------
-drop table if exists usuario;
-create table if not exists usuario(
-cod_usuario int primary key,
-login int(11),
-senha varchar(11),
-nome varchar(20),
-sobrenome varchar(20),
-tipo enum('orientador','aluno','funcionario'),
-telefone varchar(10),
-celular varchar(11),
-endereco varchar(100));
-insert into usuario values('17308','17308','42942544830','cesar','August','aluno','1142439058','11958681942','Olegario Maciel 10');
-insert into usuario values('17305','17305','14604818878','monique','Rufino','orientador','1141482099','11946143093','Rua topazio/Jardim Nomura');
--- -----------------------------------------------------------------------------------------------------------------------------------------------------
-select * from usuario;
--- Cria a tabela das mensagens -------------------------------------------------------------------------------------------------------------------------
-drop table if exists mensagem;
-create table if not exists mensagem(
-cod_mensagem int auto_increment primary key,
-remetente int,
-destinatario int default ('17305'),
-conteudo varchar(255),
-anonimato ENUM('S','N') default('N'),
-dataEnviada datetime default(now()),
-statusLida ENUM('S','N'),
-dataLida datetime,
-statusExcluida enum('S','N'),
-excluida datetime,
-foreign key (remetente) references usuario (cod_usuario),
-foreign key (destinatario) references usuario (cod_usuario)
-);
-insert into mensagem values(default, 17308,17305,'Estou enviando uma mensagem para o orientador','N',default,'N',null,'N',null);
-insert into mensagem values(default, 17305,17308,'Estou enviando uma mensagem para o aluno','N',default,'N',null,'N',null);
--- -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Cria a procedure que mostra as mensagens da caixa de enrada do usuario ------------------------------------------------------------------------------
 DELIMITER //
