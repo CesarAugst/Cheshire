@@ -11,7 +11,9 @@ CREATE TABLE IF NOT EXISTS MENSAGEM
 ( 
     id_mensagem INT AUTO_INCREMENT PRIMARY KEY,
     remetente_fk INT,
+		FOREIGN KEY (remetente_fk) references PESSOA(rm),
     destinatario_fk INT,
+		FOREIGN KEY (destinatario_fk) references PESSOA(rm),
     conteudo TEXT,
     anonimato ENUM('s', 'n'),
     lida ENUM('s', 'n'),
@@ -30,10 +32,15 @@ DROP TABLE IF EXISTS PESSOA;
 CREATE TABLE IF NOT EXISTS PESSOA (
     rm INT PRIMARY KEY,
     login_fk INT,
+		FOREIGN KEY (login_fk) references LOGIN(id_login),
     endereco_fk INT,
+		FOREIGN KEY (endereco_fk) references LOGIN(id_endereco),
     registro_fk INT,
+		FOREIGN KEY (registro_fk) references REGISTRO(id_registro),
     tipo_fk INT,
-    anamnese_fk INT
+		FOREIGN KEY (tipo_fk) references TIPO_USUARIO(id_tipo),
+    anamnese_fk INT,
+		FOREIGN KEY (anamnese_fk) references ANAMNESE(id_anamnese)
 ); 
 -- Tabela pessoa 2.0
 /*---------------------------------------------------------------------------------------------------*/
@@ -42,6 +49,7 @@ DROP TABLE IF EXISTS TELEFONE;
 CREATE TABLE IF NOT EXISTS TELEFONE (
     id_telefone INT AUTO_INCREMENT PRIMARY KEY,
     pessoa_fk INT,
+		FOREIGN KEY (pessoa_fk) references PESSOA(rm),
     ddd INT,
     tipo ENUM('movel', 'fixo'),
     numero VARCHAR(255)
@@ -53,6 +61,7 @@ DROP TABLE IF EXISTS EMAIL;
 CREATE TABLE IF NOT EXISTS EMAIL (
     id_email INT AUTO_INCREMENT PRIMARY KEY,
     pessoa_fk INT,
+		FOREIGN KEY (pessoa_fk) references PESSOA(rm),
     endereco VARCHAR(255)
 );
 -- Tabela email 2.2
@@ -104,10 +113,15 @@ DROP TABLE IF EXISTS ANAMNESE;
 CREATE TABLE IF NOT EXISTS ANAMNESE (
     id_anamnese INT AUTO_INCREMENT PRIMARY KEY,
     identificacao_aluno_fk INT,
+		FOREIGN KEY (identificacao_aluno_fk) references IDENTIFICACAO_ALUNO(id_aluno),
     dados_familiares_fk INT,
+		FOREIGN KEY (dados_familiares_fk) references DADOS_FAMILIARES(id_familiar),
     historico_saude_fk INT,
+		FOREIGN KEY (historico_saude_fk) references HISTORICO_SAUDE(id_historico_saude),
     desenvolvimento_fk INT,
-    escolarizacao_fk INT
+		FOREIGN KEY (desenvolvimento_fk) references DESENVOLVIMENTO(id_desenvolvimento),
+    escolarizacao_fk INT,
+		FOREIGN KEY (escolarizacao_fk) references ESCOLARIZACAO(id_escolarizacao)
 );
 -- Tabela anamnese 3.0
 /*---------------------------------------------------------------------------------------------------*/
@@ -121,7 +135,8 @@ CREATE TABLE IF NOT EXISTS IDENTIFICACAO_ALUNO (
     dt_nascimento DATE,
     naturalidade VARCHAR(255),
     sexo ENUM('m', 'f'),
-    endereco_fk INT
+    endereco_fk INT,
+		FOREIGN KEY (ENDERECO_fk) references endereco(id_endereco)
 );
 -- Tabela identificacao_aluno 3.1
 /*---------------------------------------------------------------------------------------------------*/
@@ -130,8 +145,11 @@ DROP TABLE IF EXISTS DADOS_FAMILIARES;
 CREATE TABLE IF NOT EXISTS DADOS_FAMILIARES (
     id_familiar INT AUTO_INCREMENT PRIMARY KEY,
     dados_mae_fk INT,
+		FOREIGN KEY (dados_mae_fk) references DADOS_MAE(id_mae),
     dados_pai_fk INT,
+		FOREIGN KEY (dados_pai_fk) references DADOS_PAI(id_pai),
     dados_responsavel_fk INT,
+		FOREIGN KEY (dados_responsavel_fk) references DADOS_RESPONSAVEL(id_responsavel),
     relacao_pais ENUM('casados', 'divorciados', 'uniao estavel'),
     moram_juntos ENUM('sim', 'nao'),
     quem_mora VARCHAR(255)
@@ -147,7 +165,9 @@ CREATE TABLE IF NOT EXISTS DADOS_MAE (
     dt_nasc_mae DATE,
     profissao_mae VARCHAR(255),
     contato_mae_fk INT,
-    endereco_mae_fk INT
+		FOREIGN KEY (contato_mae_fk) references TELEFONE(id_telefone),
+    endereco_mae_fk INT,
+		FOREIGN KEY (endereco_mae_fk) references ENDERECO(id_endereco)
 );
 -- Tabela dados_mae 3.2.1
 /*---------------------------------------------------------------------------------------------------*/
@@ -160,7 +180,9 @@ CREATE TABLE IF NOT EXISTS DADOS_PAI (
     dt_nasc_pai DATE,
     profissao_pai VARCHAR(255),
     contato_pai_fk INT,
-    endereco_pai_fk INT
+		FOREIGN KEY (contato_pai_fk) references TELEFONE(id_contato),
+    endereco_pai_fk INT,
+		FOREIGN KEY (endereco_pai_fk) references ENDERECO(id_endereco)
 );
 -- Tabela dados_pai 3.2.2
 /*---------------------------------------------------------------------------------------------------*/
@@ -173,7 +195,9 @@ CREATE TABLE IF NOT EXISTS DADOS_RESPONSAVEL (
     dt_nasc_responsavel DATE,
     profissao_responsavel VARCHAR(255),
     contato_responsavel_fk INT,
-    endereco_responsavel_fk INT
+		FOREIGN KEY (contato_responsavel_fk) references TELEFONE(id_telefone),
+    endereco_responsavel_fk INT,
+		FOREIGN KEY (endereco_responsavel_fk) references ENDERECO(id_endereco)
 );
 -- Tabela dados_responsavel 3.2.3
 /*---------------------------------------------------------------------------------------------------*/
