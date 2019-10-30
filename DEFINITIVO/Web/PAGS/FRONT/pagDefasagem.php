@@ -114,7 +114,7 @@ if ($_SESSION['log'] != 'ativo') {
                             Segundo estudo um levantamento de dados realizado pelo INEP em 2017, o número de alunos que demonstravam um nível de conhecimento didático incompativelmente inferior ao esperado pela sua idade (defasagem escolar) em 2017 ensino médio chegava a 28%.
 
                     </p>
-                    <img class="img-fluid pt-10 pb-10" src="../../img/defasagem_grafico.jpg" alt="">
+                    <img class="img pt-10 pb-10" src="../../img/defasagem_grafico.jpg" alt="">
                     <p>
                         A aplicação proposta pelo projeto propõe uma forma de acompanhamento online de uma planilha de estudos que é desenvolvida pelo orientador juntamente do aluno, onde antes havia um acompanhamento quinzenal ou semanal passa a ser em tempo real, para assim planejarem juntos uma forma de aprimorar o processo de aprendizagem do docente e reduzir esse nível de defasagem.</h5>
                     </p>

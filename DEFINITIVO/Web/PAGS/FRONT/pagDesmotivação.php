@@ -74,8 +74,7 @@ if ($_SESSION['log'] != 'ativo') {
                             </li>
                             <li><a href="pagDefasagem.php">Defasagem</a></li>
                             <li><a href="pagProblemasFamiliares.php">Problemas familiares</a></li>
-                            <li><a href="paContato.php">Contato</a></li>
-
+                            <li><a href="pagContato.php">Contato</a></li>
                         </ul>
                     </nav><!-- #nav-menu-container -->
                 </div>
@@ -100,7 +99,7 @@ if ($_SESSION['log'] != 'ativo') {
 
         <!-- Start our-mission Area -->
         <section class="our-mission-area section-gap">
-            <div class="container">
+            <div class="container section-top-border2">
                 <div class="row d-flex justify-content-center">
                     <div class="menu-content pb-70 col-lg-8">
                         <div class="title text-center">
@@ -173,9 +172,9 @@ if ($_SESSION['log'] != 'ativo') {
                         </dl>
                         <!-- accordion 2 end-->
                     </div>
-                    <div class="col-md-6 video-right justify-content-center align-items-center d-flex relative">
+                    <div class="col-md-6 video-right justify-content-center align-items-center d-flex relative ">
                         <div class="overlay overlay-bg"></div>
-                        <a class="play-btn" href="https://www.youtube.com/watch?v=vC0aA9hgHwI"><img class="img-fluid mx-auto" src="../../img/about/play.png" alt=""></a>
+                        <a class="play-btn" href="https://www.youtube.com/watch?v=vC0aA9hgHwI"><img class="img- mx-auto" src="../../img/about/play.png" alt=""></a>
                     </div>
                 </div>
             </div>
@@ -183,34 +182,53 @@ if ($_SESSION['log'] != 'ativo') {
         <!-- End our-mission Area -->
 
         <!-- Parte das frases motivacionais -->
+        <!-- Start Align Area -->
+			<div class="whole-wrap">
+				<div class="container">
+					<div class="section-top-border">
+						<h3 class="mb-30">Tenha tempo para a sua familia</h3>
+						<div class="row">
+							<div class="col-md-3">
+								<img src="../../img/tempo-familia.jpg" alt=""  class="img-fluid">
+							</div>
+							<div class="col-md-9 mt-sm-20 left-align-p">
+								<p>Tenha tempo para a família
+O cuidado com as relações familiares deve ser similar ao dispensado a uma planta, que precisa de atenção diariamente. Dedique parte do seu tempo para o convívio familiar e esteja atento para a qualidade desses momentos: quando estiver com sua família, esteja realmente com ela — e não com a televisão, celular ou amigos das redes sociais. 
+<p>Há momentos únicos em nossa familia e a presença ou não sua pode fazer toda a diferença. Compartilhar momentos em família é fundamental para estreitar os laços e colecionar boas lembranças. Além de gerar aproximação, fugir da rotina da casa é uma excelente maneira de amenizar o estresse do dia a dia.</p>
+								</p>
+							</div>
+						</div>
+					</div>
+					<div class="section-top-border text-right">
+						<h3 class="mb-30">Aceite e entenda</h3>
+						<div class="row">
+							<div class="col-md-9">
+								<p class="text-right">Compartilhar momentos em família é fundamental para estreitar os laços e colecionar boas lembranças. Além de gerar aproximação, fugir da rotina da casa é uma excelente maneira de amenizar o estresse do dia a dia.Guardar mágoas ou sentimentos negativos em relação aos pais, filhos ou irmãos só serve para prolongar uma situação que poderia ser resolvida de maneira mais rápida. Caso tenha alguma situação ou sentimento pendente, abra seu coração e fale a respeito de como você se sente em relação a determinado assunto.</p>
+								<p class="text-right">Entenda que as pessoas acertam, erram, decepcionam e despertam orgulho. Não exija perfeição de seus familiares e, acima de tudo, ame-os incondicionalmente.</p>
+							</div>
+							<div class="col-md-3">
+								<img src="../../img/entendimento.jpg" alt="" height="164px" width="250px" >
+							</div>
+						</div>
+					</div>
+					
+					<div class="section-top-border">
+						<h2 class="mb-30">A importância da familia na sociedade</h2>
+						<div class="row">
+							<div class="col-lg-12 text-black">
+								<blockquote class="generic-blockquote">
+								À medida que o tempo passa, as transformações se dão cada vez mais rápido em nossas vidas. Tais mudanças não estão apenas associadas aos produtos ou à tecnologia, a rapidez com que este processo acontece também influencia na nossa percepção sobre a sociedade e como as relações interpessoais ocorrem no dia a dia.
 
-        <!-- End info Area -->
+                                A maneira como enxergamos a família também está se transformando. Não precisamos voltar muito no tempo para lembrarmos que o casamento entre duas pessoas de cores diferentes era algo abominável para uns e em certos lugares até proibido.
 
-        <!-- Start team Area -->
-        <section class="team-area section-gap">
-            <div class="container">
-                <div class="row d-flex justify-content-center">
-                    <div class="menu-content pb-70 col-lg-7">
+                                A relação da família sempre teve grande importância no desenvolvimento da sociedade. O núcleo familiar, pais e filhos, é responsável pela forma como veremos o mundo no futuro. A escola tem o objetivo de difundir conhecimento e não de educar, dar limites ou moralidade.
 
-                    </div>
-                </div>
-                <div class="row justify-content-center d-flex align-items-center">
-                    <div class="col-lg-3 col-md-6 single-team">
-
-                    </div>
-                    <div class="col-lg-3 col-md-6 single-team">
-
-                    </div>
-                    <div class="col-lg-3 col-md-6 single-team">
-
-                    </div>
-                    <div class="col-lg-3 col-md-6 single-team">
-
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- End team Area -->
+                                Não podemos permitir que a influência da família na sociedade seja desvalorizada, ela é quem define nossos princípios, o que entendemos por certo e errado e, principalmente, como nos relacionaremos com os integrantes de outras famílias. É a partir da nossa casa que aprendemos como administrar os nossos sentimentos e tudo isso contribui completamente como será o comportamento da sociedade futuramente
+								</blockquote>
+							</div>
+						</div>
+					</div>
+        
 
         <!-- Start feedback Area -->
         <section class="feedback-area section-gap aboutpage-feedback-area">

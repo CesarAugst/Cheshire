@@ -882,6 +882,11 @@ td, th {
   border-bottom-style: outset;
 }
 
+
+.section-top-border2 {
+  border-color:10px  #75cf0d;
+  border-bottom-style: outset;
+}
 .switch-wrap {
   margin-bottom: 10px;
 }
@@ -2886,12 +2891,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   color: orange;
 }
 
-.feedback-left img {
-  margin-bottom: 10px;
-  border-style: solid;
-  border-width: 1px;
-  color: #008000;
-}
+
 
 .feedback-left .owl-carousel .owl-item img {
   width: auto !important;
@@ -3451,7 +3451,7 @@ dl.toggle.time-line:before {
 }
 
 .video-right .overlay-bg {
-  background-color: rgba(9, 158, 46, 0.2);
+  background-color: rgba(106, 134, 113, 0.2);
 }
 
 .video-right .play-btn {
