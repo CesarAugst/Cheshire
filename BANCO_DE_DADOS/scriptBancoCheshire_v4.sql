@@ -5,9 +5,10 @@ use bancoCheshireV4;
 /*BERCARIO#################################################################################################################################*/-----------
 
 /*SESSÃO DE MENSAGENS#################################################################################################################################*/
+-- Tabela mensagem 1.0
 DROP TABLE IF EXISTS MENSAGEM;
 CREATE TABLE IF NOT EXISTS MENSAGEM
-( -- Tabela mensagem 1.0
+( 
     id_mensagem INT AUTO_INCREMENT PRIMARY KEY,
     remetente_fk INT,
     destinatario_fk INT,
@@ -19,10 +20,12 @@ CREATE TABLE IF NOT EXISTS MENSAGEM
     data_excluida_remetente DATETIME,
     excluida_destinatario ENUM('s', 'n'),
     data_excluida_destinatario DATETIME
-);-- Tabela mensagem 1.0
+);
+-- Tabela mensagem 1.0
 /*SESSÃO DE MENSAGENS#################################################################################################################################*/
 
 /*SESSAO DE USUARIOS##################################################################################################################################*/
+-- Tabela pessoa 2.0
 DROP TABLE IF EXISTS PESSOA;
 CREATE TABLE IF NOT EXISTS PESSOA (
     rm INT PRIMARY KEY,
@@ -31,68 +34,84 @@ CREATE TABLE IF NOT EXISTS PESSOA (
     registro_fk INT,
     tipo_fk INT,
     anamnese_fk INT
-); -- Tabela pessoa 2.0
-/*--------------------------------------------*/
+); 
+-- Tabela pessoa 2.0
+/*---------------------------------------------------------------------------------------------------*/
+-- Tabela telefone 2.1
 DROP TABLE IF EXISTS TELEFONE;
 CREATE TABLE IF NOT EXISTS TELEFONE (
-    id_telefone INT PRIMARY KEY,
+    id_telefone INT AUTO_INCREMENT PRIMARY KEY,
     pessoa_fk INT,
     ddd INT,
     tipo ENUM('movel', 'fixo'),
     numero VARCHAR(255)
-);-- Tabela telefone 2.1 
-/*--------------------------------------------*/
+);
+-- Tabela telefone 2.1
+/*---------------------------------------------------------------------------------------------------*/
+-- Tabela email 2.2
 DROP TABLE IF EXISTS EMAIL;
 CREATE TABLE IF NOT EXISTS EMAIL (
-    id_email INT PRIMARY KEY,
+    id_email INT AUTO_INCREMENT PRIMARY KEY,
     pessoa_fk INT,
     endereco VARCHAR(255)
 );
-/*--------------------------------------------*/
+-- Tabela email 2.2
+/*---------------------------------------------------------------------------------------------------*/
+-- Tabela login 2.3
 DROP TABLE IF EXISTS LOGIN;
 CREATE TABLE IF NOT EXISTS LOGIN (
-    id_login INT PRIMARY KEY,
+    id_login INT AUTO_INCREMENT PRIMARY KEY,
     login VARCHAR(255),
     senha VARCHAR(255)
 );
-/*--------------------------------------------*/
+-- Tabela login 2.3
+/*---------------------------------------------------------------------------------------------------*/
+-- Tabela endereco 2.4
 DROP TABLE IF EXISTS ENDERECO;
 CREATE TABLE IF NOT EXISTS ENDERECO (
-    id_endereco INT PRIMARY KEY,
+    id_endereco INT AUTO_INCREMENT PRIMARY KEY,
     cep VARCHAR(255),
     lograduro VARCHAR(255),
     bairro VARCHAR(255),
     cidade VARCHAR(255),
     estado VARCHAR(2)
 );
-/*--------------------------------------------*/
+-- Tabela endereco 2.4
+/*---------------------------------------------------------------------------------------------------*/
+-- Tabela registro 2.5
 DROP TABLE IF EXISTS REGISTRO;
 CREATE TABLE IF NOT EXISTS REGISTRO (
-    id_registro INT PRIMARY KEY,
+    id_registro INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(255),
     sobrenome VARCHAR(255),
     dt_nascimento DATE,
     dt_registro DATE
 );
-/*--------------------------------------------*/
+-- Tabela registro 2.5
+/*---------------------------------------------------------------------------------------------------*/
+-- Tabela tipo_usuario 2.6
 DROP TABLE IF EXISTS TIPO_USUARIO;
 CREATE TABLE IF NOT EXISTS TIPO_USUARIO (
-    id_tipo INT PRIMARY KEY,
+    id_tipo INT AUTO_INCREMENT PRIMARY KEY,
     tipo ENUM('orientador', 'aluno')
 );
+-- Tabela tipo_usuario 2.6
 /*SESSAO DE USUARIOS##################################################################################################################################*/
 
 /*SESSAO DE ANAMNESE##################################################################################################################################*/
+-- Tabela anamnese 3.0
 DROP TABLE IF EXISTS ANAMNESE;
 CREATE TABLE IF NOT EXISTS ANAMNESE (
-    id_anamnese INT AUTO_INCREMENT,
+    id_anamnese INT AUTO_INCREMENT PRIMARY KEY,
     identificacao_aluno_fk INT,
     dados_familiares_fk INT,
     historico_saude_fk INT,
     desenvolvimento_fk INT,
     escolarizacao_fk INT
 );
-/*--------------------------------------------*/
+-- Tabela anamnese 3.0
+/*---------------------------------------------------------------------------------------------------*/
+-- Tabela identificacao_aluno 3.1
 DROP TABLE IF EXISTS IDENTIFICACAO_ALUNO;
 CREATE TABLE IF NOT EXISTS IDENTIFICACAO_ALUNO (
     rm INT PRIMARY KEY,
@@ -104,6 +123,101 @@ CREATE TABLE IF NOT EXISTS IDENTIFICACAO_ALUNO (
     sexo ENUM('m', 'f'),
     endereco_fk INT
 );
+-- Tabela identificacao_aluno 3.1
+/*---------------------------------------------------------------------------------------------------*/
+-- Tabela dados_familiares 3.2
+DROP TABLE IF EXISTS DADOS_FAMILIARES;
+CREATE TABLE IF NOT EXISTS DADOS_FAMILIARES (
+    id_familiar INT AUTO_INCREMENT PRIMARY KEY,
+    dados_mae_fk INT,
+    dados_pai_fk INT,
+    dados_responsavel_fk INT,
+    relacao_pais ENUM('casados', 'divorciados', 'uniao estavel'),
+    moram_juntos ENUM('sim', 'nao'),
+    quem_mora VARCHAR(255)
+);
+-- Tabela dados_familiares 3.2
+/*---------------------------------------------------------------------------------------------------*/
+-- Tabela dados_mae 3.2.1
+DROP TABLE IF EXISTS DADOS_MAE;
+CREATE TABLE IF NOT EXISTS DADOS_MAE (
+    id_mae INT AUTO_INCREMENT PRIMARY KEY,
+    nome_mae VARCHAR(255),
+    sobrenome_mae VARCHAR(255),
+    dt_nasc_mae DATE,
+    profissao_mae VARCHAR(255),
+    contato_mae_fk INT,
+    endereco_mae_fk INT
+);
+-- Tabela dados_mae 3.2.1
+/*---------------------------------------------------------------------------------------------------*/
+-- Tabela dados_pai 3.2.2
+DROP TABLE IF EXISTS DADOS_PAE;
+CREATE TABLE IF NOT EXISTS DADOS_PAI (
+    id_mae INT AUTO_INCREMENT PRIMARY KEY,
+    nome_pai VARCHAR(255),
+    sobrenome_pai VARCHAR(255),
+    dt_nasc_pai DATE,
+    profissao_pai VARCHAR(255),
+    contato_pai_fk INT,
+    endereco_pai_fk INT
+);
+-- Tabela dados_pai 3.2.2
+/*---------------------------------------------------------------------------------------------------*/
+-- Tabela dados_responsavel 3.2.3
+DROP TABLE IF EXISTS DADOS_RESPONSAVEL;
+CREATE TABLE IF NOT EXISTS DADOS_RESPONSAVEL (
+    id_responsavel INT AUTO_INCREMENT PRIMARY KEY,
+    nome_responsavel VARCHAR(255),
+    sobrenome_responsavel VARCHAR(255),
+    dt_nasc_responsavel DATE,
+    profissao_responsavel VARCHAR(255),
+    contato_responsavel_fk INT,
+    endereco_responsavel_fk INT
+);
+-- Tabela dados_responsavel 3.2.3
+/*---------------------------------------------------------------------------------------------------*/
+-- Tabela historico_saude 3.3
+DROP TABLE IF EXISTS HISTORICO_SAUDE;
+CREATE TABLE IF NOT EXISTS HISTORICO_SAUDE(
+	id_historico_saude INT AUTO_INCREMENT PRIMARY KEY,
+	cuidados_medicos VARCHAR(255) DEFAULT('nao'),
+	alergias VARCHAR(255) DEFAULT('nao'),
+	medicacao VARCHAR(255) DEFAULT('nao'),
+	ed_fisica VARCHAR(255) DEFAULT('sim'),
+	acidente VARCHAR(255) DEFAULT('nao'),
+	cirurgia VARCHAR(255) DEFAULT('nao'),
+	convulcoes VARCHAR(255) DEFAULT('nao'),
+	problemas_neurologicos VARCHAR(255) DEFAULT('nao')
+);
+-- Tabela historico_saude 3.3
+/*---------------------------------------------------------------------------------------------------*/
+-- Tabela desenvolvimento 3.4
+DROP TABLE IF EXISTS DESENVOLVIMENTO;
+CREATE TABLE IF NOT EXISTS DESENVOLVIMENTO(
+	id_desenvolvimento INT AUTO_INCREMENT PRIMARY KEY,
+    locomocao VARCHAR(255) DEFAULT('nao'),
+    fala VARCHAR(255) DEFAULT('nao'),
+    visao VARCHAR(255) DEFAULT('nao'),
+    audicao VARCHAR(255) DEFAULT('nao'),
+    problemas_neurologicos VARCHAR(255) DEFAULT('nao')
+);
+-- Tabela desenvolvimento 3.4
+/*---------------------------------------------------------------------------------------------------*/
+-- Tabela escolarizacao 3.5
+DROP TABLE IF EXISTS ESCOLARIZACAO;
+CREATE TABLE IF NOT EXISTS ESCOLARIZACAO (
+    id_escolarizacao INT AUTO_INCREMENT PRIMARY KEY,
+    escola_anterior VARCHAR(255),
+    relacionamento_professores ENUM('bom', 'ruim'),
+    relacionamento_colegas ENUM('bom', 'ruim'),
+    dificuldade_aprendizagem VARCHAR(255) DEFAULT('nao'),
+    apoio_pedagogico VARCHAR(255) DEFAULT('nao'),
+    avaliacao_profissional VARCHAR(255) DEFAULT('nao'),
+    acompanhamento_profissional VARCHAR(255) DEFAULT('nao'),
+    necessita_apoio VARCHAR(255) DEFAULT('nao')
+);
+-- Tabela escolarizacao 3.5
 /*SESSAO DE ANAMNESE##################################################################################################################################*/
 
 
