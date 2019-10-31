@@ -2,7 +2,7 @@
 drop database if exists bancoCheshireV4;
 create database bancoCheshireV4;
 use bancoCheshireV4;
-/*BERCARIO#################################################################################################################################*/-----------
+/*BERCARIO#################################################################################################################################*/
 
 /*SESSÃO DE MENSAGENS#################################################################################################################################*/
 -- Tabela mensagem 1.0
@@ -44,8 +44,8 @@ CREATE TABLE IF NOT EXISTS PESSOA (
     anamnese_fk INT,
 		FOREIGN KEY (anamnese_fk) references ANAMNESE(id_anamnese)
 );
-insert into PESSOA values(17308,1,1,1,1);
-insert into PESSOA values(17305,2,2,2,2);
+insert into PESSOA values(17308,1,1,1,1,1);
+insert into PESSOA values(17305,2,2,2,2,2);
 -- Tabela pessoa 2.0
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela telefone 2.1
@@ -58,8 +58,8 @@ CREATE TABLE IF NOT EXISTS TELEFONE (
     tipo ENUM('movel', 'fixo'),
     numero VARCHAR(255)
 );
-insert into TELEFONE values(default,1,'17308',11,'movel','958681942');
-insert into TELEFONE values(default,2,'17305',11,'fixo','41482099');
+insert into TELEFONE values(default,'17308',11,'movel','958681942');
+insert into TELEFONE values(default,'17305',11,'fixo','41482099');
 -- Tabela telefone 2.1
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela email 2.2
@@ -109,8 +109,8 @@ CREATE TABLE IF NOT EXISTS REGISTRO (
     dt_nascimento DATE,
     dt_registro DATE default (DATE(NOW()))
 );
-insert into REGISTRO values(default,default, 'Cesar', 'August','2000-04-16',default);
-insert into REGISTRO values(default,default, 'Monique', 'Rufino','1985-06-18',default);
+insert into REGISTRO values(default, 'Cesar', 'August','2000-04-16',default);
+insert into REGISTRO values(default, 'Monique', 'Rufino','1985-06-18',default);
 -- Tabela registro 2.5
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela tipo_usuario 2.6
@@ -158,7 +158,7 @@ CREATE TABLE IF NOT EXISTS IDENTIFICACAO_ALUNO (
 		FOREIGN KEY (ENDERECO_fk) references endereco(id_endereco)
 );
 insert into IDENTIFICACAO_ALUNO values(17308,'42942544830','Cesar','August','2000-04-16',default,'M',1);
-insert into IDENTIFICACAO_ALUNO values(17308,'14604818878','Monique','Rufino','1985-06-18','Austriaco','F',2);
+insert into IDENTIFICACAO_ALUNO values(17305,'14604818878','Monique','Rufino','1985-06-18','Austriaco','F',2);
 -- Tabela identificacao_aluno 3.1
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela dados_familiares 3.2
@@ -209,8 +209,8 @@ CREATE TABLE IF NOT EXISTS DADOS_PAI (
     endereco_pai_fk INT,
 		FOREIGN KEY (endereco_pai_fk) references ENDERECO(id_endereco)
 );
-insert into DADOS_PAI values(default, 'Celi','Barbosa','1970-01-11',1,1);
-insert into DADOS_PAI values(default, 'Celso','Baristo','1969-01-10',2,2);
+insert into DADOS_PAI values(default, 'Celi', 'Barbosa', '1970-01-11', 'Vendedor', 1, 1);
+insert into DADOS_PAI values(default, 'Celso', 'Baristo', '1969-01-10', 'Gerente', 2, 2);
 -- Tabela dados_pai 3.2.2
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela dados_responsavel 3.2.3
@@ -227,7 +227,7 @@ CREATE TABLE IF NOT EXISTS DADOS_RESPONSAVEL (
 		FOREIGN KEY (endereco_responsavel_fk) references ENDERECO(id_endereco)
 );
 insert into DADOS_RESPONSAVEL values(default, 'Noiva','Silva','1971-02-12','Cabeleireiro',1,1);
-insert into DADOS_PAI values(default, 'Celso','Baristo','1969-01-10',2,2);
+insert into DADOS_RESPONSAVEL values(default, 'Celso','Baristo','1969-01-10','Gerente',2,2);
 -- Tabela dados_responsavel 3.2.3
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela historico_saude 3.3
@@ -243,8 +243,8 @@ CREATE TABLE IF NOT EXISTS HISTORICO_SAUDE(
 	convulcoes VARCHAR(255) DEFAULT('nao'),
 	problemas_neurologicos VARCHAR(255) DEFAULT('nao')
 );
-insert into HISTORICO_SAUDE values(default, default, 'dipirona', default, default, default, default, default);
-insert into HISTORICO_SAUDE values(default, default, default, default, default, default, default, default);
+insert into HISTORICO_SAUDE values(default, default, 'dipirona', default, default, default, default, default,default);
+insert into HISTORICO_SAUDE values(default, default, default, default, default, default, default, default,default);
 -- Tabela historico_saude 3.3
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela desenvolvimento 3.4
@@ -279,11 +279,14 @@ insert into ESCOLARIZACAO values(default, 'ETEC de Cotia', 'bom', 'bom', default
 -- Tabela escolarizacao 3.5
 /*SESSAO DE ANAMNESE##################################################################################################################################*/
 
+/*SESSAO DE PROCEDURES##################################################################################################################################*/
+
+
+/*SESSAO DE PROCEDURES##################################################################################################################################*/
 
 
 
-
-
+/*
 -- Cria a procedure que mostra as mensagens da caixa de enrada do usuario ------------------------------------------------------------------------------
 DELIMITER //
 drop procedure if exists caixaEntrada //
@@ -327,3 +330,4 @@ update mensagem set dataLida = now() where cod_mensagem = id;
 end //
 DELIMITER ;
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------
+*/
