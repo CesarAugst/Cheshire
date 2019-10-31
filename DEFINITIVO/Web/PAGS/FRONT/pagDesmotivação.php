@@ -3,7 +3,7 @@
 session_start();
 if ($_SESSION['log'] != 'ativo') {
     session_destroy();
-    header("location: Login.php");
+    header("location: pagLogin.php");
 }
 ?>
 <h<html lang="zxx" class="no-js">
@@ -121,52 +121,20 @@ if ($_SESSION['log'] != 'ativo') {
                                 O medo do próprio fracasso e como lidar com ele é um dos fatores que podem desmotivar o aluno, por vezes, causados até mesmo por parte do medo de decepcionar a família, faz com que o aluno acabe se pressionando demais, fazendo com que o que antes lhe era encorajador, agora lhe causando medo.
                             </dd>
                             <dt>
-                                <a href="">Como lidar?</a>
+                                <a href="">Escolar</a>
                             </dt>
                             <dd>
-                                Para lidar como a desmotivação você precisa primeiro assumir que tem um problema para ser resolvido. A negação indica resistência e consequente não resolução do problema.
-
-                                Antes de lhe dar sugestões de mudanças necessárias, é importante entender que as ações precisam partir de você e não de fora.
-
-                                Reconhecer que está deixando de lado coisas importantes que deveriam ser mudadas é o primeiro passo para que as coisas voltem a ser como eram antes e você finalmente consiga se livrar dessa fase de desmotivação.
-
-                                Mas, é claro, nem sempre os motivos que o levam ao desestímulo são internos. Alguns exemplos citados acima demonstram que nem sempre estamos no controle total da situação. Algumas atitudes podem fazer com que um a um desses problemas sejam resolvidos.
-
-                                Após o reconhecimento do problema, aí sim, uma mudança na rotina pode ser a melhor pedida. Trocar de emprego, de curso, ou terminar um relacionamento que já não flui mais, são tarefas muito difíceis para a maioria das pessoas, mas podem ser a libertação necessária.
-
-                                É importante separar cada motivo que o levou a ficar desmotivado e criar novas metas, objetivos e desafios. Com muita calma pode-se encontrar a melhor solução para cada problema identificado e adicionar novas ações.
+                                A educação há muito é uma forma de ascensão pessoal e intelectual. Uma fonte
+                                farta de conhecimento e possível de libertação das pessoas. Porém, enfrenta diversos
+                                problemas estruturais, pessoais, físicos dentre outros tantos. É preciso repensá-la e
+                                refletir sobre as dificuldades que assolam o cotidiano escolar.                           
                             </dd>
                             <dt>
-                                <a href="">Acões devem ser tomadas</a>
+                                <a href="">Trabalho</a>
                             </dt>
                             <dd>
-                                O primeiro passo para que os problemas sejam resolvidos é não ficar se culpando constantemente pela situação que o rodeia. Algumas coisas são realmente inevitáveis e não há como tomar o controle total delas.
-
-                                Ficar se martirizando por algo que você não tem como evitar não vai resolver o problema e pode deixá-lo ainda pior. É muito importante sim reconhecer os erros, mas é mais ainda reconhecer o que não está ao seu alcance.
-
-
-
-                                Criar novos objetivos
-                                Não esperar demais de outras pessoas
-                                Tomar a liderança
-                                Aceitar ajuda
-
-
-                                Criar novos objetivos, com foco, sem desistir no caminho, é uma maneira eficiente de driblar a desmotivação. O orgulho deve ser deixado de lado nesse momento e toda ajuda pode ser bem-vinda.
-
-                                Não se fechar nesses momentos pode ser uma das melhores coisas a se fazer, pois todo mundo precisa de apoio e ajuda em alguma fase da vida.
-
-                                Não esperar demais de outras pessoas é outro passo importante a ser tomado. O que o indivíduo sente, apenas ele sente, e as pessoas em sua volta podem não perceber ou nem ligar para o problema. Achar que outras pessoas vão se sensibilizar com isso é um erro, e a espera pode ser eterna, até que a pessoa não aguente mais e estoure seu limite.
-
-                                Assim como é importante dar esse passo à frente, tomar as rédeas da situação é igualmente importante. Seja aquele que decide o melhor e toma frente à situação sem depender de terceiros.
-
-                                Alguns exercícios também podem ser feitos para ajudar nesse processo. Um deles é acordar todas as manhãs e ser grato por tudo aquilo de bom que o rodeia, agradecer pelos pequenos momentos que a vida lhe proporciona. Fazer listas também pode ajudar, comparando aquilo que se faz bem e o que se está fazendo mal, e a cada item riscado da segunda lista, uma nova vitória será conquistada.
-
-                                Trabalhar com um sistema de recompensa por tarefas concluídas também pode funcionar, e isso motiva a pessoa a seguir firme com os novos objetivos.
-
-                                Levantar cedo, tomar um bom café da manhã, sair para se exercitar e se dar mais tempo livre para fazer o que gosta são tarefas que todas as pessoas deveriam fazer.
-
-                                Uma pequena dose disso todos os dias não só elimina a desmotivação, como ainda previne os sentimentos de voltarem. Errar é humano, mas reconhecer o erro e buscar uma alternativa para resolvê-los é uma atitude ainda mais inteligente!
+                            A desmotivação profissional é causada por diversos fatores decorrentes da rotina diária de um profissional. O acúmulo de tarefas, obrigações e as cobranças geradas por um mercado cada vez mais competitivo e exigente acabam gerando a tão indesejada desmotivação.
+                            É importante que o indivíduo que visa construir uma carreira de sucesso consiga identificar as causas de sua desmotivação, antes que isto lhe gere problemas. Ao identificá-las, deve procurar meios para resolvê-las e superá-las a fim de recuperar sua motivação e obter melhores resultados, tanto para si quanto para a organização.
                             </dd>
 
                         </dl>
@@ -181,49 +149,72 @@ if ($_SESSION['log'] != 'ativo') {
         </section>
         <!-- End our-mission Area -->
 
-        <!-- Parte das frases motivacionais -->
+       <center><h1>Causas comuns de desmotivação</h1></center>
         <!-- Start Align Area -->
 			<div class="whole-wrap">
 				<div class="container">
 					<div class="section-top-border">
-						<h3 class="mb-30">Tenha tempo para a sua familia</h3>
+						<h3 class="mb-30">Vulnerabilidade</h3>
 						<div class="row">
 							<div class="col-md-3">
-								<img src="../../img/tempo-familia.jpg" alt=""  class="img-fluid">
+								<img src="../../img/vulnerabilidade.jpg" alt=""  class="img-fluid">
 							</div>
 							<div class="col-md-9 mt-sm-20 left-align-p">
-								<p>Tenha tempo para a família
-O cuidado com as relações familiares deve ser similar ao dispensado a uma planta, que precisa de atenção diariamente. Dedique parte do seu tempo para o convívio familiar e esteja atento para a qualidade desses momentos: quando estiver com sua família, esteja realmente com ela — e não com a televisão, celular ou amigos das redes sociais. 
-<p>Há momentos únicos em nossa familia e a presença ou não sua pode fazer toda a diferença. Compartilhar momentos em família é fundamental para estreitar os laços e colecionar boas lembranças. Além de gerar aproximação, fugir da rotina da casa é uma excelente maneira de amenizar o estresse do dia a dia.</p>
+								<p>Vulnerabilidade social é o conceito que caracteriza a condição dos grupos de indivíduos que estão a margem da sociedade, ou seja, pessoas ou famílias que estão em processo de exclusão social, principalmente por fatores socioeconômicos.
+                                    Algumas das principais características que marcam o estado de vulnerabilidade social são as condições precárias de moradia e saneamento, os meios de subsistência inexistentes e a ausência de um ambiente familiar, por exemplo.
+                                </p>
+
+                                <p>
+                                    Estes fatores desmotivam pela percepição de desigualdade, o que muitas vezes gera diversas outras dificuldade como dificuldade em alcançar um bom desempenho.
 								</p>
 							</div>
 						</div>
 					</div>
 					<div class="section-top-border text-right">
-						<h3 class="mb-30">Aceite e entenda</h3>
+						<h3 class="mb-30">Trabalho</h3>
 						<div class="row">
 							<div class="col-md-9">
-								<p class="text-right">Compartilhar momentos em família é fundamental para estreitar os laços e colecionar boas lembranças. Além de gerar aproximação, fugir da rotina da casa é uma excelente maneira de amenizar o estresse do dia a dia.Guardar mágoas ou sentimentos negativos em relação aos pais, filhos ou irmãos só serve para prolongar uma situação que poderia ser resolvida de maneira mais rápida. Caso tenha alguma situação ou sentimento pendente, abra seu coração e fale a respeito de como você se sente em relação a determinado assunto.</p>
-								<p class="text-right">Entenda que as pessoas acertam, erram, decepcionam e despertam orgulho. Não exija perfeição de seus familiares e, acima de tudo, ame-os incondicionalmente.</p>
+								<p class="text-right">Muitas pessoas acabam tendo que trabalhar muito cedo para complementar a renda familiar, por conta disso nota-se dificuldade dessas pessoas em conciliar seu trabalho com os estudos e outros alfazeres
+                                                      por estarem extremamente cansados por conta do trabalho. Rotinas como acordar cedo para trabalhar, enfretar diversas dificuldades durante o caminho, e ter um grande expediente de trabalho são a principal causa geradora do cansaço e desmotivação no trabalho.</p>
+								<p class="text-right">Entenda que as pessoas acertam, erram, decepcionam e despertam orgulho. Não exija perfeição no seu trabalho e, acima de tudo, preserve sua saúde mental e fisica.</p>
 							</div>
 							<div class="col-md-3">
-								<img src="../../img/entendimento.jpg" alt="" height="164px" width="250px" >
+								<img src="../../img/trabalho.jpg" alt="" height="164px" width="250px" >
+							</div>
+						</div>
+					</div>
+
+                    <div class="section-top-border">
+						<h3 class="mb-30">Gravidez precoce</h3>
+						<div class="row">
+							<div class="col-md-3">
+								<img src="../../img/gravidez_precoce.jpg" alt=""  class="img-fluid">
+							</div>
+							<div class="col-md-9 mt-sm-20 left-align-p">
+								<p>A gravidez na adolescência envolve muito mais do que problemas físicos, pois há também problemas emocionais, sociais, entre outros. Uma jovem de 14 anos, por exemplo, não está preparada mentalmente para cuidar de um bebê, muito menos de uma família. Entretanto, o seu organismo já está preparado para prosseguir com a gestação, já que, a partir do momento da menstruação, a maturidade sexual já está estabelecida. Outra polêmica é o de mães solteiras: por serem muito jovens, os rapazes e as moças não assumem um compromisso sério e, na maioria dos casos, quando surge a gravidez, um dos dois abandona a relação sem se importar com as consequências. Este é apenas um dos motivos que fazem crescer, consideravelmente a cada ano, o número de pais e mães jovens e solteiros.
+                                </p>
+
+                                <p>
+                                    Estes fatores desmotivam pela grande atenção que um filho exigi, os pais muitas vezes não estão preparados e encontram dificuldades que os desmotivam.
+								</p>
 							</div>
 						</div>
 					</div>
 					
 					<div class="section-top-border">
-						<h2 class="mb-30">A importância da familia na sociedade</h2>
+						<h2 class="mb-30">Como lidar?</h2>
 						<div class="row">
 							<div class="col-lg-12 text-black">
 								<blockquote class="generic-blockquote">
-								À medida que o tempo passa, as transformações se dão cada vez mais rápido em nossas vidas. Tais mudanças não estão apenas associadas aos produtos ou à tecnologia, a rapidez com que este processo acontece também influencia na nossa percepção sobre a sociedade e como as relações interpessoais ocorrem no dia a dia.
+								Para lidar como a desmotivação você precisa primeiro assumir que tem um problema para ser resolvido. A negação indica resistência e consequente não resolução do problema.
 
-                                A maneira como enxergamos a família também está se transformando. Não precisamos voltar muito no tempo para lembrarmos que o casamento entre duas pessoas de cores diferentes era algo abominável para uns e em certos lugares até proibido.
+                                Antes de lhe dar sugestões de mudanças necessárias, é importante entender que as ações precisam partir de você e não de fora.
 
-                                A relação da família sempre teve grande importância no desenvolvimento da sociedade. O núcleo familiar, pais e filhos, é responsável pela forma como veremos o mundo no futuro. A escola tem o objetivo de difundir conhecimento e não de educar, dar limites ou moralidade.
+                                Reconhecer que está deixando de lado coisas importantes que deveriam ser mudadas é o primeiro passo para que as coisas voltem a ser como eram antes e você finalmente consiga se livrar dessa fase de desmotivação.
 
-                                Não podemos permitir que a influência da família na sociedade seja desvalorizada, ela é quem define nossos princípios, o que entendemos por certo e errado e, principalmente, como nos relacionaremos com os integrantes de outras famílias. É a partir da nossa casa que aprendemos como administrar os nossos sentimentos e tudo isso contribui completamente como será o comportamento da sociedade futuramente
+                                Mas, é claro, nem sempre os motivos que o levam ao desestímulo são internos. Alguns exemplos citados acima demonstram que nem sempre estamos no controle total da situação. Algumas atitudes podem fazer com que um a um desses problemas sejam resolvidos.
+
+                                Após o reconhecimento do problema, aí sim, uma mudança na rotina pode ser a melhor pedida. Trocar de emprego, de curso, ou terminar um relacionamento que já não flui mais, são tarefas muito difíceis para a maioria das pessoas, mas podem ser a libertação necessária.
 								</blockquote>
 							</div>
 						</div>
@@ -281,31 +272,27 @@ O cuidado com as relações familiares deve ser similar ao dispensado a uma plan
 
 
 
-        <!-- start footer Area -->
-        <footer class="footer-area section-gap">
-            <div class="container">
+        	<!-- start footer Area -->		
+            <footer class="footer-area section-gap">
+                <div class="container">
 
 
-                <footer class="footer-area section-gap">
-                    <div class="container">
-                        <img src="../../img/logo_cps.png">
-                        <div class="row footer-bottom d-flex justify-content-between">
-                            <p class="col-lg-8 col-sm-12 footer-text m-0">
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                Copyright &copy;<script>
-                                    document.write(new Date().getFullYear());
-                                </script> Etec de Cotia <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.cps.sp.gov.br" target="_blank">Centro Paula Souza</a>
-                                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            </p>
-                            <div class="col-lg-4 col-sm-12 footer-social">
-                                <a href="https://www.facebook.com/etecdecotia"><i class="fa fa-facebook"></i></a>
-                                <a href="https://twitter.com/etecdecotia"><i class="fa fa-twitter"></i></a>
+                    <footer class="footer-area section-gap">
+                        <div class="container">
+                            <img src="../../img/logo_cps.png">
+                            <div class="row footer-bottom d-flex justify-content-between">
+                                <p class="col-lg-8 col-sm-12 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Etec de Cotia <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.cps.sp.gov.br" target="_blank">Centro Paula Souza</a>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                                <div class="col-lg-4 col-sm-12 footer-social">
+                                    <a href="https://www.facebook.com/etecdecotia"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://twitter.com/etecdecotia"><i class="fa fa-twitter"></i></a>
+                                </div>					
                             </div>
                         </div>
-                    </div>
-                </footer>
-            </div>
-        </footer>
+                    </footer>
+                </div>
+            </footer>
         <!-- End footer Area -->
 
 

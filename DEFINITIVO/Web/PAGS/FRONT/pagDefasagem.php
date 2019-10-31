@@ -4,7 +4,7 @@
 session_start();
 if ($_SESSION['log'] != 'ativo') {
     session_destroy();
-    header("location: Login.php");
+    header("location: pagLogin.php");
 }
 ?>
 <html lang="zxx" class="no-js">
