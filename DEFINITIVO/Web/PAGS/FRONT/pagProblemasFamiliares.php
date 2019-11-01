@@ -90,7 +90,7 @@ if ($_SESSION['log'] != 'ativo') {
 							<h1 class="text-white">
 								Problemas familiares			
 							</h1>	
-							<p class="text-white link-nav"><a href="pagInicio.php">Inicio </a>  <span class="lnr lnr-arrow-right"></span><a href="ProblemasFamiliares.php">Problemas familiares </a> 
+							<p class="text-white link-nav"><a href="pagInicio.php">Inicio </a>  <span class="lnr lnr-arrow-right"></span><a href="pagProblemasFamiliares.php">Problemas familiares </a> 
 						</div>	
 					</div>
 				</div>
@@ -188,10 +188,6 @@ Não podemos permitir que a influência da família na sociedade seja desvaloriz
 			<!-- End Align Area -->
 
 			<!-- start footer Area -->		
-            <footer class="footer-area section-gap">
-                <div class="container">
-
-
                     <footer class="footer-area section-gap">
                         <div class="container">
                             <img src="../../img/logo_cps.png">
@@ -205,9 +201,7 @@ Não podemos permitir que a influência da família na sociedade seja desvaloriz
                                 </div>					
                             </div>
                         </div>
-                    </footer>
-                </div>
-            </footer>
+                    </footer>                
             <!-- End footer Area -->
 
 			<script src="../../js/vendor/jquery-2.2.4.min.js"></script>

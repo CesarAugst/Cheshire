@@ -90,7 +90,7 @@ if ($_SESSION['log'] != 'ativo') {
                         <h1 class="text-white">
                             Desmotivação
                         </h1>
-                        <p class="text-white link-nav"><a href="pagInicio.php">Inicio </a> <span class="lnr lnr-arrow-right"></span> <a href="Desmotivação.php"> Desmotivação</a></p>
+                        <p class="text-white link-nav"><a href="pagInicio.php">Inicio </a> <span class="lnr lnr-arrow-right"></span> <a href="pagDesmotivação.php"> Desmotivação</a></p>
                     </div>
                 </div>
             </div>
@@ -219,10 +219,10 @@ if ($_SESSION['log'] != 'ativo') {
 							</div>
 						</div>
 					</div>
-        
+                </div>
 
         <!-- Start feedback Area -->
-        <section class="feedback-area section-gap aboutpage-feedback-area">
+        <section class="feedback-area section-gap">
             <div class="container">
 
                 <div class="row feedback-contents justify-content-center align-items-center">
@@ -272,11 +272,7 @@ if ($_SESSION['log'] != 'ativo') {
 
 
 
-        	<!-- start footer Area -->		
-            <footer class="footer-area section-gap">
-                <div class="container">
-
-
+        	<!-- start footer Area -->
                     <footer class="footer-area section-gap">
                         <div class="container">
                             <img src="../../img/logo_cps.png">
@@ -290,9 +286,7 @@ if ($_SESSION['log'] != 'ativo') {
                                 </div>					
                             </div>
                         </div>
-                    </footer>
-                </div>
-            </footer>
+                    </footer>               
         <!-- End footer Area -->
 
 

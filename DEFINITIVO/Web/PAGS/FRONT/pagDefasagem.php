@@ -94,7 +94,7 @@ if ($_SESSION['log'] != 'ativo') {
                     </h1>
 
                     </h1>
-                    <p class="text-white link-nav"><a href="pagInicio.php">Inicio </a> <span class="lnr lnr-arrow-right"></span> <a href="Defasagem.php"> Defasagem</a></p>
+                    <p class="text-white link-nav"><a href="pagInicio.php">Inicio </a> <span class="lnr lnr-arrow-right"></span> <a href="pagDefasagem.php"> Defasagem</a></p>
                 </div>
 
             </div>
@@ -107,12 +107,12 @@ if ($_SESSION['log'] != 'ativo') {
     <section class="offered-service-area dep-offred-service">
         <div class="container">
             <div class="row offred-wrap section-gap">
-                <div class="col-lg-8 offered-left">
+                <div class="col-lg-8 offered-left text-black">
                     <h1>Problemas na defasagem escolar</h1>
                     <p>
-                        <h5>O aluno que apresenta defasagem escolar deve ser orientado pelo orientador educacional para aproveitar da melhor maneira possível suas habilidades, promovendo um autoconhecimento que lhe favoreça em determinada área de sua escolha, uma vez que o aluno pode não ser bom em um determinado ramo específico, mas pode ser melhor em outro.
+                        <dd>O aluno que apresenta defasagem escolar deve ser orientado pelo orientador educacional para aproveitar da melhor maneira possível suas habilidades, promovendo um autoconhecimento que lhe favoreça em determinada área de sua escolha, uma vez que o aluno pode não ser bom em um determinado ramo específico, mas pode ser melhor em outro.
                             Segundo estudo um levantamento de dados realizado pelo INEP em 2017, o número de alunos que demonstravam um nível de conhecimento didático incompativelmente inferior ao esperado pela sua idade (defasagem escolar) em 2017 ensino médio chegava a 28%.
-
+                        </dd>
                     </p>
                     <img class="img pt-10 pb-10" src="../../img/defasagem_grafico.jpg" alt="">
                     <p>

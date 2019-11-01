@@ -1,4 +1,11 @@
 <!DOCTYPE html>
+<?php
+session_start();
+if ($_SESSION['log'] != 'ativo') {
+    session_destroy();
+    header("location: pagLogin.php");
+}
+?>
 <html lang="zxx" class="no-js">
 
 <head>
@@ -34,45 +41,50 @@
 </head>
 
 <body>
-    <header id="header">
-        <div class="header-top">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-6 col-sm-6 col-4 header-top-left">
-                        <a href="tel:+9530123654896"><span class="lnr lnr-phone-handset"></span> <span class="text"><span class="text">+953 012 3654 896</span></span></a>
-                        <a href="mailto:support@colorlib.com"><span class="lnr lnr-envelope"></span> <span class="text"><span class="text">support@colorlib.com</span></span></a>
-                    </div>
-                    <div class="col-lg-6 col-sm-6 col-8 header-top-right">
-                        <a href="pagCadastro.php" class="primary-btn text-uppercase">Cadastra-se</a>
+            <header id="header">
+            <div class="header-top">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 col-sm-6 col-4 header-top-left">
+                                <a href="tel:+9530123654896"><span class="lnr lnr-phone-handset"></span> <span class="text"><span class="text">+55 11 4148-2099</span></span></a>
+                                <a href="mailto:support@colorlib.com"><span class="lnr lnr-envelope"></span> <span class="text"><span class="text">faleconosco@etecdecotia.com.br</span></span></a>			
+                            </div>
+                            <div class="col-lg-6 col-sm-6 col-8 header-top-right">
+                                <?php
+                                echo "Bem Vindo! <b>" . $_SESSION['rm'] . " </b>";
+                                ?>
+                                <a href="../BACK/logout.php" class="primary-btn text-uppercase">Logout</a>
+                            </div>
+                        </div>			  					
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="container main-menu">
-            <div class="row align-items-center justify-content-between d-flex">
-                <div id="logo">
-                    <a href="pagInicio.php"><img src="img/cheshire1.png" width="100px" height="70px" alt="" title="" /></a>
-                </div>
-                <nav id="nav-menu-container">
-                    <ul class="nav-menu">
-                        <li class="menu-has-children"><a href="">Transtornos</a>
-                            <ul>
-                                <li><a href="pagTranstornoEmocional.php">Emocionais</a></li>
-                                <li><a href="blog-single.html">Alimentares</a></li>
-                                <li><a href="blog-single.html">Psicoses</a></li>
+                <div class="container main-menu">
+                    <div class="row align-items-center justify-content-between d-flex">
+                        <div id="logo">
+                            <a href="pagInicio."><img src="../../img/cheshire1.png" width="100px" height="70px" alt="" title="" /></a>
+                        </div>
+                        <nav id="nav-menu-container">
+                            <ul class="nav-menu">
+                                <li class="menu-has-children"><a href="">Transtornos</a>
+                                    <ul>
+                                        <li><a href="pagTranstornoEmocional.php">Emocionais</a></li>
+                                        <li><a href="pagBlog-single.html">Alimentares</a></li>
+                                        <li><a href="pagBlog-single.html">Psicoses</a></li>
+                                    </ul>
+                                </li>
+								<li><a href="pagDefasagem.php">Defasagem</a></li>
+								<li><a href="pagDesmotivação.php">Desmotivação</a></li>
+                                <li><a href="pagProblemasFamiliares.php">Problemas familiares</a></li>			        
+                                <li><a href="pagContato.php">Contato</a></li>
+
                             </ul>
-                        </li>
-                        <li><a href="pagDefasagem.php">Defasagem</a></li>
-                        <li><a href="pagDesmotivação.php">Desmotivação</a></li>
-                        <li><a href="pagAbout.html">Problemas familiares</a></li>
-                    </ul>
-                </nav><!-- #nav-menu-container -->
-            </div>
-        </div>
-    </header><!-- #header -->
+                        </nav><!-- #nav-menu-container -->		    		
+                    </div>
+                </div>
+            </header><!-- #header -->
 
     <!-- start banner Area -->
-    <section class="banner-area relative about-banner" id="home">
+    <section class="banner-area relative contato-banner" id="home">
         <div class="overlay overlay-bg"></div>
         <div class="container">
             <div class="row d-flex align-items-center justify-content-center">
@@ -80,7 +92,7 @@
                     <h1 class="text-white">
                         Contato
                     </h1>
-                    <p class="text-white link-nav"><a href="pagInicio.php">Inicio </a> <span class="lnr lnr-arrow-right"></span> <a href="contact.php"> Contato</a></p>
+                    <p class="text-white link-nav"><a href="pagInicio.php">Inicio </a> <span class="lnr lnr-arrow-right"></span> <a href="pagContato.php"> Contato</a></p>
                 </div>
             </div>
         </div>
@@ -167,29 +179,22 @@
     </section>
     <!-- End contact-page Area -->
 
-    <!-- start footer Area -->
+    <!-- start footer Area -->		
     <footer class="footer-area section-gap">
-        <div class="container">
-            <div class="row">
-
-
-
-
-            </div>
-
-            <div class="row footer-bottom d-flex justify-content-between">
-                <p class="col-lg-8 col-sm-12 footer-text m-0">
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                    Copyright &copy;<script>
-                        document.write(new Date().getFullYear());
-                    </script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                </p>
-
-            </div>
-        </div>
-    </footer>
-    <!-- End footer Area -->
+                        <div class="container">
+                            <img src="../../img/logo_cps.png">
+                            <div class="row footer-bottom d-flex justify-content-between">
+                                <p class="col-lg-8 col-sm-12 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Etec de Cotia <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.cps.sp.gov.br" target="_blank">Centro Paula Souza</a>
+                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+                                <div class="col-lg-4 col-sm-12 footer-social">
+                                    <a href="https://www.facebook.com/etecdecotia"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://twitter.com/etecdecotia"><i class="fa fa-twitter"></i></a>
+                                </div>					
+                            </div>
+                        </div>
+                    </footer>                
+            <!-- End footer Area -->
     <div id="mapa"> </div>
     <script async="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA&callback=initMap"></script>
     <script>

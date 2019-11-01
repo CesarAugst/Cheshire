@@ -302,17 +302,10 @@ Tratamento: O acompanhamento médico visa reduzir as ocorrências das crises, be
 							</div>
 						</div>
 					</div>
-					
-					
-					
-			</div>
+				</div>
 			<!-- End Align Area -->
 
 			<!-- start footer Area -->		
-            <footer class="footer-area section-gap">
-                <div class="container">
-
-
                     <footer class="footer-area section-gap">
                         <div class="container">
                             <img src="../../img/logo_cps.png">
@@ -327,8 +320,6 @@ Tratamento: O acompanhamento médico visa reduzir as ocorrências das crises, be
                             </div>
                         </div>
                     </footer>
-                </div>
-            </footer>
             <!-- End footer Area -->
 
 			<script src="../../js/vendor/jquery-2.2.4.min.js"></script>
