@@ -26,7 +26,9 @@ CREATE TABLE IF NOT EXISTS MENSAGEM
 );
 -- Tabela mensagem 1.0
 insert into MENSAGEM values(default,17308,17305,'Cesar enviando para Monique','n',default,'n',null,'n',null,'n',null);
+insert into MENSAGEM values(default,17308,17305,'Cesar enviando para Monique denovo','n',default,'n',null,'n',null,'n',null);
 insert into MENSAGEM values(default,17305,17308,'Monique enviando para Cesar','n',default,'n',null,'n',null,'n',null);
+insert into MENSAGEM values(default,17305,17308,'Monique enviando para Cesar, porem lida','n',default,'s',null,'n',null,'n',null);
 /*SESSÃO DE MENSAGENS#################################################################################################################################*/
 
 /*SESSAO DE USUARIOS##################################################################################################################################*/
@@ -308,10 +310,37 @@ end //
 delimiter ;
 -- PROCEDURE - CAIXA DE ENTRADA -----------------------------------------------------------------------------------------------------------------------
 
+-- PROCEDURE - CAIXA DE LIDAS -----------------------------------------------------------------------------------------------------------------------
+DELIMITER //
+drop procedure if exists CAIXA_LIDAS //
+create procedure CAIXA_LIDAS(id varchar(11))
+main:begin
+declare remetente_n, remetente_s, destinatario_n, destinatario_s varchar(255);
+
+set destinatario_n = (select nome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = id);
+set destinatario_s = (select sobrenome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = id);
+set remetente_n = (select sobrenome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = id);
+
+select 
+m.id_mensagem,
+(select nome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = m.remetente_fk) as nome_remetente,
+(select sobrenome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = m.remetente_fk) as sobrenome_remetente,
+destinatario_n as nome_destinatario,
+destinatario_s as sobrenome_destinatario,
+m.conteudo, 
+m.anonimato, 
+m.data_enviada,  
+m.excluida_destinatario, 
+m.data_excluida_destinatario
+from mensagem as m where ((m.destinatario_fk = id) && (lida = 'S' && m.excluida_destinatario = 'N'));
+end // 
+delimiter ;
+-- PROCEDURE - CAIXA DE LIDAS -----------------------------------------------------------------------------------------------------------------------
 /*SESSAO DE PROCEDURES - CRIAÇÃO##################################################################################################################################*/
 
 /*SESSAO DE PROCEDURES - UTILIZAÇÃO##################################################################################################################################*/
 call CAIXA_ENTRADA(17308);
+call CAIXA_LIDAS(17308);
 /*SESSAO DE PROCEDURES - UTILIZAÇÃO##################################################################################################################################*/
 
 
