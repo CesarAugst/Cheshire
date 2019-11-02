@@ -16,6 +16,7 @@ CREATE TABLE IF NOT EXISTS MENSAGEM
 		FOREIGN KEY (destinatario_fk) references PESSOA(rm),
     conteudo TEXT,
     anonimato ENUM('s', 'n'),
+    data_enviada DATETIME default(now()),
     lida ENUM('s', 'n'),
     data_lida DATETIME,
     excluida_remetente ENUM('s', 'n'),
@@ -24,8 +25,8 @@ CREATE TABLE IF NOT EXISTS MENSAGEM
     data_excluida_destinatario DATETIME
 );
 -- Tabela mensagem 1.0
-insert into MENSAGEM values(default,17308,17305,'Cesar enviando para Monique','n','n',null,'n',null,'n',null);
-insert into MENSAGEM values(default,17305,17308,'Monique enviando para Cesar','n','n',null,'n',null,'n',null);
+insert into MENSAGEM values(default,17308,17305,'Cesar enviando para Monique','n',default,'n',null,'n',null,'n',null);
+insert into MENSAGEM values(default,17305,17308,'Monique enviando para Cesar','n',default,'n',null,'n',null,'n',null);
 /*SESSÃO DE MENSAGENS#################################################################################################################################*/
 
 /*SESSAO DE USUARIOS##################################################################################################################################*/
@@ -279,25 +280,43 @@ insert into ESCOLARIZACAO values(default, 'ETEC de Cotia', 'bom', 'bom', default
 -- Tabela escolarizacao 3.5
 /*SESSAO DE ANAMNESE##################################################################################################################################*/
 
-/*SESSAO DE PROCEDURES##################################################################################################################################*/
+/*SESSAO DE PROCEDURES - CRIAÇÃO##################################################################################################################################*/
+-- PROCEDURE - CAIXA DE ENTRADA -----------------------------------------------------------------------------------------------------------------------
+DELIMITER //
+drop procedure if exists CAIXA_ENTRADA //
+create procedure CAIXA_ENTRADA(id varchar(11))
+main:begin
+declare remetente_n, remetente_s, destinatario_n, destinatario_s varchar(255);
 
+set destinatario_n = (select nome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = id);
+set destinatario_s = (select sobrenome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = id);
+set remetente_n = (select sobrenome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = id);
 
-/*SESSAO DE PROCEDURES##################################################################################################################################*/
+select 
+m.id_mensagem,
+(select nome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = m.remetente_fk) as nome_remetente,
+(select sobrenome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = m.remetente_fk) as sobrenome_remetente,
+destinatario_n as nome_destinatario,
+destinatario_s as sobrenome_destinatario,
+m.conteudo, 
+m.anonimato, 
+m.data_enviada,  
+m.excluida_destinatario, 
+m.data_excluida_destinatario
+from mensagem as m where ((m.destinatario_fk = id) && (lida = 'N' && m.excluida_destinatario = 'N'));
+end //
+delimiter ;
+-- PROCEDURE - CAIXA DE ENTRADA -----------------------------------------------------------------------------------------------------------------------
+
+/*SESSAO DE PROCEDURES - CRIAÇÃO##################################################################################################################################*/
+
+/*SESSAO DE PROCEDURES - UTILIZAÇÃO##################################################################################################################################*/
+call CAIXA_ENTRADA(17308);
+/*SESSAO DE PROCEDURES - UTILIZAÇÃO##################################################################################################################################*/
 
 
 
 /*
--- Cria a procedure que mostra as mensagens da caixa de enrada do usuario ------------------------------------------------------------------------------
-DELIMITER //
-drop procedure if exists caixaEntrada //
-create procedure caixaEntrada(id varchar(11))
-main:begin
-
-select * from mensagem as men where ((men.destinatario = id) && (statusLida = 'N' && statusExcluida = 'N'));
-
-end //
-delimiter ;
--- -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 -- Cria a procedure que mostra as mensagens da caixa de saida do usuario ------------------------------------------------------------------------------
 DELIMITER //
