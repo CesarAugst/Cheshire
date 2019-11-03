@@ -326,7 +326,7 @@ destinatario_s as sobrenome_destinatario,
 m.conteudo, 
 m.anonimato, 
 m.data_enviada,
-data_lida
+m.data_lida
 from mensagem as m where ((m.destinatario_fk = id) && (lida = 'S' && m.excluida_destinatario = 'N'));
 end // 
 delimiter ;
@@ -355,6 +355,31 @@ from mensagem as m where ((m.remetente_fk = id) && (m.excluida_remetente = 'N'))
 end // 
 delimiter ;
 -- PROCEDURE - CAIXA DE ENVIADAS -----------------------------------------------------------------------------------------------------------------------
+
+-- PROCEDURE - CAIXA DE EXCLUIDAS -----------------------------------------------------------------------------------------------------------------------
+DELIMITER //
+drop procedure if exists CAIXA_EXCLUIDAS_REMETENTE //
+create procedure CAIXA_EXCLUIDAS(id varchar(255))
+main:begin
+declare remetente_n, remetente_s, destinatario_n, destinatario_s varchar(255);
+
+set destinatario_n = (select nome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = id);
+set destinatario_s = (select sobrenome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = id);
+
+select 
+m.id_mensagem,
+(select nome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = m.remetente_fk) as nome_remetente,
+(select sobrenome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = m.remetente_fk) as sobrenome_remetente,
+destinatario_n as nome_destinatario,
+destinatario_s as sobrenome_destinatario,
+m.conteudo, 
+m.anonimato, 
+m.data_enviada,
+m.data_lida
+from mensagem as m where ((m.remetente_fk = id) && (m.excluida_remetente = 'S'));
+end // 
+delimiter ;
+-- PROCEDURE - CAIXA DE EXCLUIDAS -----------------------------------------------------------------------------------------------------------------------
 
 -- PROCEDURE - MARCA MENSAGENS COMO LIDAS ---------------------------------------------------------------------------------------
 DELIMITER //
@@ -388,6 +413,45 @@ update MENSAGEM set data_excluida_destinatario = now() where id_mensagem = id;
 end //
 DELIMITER ;
 -- PROCEDURE - MARCA MENSAGENS DO REMETENTE COMO EXCLUIDAS ---------------------------------------------------------------------------------------
+
+-- PROCEDURE - CADASTRO -----------------------------------------------------------------------------------------------------
+DELIMITER //
+drop procedure if exists CADASTRO //
+create procedure CADASTRO(rm_p int,login_p varchar(255),senha_p varchar(255),nome_p varchar(255),sobrenome_p varchar(255),funcao_p varchar(255),email_p varchar(255),celular_p varchar(255))
+main:begin
+
+insert into LOGIN values
+(
+default, 
+rm_p, 
+senha_p
+);
+
+insert into REGISTRO (id_registro, nome, sobrenome)values 
+(
+default,
+nome_p, 
+sobrenome_p
+);
+
+insert into TELEFONE values(default, rm, );
+
+insert into PESSOA (rm, login_fk, registro_fk) values
+(
+rm_p, 
+(select id_login from LOGIN where (login = login_p && senha = senha_p)), 
+(select id_registro from REGISTRO where (nome = nome_p && sobrenome = sobrenome_p))
+);
+
+IF (funcao_p = 'orientador') THEN 
+UPDATE PESSOA SET tipo_fk = 1;
+ELSE
+UPDATE PESSOA SET tipo_fk = 2;
+END IF;
+
+end //
+DELIMITER ;
+-- PROCEDURE - CADASTRO -----------------------------------------------------------------------------------------------------
 /*SESSAO DE PROCEDURES - CRIAÇÃO##################################################################################################################################*/
 
 /*SESSAO DE PROCEDURES - UTILIZAÇÃO##################################################################################################################################*/
