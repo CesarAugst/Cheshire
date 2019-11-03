@@ -286,7 +286,7 @@ insert into ESCOLARIZACAO values(default, 'ETEC de Cotia', 'bom', 'bom', default
 -- PROCEDURE - CAIXA DE ENTRADA -----------------------------------------------------------------------------------------------------------------------
 DELIMITER //
 drop procedure if exists CAIXA_ENTRADA //
-create procedure CAIXA_ENTRADA(id varchar(11))
+create procedure CAIXA_ENTRADA(id varchar(255))
 main:begin
 declare remetente_n, remetente_s, destinatario_n, destinatario_s varchar(255);
 
@@ -310,7 +310,7 @@ delimiter ;
 -- PROCEDURE - CAIXA DE LIDAS -----------------------------------------------------------------------------------------------------------------------
 DELIMITER //
 drop procedure if exists CAIXA_LIDAS //
-create procedure CAIXA_LIDAS(id varchar(11))
+create procedure CAIXA_LIDAS(id varchar(255))
 main:begin
 declare remetente_n, remetente_s, destinatario_n, destinatario_s varchar(255);
 
@@ -335,7 +335,7 @@ delimiter ;
 -- PROCEDURE - CAIXA DE ENVIADAS -----------------------------------------------------------------------------------------------------------------------
 DELIMITER //
 drop procedure if exists CAIXA_ENVIADAS //
-create procedure CAIXA_ENVIADAS(id varchar(11))
+create procedure CAIXA_ENVIADAS(id varchar(255))
 main:begin
 declare remetente_n, remetente_s, destinatario_n, destinatario_s varchar(255);
 
@@ -358,11 +358,11 @@ delimiter ;
 
 -- PROCEDURE - MARCA MENSAGENS COMO LIDAS ---------------------------------------------------------------------------------------
 DELIMITER //
-drop procedure if exists MARCALIDA //
-create procedure MARCALIDA(id varchar(11))
+drop procedure if exists MARCA_LIDA //
+create procedure MARCA_LIDA(id varchar(255))
 main:begin
-update mensagem set statusLida = 'S' where cod_mensagem = id;
-update mensagem set dataLida = now() where cod_mensagem = id;
+update MENSAGEM set lida = 'S' where id_mensagem = id;
+update MENSAGEM set data_lida = now() where id_mensagem = id;
 end //
 DELIMITER ;
 -- PROCEDURE - MARCA MENSAGENS COMO LIDAS ---------------------------------------------------------------------------------------
@@ -370,7 +370,7 @@ DELIMITER ;
 
 /*SESSAO DE PROCEDURES - UTILIZAÇÃO##################################################################################################################################*/
 call CAIXA_ENTRADA(17308);
-call CAIXA_LIDAS(17308);
+call CAIXA_LIDAS(17305);
 call CAIXA_ENVIADAS(17308);
-select * from mensagem;
+call MARCA_LIDA(4);
 /*SESSAO DE PROCEDURES - UTILIZAÇÃO##################################################################################################################################*/
