@@ -366,6 +366,28 @@ update MENSAGEM set data_lida = now() where id_mensagem = id;
 end //
 DELIMITER ;
 -- PROCEDURE - MARCA MENSAGENS COMO LIDAS ---------------------------------------------------------------------------------------
+
+-- PROCEDURE - MARCA MENSAGENS DO REMETENTE COMO EXCLUIDAS ---------------------------------------------------------------------------------------
+DELIMITER //
+drop procedure if exists MARCA_EXCLUIDA_REMETENTE //
+create procedure MARCA_EXCLUIDA_REMETENTE(id varchar(255))
+main:begin
+update MENSAGEM set excluida_remetente = 'S' where id_mensagem = id;
+update MENSAGEM set data_excluida_remetente = now() where id_mensagem = id;
+end //
+DELIMITER ;
+-- PROCEDURE - MARCA MENSAGENS DO REMETENTE COMO EXCLUIDAS ---------------------------------------------------------------------------------------
+
+-- PROCEDURE - MARCA MENSAGENS DO DESTINATARIO COMO EXCLUIDAS ---------------------------------------------------------------------------------------
+DELIMITER //
+drop procedure if exists MARCA_EXCLUIDA_DESTINATARIO //
+create procedure MARCA_EXCLUIDA_DESTINATARIO(id varchar(255))
+main:begin
+update MENSAGEM set excluida_destinatario = 'S' where id_mensagem = id;
+update MENSAGEM set data_excluida_destinatario = now() where id_mensagem = id;
+end //
+DELIMITER ;
+-- PROCEDURE - MARCA MENSAGENS DO REMETENTE COMO EXCLUIDAS ---------------------------------------------------------------------------------------
 /*SESSAO DE PROCEDURES - CRIAÇÃO##################################################################################################################################*/
 
 /*SESSAO DE PROCEDURES - UTILIZAÇÃO##################################################################################################################################*/
@@ -373,4 +395,7 @@ call CAIXA_ENTRADA(17308);
 call CAIXA_LIDAS(17305);
 call CAIXA_ENVIADAS(17308);
 call MARCA_LIDA(4);
+call MARCA_EXCLUIDA_REMETENTE(4);
+call MARCA_EXCLUIDA_DESTINATARIO(4);
+select * from MENSAGEM;
 /*SESSAO DE PROCEDURES - UTILIZAÇÃO##################################################################################################################################*/
