@@ -292,7 +292,6 @@ declare remetente_n, remetente_s, destinatario_n, destinatario_s varchar(255);
 
 set destinatario_n = (select nome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = id);
 set destinatario_s = (select sobrenome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = id);
-set remetente_n = (select sobrenome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = id);
 
 select 
 m.id_mensagem,
@@ -302,9 +301,7 @@ destinatario_n as nome_destinatario,
 destinatario_s as sobrenome_destinatario,
 m.conteudo, 
 m.anonimato, 
-m.data_enviada,  
-m.excluida_destinatario, 
-m.data_excluida_destinatario
+m.data_enviada
 from mensagem as m where ((m.destinatario_fk = id) && (lida = 'N' && m.excluida_destinatario = 'N'));
 end //
 delimiter ;
@@ -319,7 +316,6 @@ declare remetente_n, remetente_s, destinatario_n, destinatario_s varchar(255);
 
 set destinatario_n = (select nome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = id);
 set destinatario_s = (select sobrenome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = id);
-set remetente_n = (select sobrenome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = id);
 
 select 
 m.id_mensagem,
@@ -329,9 +325,8 @@ destinatario_n as nome_destinatario,
 destinatario_s as sobrenome_destinatario,
 m.conteudo, 
 m.anonimato, 
-m.data_enviada,  
-m.excluida_destinatario, 
-m.data_excluida_destinatario
+m.data_enviada,
+data_lida
 from mensagem as m where ((m.destinatario_fk = id) && (lida = 'S' && m.excluida_destinatario = 'N'));
 end // 
 delimiter ;
@@ -346,7 +341,6 @@ declare remetente_n, remetente_s, destinatario_n, destinatario_s varchar(255);
 
 set destinatario_n = (select nome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = id);
 set destinatario_s = (select sobrenome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = id);
-set remetente_n = (select sobrenome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = id);
 
 select 
 m.id_mensagem,
@@ -356,54 +350,27 @@ destinatario_n as nome_destinatario,
 destinatario_s as sobrenome_destinatario,
 m.conteudo, 
 m.anonimato, 
-m.data_enviada,  
-m.excluida_destinatario, 
-m.data_excluida_destinatario
+m.data_enviada
 from mensagem as m where ((m.remetente_fk = id) && (m.excluida_remetente = 'N'));
 end // 
 delimiter ;
 -- PROCEDURE - CAIXA DE ENVIADAS -----------------------------------------------------------------------------------------------------------------------
-/*SESSAO DE PROCEDURES - CRIAÇÃO##################################################################################################################################*/
 
-/*SESSAO DE PROCEDURES - UTILIZAÇÃO##################################################################################################################################*/
-call CAIXA_ENTRADA(17308);
-call CAIXA_LIDAS(17308);
-call CAIXA_ENVIADAS(17305);
-/*SESSAO DE PROCEDURES - UTILIZAÇÃO##################################################################################################################################*/
-
-
-
-/*
-
--- Cria a procedure que mostra as mensagens da caixa de saida do usuario ------------------------------------------------------------------------------
+-- PROCEDURE - MARCA MENSAGENS COMO LIDAS ---------------------------------------------------------------------------------------
 DELIMITER //
-drop procedure if exists caixaEnviada //
-create procedure caixaEnviada(id varchar(11))
-main:begin
-select * from mensagem where (remetente = id ) && (statusLida = 'N' && statusExcluida = 'N');
-end //
-delimiter ;
--- -----------------------------------------------------------------------------------------------------------------------------------------------------
-
-
--- Cria a procedure que mostra as mensagens marcadas omo lidas pelo usuario ----------------------------------------------------------------------------
-DELIMITER //
-drop procedure if exists mensagemLida //
-create procedure mensagemLida(id varchar(11))
-main:begin
-select * from mensagem where (destinatario = id) && (statusLida = 'S' && statusExcluida = 'N');
-end //
-delimiter ;
--- -----------------------------------------------------------------------------------------------------------------------------------------------------
-
--- Cria a procedure que marca as mensagens como lidas --------------------------------------------------------------------------------------------------
-DELIMITER //
-drop procedure if exists marcaLida //
-create procedure marcaLida(id varchar(11))
+drop procedure if exists MARCALIDA //
+create procedure MARCALIDA(id varchar(11))
 main:begin
 update mensagem set statusLida = 'S' where cod_mensagem = id;
 update mensagem set dataLida = now() where cod_mensagem = id;
 end //
 DELIMITER ;
--- -----------------------------------------------------------------------------------------------------------------------------------------------------
-*/
+-- PROCEDURE - MARCA MENSAGENS COMO LIDAS ---------------------------------------------------------------------------------------
+/*SESSAO DE PROCEDURES - CRIAÇÃO##################################################################################################################################*/
+
+/*SESSAO DE PROCEDURES - UTILIZAÇÃO##################################################################################################################################*/
+call CAIXA_ENTRADA(17308);
+call CAIXA_LIDAS(17308);
+call CAIXA_ENVIADAS(17308);
+select * from mensagem;
+/*SESSAO DE PROCEDURES - UTILIZAÇÃO##################################################################################################################################*/
