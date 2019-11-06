@@ -120,11 +120,7 @@
 										<option value="2">funcionario</option>
 										<option value="3">orientador</option>
 									</select>
-								</div>
-
-								<input type="text" class="form-control" name="txtEmail" placeholder="Email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email'">
-
-								<input type="text" class="form-control" name="txtcel" placeholder="Celular" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Celular'">
+								</div>								
 
 								
 								<button type="submit" class="primary-btn text-uppercase">Confirmar</button>

@@ -107,8 +107,8 @@ if ($_SESSION['log'] != 'ativo') {
     <section class="offered-service-area dep-offred-service">
         <div class="container">
             <div class="row offred-wrap section-gap">
-                <div class="col-lg-8 offered-left text-black">
-                    <h1>Problemas na defasagem escolar</h1>
+                <div class="col-lg-8 offered-area text-black">
+                    <center><h1>Problemas na defasagem escolar</h1>
                     <p>
                         <dd>O aluno que apresenta defasagem escolar deve ser orientado pelo orientador educacional para aproveitar da melhor maneira possível suas habilidades, promovendo um autoconhecimento que lhe favoreça em determinada área de sua escolha, uma vez que o aluno pode não ser bom em um determinado ramo específico, mas pode ser melhor em outro.
                             Segundo estudo um levantamento de dados realizado pelo INEP em 2017, o número de alunos que demonstravam um nível de conhecimento didático incompativelmente inferior ao esperado pela sua idade (defasagem escolar) em 2017 ensino médio chegava a 28%.
@@ -118,59 +118,8 @@ if ($_SESSION['log'] != 'ativo') {
                     <p>
                         A aplicação proposta pelo projeto propõe uma forma de acompanhamento online de uma planilha de estudos que é desenvolvida pelo orientador juntamente do aluno, onde antes havia um acompanhamento quinzenal ou semanal passa a ser em tempo real, para assim planejarem juntos uma forma de aprimorar o processo de aprendizagem do docente e reduzir esse nível de defasagem.</h5>
                     </p>
-
-                    <div class="service-wrap row">
-                        <div class="col-lg-6 col-md-6">
-
-                        </div>
-
-
-                    </div>
+                    </center>
                 </div>
-                <div class="col-lg-4">
-                    <div class="offered-right relative sidebar-offered-service">
-                        <div class="overlay overlay-bg"></div>
-                        <h3 class="relative text-white">Causas comuns da defasagem</h3>
-                        <ul class="relative dep-list">
-
-                            <li><a href="#">fragilidade da escola</a></li>
-                            <li><a href="#">material didático</a></li>
-                            <li><a href="#">corpo docente</a></li><br>
-                        </ul>
-                        <h3 class="relative text-white">Consequências</h3>
-                        <ul class="relative dep-list">
-
-                            <li><a href="#">Notas baixas</a></li>
-                            <li><a href="#">Reprovação</a></li>
-                            <li><a href="#">Abandono Escolar</a></li>
-                        </ul>
-
-                    </div>
-                    <form class="form-wrap sidebar-appointment">
-                        <h3 class="pb-20 text-center">Book an Appointment</h3>
-                        <input type="text" class="form-control" name="name" placeholder="Patient Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Patient Name'">
-                        <input type="text" class="form-control" name="phone" placeholder="Phone " onfocus="this.placeholder = ''" onblur="this.placeholder = 'Phone'">
-                        <input type="email" class="form-control" name="email" placeholder="Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email Address'">
-                        <input id="datepicker1" name="dop" class="dates form-control" placeholder="Date of Birth" type="text">
-                        <div class="form-select" id="service-select">
-                            <select>
-                                <option data-display="">Disease Type</option>
-                                <option value="1">Type One</option>
-                                <option value="2">Type Two</option>
-                                <option value="3">Type Three</option>
-                                <option value="4">Type Four</option>
-                            </select>
-                        </div>
-                        <input id="datepicker2" class="dates form-control" placeholder="appointment Date" type="text">
-                        <textarea name="messege" class="" rows="5" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'"></textarea>
-                        <button class="primary-btn text-uppercase">Confirm Booking</button>
-                    </form>
-
-
-
-
-                </div>
-            </div>
     </section>
     <!-- End offered-service Area -->
 
