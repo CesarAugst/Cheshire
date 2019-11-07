@@ -211,8 +211,6 @@ De acordo com um estudo do Fundo das Nações Unidas pela Infância e Adolescên
 Várias podem ser as razões da evasão escolar: pobreza, violência, gravidez, acesso limitado, qualidade da educação, clima escolar, mercado de trabalho, atividades ilegais… Um estudante que abandonou a escola é, na maioria das vezes, um estudante cujo desempenho acadêmico, formação acadêmica ou perspectiva de ter e construir uma vida ativa não é intelectualmente interessante. Tudo isso leva ao abandono escolar, mas também e especialmente a um declínio na autoestima, uma grande dificuldade em medir as suas habilidades e uma visão pessimista e fatalista de sua vida.
 
 O professor deve ser um aliado nesse processo, contribuindo para que o aluno não seja levado ao abandono escolar, melhorando sua autoestima, refinando suas habilidades e apostando nas futuras perspectivas. Porque sim, um aluno que abandonou a escola não pode ser esquecido; é preciso resgatá-lo e reinseri-lo no ambiente escolar por meio de uma estratégia que combine vários fatores.
-
-Nós todos sabemos: a perseverança na educação é a chave para concluir seus estudos, encontrar um emprego adequado às suas expectativas e conseguir ter sucesso em sua vida pessoal e profissional. Um aluno paralisado não estará nessa perspectiva e será bastante derrotista, correndo o risco de recusar qualquer apoio personalizado e qualquer segunda chance.
                         </blockquote>
                     </div>
                 </div>
