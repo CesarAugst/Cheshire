@@ -3609,6 +3609,27 @@ dl.toggle.time-line:before {
   }
 }
 
+.video-defasagem {
+  background: url(../img/defasagem-video.jpg) no-repeat center;
+  background-size: cover;
+  height: 330px;
+  width: 100px;
+}
+
+.video-defasagem .overlay-bg {
+  background-color: rgba(106, 134, 113, 0.2);
+}
+
+.video-defasagem .play-btn {
+  z-index: 2;
+}
+
+@media (max-width: 767px) {
+  .video-defasagem {
+    margin-top: 50px;
+  }
+}
+
 
 .video-left{
   background: url(../img/ansiedade.jpg) no-repeat center;

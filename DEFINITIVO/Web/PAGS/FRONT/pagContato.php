@@ -41,47 +41,47 @@ if ($_SESSION['log'] != 'ativo') {
 </head>
 
 <body>
-            <header id="header">
-            <div class="header-top">
-                    <div class="container">
-                        <div class="row align-items-center">
-                            <div class="col-lg-6 col-sm-6 col-4 header-top-left">
-                                <a href="tel:+9530123654896"><span class="lnr lnr-phone-handset"></span> <span class="text"><span class="text">+55 11 4148-2099</span></span></a>
-                                <a href="mailto:support@colorlib.com"><span class="lnr lnr-envelope"></span> <span class="text"><span class="text">faleconosco@etecdecotia.com.br</span></span></a>			
-                            </div>
-                            <div class="col-lg-6 col-sm-6 col-8 header-top-right">
-                                <?php
-                                echo "Bem Vindo! <b>" . $_SESSION['rm'] . " </b>";
-                                ?>
-                                <a href="../BACK/logout.php" class="primary-btn text-uppercase">Logout</a>
-                            </div>
-                        </div>			  					
+    <header id="header">
+        <div class="header-top">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-sm-6 col-4 header-top-left">
+                        <a href="tel:+9530123654896"><span class="lnr lnr-phone-handset"></span> <span class="text"><span class="text">+55 11 4148-2099</span></span></a>
+                        <a href="mailto:support@colorlib.com"><span class="lnr lnr-envelope"></span> <span class="text"><span class="text">faleconosco@etecdecotia.com.br</span></span></a>
+                    </div>
+                    <div class="col-lg-6 col-sm-6 col-8 header-top-right">
+                        <?php
+                        echo "Bem Vindo! <b>" . $_SESSION['rm'] . " </b>";
+                        ?>
+                        <a href="../BACK/logout.php" class="primary-btn text-uppercase">Logout</a>
                     </div>
                 </div>
-                <div class="container main-menu">
-                    <div class="row align-items-center justify-content-between d-flex">
-                        <div id="logo">
-                            <a href="pagInicio."><img src="../../img/cheshire1.png" width="100px" height="70px" alt="" title="" /></a>
-                        </div>
-                        <nav id="nav-menu-container">
-                            <ul class="nav-menu">
-                                <li class="menu-has-children"><a href="">Transtornos</a>
-                                    <ul>
-                                        <li><a href="pagTranstornoEmocional.php">Emocionais</a></li>
-                                        <li><a href="pagBlog-single.html">Alimentares</a></li>
-                                        <li><a href="pagBlog-single.html">Psicoses</a></li>
-                                    </ul>
-                                </li>
-								<li><a href="pagDefasagem.php">Defasagem</a></li>
-								<li><a href="pagDesmotivação.php">Desmotivação</a></li>
-                                <li><a href="pagProblemasFamiliares.php">Problemas familiares</a></li>			        
-                                <li><a href="pagContato.php">Contato</a></li>
-
+            </div>
+        </div>
+        <div class="container main-menu">
+            <div class="row align-items-center justify-content-between d-flex">
+                <div id="logo">
+                    <a href="pagInicio."><img src="../../img/cheshire1.png" width="100px" height="70px" alt="" title="" /></a>
+                </div>
+                <nav id="nav-menu-container">
+                    <ul class="nav-menu">
+                        <li class="menu-has-children"><a href="">Transtornos</a>
+                            <ul>
+                                <li><a href="pagTranstornoEmocional.php">Emocionais</a></li>
+                                <li><a href="pagBlog-single.html">Alimentares</a></li>
+                                <li><a href="pagBlog-single.html">Psicoses</a></li>
                             </ul>
-                        </nav><!-- #nav-menu-container -->		    		
-                    </div>
-                </div>
-            </header><!-- #header -->
+                        </li>
+                        <li><a href="pagDefasagem.php">Defasagem</a></li>
+                        <li><a href="pagDesmotivação.php">Desmotivação</a></li>
+                        <li><a href="pagProblemasFamiliares.php">Problemas familiares</a></li>
+                        <li><a href="pagContato.php">Contato</a></li>
+
+                    </ul>
+                </nav><!-- #nav-menu-container -->
+            </div>
+        </div>
+    </header><!-- #header -->
 
     <!-- start banner Area -->
     <section class="banner-area relative contato-banner" id="home">
@@ -179,22 +179,28 @@ if ($_SESSION['log'] != 'ativo') {
     </section>
     <!-- End contact-page Area -->
 
-    <!-- start footer Area -->		
+    <!-- start footer Area -->
     <footer class="footer-area section-gap">
-                        <div class="container">
-                            <img src="../../img/logo_cps.png">
-                            <div class="row footer-bottom d-flex justify-content-between">
-                                <p class="col-lg-8 col-sm-12 footer-text m-0"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                    Copyright &copy;<script>document.write(new Date().getFullYear());</script> Etec de Cotia <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.cps.sp.gov.br" target="_blank">Centro Paula Souza</a>
-                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-                                <div class="col-lg-4 col-sm-12 footer-social">
-                                    <a href="https://www.facebook.com/etecdecotia"><i class="fa fa-facebook"></i></a>
-                                    <a href="https://twitter.com/etecdecotia"><i class="fa fa-twitter"></i></a>
-                                </div>					
-                            </div>
-                        </div>
-                    </footer>                
-            <!-- End footer Area -->
+        <div class="container">
+            <img src="../../img/logo_cps.png">
+            <div class="row footer-bottom d-flex justify-content-between">
+                <p class="col-lg-8 col-sm-12 footer-text m-0">
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    Copyright &copy;<script>
+                        document.write(new Date().getFullYear());
+                    </script> Etec de Cotia <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.cps.sp.gov.br" target="_blank">Centro Paula Souza</a>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </p>
+                <div class="col-lg-4 col-sm-12 footer-social">
+                    <a href="https://www.facebook.com/etecdecotia"><i class="fa fa-facebook"></i></a>
+                    <a href="https://twitter.com/etecdecotia"><i class="fa fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End footer Area -->
+
+    <!-- Mapa com Funções -->
     <div id="mapa"> </div>
     <script async="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA&callback=initMap"></script>
     <script>
@@ -231,7 +237,7 @@ if ($_SESSION['log'] != 'ativo') {
             });
         }
     </script>
-
+    <!-- Fim Mapa -->
 
 
     <script src="../../js/vendor/jquery-2.2.4.min.js"></script>

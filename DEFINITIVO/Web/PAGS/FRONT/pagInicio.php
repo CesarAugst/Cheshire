@@ -1,5 +1,6 @@
 	<!DOCTYPE html>
 	<?php
+	//Condição: Se estiver logado acessa a página
 	session_start();
 	if ($_SESSION['log'] != 'ativo') {
 		session_destroy();
@@ -41,6 +42,7 @@
 	</head>
 
 	<body>
+		<!-- Cabeçalho -->
 		<header id="header">
 			<div class="header-top">
 				<div class="container">
@@ -80,9 +82,9 @@
 					</nav><!-- #nav-menu-container -->
 				</div>
 			</div>
-		</header><!-- #header -->
+		</header><!-- Fim do cabeçalho -->
 
-		<!-- start banner Area -->
+		<!-- Banner Area -->
 		<section class=" relative blog-home-banner" id="home">
 			<div class="overlay overlay-bg"></div>
 			<div class="container">
@@ -99,12 +101,12 @@
 				</div>
 			</div>
 		</section>
-		<!-- End banner Area -->
+		<!-- Fim banner Area -->
 		<br><br>
 		<center>
 			<h1>problemas</h1>
 		</center>
-		<!-- Start top-category-widget Area -->
+		<!-- Menu de páginas -->
 		<section class="top-category-widget-area pt-90 pb-90 ">
 			<div class="container">
 				<div class="row">
@@ -164,7 +166,7 @@
 				</div>
 			</div>
 		</section>
-		<!-- End top-category-widget Area -->
+		<!-- fim menu -->
 
 		<!-- Start post-content Area -->
 		<section class="post-content-area">
