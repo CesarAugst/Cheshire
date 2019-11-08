@@ -875,6 +875,7 @@ td, th {
   background: #fff;
 }
 
+/* bordas das páginas*/
 .section-top-border {
   padding: 50px 0;
   border-top: 1px dotted #eee;
@@ -887,6 +888,7 @@ td, th {
   border-color:10px  #75cf0d;
   border-bottom-style: outset;
 }
+/* fim das bordas */
 .switch-wrap {
   margin-bottom: 10px;
 }
@@ -1303,11 +1305,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .progress-table .table-row .percentage .progress .progress-bar.color-4 {
-  background-color: #73fbaf;
+  background-color: #242b27;
 }
 
 .progress-table .table-row .percentage .progress .progress-bar.color-5 {
-  background-color: #73fbaf;
+  background-color: #969696;
 }
 
 .progress-table .table-row .percentage .progress .progress-bar.color-6 {
@@ -2480,6 +2482,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /*-------- Start Banner Area ------------*/
+
+/* Banner Login e Cadastro */
 .banner-area {
   background: url(../img/solidarios.jpg) right;
   background-size: cover;
@@ -2679,7 +2683,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*-------- End facilities Area ------------*/
 /*-------- Start offered-service Area ------------*/
 .offered-service-area {
-  background: #222222;
+  background: #3c974b;
 }
 
 .offered-service-area .offered-left p {
@@ -2688,15 +2692,18 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .offered-service-area .offered-right {
   background: url();
-  padding: 80px;
+  padding: 50px;
   background-size: cover;
-  left: 50px;
-  color: #fff;
+  left: 40px;
+  color: rgb(0, 0, 0);
+  top: 107px;
+  width: 500px;
   text-align: center;
+  text-decoration-color: #000;
 }
 
 .offered-service-area .offered-right .overlay-bg {
-  background: #8AE2FF;
+
 }
 
 .offered-service-area .offered-right .dep-list {
@@ -3086,6 +3093,10 @@ body.mobile-nav-active #mobile-nav-toggle {
   background-size: cover;
 }
 
+.TranstornoAlimentar-banner {
+  background: url(../img/TranstornoAlimentarjpg) no-repeat;
+  background-size: cover;
+}
 
 .about-content {
   margin-top: 110px;
@@ -3626,6 +3637,66 @@ dl.toggle.time-line:before {
 
 @media (max-width: 767px) {
   .video-defasagem {
+    margin-top: 50px;
+  }
+}
+
+.video-anorexia{
+  background: url(../img/anorexia.jpg) no-repeat center;
+  background-size: cover;
+  height: 300px;
+}
+
+.video-anorexia .overlay-bg {
+  background-color: rgba(106, 134, 113, 0.2);
+}
+
+.video-anorexia .play-btn {
+  z-index: 2;
+}
+
+@media (max-width: 767px) {
+  .video-anorexia {
+    margin-top: 50px;
+  }
+}
+
+.video-bulimia{
+  background: url(../img/bulimia.jpg) no-repeat center;
+  background-size: cover;
+  height: 300px;
+}
+
+.video-bulimia .overlay-bg {
+  background-color: rgba(106, 134, 113, 0.2);
+}
+
+.video-bulimia .play-btn {
+  z-index: 2;
+}
+
+@media (max-width: 767px) {
+  .video-bulimia {
+    margin-top: 50px;
+  }
+}
+
+.video-compulsao{
+  background: url(../img/compulsao.jpg) no-repeat center;
+  background-size: cover;
+  height: 300px;
+}
+
+.video-compulsao .overlay-bg {
+  background-color: rgba(106, 134, 113, 0.2);
+}
+
+.video-compulsao .play-btn {
+  z-index: 2;
+}
+
+@media (max-width: 767px) {
+  .video-compulsao {
     margin-top: 50px;
   }
 }

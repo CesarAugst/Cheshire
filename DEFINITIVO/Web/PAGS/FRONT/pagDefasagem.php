@@ -69,7 +69,7 @@ if ($_SESSION['log'] != 'ativo') {
                         <li class="menu-has-children"><a href="">Transtornos</a>
                             <ul>
                                 <li><a href="pagTranstornoEmocional.php">Emocionais</a></li>
-                                <li><a href="blog-single.html">Alimentares</a></li>
+                                <li><a href="pagTranstornoAlimentar.php">Alimentares</a></li>
                                 <li><a href="blog-single.html">Psicoses</a></li>
                             </ul>
                         </li>
