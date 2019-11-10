@@ -417,38 +417,52 @@ DELIMITER ;
 -- PROCEDURE - CADASTRO -----------------------------------------------------------------------------------------------------
 DELIMITER //
 drop procedure if exists CADASTRO //
-create procedure CADASTRO(rm_p int,login_p varchar(255),senha_p varchar(255),nome_p varchar(255),sobrenome_p varchar(255),funcao_p varchar(255),email_p varchar(255),celular_p varchar(255))
+create procedure CADASTRO(rm_p int,login_p varchar(255),senha_p varchar(255),nome_p varchar(255),sobrenome_p varchar(255),funcao_p varchar(255))
 main:begin
 
-insert into LOGIN values
-(
-default, 
-rm_p, 
-senha_p
-);
+declare valido boolean;
+declare log_c, rm_c int;
 
-insert into REGISTRO (id_registro, nome, sobrenome)values 
-(
-default,
-nome_p, 
-sobrenome_p
-);
+set log_c = (SELECT COUNT(*) FROM LOGIN WHERE login = login_p);
+set rm_c = (SELECT COUNT(*) FROM PESSOA WHERE rm = rm_p);
 
-insert into TELEFONE values(default, rm, );
+if( (log_c > 0) && (rm_c > 0))then
+	set valido = false;
+else 
+    set valido = true;
+end if;
 
-insert into PESSOA (rm, login_fk, registro_fk) values
-(
-rm_p, 
-(select id_login from LOGIN where (login = login_p && senha = senha_p)), 
-(select id_registro from REGISTRO where (nome = nome_p && sobrenome = sobrenome_p))
-);
 
-IF (funcao_p = 'orientador') THEN 
-UPDATE PESSOA SET tipo_fk = 1;
-ELSE
-UPDATE PESSOA SET tipo_fk = 2;
-END IF;
+if(valido = true)then
+	insert into LOGIN values
+	(
+	default, 
+		login_p, 
+		senha_p
+	);
 
+	insert into REGISTRO (nome, sobrenome)values 
+	(
+		nome_p, 
+		sobrenome_p
+	);
+
+	insert into PESSOA (rm, login_fk, registro_fk) values
+	(
+		rm_p, 
+		(select id_login from LOGIN where (login = login_p && senha = senha_p)), 
+		(select id_registro from REGISTRO where (nome = nome_p && sobrenome = sobrenome_p))
+	);
+
+	IF (funcao_p = 'orientador') THEN 
+		UPDATE PESSOA SET tipo_fk = 1 where rm = rm_p;
+	END IF;
+
+	IF (funcao_p = 'aluno') THEN 
+		UPDATE PESSOA SET tipo_fk = 2 where rm = rm_p;
+	END IF;
+
+end if;
 end //
 DELIMITER ;
 -- PROCEDURE - CADASTRO -----------------------------------------------------------------------------------------------------
@@ -461,5 +475,5 @@ call CAIXA_ENVIADAS(17308);
 call MARCA_LIDA(4);
 call MARCA_EXCLUIDA_REMETENTE(4);
 call MARCA_EXCLUIDA_DESTINATARIO(4);
-select * from MENSAGEM;
+call CADASTRO(12345,'lougin','snha','nome','sobrenome','aluno');
 /*SESSAO DE PROCEDURES - UTILIZAÇÃO##################################################################################################################################*/
