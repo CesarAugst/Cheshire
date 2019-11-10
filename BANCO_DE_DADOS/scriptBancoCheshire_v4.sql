@@ -466,6 +466,19 @@ end if;
 end //
 DELIMITER ;
 -- PROCEDURE - CADASTRO -----------------------------------------------------------------------------------------------------
+
+-- PROCEDURE - LOGIN --------------------------------------------------------------------------------------------------------
+DELIMITER //
+drop procedure if exists LOGIN //
+create procedure LOGIN(login_p varchar(255),senha_p varchar(255))
+main:begin
+declare cod_log, cod_rm int;
+set cod_log = (select id_login from LOGIN where login= login_p && senha= senha_p);
+set cod_rm = (select rm from PESSOA where login_fk= cod_log);
+select cod_rm, login, senha from LOGIN where login= login_p and senha= senha_p;
+end //
+DELIMITER ;
+-- PROCEDURE - LOGIN --------------------------------------------------------------------------------------------------------
 /*SESSAO DE PROCEDURES - CRIAÇÃO##################################################################################################################################*/
 
 /*SESSAO DE PROCEDURES - UTILIZAÇÃO##################################################################################################################################*/
@@ -476,4 +489,5 @@ call MARCA_LIDA(4);
 call MARCA_EXCLUIDA_REMETENTE(4);
 call MARCA_EXCLUIDA_DESTINATARIO(4);
 call CADASTRO(12345,'lougin','snha','nome','sobrenome','aluno');
+call LOGIN('lougin','snha');
 /*SESSAO DE PROCEDURES - UTILIZAÇÃO##################################################################################################################################*/
