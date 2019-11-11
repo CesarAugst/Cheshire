@@ -217,13 +217,13 @@ if ($_SESSION['log'] != 'ativo') {
 							<div class="table-head">
 								<div class="serial"></div>
 								<div class="country">Paises</div>
-								<div class="visit">Taxas/População</div>
+								<div class="visit text-black">Taxas/População</div>
 								<div class="percentage"></div>
 							</div>
 							<div class="table-row">
 								<div class="serial">01</div>
 								<div class="country"> <img src="../../img/elements/bandeira_ucrania.jpg" alt="flag">Ucrânia</div>
-								<div class="visit">6.3%/48.457.102</div>
+								<div class="visit text-black">6.3%/48.457.102</div>
 								<div class="percentage">
 									<div class="progress">
 										<div class="progress-bar color-1" role="progressbar" style="width: 6.3%" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
@@ -233,7 +233,7 @@ if ($_SESSION['log'] != 'ativo') {
 							<div class="table-row">
 								<div class="serial">02</div>
 								<div class="country"> <img src="../../img/elements/f5.jpg" alt="flag">Austrália</div>
-								<div class="visit">6.1%/24.621.009</div>
+								<div class="visit text-black">6.1%/24.621.009</div>
 								<div class="percentage">
 									<div class="progress">
 										<div class="progress-bar color-2" role="progressbar" style="width: 6.1%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
@@ -242,8 +242,8 @@ if ($_SESSION['log'] != 'ativo') {
 							</div>
 							<div class="table-row">
 								<div class="serial">03</div>
-								<div class="country"> <img src="../../img/elements/f3.jpg" alt="flag">Estados Unidos</div>
-								<div class="visit">6.0%/327.822.431</div>
+								<div class="country"> <img src="../../img/elements/Eua.jpg" alt="flag">Estados Unidos</div>
+								<div class="visit text-black">6.0%/327.822.431</div>
 								<div class="percentage">
 									<div class="progress">
 										<div class="progress-bar color-3" role="progressbar" style="width: 6%" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
@@ -253,7 +253,7 @@ if ($_SESSION['log'] != 'ativo') {
 							<div class="table-row">
 								<div class="serial">04</div>
 								<div class="country"> <img src="../../img/elements/Brasil.jpg" alt="flag">Brasil</div>
-								<div class="visit">5.9%/209.351.024</div>
+								<div class="visit text-black">5.9%/209.351.024</div>
 								<div class="percentage">
 									<div class="progress">
 										<div class="progress-bar color-4" role="progressbar" style="width: 5.9%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
@@ -263,7 +263,7 @@ if ($_SESSION['log'] != 'ativo') {
 							<div class="table-row">
 								<div class="serial">05</div>
 								<div class="country"> <img src="../../img/elements/Portugual.jpg" alt="flag">Portugual</div>
-								<div class="visit">5.7%/10.291.056</div>
+								<div class="visit text-black">5.7%/10.291.056</div>
 								<div class="percentage">
 									<div class="progress">
 										<div class="progress-bar color-5" role="progressbar" style="width: 5.7%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
@@ -273,7 +273,7 @@ if ($_SESSION['log'] != 'ativo') {
 							<div class="table-row">
 								<div class="serial">06</div>
 								<div class="country"> <img src="../../img/elements/lituania.jpg" alt="flag">Lituânia</div>
-								<div class="visit">5.6/2.794.023</div>
+								<div class="visit text-black">5.6/2.794.023</div>
 								<div class="percentage">
 									<div class="progress">
 										<div class="progress-bar color-6" role="progressbar" style="width: 5.6%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
@@ -283,7 +283,7 @@ if ($_SESSION['log'] != 'ativo') {
 							<div class="table-row">
 								<div class="serial">07</div>
 								<div class="country"> <img src="../../img/elements/nova_zelandia.jpg" alt="flag">Nova zelândia</div>
-								<div class="visit">5.4%/4.794.079</div>
+								<div class="visit text-black">5.4%/4.794.079</div>
 								<div class="percentage">
 									<div class="progress">
 										<div class="progress-bar color-7" role="progressbar" style="width: 5.4%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100"></div>
@@ -293,7 +293,7 @@ if ($_SESSION['log'] != 'ativo') {
 							<div class="table-row">
 								<div class="serial">08</div>
 								<div class="country"> <img src="../../img/elements/replubica_moldavia.jpg" alt="flag">Repluica da Moldávia</div>
-								<div class="visit">5.4%/3.551.004</div>
+								<div class="visit text-black">5.4%/3.551.004</div>
 								<div class="percentage">
 									<div class="progress">
 										<div class="progress-bar color-8" role="progressbar" style="width: 5.4%" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>

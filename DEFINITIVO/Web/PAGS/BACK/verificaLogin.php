@@ -16,7 +16,7 @@ die();
 }
 else{
 echo '<br><h1>Email ou Senha invalidos</h1><br><br>'
-. "<a href = 'Login.php'> voltar</a> ";
+. "<a href = '../FRONT/pagLogin.php'> voltar</a> ";
 }
 }
 ?>
