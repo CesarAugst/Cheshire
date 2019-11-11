@@ -413,7 +413,8 @@ update MENSAGEM set data_excluida_destinatario = now() where id_mensagem = id;
 end //
 DELIMITER ;
 -- PROCEDURE - MARCA MENSAGENS DO REMETENTE COMO EXCLUIDAS ---------------------------------------------------------------------------------------
-
+SELECT COUNT(*) FROM LOGIN WHERE login = 'louin';
+select * from login;
 -- PROCEDURE - CADASTRO -----------------------------------------------------------------------------------------------------
 DELIMITER //
 drop procedure if exists CADASTRO //
@@ -426,7 +427,7 @@ declare log_c, rm_c int;
 set log_c = (SELECT COUNT(*) FROM LOGIN WHERE login = login_p);
 set rm_c = (SELECT COUNT(*) FROM PESSOA WHERE rm = rm_p);
 
-if( (log_c > 0) && (rm_c > 0))then
+if( log_c > 0 || rm_c > 0)then
 	set valido = false;
 else 
     set valido = true;
@@ -435,24 +436,13 @@ end if;
 
 if(valido = true)then
 	insert into LOGIN values
-	(
-	default, 
-		login_p, 
-		senha_p
-	);
+	(default, login_p, senha_p);
 
 	insert into REGISTRO (nome, sobrenome)values 
-	(
-		nome_p, 
-		sobrenome_p
-	);
+	(nome_p, sobrenome_p);
 
 	insert into PESSOA (rm, login_fk, registro_fk) values
-	(
-		rm_p, 
-		(select id_login from LOGIN where (login = login_p && senha = senha_p)), 
-		(select id_registro from REGISTRO where (nome = nome_p && sobrenome = sobrenome_p))
-	);
+	(rm_p, (select id_login from LOGIN where (login = login_p && senha = senha_p)), (select id_registro from REGISTRO where (nome = nome_p && sobrenome = sobrenome_p)));
 
 	IF (funcao_p = 'orientador') THEN 
 		UPDATE PESSOA SET tipo_fk = 1 where rm = rm_p;
@@ -472,13 +462,41 @@ DELIMITER //
 drop procedure if exists LOGIN //
 create procedure LOGIN(login_p varchar(255),senha_p varchar(255))
 main:begin
-declare cod_log, cod_rm int;
-set cod_log = (select id_login from LOGIN where login= login_p && senha= senha_p);
-set cod_rm = (select rm from PESSOA where login_fk= cod_log);
-select cod_rm, login, senha from LOGIN where login= login_p and senha= senha_p;
+declare cod_log, cod_rm, cod_tipo int;
+declare tipo, nome, sobrenome varchar(255);
+
+declare valido boolean;
+declare log_c, sen_c int;
+
+set log_c = (SELECT COUNT(*) FROM LOGIN WHERE login = login_p);
+set sen_c = (SELECT COUNT(*) FROM LOGIN WHERE senha = senha_p);
+
+if( (log_c > 0) && (sen_c > 0))then
+	set valido = true;
+else 
+    set valido = false;
+end if;
+
+if(valido = true)then
+	set cod_log = (select id_login from LOGIN where login= login_p && senha= senha_p);
+	set cod_rm = (select rm from PESSOA where login_fk= cod_log);
+	set cod_tipo = (select tipo_fk from PESSOA where rm = cod_rm);
+
+	if(cod_tipo = 1)then 
+		set tipo = 'orientador';
+	elseif (cod_tipo = 2)then
+		set tipo = 'aluno';
+	end if;
+
+	set nome = (select r.nome from REGISTRO as r join PESSOA as p on p.registro_fk = r.id_registro where p.rm = cod_rm);
+	set sobrenome = (select r.sobrenome from REGISTRO as r join PESSOA as p on p.registro_fk = r.id_registro where p.rm = cod_rm);
+
+	select cod_rm, tipo, concat(nome, ' ', sobrenome) as nome;
+end if;
 end //
 DELIMITER ;
 -- PROCEDURE - LOGIN --------------------------------------------------------------------------------------------------------
+
 /*SESSAO DE PROCEDURES - CRIAÇÃO##################################################################################################################################*/
 
 /*SESSAO DE PROCEDURES - UTILIZAÇÃO##################################################################################################################################*/
@@ -488,6 +506,9 @@ call CAIXA_ENVIADAS(17308);
 call MARCA_LIDA(4);
 call MARCA_EXCLUIDA_REMETENTE(4);
 call MARCA_EXCLUIDA_DESTINATARIO(4);
-call CADASTRO(12345,'lougin','snha','nome','sobrenome','aluno');
-call LOGIN('lougin','snha');
+call CADASTRO(54321,'logando','senhando','nomeando','sobrenomeando','aluno');
+call LOGIN('logando','senhand');
 /*SESSAO DE PROCEDURES - UTILIZAÇÃO##################################################################################################################################*/
+select * from pessoa;
+select * from login;
+select * from registro;
