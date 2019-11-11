@@ -35,4 +35,5 @@ if(preg_match('/(.*)?([!-//]|[:-@]|[^-`]|~)(.*)?/', $senha)){
 if(preg_match('1234567890', $senha)){
     $hard++;
 }
+return $hard;
 }
