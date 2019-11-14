@@ -124,42 +124,21 @@
 
 
 
-		<!-- Start offered-service Area -->
-		<section class="offered-service-area section-gap">
-			<div class="container">
-
-			</div>
-		</section>
-		<!-- End offered-service Area -->
-
-
-
 		<!-- start footer Area -->
 		<footer class="footer-area section-gap">
 			<div class="container">
-				<div class="row">
-					<div class="col-lg-2  col-md-6">
-
-					</div>
-
-					<div class="col-lg-6  col-md-12">
-
-					</div>
-				</div>
-
+				<img src="../../img/logo_cps.png">
 				<div class="row footer-bottom d-flex justify-content-between">
-					<p class="col-lg-5 col-sm-05 footer-text m-0">
+					<p class="col-lg-8 col-sm-12 footer-text m-0">
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						Copyright &copy;<script>
 							document.write(new Date().getFullYear());
-						</script> Etec de Cotia | Centro Paulo Souza <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href=" http://www.etecdecotia.com.br/" target="_blank">Etec</a>
+						</script> Etec de Cotia <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.cps.sp.gov.br" target="_blank">Centro Paula Souza</a>
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					</p>
 					<div class="col-lg-4 col-sm-12 footer-social">
-						<a href="#"><i class="fa fa-facebook"></i></a>
-						<a href="#"><i class="fa fa-twitter"></i></a>
-						<a href="#"><i class="fa fa-dribbble"></i></a>
-						<a href="#"><i class="fa fa-behance"></i></a>
+						<a href="https://www.facebook.com/etecdecotia"><i class="fa fa-facebook"></i></a>
+						<a href="https://twitter.com/etecdecotia"><i class="fa fa-twitter"></i></a>
 					</div>
 				</div>
 			</div>

@@ -100,10 +100,11 @@ if ($_SESSION['log'] != 'ativo') {
     <!-- End banner Area -->
 
     <!-- Start contact-page Area -->
-    <section class="contact-page-area section-gap">
+    <section class="contact-page-area ">
         <div class="container">
-            <div class="row">
+            <div class="row section-gap">
                 <div class="map-wrap" style="width:100%; height: 445px;" id="map"></div>
+
                 <div class="col-lg-4 d-flex flex-column address-wrap">
                     <div class="single-contact-address d-flex flex-row">
                         <div class="icon">
@@ -137,15 +138,15 @@ if ($_SESSION['log'] != 'ativo') {
 
                 </div>
 
-                <div class="col-lg-4 d-flex flex-column align-items-center address-wrap">
+                <div class="col-lg-3  d-flex flex-column align-items-center address-wrap">
                     <div class="single-contact-address d-flex flex-row align-middle ali">
                         <div class="icon">
                             <span class="lnr lnr-home"></span>
                         </div>
                         <div class="contact-details">
-                            <h5>Etec de Cotia</h5>
+                            <h5>Caps psicossocial</h5>
                             <p>
-                                Rua topazio/ Jardim Nomura
+                                Rua João Nishimura, 50 - Vila Santo Antonio do Portao
                             </p>
                         </div>
                     </div>
@@ -154,22 +155,39 @@ if ($_SESSION['log'] != 'ativo') {
                             <span class="lnr lnr-phone-handset"></span>
                         </div>
                         <div class="contact-details">
-                            <h5>55 11 4148-2099 ou +55 11 4614-3093</h5>
-                            <p>Aberto das 7:00 as 23:00 horas</p>
+                            <h5>(11) 4148-5674</h5>
+                            <p>Aberto das 8:00 as 17:00 horas</p>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="col-lg-3 left-align d-flex flex-column align-items-center address-wrap">
+                    <div class="single-contact-address d-flex flex-row align-middle ali">
+                        <div class="icon">
+                            <span class="lnr lnr-home"></span>
+                        </div>
+                        <div class="contact-details">
+                            <h5>Caps alcoól e drogas</h5>
+                            <p>
+                                Rua Adolfo Eugênio Barsotine, 140 - Vila Santo Antonio
+                            </p>
                         </div>
                     </div>
                     <div class="single-contact-address d-flex flex-row">
                         <div class="icon">
-                            <span class="lnr lnr-envelope"></span>
+                            <span class="lnr lnr-phone-handset"></span>
                         </div>
                         <div class="contact-details">
-                            <h5>faleconosco@etecdecotia.com.br</h5>
-                            <p>Fale conosco através de nosso Email</p>
+                            <h5>(11) 4616-3889</h5>
+                            <p>Aberto das 8:00 as 17:00 horas</p>
                         </div>
                     </div>
 
-                </div>
 
+                </div>
 
             </div>
         </div>

@@ -104,7 +104,7 @@
 		<!-- Fim banner Area -->
 		<br><br>
 		<center>
-			<h1>problemas</h1>
+			<h1>problemas educacionais e não educacionais:</h1>
 		</center>
 		<!-- Menu de páginas -->
 		<section class="top-category-widget-area pt-90 pb-90 ">

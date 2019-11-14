@@ -120,9 +120,9 @@
 										<option value="2">funcionario</option>
 										<option value="3">orientador</option>
 									</select>
-								</div>								
+								</div>
 
-								
+
 								<button type="submit" class="primary-btn text-uppercase">Confirmar</button>
 							</form>
 							<?php
@@ -135,74 +135,21 @@
 		</section>
 		<!-- End appointment Area -->
 
-
-		<!-- End facilities Area -->
-
-
-		<!-- Start offered-service Area -->
-		<section class="offered-service-area section-gap">
-			<div class="container">
-
-			</div>
-		</section>
-		<!-- End offered-service Area -->
-
-
-		<!-- End team Area -->
-
-		<!-- End feedback Area -->
-
-		<!-- Start brands Area -->
-
-		<!-- End brands Area -->
-
-
-		<!-- end recent-blog Area -->
-
 		<!-- start footer Area -->
 		<footer class="footer-area section-gap">
 			<div class="container">
-				<div class="row">
-					<div class="col-lg-2  col-md-6">
-
-					</div>
-
-					<div class="col-lg-6  col-md-12">
-						<div class="single-footer-widget newsletter">
-							<h6>Newsletter</h6>
-							<p>You can trust us. we only send promo offers, not a single spam.</p>
-							<div id="mc_embed_signup">
-								<form target="_blank" action="https://spondonit.us12.list-manage.com/subscribe/post?u=1462626880ade1ac87bd9c93a&amp;id=92a4423d01" method="get" class="form-inline">
-
-									<div class="form-group row" style="width: 100%">
-										<div class="col-lg-8 col-md-12">
-											<input name="EMAIL" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address '" required="" type="email">
-										</div>
-
-										<div class="col-lg-4 col-md-12">
-											<button class="nw-btn primary-btn circle">Subscribe<span class="lnr lnr-arrow-right"></span></button>
-										</div>
-									</div>
-									<div class="info"></div>
-								</form>
-							</div>
-						</div>
-					</div>
-				</div>
-
+				<img src="../../img/logo_cps.png">
 				<div class="row footer-bottom d-flex justify-content-between">
 					<p class="col-lg-8 col-sm-12 footer-text m-0">
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						Copyright &copy;<script>
 							document.write(new Date().getFullYear());
-						</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+						</script> Etec de Cotia <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.cps.sp.gov.br" target="_blank">Centro Paula Souza</a>
 						<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 					</p>
 					<div class="col-lg-4 col-sm-12 footer-social">
-						<a href="#"><i class="fa fa-facebook"></i></a>
-						<a href="#"><i class="fa fa-twitter"></i></a>
-						<a href="#"><i class="fa fa-dribbble"></i></a>
-						<a href="#"><i class="fa fa-behance"></i></a>
+						<a href="https://www.facebook.com/etecdecotia"><i class="fa fa-facebook"></i></a>
+						<a href="https://twitter.com/etecdecotia"><i class="fa fa-twitter"></i></a>
 					</div>
 				</div>
 			</div>
