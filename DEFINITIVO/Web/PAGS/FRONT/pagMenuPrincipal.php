@@ -9,7 +9,7 @@ if ($_SESSION['log'] != "ativo") {
 echo "<nav class = 'navbar navbar-light bg-dark text-light'>
     <a class = 'navbar-brand'> Olá, <em><b>" . $_SESSION['nome'] .
     "</em></b>, bem vindo ao sistema.</a>";
-echo "<a class = 'btn btn-success btn-lg' href='../BACK/logout.php'>SAIR</a>
+echo "<a class = 'btn btn-success btn-lg' href='../BACK/logout.php'>LOGOUT</a>
       </nav>
     ";
 ?>
@@ -31,6 +31,7 @@ echo "<a class = 'btn btn-success btn-lg' href='../BACK/logout.php'>SAIR</a>
                 <a class="btn btn-block btn-lg btn-success" href="pagEnviar.php">Enviar mensagem</a><br>
                 <a class="btn btn-block btn-lg btn-success" href="pagMsgLida.php">Visualizar mensagens lidas</a><br>
                 <a class="btn btn-block btn-lg btn-success" href="pagCaixaMsgEnv.php">Visualizar mensagens enviadas</a><br>
+                <a class="btn btn-block btn-lg btn-danger" href="pagInicio.php">Sair do menu de mensagens</a><br>
             </div>
         </div>
 </div>

@@ -6,6 +6,7 @@
 		session_destroy();
 		header("location: pagLogin.php");
 	}
+	
 	?>
 	<html lang="zxx" class="no-js">
 
@@ -53,7 +54,7 @@
 						</div>
 						<div class="col-lg-6 col-sm-6 col-8 header-top-right">
 							<?php
-							echo "Bem Vindo! <b>" . $_SESSION['rm'] . " </b>";
+							echo "Bem Vindo! <b>" . $_SESSION['nome'] . " </b>";
 							?>
 							<a href="../BACK/logout.php" class="primary-btn text-uppercase">Logout</a>
 						</div>
@@ -78,6 +79,7 @@
 							<li><a href="pagDesmotivação.php">Desmotivação</a></li>
 							<li><a href="pagProblemasFamiliares">Problemas familiares</a></li>
 							<li><a href="pagContato.php">Contato</a></li>
+							<li><a href="pagMenuPrincipal.php">Mensagens</a></li>
 						</ul>
 					</nav><!-- #nav-menu-container -->
 				</div>

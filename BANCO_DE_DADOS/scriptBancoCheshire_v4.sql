@@ -509,6 +509,4 @@ call MARCA_EXCLUIDA_DESTINATARIO(4);
 call CADASTRO(54321,'logando','senhando','nomeando','sobrenomeando','aluno');
 call LOGIN('logando','senhand');
 /*SESSAO DE PROCEDURES - UTILIZAÇÃO##################################################################################################################################*/
-select * from pessoa;
-select * from login;
-select * from registro;
+select * from mensagem where conteudo like '%Cesar%';

@@ -1,14 +1,19 @@
 <?php
 
-    include ("Conexao.php");
-    include ("Banco.php");
+    include ("conexao.php");
+    include ("bancoUsuario.php");
                                                       
 if($_POST){
 $login = $_POST['txtlogin'];
 $senha = $_POST['txtsenha'];
-if (login($conexao, $login, $senha)){
+if (efetuarLogin($conexao, $login, $senha)){
 session_start();
-$_SESSION['rm'] = $login;
+
+$rm = buscaRm($conexao, $login, $senha);
+$nome = buscaNome($conexao,$rm['cod_rm']);
+
+$_SESSION['rm'] = $rm['cod_rm'];
+$_SESSION['nome'] = $nome['nome'];
 $_SESSION['log'] = 'ativo';
 header("location: ../FRONT/pagInicio.php");
 die();

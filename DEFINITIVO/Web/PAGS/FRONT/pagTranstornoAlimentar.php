@@ -76,6 +76,7 @@ if ($_SESSION['log'] != 'ativo') {
 							<li><a href="pagDesmotivação.php">Desmotivação</a></li>
 							<li><a href="pagProblemasFamiliares.php">Problemas familiares</a></li>
 							<li><a href="pagContato.php">Contato</a></li>
+							<li><a href="pagMenuPrincipal.php">Mensagens</a></li>
 
 						</ul>
 					</nav><!-- #nav-menu-container -->
