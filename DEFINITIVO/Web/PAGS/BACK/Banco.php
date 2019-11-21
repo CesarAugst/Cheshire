@@ -6,10 +6,10 @@
         return mysqli_fetch_assoc($resultado);
     }
     
-    function cadastro($conexao,$login,$senha,$nome,$sobrenome,$funcao,$tel,$cel,$end ){
+    function cadastro($conexao,$rm,$login,$senha,$nome,$sobrenome,$funcao ){
         $sql = "insert into tblRegistro"
-                ."(login, senha, nome, sobrenome, funcao, telefone, celular, endereco)"
-                ."values ('$login', '$senha', '$nome', '$sobrenome', '$funcao', '$tel', '$cel','$end' )";
+                ."(rm,login, senha, nome, sobrenome, funcao)"
+                ."values ('$rm','$login', '$senha', '$nome', '$sobrenome', '$funcao')";
         
         return mysqli_query($conexao, $sql);
     }

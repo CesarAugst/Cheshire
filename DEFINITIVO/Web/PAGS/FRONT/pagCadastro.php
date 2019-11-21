@@ -125,10 +125,6 @@
 
 								<button type="submit" class="primary-btn text-uppercase">Confirmar</button>
 							</form>
-							<?php
-
-							?>
-
 					</div>
 				</div>
 			</div>
