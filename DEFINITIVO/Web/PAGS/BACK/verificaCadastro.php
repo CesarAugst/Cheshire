@@ -2,15 +2,15 @@
 
 include("Conexao.php");
 include("Banco.php");
-$rm=($_POST['txtRM']);                                                      
+$codigo=($_POST['txtRM']);                                                      
 $login=($_POST['txtlogin']);    
 $senha=($_POST['txtsenha']);
 $nome=($_POST['txtnome']);
 $sobrenome=($_POST['txtsobrenome']);
-$funcao=($_POST['optfuncao']);
+$tipo=($_POST['optfuncao']);
 
 
-if(cadastro($conexao,$rm, $login, $senha, $nome, $sobrenome, $funcao)){
+if(cadastro($conexao,$codigo, $login, $senha, $nome, $sobrenome, $tipo)){
     header("location: ../FRONT/pagLogin.php");
     die();
 }

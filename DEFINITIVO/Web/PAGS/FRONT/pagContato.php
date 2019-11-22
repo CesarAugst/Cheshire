@@ -68,8 +68,7 @@ if ($_SESSION['log'] != 'ativo') {
                         <li class="menu-has-children"><a href="">Transtornos</a>
                             <ul>
                                 <li><a href="pagTranstornoEmocional.php">Emocionais</a></li>
-                                <li><a href="pagTranstornoAlimentar.php">Alimentares</a></li>
-                                <li><a href="pagBlog-single.html">Psicoses</a></li>
+                                <li><a href="pagTranstornoAlimentar.php">Alimentares</a></li>                           
                             </ul>
                         </li>
                         <li><a href="pagDefasagem.php">Defasagem</a></li>
@@ -221,7 +220,7 @@ if ($_SESSION['log'] != 'ativo') {
 
     <!-- Mapa com Funções -->
     <div id="mapa"> </div>
-    <script async="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA&callback=initMap"></script>
+    <script async="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzJeHJE_I9PGTkmkez_SYOPIAadJjAo9o&callback=initMap"></script>
     <script>
         function initMap() {
 

@@ -69,8 +69,7 @@ if ($_SESSION['log'] != 'ativo') {
                         <li class="menu-has-children"><a href="">Transtornos</a>
                             <ul>
                                 <li><a href="pagTranstornoEmocional.php">Emocionais</a></li>
-                                <li><a href="pagTranstornoAlimentar.php">Alimentares</a></li>
-                                <li><a href="blog-single.html">Psicoses</a></li>
+                                <li><a href="pagTranstornoAlimentar.php">Alimentares</a></li>                             
                             </ul>
                         </li>
                         <li><a href="pagDefasagem.php">Defasagem</a></li>
@@ -111,9 +110,9 @@ if ($_SESSION['log'] != 'ativo') {
             <div class="section-top-border2 ">
                 <div class="row d-flex justify-content-center">
                     <div class="menu-content pb-70 col-lg-8">
-                        <div class="title text-center">
-                            <h2 class="mb-10">Ser ruim na escola e ter notas baixas, não te fazem um burro. Você não esta na escola porque ama ela, está por obrigação, tudo que somos obrigados á fazer, não fazemos por prazer. Se você não ama matemática, você nunca será um gênio da matemática...</h2>
-                            <p>Lolla Carolina</p>
+                        <div class="title">
+                            <h2 class="mb-10" align=justify>"Ser ruim na escola e ter notas baixas, não te fazem um burro. Você não esta na escola porque ama ela, está por obrigação, tudo que somos obrigados á fazer, não fazemos por prazer. Se você não ama matemática, você nunca será um gênio da matemática..."</h2>
+                            <p align="right">Lolla Carolina</p>
                         </div>
                     </div>
                 </div>
@@ -125,7 +124,7 @@ if ($_SESSION['log'] != 'ativo') {
                             <dt>
                                 <a href="">Fragilidade da escola</a>
                             </dt>
-                            <dd>
+                            <dd align=justify>
                             Uma instituição que não passa por avaliações frequentes pode deixar de oferecer um ensino de qualidade. Quando os valores e conhecimentos não são passados de forma adequada para os educadores, casos de fracasso escolar se tornam mais comuns.
                             </dd>
                             <dt>
@@ -160,12 +159,12 @@ if ($_SESSION['log'] != 'ativo') {
 
                                 <h1>Problemas na defasagem escolar</h1>
                                 <p>
-                                    <dd>O aluno que apresenta defasagem escolar deve ser orientado pelo orientador educacional para aproveitar da melhor maneira possível suas habilidades, promovendo um autoconhecimento que lhe favoreça em determinada área de sua escolha, uma vez que o aluno pode não ser bom em um determinado ramo específico, mas pode ser melhor em outro.
+                                    <dd align=justify>O aluno que apresenta defasagem escolar deve ser orientado pelo orientador educacional para aproveitar da melhor maneira possível suas habilidades, promovendo um autoconhecimento que lhe favoreça em determinada área de sua escolha, uma vez que o aluno pode não ser bom em um determinado ramo específico, mas pode ser melhor em outro.
                                         Segundo estudo um levantamento de dados realizado pelo INEP em 2017, o número de alunos que demonstravam um nível de conhecimento didático incompativelmente inferior ao esperado pela sua idade (defasagem escolar) em 2017 ensino médio chegava a 28%.
                                     </dd>
                                 </p>
                                 <img class="img pt-10 pb-10" src="../../img/defasagem_grafico.jpg" alt="">
-                                <p>
+                                <p align=justify>
                                     A aplicação proposta pelo projeto propõe uma forma de acompanhamento online de uma planilha de estudos que é desenvolvida pelo orientador juntamente do aluno, onde antes havia um acompanhamento quinzenal ou semanal passa a ser em tempo real, para assim planejarem juntos uma forma de aprimorar o processo de aprendizagem do docente e reduzir esse nível de defasagem.</h5>
                                 </p>
 
@@ -181,19 +180,19 @@ if ($_SESSION['log'] != 'ativo') {
                     <div class="col-md-4">
                         <div class="single-defination">
                             <h4 class="mb-20">Notas baixas</h4>
-                            <p>Queda no rendimento é o primeiro sinal de alerta, quando um aluno começa a apresentar um quadro de fracasso escolar. Nesse ponto, os professores e os pais podem intervir com mais facilidade e encontrar os problemas que estão causando as notas ruins.</p>
+                            <p align=justify>Queda no rendimento é o primeiro sinal de alerta, quando um aluno começa a apresentar um quadro de fracasso escolar. Nesse ponto, os professores e os pais podem intervir com mais facilidade e encontrar os problemas que estão causando as notas ruins.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="single-defination">
                             <h4 class="mb-20">Reprovação</h4>
-                            <p>Quando o aluno é reprovado, significa que os primeiros sinais passaram despercebidos ou que pouco foi feito para ajudá-lo. A reprovação pode significar um novo começo. Dar atenção para as necessidades do aluno é fundamental nessa etapa.</p>
+                            <p align=justify>Quando o aluno é reprovado, significa que os primeiros sinais passaram despercebidos ou que pouco foi feito para ajudá-lo. A reprovação pode significar um novo começo. Dar atenção para as necessidades do aluno é fundamental nessa etapa.</p>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="single-defination">
                             <h4 class="mb-20">Abandono escolar</h4>
-                            <p>O caso mais grave de fracasso escolar é quando o aluno desiste dos estudos. Isso pode ocorrer por diversos motivos, desde problemas pessoais e familiares, até a falta de vontade de seguir em frente. Passando pelas etapas de notas baixas e reprovação, o aluno pode se sentir desmotivado a continuar estudando e, com isso, abandonar a escola. Para que tal fato não ocorra, tanto os pais, quanto professores devem estar atentos ao estudante, buscando soluções.</p>
+                            <p align=justify>O caso mais grave de fracasso escolar é quando o aluno desiste dos estudos. Isso pode ocorrer por diversos motivos, desde problemas pessoais e familiares, até a falta de vontade de seguir em frente. Passando pelas etapas de notas baixas e reprovação, o aluno pode se sentir desmotivado a continuar estudando e, com isso, abandonar a escola. Para que tal fato não ocorra, tanto os pais, quanto professores devem estar atentos ao estudante, buscando soluções.</p>
                         </div>
                     </div>
                 </div>
@@ -202,7 +201,7 @@ if ($_SESSION['log'] != 'ativo') {
                 <h2 class="mb-30">Como o professor pode ajudar a evitar evasão escolar:</h2>
                 <div class="row">
                     <div class="col-lg-12 text-black">
-                        <blockquote class="generic-blockquote">
+                        <blockquote class="generic-blockquote" align=justify>
                         Evasão escolar é o ato de deixar de frequentar as aulas, ou seja, abandonar o ensino em decorrência de qualquer motivo.
 
 Esse problema social que, infelizmente, é comum no Brasil, afeta principalmente os alunos do Ensino Médio.

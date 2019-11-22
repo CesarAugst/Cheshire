@@ -70,7 +70,6 @@ if ($_SESSION['log'] != 'ativo') {
                                 <ul>
                                     <li><a href="pagTranstornoEmocional.php">Emocionais</a></li>
                                     <li><a href="pagTranstornoAlimentar.php">Alimentares</a></li>
-                                    <li><a href="pagBlog-single.html">Psicoses</a></li>
                                 </ul>
                             </li>
                             <li><a href="pagDefasagem.php">Defasagem</a></li>
@@ -164,11 +163,11 @@ if ($_SESSION['log'] != 'ativo') {
                             <img src="../../img/vulnerabilidade.jpg" alt="" class="img-fluid">
                         </div>
                         <div class="col-md-9 mt-sm-20 left-align-p">
-                            <p>Vulnerabilidade social é o conceito que caracteriza a condição dos grupos de indivíduos que estão a margem da sociedade, ou seja, pessoas ou famílias que estão em processo de exclusão social, principalmente por fatores socioeconômicos.
+                            <p align=justify>Vulnerabilidade social é o conceito que caracteriza a condição dos grupos de indivíduos que estão a margem da sociedade, ou seja, pessoas ou famílias que estão em processo de exclusão social, principalmente por fatores socioeconômicos.
                                 Algumas das principais características que marcam o estado de vulnerabilidade social são as condições precárias de moradia e saneamento, os meios de subsistência inexistentes e a ausência de um ambiente familiar, por exemplo.
                             </p>
 
-                            <p>
+                            <p align=justify>
                                 Estes fatores desmotivam pela percepição de desigualdade, o que muitas vezes gera diversas outras dificuldade como dificuldade em alcançar um bom desempenho.
                             </p>
                         </div>
@@ -178,7 +177,7 @@ if ($_SESSION['log'] != 'ativo') {
                     <h3 class="mb-30">Trabalho</h3>
                     <div class="row">
                         <div class="col-md-9">
-                            <p class="text-right">Muitas pessoas acabam tendo que trabalhar muito cedo para complementar a renda familiar, por conta disso nota-se dificuldade dessas pessoas em conciliar seu trabalho com os estudos e outros alfazeres
+                            <p class="text-right" align=justify>Muitas pessoas acabam tendo que trabalhar muito cedo para complementar a renda familiar, por conta disso nota-se dificuldade dessas pessoas em conciliar seu trabalho com os estudos e outros alfazeres
                                 por estarem extremamente cansados por conta do trabalho. Rotinas como acordar cedo para trabalhar, enfretar diversas dificuldades durante o caminho, e ter um grande expediente de trabalho são a principal causa geradora do cansaço e desmotivação no trabalho.</p>
                             <p class="text-right">Entenda que as pessoas acertam, erram, decepcionam e despertam orgulho. Não exija perfeição no seu trabalho e, acima de tudo, preserve sua saúde mental e fisica.</p>
                         </div>
@@ -195,10 +194,10 @@ if ($_SESSION['log'] != 'ativo') {
                             <img src="../../img/gravidez_precoce.jpg" alt="" class="img-fluid">
                         </div>
                         <div class="col-md-9 mt-sm-20 left-align-p">
-                            <p>A gravidez na adolescência envolve muito mais do que problemas físicos, pois há também problemas emocionais, sociais, entre outros. Uma jovem de 14 anos, por exemplo, não está preparada mentalmente para cuidar de um bebê, muito menos de uma família. Entretanto, o seu organismo já está preparado para prosseguir com a gestação, já que, a partir do momento da menstruação, a maturidade sexual já está estabelecida. Outra polêmica é o de mães solteiras: por serem muito jovens, os rapazes e as moças não assumem um compromisso sério e, na maioria dos casos, quando surge a gravidez, um dos dois abandona a relação sem se importar com as consequências. Este é apenas um dos motivos que fazem crescer, consideravelmente a cada ano, o número de pais e mães jovens e solteiros.
+                            <p align=justify>A gravidez na adolescência envolve muito mais do que problemas físicos, pois há também problemas emocionais, sociais, entre outros. Uma jovem de 14 anos, por exemplo, não está preparada mentalmente para cuidar de um bebê, muito menos de uma família. Entretanto, o seu organismo já está preparado para prosseguir com a gestação, já que, a partir do momento da menstruação, a maturidade sexual já está estabelecida. Outra polêmica é o de mães solteiras: por serem muito jovens, os rapazes e as moças não assumem um compromisso sério e, na maioria dos casos, quando surge a gravidez, um dos dois abandona a relação sem se importar com as consequências. Este é apenas um dos motivos que fazem crescer, consideravelmente a cada ano, o número de pais e mães jovens e solteiros.
                             </p>
 
-                            <p>
+                            <p align=justify>
                                 Estes fatores desmotivam pela grande atenção que um filho exigi, os pais muitas vezes não estão preparados e encontram dificuldades que os desmotivam.
                             </p>
                         </div>
@@ -209,7 +208,7 @@ if ($_SESSION['log'] != 'ativo') {
                     <h2 class="mb-30">Como lidar?</h2>
                     <div class="row">
                         <div class="col-lg-12 text-black">
-                            <blockquote class="generic-blockquote">
+                            <blockquote class="generic-blockquote" align=justify>
                                 Para lidar como a desmotivação você precisa primeiro assumir que tem um problema para ser resolvido. A negação indica resistência e consequente não resolução do problema.
 
                                 Antes de lhe dar sugestões de mudanças necessárias, é importante entender que as ações precisam partir de você e não de fora.
@@ -242,7 +241,7 @@ if ($_SESSION['log'] != 'ativo') {
                                         <h4 class="pb-10">Flávio Augusto</h4>
 
                                     </div>
-                                    <p>
+                                    <p align=justify>
                                         Quem vive só para agradar as pessoas, acaba se tornando um grande colecionador de arrependimentos.
                                     </p>
                                 </div>
@@ -252,7 +251,7 @@ if ($_SESSION['log'] != 'ativo') {
                                         <h4 class="pb-10">Rick Chesther</h4>
 
                                     </div>
-                                    <p>
+                                    <p align=justify>
                                         A vida tem dois lados: o lado do problema e o da solução, e se você não for parte da solução, automaticamente fará parte do problema
                                     </p>
                                 </div>
@@ -262,7 +261,7 @@ if ($_SESSION['log'] != 'ativo') {
                                         <h4 class="pb-10">Ayrton Senna</h4>
 
                                     </div>
-                                    <p>
+                                    <p align=justify>
                                         Seja você quem for, seja qual for a posição social que você tenha na vida, a mais alta ou a mais baixa, tenha sempre como meta muita força, muita determinação e sempre faça tudo com muito amor e com muita fé em Deus, que um dia você chega lá. De alguma maneira você chega lá.
                                     </p>
                                 </div>

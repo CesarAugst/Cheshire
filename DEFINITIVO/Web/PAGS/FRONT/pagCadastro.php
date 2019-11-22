@@ -116,8 +116,7 @@
 								<div class="form-select" id="service-select">
 									<select name="optfuncao">
 										<option data-display="">Função</option>
-										<option value="1">aluno</option>
-										<option value="2">funcionario</option>
+										<option value="1">aluno</option>								
 										<option value="3">orientador</option>
 									</select>
 								</div>

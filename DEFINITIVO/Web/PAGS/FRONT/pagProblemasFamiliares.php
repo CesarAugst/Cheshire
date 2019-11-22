@@ -69,7 +69,6 @@ if ($_SESSION['log'] != 'ativo') {
 								<ul>
 									<li><a href="pagTranstornoEmocional.php">Emocionais</a></li>
 									<li><a href="pagTranstornoAlimentar.php">Alimentares</a></li>
-									<li><a href="pagBlog-single.html">Psicoses</a></li>
 								</ul>
 							</li>
 							<li><a href="pagDefasagem.php">Defasagem</a></li>
@@ -108,7 +107,7 @@ if ($_SESSION['log'] != 'ativo') {
 					<img height="260px" width="320px" src="../../img/Compreender.png" alt="">
 				</center>
 				<p class="sample-text text-black">
-					<dd class="text-black">Os problemas familiares podem interferir no andamento do aluno no ambiente escolar, ainda mais em sua capacidade de interação social, uma vez que um ambiente violento em certos estimula o aluno a reproduzir esse comportamento na escola, e em outros casos estimula a reproduzir comportamentos apáticos.
+					<dd class="text-black" align=justify>Os problemas familiares podem interferir no andamento do aluno no ambiente escolar, ainda mais em sua capacidade de interação social, uma vez que um ambiente violento em certos estimula o aluno a reproduzir esse comportamento na escola, e em outros casos estimula a reproduzir comportamentos apáticos.
 						Segundo um estudo realizado pela USP, foram acompanhados os casos de 3 alunos diferentes que possuíam dificuldade de letramento em uma escola estadual. Nos casos apresentados foi apontado pela coordenação do colégio que os pais se encontravam em de certa forma ausentes no processo de aprendizagem de seus filhos, sendo questionados pelas razões, eles apontaram que sentiam dificuldade de se aproximar ao contexto escolar de seus filhos. A partir desse estudo, entende-se que o ambiente familiar conturbado ou mesmo ausente influencia negativamente no aluno.
 						Como as atribuições e a própria formação do orientador não o permitem adentrar muito nesse contexto, quando o aluno lhe apresenta dificuldades de relacionamento familiar, o máximo que a orientação pode fazer é ouvi-lo sem apresentar críticas ou objeções, nesse caso melhorando o laço de confiança que o aluno cultiva, sendo essencial para o sucesso da conversa e de bons retornos para o mesmo. Nesse aspecto a aplicação seria útil apresentando orientações ao orientador de como atender o aluno, evitando equívocos e incidentes que poderiam causar danos para o aluno.</dd>
 
@@ -128,7 +127,7 @@ if ($_SESSION['log'] != 'ativo') {
 							<img src="../../img/tempo-familia.jpg" alt="" class="img-fluid">
 						</div>
 						<div class="col-md-9 mt-sm-20 left-align-p">
-							<p>Tenha tempo para a família
+							<p align=justify>Tenha tempo para a família
 								O cuidado com as relações familiares deve ser similar ao dispensado a uma planta, que precisa de atenção diariamente. Dedique parte do seu tempo para o convívio familiar e esteja atento para a qualidade desses momentos: quando estiver com sua família, esteja realmente com ela — e não com a televisão, celular ou amigos das redes sociais.
 								<p>Há momentos únicos em nossa familia e a presença ou não sua pode fazer toda a diferença. Compartilhar momentos em família é fundamental para estreitar os laços e colecionar boas lembranças. Além de gerar aproximação, fugir da rotina da casa é uma excelente maneira de amenizar o estresse do dia a dia.</p>
 							</p>
@@ -139,8 +138,8 @@ if ($_SESSION['log'] != 'ativo') {
 					<h3 class="mb-30">Aceite e entenda</h3>
 					<div class="row">
 						<div class="col-md-9">
-							<p class="text-right">Compartilhar momentos em família é fundamental para estreitar os laços e colecionar boas lembranças. Além de gerar aproximação, fugir da rotina da casa é uma excelente maneira de amenizar o estresse do dia a dia.Guardar mágoas ou sentimentos negativos em relação aos pais, filhos ou irmãos só serve para prolongar uma situação que poderia ser resolvida de maneira mais rápida. Caso tenha alguma situação ou sentimento pendente, abra seu coração e fale a respeito de como você se sente em relação a determinado assunto.</p>
-							<p class="text-right">Entenda que as pessoas acertam, erram, decepcionam e despertam orgulho. Não exija perfeição de seus familiares e, acima de tudo, ame-os incondicionalmente.</p>
+							<p class="text-right" align=justify>Compartilhar momentos em família é fundamental para estreitar os laços e colecionar boas lembranças. Além de gerar aproximação, fugir da rotina da casa é uma excelente maneira de amenizar o estresse do dia a dia.Guardar mágoas ou sentimentos negativos em relação aos pais, filhos ou irmãos só serve para prolongar uma situação que poderia ser resolvida de maneira mais rápida. Caso tenha alguma situação ou sentimento pendente, abra seu coração e fale a respeito de como você se sente em relação a determinado assunto.</p>
+							<p class="text-right" align=justify>Entenda que as pessoas acertam, erram, decepcionam e despertam orgulho. Não exija perfeição de seus familiares e, acima de tudo, ame-os incondicionalmente.</p>
 						</div>
 						<div class="col-md-3">
 							<img src="../../img/entendimento.jpg" alt="" height="164px" width="250px">
@@ -153,19 +152,19 @@ if ($_SESSION['log'] != 'ativo') {
 						<div class="col-md-4">
 							<div class="single-defination">
 								<h4 class="mb-20">Familia monoparental</h4>
-								<p>Família monoparental: composta por apenas um dos progenitores: pai ou mãe. Os motivos que possibilitam essa estrutura são diversos. Englobam causas circunstanciais (morte, abandono ou divórcio) ou ainda, a decisão (na maior parte dos casos, uma decisão da mulher) de ter um filho de forma independente.</p>
+								<p align=justify>Família monoparental: composta por apenas um dos progenitores: pai ou mãe. Os motivos que possibilitam essa estrutura são diversos. Englobam causas circunstanciais (morte, abandono ou divórcio) ou ainda, a decisão (na maior parte dos casos, uma decisão da mulher) de ter um filho de forma independente.</p>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="single-defination">
 								<h4 class="mb-20">Familia contemporânea</h4>
-								<p>Família contemporânea: é caracterizada pela inversão dos papéis do homem e da mulher na estrutura familiar passando a ser a mulher a chefe de família. Abrange a família monoparental, constituída por mãe solteira ou divorciada.</p>
+								<p align=justify>Família contemporânea: é caracterizada pela inversão dos papéis do homem e da mulher na estrutura familiar passando a ser a mulher a chefe de família. Abrange a família monoparental, constituída por mãe solteira ou divorciada.</p>
 							</div>
 						</div>
 						<div class="col-md-4">
 							<div class="single-defination">
 								<h4 class="mb-20">Familia pais</h4>
-								<p>Família Pais :. Consiste de um dos pais (na maioria das vezes a mãe) e seus filhos. Você pode ter diferentes origens. Pais separados ou divorciados, onde as crianças vivem com um dos pais, por gravidez precoce, onde a família de uma mãe solteira é formado e, finalmente, a morte de um dos cônjuges</p>
+								<p align=justify>Família Pais :. Consiste de um dos pais (na maioria das vezes a mãe) e seus filhos. Você pode ter diferentes origens. Pais separados ou divorciados, onde as crianças vivem com um dos pais, por gravidez precoce, onde a família de uma mãe solteira é formado e, finalmente, a morte de um dos cônjuges</p>
 							</div>
 						</div>
 					</div>
@@ -174,7 +173,7 @@ if ($_SESSION['log'] != 'ativo') {
 					<h2 class="mb-30">A importância da familia na sociedade</h2>
 					<div class="row">
 						<div class="col-lg-12 text-black">
-							<blockquote class="generic-blockquote">
+							<blockquote class="generic-blockquote" align=justify>
 								À medida que o tempo passa, as transformações se dão cada vez mais rápido em nossas vidas. Tais mudanças não estão apenas associadas aos produtos ou à tecnologia, a rapidez com que este processo acontece também influencia na nossa percepção sobre a sociedade e como as relações interpessoais ocorrem no dia a dia.
 
 								A maneira como enxergamos a família também está se transformando. Não precisamos voltar muito no tempo para lembrarmos que o casamento entre duas pessoas de cores diferentes era algo abominável para uns e em certos lugares até proibido.
