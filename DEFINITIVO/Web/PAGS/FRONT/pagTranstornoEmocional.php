@@ -69,7 +69,6 @@ if ($_SESSION['log'] != 'ativo') {
 								<ul>
 									<li><a href="pagtranstornoEmocional.php">Emocionais</a></li>
 									<li><a href="pagTranstornoAlimentar.php">Alimentares</a></li>
-									<li><a href="pagBlog-single.html">Psicoses</a></li>
 								</ul>
 							</li>
 							<li><a href="pagDefasagem.php">Defasagem</a></li>
@@ -108,7 +107,7 @@ if ($_SESSION['log'] != 'ativo') {
 
 
 					<p class="sample-text text-black">
-						<dd class="text-black">O transtorno emocional se caracteriza por dificuldades sociais criadas por comportamentos dissociativos, agressivos, amedrontados ou alienados. A rotina estressante, juntamente à presença excessiva da tecnologia, tem afetado seriamente a saúde emocional e mental da população. Transtornos como: depressão, ansiedade, síndrome do pânico, estresse, fobia social, transtorno comportamental e TOC, estão cada vez mais comuns. Por isso mesmo é importante estar alerta!
+						<dd class="text-black" align=justify>O transtorno emocional se caracteriza por dificuldades sociais criadas por comportamentos dissociativos, agressivos, amedrontados ou alienados. A rotina estressante, juntamente à presença excessiva da tecnologia, tem afetado seriamente a saúde emocional e mental da população. Transtornos como: depressão, ansiedade, síndrome do pânico, estresse, fobia social, transtorno comportamental e TOC, estão cada vez mais comuns. Por isso mesmo é importante estar alerta!
 
 							Vou apresentar, em mais detalhes, cada um desses tipos de transtornos emocionais citados cima e mostrar seus sinais para que entenda como lidar assertivamente com eles e não deixar que causem maiores danos.</dd>
 
@@ -130,8 +129,8 @@ if ($_SESSION['log'] != 'ativo') {
 							<img src="../../img/ansiedade.jpg" alt="" height="210px" width="250px">
 						</div>
 						<div class="col-md-9 mt-sm-20 left-align-p ">
-							<p>Quando na medida certa, a ansiedade é positiva para o ser humano,<br> pois age liberando uma série de hormônios capazes de nos tornar mais alertas e ativos diante dos desafios.
-								<p>
+							<p align=justify>Quando na medida certa, a ansiedade é positiva para o ser humano,<br> pois age liberando uma série de hormônios capazes de nos tornar mais alertas e ativos diante dos desafios.
+								<p align=justify>
 									Contudo, quando demasiada, a ansiedade se torna um grave transtorno emocional que prejudica a vida social e profissional do indivíduo. Uma pessoa que sofre de um distúrbio de ansiedade está sempre angustiada em relação a algo que está por vir, não conseguindo se dissociar desse foco e sofrendo muito.
 								</p>
 								Tratamento: O médico deve verificar se a ansiedade está ligada a uma doença física – tratando a mesma para acabar com o sintoma – ou a um distúrbio de origem emocional, ou os dois, que pode levar ao uso de medicamentos e terapia.</p>
@@ -144,10 +143,10 @@ if ($_SESSION['log'] != 'ativo') {
 					<h3 class="mb-30">Simdrome do Pânico</h3>
 					<div class="row">
 						<div class="col-md-9">
-							<p class="text-right">Um dos tipos de transtornos emocionais mais frequentes atualmente é a Síndrome do Pânico, desencadeada por situações estressantes ou traumáticas. Trata-se de crises agudas de ansiedade em que o indivíduo tem intenso medo e angústia de que algo muito ruim irá acontecer, mesmo tendo consciência de que isso é improvável. Os episódios desse transtorno emocional acontecem de forma inesperada, tendo sintomas emocionais e físicos que podem levar o indivíduo até um desmaio.
+							<p class="text-right" align=justify>Um dos tipos de transtornos emocionais mais frequentes atualmente é a Síndrome do Pânico, desencadeada por situações estressantes ou traumáticas. Trata-se de crises agudas de ansiedade em que o indivíduo tem intenso medo e angústia de que algo muito ruim irá acontecer, mesmo tendo consciência de que isso é improvável. Os episódios desse transtorno emocional acontecem de forma inesperada, tendo sintomas emocionais e físicos que podem levar o indivíduo até um desmaio.
 
 								Tratamento: O acompanhamento médico visa reduzir as ocorrências das crises, bem como seu tempo de duração e gravidade. </p>
-							<p class="text-right">O tratamento também pode ser feito por meio de psicoterapia e medicamentos.</p>
+							<p class="text-right" align=justify>O tratamento também pode ser feito por meio de psicoterapia e medicamentos.</p>
 						</div>
 						<div class="col-md-3">
 							<img src="../../img/Síndrome-do-Panico.jpg" alt="" height="164px" width="250px">
@@ -162,9 +161,9 @@ if ($_SESSION['log'] != 'ativo') {
 							<img src="../../img/Estresse.jpg" alt="" height="210px" width="250px">
 						</div>
 						<div class="col-md-9 mt-sm-20 left-align-p ">
-							<p>
+							<p align=justify>
 								O mal do século, o estresse, está presente na vida de grande parte da população mundial. Seu crescimento é creditado ao estilo de vida moderno, em que os indivíduos são cobrados intensamente o tempo todo. O estresse pode se manifestar de maneiras diversas, incluindo sintomas emocionais – como irritação, descontrole emocional, choro e extrema preocupação – e sintomas físicos, incluindo fortes dores de cabeça, estômago, pelo corpo, bruxismo, sudorese, tremores e tonturas.
-							</p>
+							</p align=justify>
 							Tratamento: É essencial identificar a fonte do estresse para eliminá-la e buscar acompanhamento médico também. Dependendo do caso, o paciente pode precisar de terapia.
 							<p>
 

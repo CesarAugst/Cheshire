@@ -55,6 +55,7 @@ CREATE TABLE IF NOT EXISTS LOGIN (
     login VARCHAR(255),
     senha VARCHAR(255)
 );
+insert into LOGIN values ('1','henrique157', '1533');
 /*--------------------------------------------*/
 DROP TABLE IF EXISTS ENDERECO;
 CREATE TABLE IF NOT EXISTS ENDERECO (
@@ -119,16 +120,13 @@ CREATE TABLE IF NOT EXISTS IDENTIFICACAO_ALUNO (
 drop table if exists usuario;
 create table if not exists usuario(
 cod_usuario int primary key,
-login int(11),
+login varchar(20),
 senha varchar(11),
 nome varchar(20),
 sobrenome varchar(20),
-tipo enum('orientador','aluno','funcionario'),
-telefone varchar(10),
-celular varchar(11),
-endereco varchar(100));
-insert into usuario values('17308','17308','42942544830','cesar','August','aluno','1142439058','11958681942','Olegario Maciel 10');
-insert into usuario values('17305','17305','14604818878','monique','Rufino','orientador','1141482099','11946143093','Rua topazio/Jardim Nomura');
+tipo enum('orientador','aluno'));
+insert into usuario values('17308','Cesarr','42942544830','cesar','August','aluno');
+insert into usuario values('17305','Moniquee','14604818878','monique','Rufino','orientador');
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------
 select * from usuario;
 -- Cria a tabela das mensagens -------------------------------------------------------------------------------------------------------------------------

@@ -69,7 +69,6 @@ if ($_SESSION['log'] != 'ativo') {
 								<ul>
 									<li><a href="pagtranstornoEmocional.php">Emocionais</a></li>
 									<li><a href="pagBlog-single.html">Alimentares</a></li>
-									<li><a href="pagBlog-single.html">Psicoses</a></li>
 								</ul>
 							</li>
 							<li><a href="pagDefasagem.php">Defasagem</a></li>
@@ -109,7 +108,7 @@ if ($_SESSION['log'] != 'ativo') {
 						<div class="title text-center">
 							<h1 class="mb-10">O que são transtornos alimentares?</h1>
 							<p>
-								<dd class="text-black">
+								<dd class="text-black" align=justify>
 									Os Transtornos Alimentares são caracterizados por perturbações no comportamento alimentar, podendo levar ao emagrecimento extremo (caquexia - devido à inadequada redução da alimentação), à obesidade (devido à ingestão de grandes quantidades de comida), ou outros problemas físicos. Os principais tipos de Transtorno Alimentar são a Anorexia Nervosa e a Bulimia Nervosa, e ambos têm como características comuns: uma intensa preocupação como o peso e o medo excessivo de engordar, uma percepção distorcida da forma corporal, e a auto-avaliação baseada no peso e na forma física. (1, 3, 10, 11)
 
 									Alguns autores caracterizam os Transtornos Alimentares como síndromes ligadas à cultura de determinadas sociedades. O que evidencia esta hipótese é o fato de que a Anorexia e a Bulimia têm uma prevalência maior entre mulheres jovens de países ocidentais, principalmente as que pertencem às camadas sociais mais privilegiadas.</dd>
@@ -178,7 +177,7 @@ if ($_SESSION['log'] != 'ativo') {
 									<a href="#">
 										<h4 class="text-white">Tratamento psicológico</h4>
 									</a>
-									<p class="text-white">
+									<p class="text-white" align=justify>
 										O tratamento dos Transtornos Alimentares busca restaurar o comportamento alimentar adequado, e restabelecer o peso considerado normal para a idade e a altura do indivíduo. O objetivo do tratamento é tirar o indivíduo do desequilíbrio clínico que a gravidade dos sintomas pode gerar.
 									</p>
 								</div>
@@ -191,7 +190,7 @@ if ($_SESSION['log'] != 'ativo') {
 									<a href="#">
 										<h4 class="text-white">Tratamento Fisico</h4>
 									</a>
-									<p class="text-white">
+									<p class="text-white" align=justify>
 										A atividade fisica é recomendada como tratamento para transtornos alimentares por médicos nutricionistas. O exercicio fisico ajuda a manter equilibrio do organismo e da flora instetinal trazendo beneficios fisicos e psicológicos para o individou em questão.
 									</p>
 								</div>
@@ -225,7 +224,7 @@ if ($_SESSION['log'] != 'ativo') {
 				<h2 class="mb-30">Conclusão</h2>
 				<div class="row">
 					<div class="col-lg-12 text-black">
-						<blockquote class="generic-blockquote">
+						<blockquote class="generic-blockquote" align=justify>
 							Distúrbios alimentares podem ser originados de hábitos alimentares que causam danos à saúde como a redução extrema ou consumo em excesso de alimentos.
 
 							Os distúrbios alimentares são comuns na adolescência e no começo da adulta. Eles estão relacionados a uma série de consequências psicológicas, como ansiedade e pressões sociais para o chamado ‘corpo perfeito’.

@@ -71,8 +71,7 @@
 							<li class="menu-has-children"><a href="">Transtornos</a>
 								<ul>
 									<li><a href="pagTranstornoEmocional.php">Emocionais</a></li>
-									<li><a href="pagTranstornoAlimentar.php">Alimentares</a></li>
-									<li><a href="pagBlog-single.html">Psicoses</a></li>
+									<li><a href="pagTranstornoAlimentar.php">Alimentares</a></li>									
 								</ul>
 							</li>
 							<li><a href="pagDefasagem.php">Defasagem</a></li>
@@ -106,7 +105,7 @@
 		<!-- Fim banner Area -->
 		<br><br>
 		<center>
-			<h1>problemas educacionais e não educacionais:</h1>
+			<h1>Problemas na aprendizagem:</h1>
 		</center>
 		<!-- Menu de páginas -->
 		<section class="top-category-widget-area pt-90 pb-90 ">
@@ -187,7 +186,7 @@
 								<a class="posts-title" href="pagBlog-single.html">
 									<h2>Introdução à aplicação</h2>
 								</a><br>
-								<p class="excert">
+								<p class="excert" align=justify> 
 									Este projeto tem como base uma otimização na interação entre os orientadores educacionais com os alunos que possuem problemas educacionais. O objetivo é criar uma ferramenta que aproxime o aluno aos profissionais responsáveis por lhe orientar. Para tanto, estudos sobre o desenvolvimento de problemas educacionais em estudantes e formas de auxílio a indivíduos tais transtornos serão realizados a fim de incorporar características de métodos de intervenção e apoio mais eficazes a funcionalidades da aplicação, tomando como base as atribuições ao cargo de orientadores educacionais no ambiente ETEC. Primeiramente entende-se que o pouco período de tempo que os alunos passam no ambiente escolar, não é possível auxilia-los por completo em questão de sua atividade escolar para com seu desempenho acadêmico, em certos casos o aluno esconde sua dificuldade, dificultando o trabalho dos orientadores, onde por vezes o aluno omite o problema até mesmo de sua família, que ao passar do tempo acaba agravando a situação, em casos avançados, após a divulgação de menções semestrais, o aluno acaba se desmotivando, aumentando assim os casos de evasão escolar. Visto a necessidade da implementação de meios que facilitem a comunicação entre o estudante com dificuldades educacionais e os orientadores que possam lhe indicar meios para solucionar seus conflitos ou mesmo contatos de profissionais que lhe ofereçam os devidos tratamentos é o foco desse projeto, visando servir de ferramenta de uso no ambiente escolar, auxiliando funcionários que orientam os alunos emocionalmente, a agirem de forma mais eficaz, uma vez que não dependeriam unicamente da iniciativa do aluno, contando também com a ajuda de seus colegas e sua família para relatar situações problemas que acarretam em situações conflitantes ao ensino dos alunos e indica-lo para atendimento adequado.
 								</p>
 
@@ -215,7 +214,7 @@
 									<li><a href="https://twitter.com/etecdecotia" target="_blank"><i class="fa fa-twitter"></i></a></li>
 									<li><a href="https://github.com/CesarAugst/Cheshire" target="_blank"><i class="fa fa-github"></i></a></li>
 								</ul>
-								<p>
+								<p align=justify>
 									Trata-se de uma aplicação que possibilita uma otimização na comunicação entreo orientador e aluno, possibilitando também a interação destes com a família e os demais funcionários e alunos do ambiente acadêmico, fornecendo assim um atendimento mais dinâmico e funcional.
 								</p>
 							</div>
