@@ -42,17 +42,17 @@ session_start();
             foreach ($mensagens as $mensagem) :
                 ?>
                 <tr>
-                    <td><?php echo $mensagem['cod_mensagem'] ?></td>
-                    <td><?php echo $mensagem['remetente'] ?></td>
-                    <td><?php echo $mensagem['destinatario']?></td>
+                    <td><?php echo $mensagem['id_mensagem'] ?></td>
+                    <td><?php echo $mensagem['nome_remetente'] ?></td>
+                    <td><?php echo $mensagem['nome_destinatario']?></td>
                     <td><?php echo $mensagem['conteudo'] ?></td>
                     <td><?php echo $mensagem['anonimato'] ?></td>
-                    <td><?php echo $mensagem['dataEnviada'] ?></td>
+                    <td><?php echo $mensagem['data_enviada'] ?></td>
                     <td><a class="btn btn-info" href="../BACK/lida.php?cod_mensagem=
-                        <?php echo $mensagem['cod_mensagem'] ?>">Marcar como lida</a>
+                        <?php echo $mensagem['id_mensagem'] ?>">Marcar como lida</a>
                     </td>
                     <td><a class="btn btn-info" href="pagEnviar.php?cod_mensagem=
-                        <?php echo $mensagem['cod_mensagem'] ?>">Responder esta mensagem</a></td>
+                        <?php echo $mensagem['id_mensagem'] ?>">Responder esta mensagem</a></td>
                 </tr>
             <?php
             endforeach;

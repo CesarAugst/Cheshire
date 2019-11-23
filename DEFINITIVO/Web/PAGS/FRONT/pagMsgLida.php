@@ -30,8 +30,6 @@ include("../BACK/bancoMensagem.php");
                 <td>Destinatario</td>
                 <td>Conteudo</td>
                 <td>Anonimato</td>
-                <td>Enviada</td>
-                <td>Lida</td>
                 <td>Exlcuir</td>
                 <td>Responder</td>
             </tr>
@@ -42,18 +40,16 @@ include("../BACK/bancoMensagem.php");
                 ?>
 
                 <tr>
-                    <td><?php echo $mensagem['cod_mensagem'] ?></td>
-                    <td><?php echo $mensagem['remetente'] ?></td>
-                    <td><?php echo $mensagem['destinatario'] ?></td>
+                    <td><?php echo $mensagem['id_mensagem'] ?></td>
+                    <td><?php echo $mensagem['nome_remetente'] ?></td>
+                    <td><?php echo $mensagem['nome_destinatario'] ?></td>
                     <td><?php echo $mensagem['conteudo'] ?></td>
                     <td><?php echo $mensagem['anonimato'] ?></td>
-                    <td><?php echo $mensagem['dataEnviada'] ?></td>
-                    <td><?php echo $mensagem['dataLida'] ?></td>
                     <td><a class="btn btn-outline-success" href="../BACK/excluida.php?cod_mensagem=
-                       <?php echo $mensagem['cod_mensagem'] ?>">Excluir</a>
+                       <?php echo $mensagem['id_mensagem'] ?>">Excluir</a>
                     </td>
                     <td><a class="btn btn-outline-success" href="pagResponderMsg.php?cod_mensagem=
-                       <?php echo $mensagem['cod_mensagem'] ?>">Responder</a></td>
+                       <?php echo $mensagem['id_mensagem'] ?>">Responder</a></td>
                 </tr>
             <?php
             endforeach;

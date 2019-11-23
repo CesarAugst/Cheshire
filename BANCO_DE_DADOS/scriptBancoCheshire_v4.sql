@@ -497,6 +497,35 @@ end //
 DELIMITER ;
 -- PROCEDURE - LOGIN --------------------------------------------------------------------------------------------------------
 
+-- PROCEDURE - RM ----------------------------------------------------------
+DELIMITER //
+drop procedure if exists RM //
+create procedure RM(login_p varchar(255),senha_p varchar(255))
+main:begin
+	declare cod_log, cod_rm int;
+    
+	set cod_log = (select id_login from LOGIN where login= login_p && senha= senha_p);
+	set cod_rm = (select rm from PESSOA where login_fk= cod_log);
+    
+    select cod_rm;
+end //
+DELIMITER ;
+-- PROCEDURE - RM ----------------------------------------------------------
+
+-- PROCEDURE - NOME ----------------------------------------------------------
+DELIMITER //
+drop procedure if exists NOME //
+create procedure NOME(cod_rm varchar(255))
+main:begin
+	declare nome,sobrenome varchar(255);
+    
+	set nome = (select r.nome from REGISTRO as r join PESSOA as p on p.registro_fk = r.id_registro where p.rm = cod_rm);
+    set sobrenome = (select r.sobrenome from REGISTRO as r join PESSOA as p on p.registro_fk = r.id_registro where p.rm = cod_rm);
+    select nome,sobrenome;
+end //
+DELIMITER ;
+-- PROCEDURE - NOME ----------------------------------------------------------
+
 /*SESSAO DE PROCEDURES - CRIAÇÃO##################################################################################################################################*/
 
 /*SESSAO DE PROCEDURES - UTILIZAÇÃO##################################################################################################################################*/
@@ -507,6 +536,13 @@ call MARCA_LIDA(4);
 call MARCA_EXCLUIDA_REMETENTE(4);
 call MARCA_EXCLUIDA_DESTINATARIO(4);
 call CADASTRO(54321,'logando','senhando','nomeando','sobrenomeando','aluno');
-call LOGIN('logando','senhand');
+call LOGIN('teste','4967');
+call RM('teste','4967');
+call NOME('17308');
 /*SESSAO DE PROCEDURES - UTILIZAÇÃO##################################################################################################################################*/
 select * from mensagem where conteudo like '%Cesar%';
+select * from login;
+
+select * from LOGIN where login = 'teste' && senha = '4967';
+select tipo from TIPO_USUARIO as t join PESSOA as p on p.tipo_fk = t.id_tipo where p.rm = '17305';
+select * from pessoa;

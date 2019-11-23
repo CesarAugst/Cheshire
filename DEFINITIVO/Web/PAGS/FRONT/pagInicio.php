@@ -56,7 +56,7 @@
 							<?php
 							echo "Bem Vindo! <b>" . $_SESSION['nome'] . " </b>";
 							?>
-							<a href="../BACK/logout.php" class="primary-btn text-uppercase">Logout</a>
+							<a href="../BACK/logout.php" class="primary-btn text-uppercase ml-5">Logout</a>
 						</div>
 					</div>
 				</div>

@@ -221,7 +221,7 @@ if ($_SESSION['log'] != 'ativo') {
 
     <!-- Mapa com Funções -->
     <div id="mapa"> </div>
-    <script async="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA&callback=initMap"></script>
+    <script async="" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzJeHJE_I9PGTkmkez_SYOPIAadJjAo9o&callback=initMap"></script>
     <script>
         function initMap() {
 

@@ -2,8 +2,12 @@
 include('conexao.php');
 include('bancoUsuario.php');
 
-$rm = buscaRm($conexao,'logando','senhando');
-$nome = buscaNome($conexao,$rm['cod_rm']);
+$login = 'teste';
+$senha = '4967';
+$cod = '17308';
 
-var_dump($rm['cod_rm']);
-var_dump($nome['nome']);
+
+print_r(buscaRm($conexao,$login,$senha)['rm']);
+print_r(buscaNome($conexao,$cod)['nome']);
+
+
