@@ -667,4 +667,4 @@ select * from login;
 
 select * from LOGIN where login = 'teste' && senha = '4967';
 select tipo from TIPO_USUARIO as t join PESSOA as p on p.tipo_fk = t.id_tipo where p.rm = '17305';
-select * from PESSOA;
+select * from LOGIN;

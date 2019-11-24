@@ -31,7 +31,7 @@ function efetuarCadastro($conexao,$codigo,$login,$senha,$nome,$sobrenome,$tipo )
 
 function buscaRm($conexao, $user,$senha) {
 
-    $sql= "select RMf($user,$senha) as rm";
+    $sql= "select RMf('$user','$senha') as rm";
     //$sql = "select rm from PESSOA where login_fk= (select id_login from LOGIN where login= '$user' && senha= '$senha')";
     //$sql = "call RM('$user','$senha');";
     // $sql = "select cod_usuario from usuario where user='{$user}'"
