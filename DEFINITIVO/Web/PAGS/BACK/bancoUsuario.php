@@ -8,6 +8,27 @@ function efetuarLogin($conexao,$user,$senha){
     return mysqli_fetch_assoc($resultado);
 }
 
+function existeRm($conexao,$codigo){
+    $sql = "select VALIDA_RM($codigo) as existe";
+    $resultado = mysqli_query($conexao, $sql);
+    return mysqli_fetch_assoc($resultado);
+}
+
+function existeLogin($conexao,$login){
+    $sql = "select VALIDA_LOG('$login') as existe";
+    $resultado = mysqli_query($conexao, $sql);
+    return mysqli_fetch_assoc($resultado);
+}
+
+function efetuarCadastro($conexao,$codigo,$login,$senha,$nome,$sobrenome,$tipo ){
+    $sql = "select CADASTROf($codigo,$login,'$senha',$nome,$sobrenome,$tipo)";
+    // $sql = "insert into usuario"
+    //         ."(cod_usuario,login, senha, nome, sobrenome, tipo)"
+    //         ."values ('$codigo','$login', '$senha', '$nome', '$sobrenome', '$tipo')";
+    
+    return mysqli_query($conexao, $sql);
+}
+
 function buscaRm($conexao, $user,$senha) {
 
     $sql= "select RMf('teste','4967') as rm";

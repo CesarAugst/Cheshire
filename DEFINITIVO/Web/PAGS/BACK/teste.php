@@ -2,12 +2,22 @@
 include('conexao.php');
 include('bancoUsuario.php');
 
-$login = 'teste';
+$login = 'testi';
 $senha = '4967';
-$cod = buscaRm($conexao,$login,$senha)['rm'];
+$cod = '17300';
+
+$exis_rm = existeRm($conexao,$cod)['existe'];
+$exis_log = existeLogin($conexao,$login)['existe'];
+
+if($exis_rm == 1){
+    echo "ja existe rm" . "<br>";
+}else {
+    echo "nao existe rm" . "<br>";
+}
 
 
-print_r(buscaRm($conexao,$login,$senha));
-print_r(buscaNome($conexao,$cod)['nome']);
-
-
+if($exis_log == 1){
+    echo "ja existe login" . "<br>";
+}else {
+    echo "nao existe login" . "<br>";
+}

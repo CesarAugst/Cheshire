@@ -413,12 +413,77 @@ update MENSAGEM set data_excluida_destinatario = now() where id_mensagem = id;
 end //
 DELIMITER ;
 -- PROCEDURE - MARCA MENSAGENS DO REMETENTE COMO EXCLUIDAS ---------------------------------------------------------------------------------------
-SELECT COUNT(*) FROM LOGIN WHERE login = 'louin';
-select * from login;
+
+-- FUNCAO PARA VERIFICAR EXITENCA DE RM ----------------------------------------------------------------------------------------------------------
+DELIMITER //
+drop function if exists VALIDA_RM //
+create function VALIDA_RM(rm_p int)
+returns boolean
+main:begin
+declare valido boolean;
+declare rm_c int;
+
+set rm_c = (SELECT COUNT(*) FROM PESSOA WHERE rm = rm_p);
+
+if(rm_c > 0)then
+	set valido = true;
+else 
+    set valido = false;
+end if;
+return valido;
+end //
+DELIMITER ;
+-- FUNCAO PARA VERIFICAR EXITENCA DE RM ----------------------------------------------------------------------------------------------------------
+
+-- FUNCAO PARA VERIFICAR EXITENCA DE LOGIN ----------------------------------------------------------------------------------------------------------
+DELIMITER //
+drop function if exists VALIDA_LOG //
+create function VALIDA_LOG(login_p varchar(255))
+returns boolean
+main:begin
+declare valido boolean;
+declare log_c int;
+
+set log_c = (SELECT COUNT(*) FROM LOGIN WHERE login = login_p);
+
+if( log_c > 0)then
+	set valido = true;
+else 
+    set valido = false;
+end if;
+return valido;
+end //
+DELIMITER ;
+-- FUNCAO PARA VERIFICAR EXITENCA DE LOGIN ----------------------------------------------------------------------------------------------------------
+
 -- PROCEDURE - CADASTRO -----------------------------------------------------------------------------------------------------
 DELIMITER //
 drop procedure if exists CADASTRO //
 create procedure CADASTRO(rm_p int,login_p varchar(255),senha_p varchar(255),nome_p varchar(255),sobrenome_p varchar(255),funcao_p varchar(255))
+main:begin
+	insert into LOGIN values
+	(default, login_p, senha_p);
+
+	insert into REGISTRO (nome, sobrenome)values 
+	(nome_p, sobrenome_p);
+
+	insert into PESSOA (rm, login_fk, registro_fk) values
+	(rm_p, (select id_login from LOGIN where (login = login_p && senha = senha_p)), (select id_registro from REGISTRO where (nome = nome_p && sobrenome = sobrenome_p)));
+
+	IF (funcao_p = 'orientador') THEN 
+		UPDATE PESSOA SET tipo_fk = 1 where rm = rm_p;
+	END IF;
+
+	IF (funcao_p = 'aluno') THEN 
+		UPDATE PESSOA SET tipo_fk = 2 where rm = rm_p;
+	END IF;
+end //
+DELIMITER ;
+
+DELIMITER //
+drop function if exists CADASTROf //
+create function CADASTROf(rm_p int,login_p varchar(255),senha_p varchar(255),nome_p varchar(255),sobrenome_p varchar(255),funcao_p varchar(255))
+returns varchar(255)
 main:begin
 
 declare valido boolean;
@@ -453,6 +518,7 @@ if(valido = true)then
 	END IF;
 
 end if;
+return valido;
 end //
 DELIMITER ;
 -- PROCEDURE - CADASTRO -----------------------------------------------------------------------------------------------------
@@ -495,6 +561,30 @@ if(valido = true)then
 end if;
 end //
 DELIMITER ;
+
+DELIMITER //
+drop function if exists LOGINf //
+create function LOGINf(login_p varchar(255),senha_p varchar(255))
+returns varchar(255)
+main:begin
+declare cod_log, cod_rm int;
+
+declare valido boolean;
+declare log_c, sen_c int;
+
+set log_c = (SELECT COUNT(*) FROM LOGIN WHERE login = login_p);
+set sen_c = (SELECT COUNT(*) FROM LOGIN WHERE senha = senha_p);
+
+if( (log_c > 0) && (sen_c > 0))then
+	set valido = true;
+else 
+    set valido = false;
+end if;
+
+	return valido;
+
+end //
+DELIMITER ;
 -- PROCEDURE - LOGIN --------------------------------------------------------------------------------------------------------
 
 -- PROCEDURE - RM ----------------------------------------------------------
@@ -508,6 +598,19 @@ main:begin
 	set cod_rm = (select rm from PESSOA where login_fk= cod_log);
     
     select cod_rm;
+end //
+DELIMITER ;
+DELIMITER //
+drop function if exists RM //
+create function RMf(login_p varchar(255),senha_p varchar(255))
+returns varchar(255)
+main:begin
+	declare cod_log, cod_rm int;
+    
+	set cod_log = (select id_login from LOGIN where login= login_p && senha= senha_p);
+	set cod_rm = (select rm from PESSOA where login_fk= cod_log);
+    
+    return cod_rm;
 end //
 DELIMITER ;
 -- PROCEDURE - RM ----------------------------------------------------------
@@ -524,6 +627,19 @@ main:begin
     select nome,sobrenome;
 end //
 DELIMITER ;
+
+DELIMITER //
+drop function if exists NOME //
+create function NOMEf(cod_rm varchar(255))
+returns varchar(255)
+main:begin
+	declare nome,sobrenome varchar(255);
+    
+	set nome = (select r.nome from REGISTRO as r join PESSOA as p on p.registro_fk = r.id_registro where p.rm = cod_rm);
+    set sobrenome = (select r.sobrenome from REGISTRO as r join PESSOA as p on p.registro_fk = r.id_registro where p.rm = cod_rm);
+    return nome;
+end //
+DELIMITER ;
 -- PROCEDURE - NOME ----------------------------------------------------------
 
 /*SESSAO DE PROCEDURES - CRIAÇÃO##################################################################################################################################*/
@@ -535,14 +651,20 @@ call CAIXA_ENVIADAS(17308);
 call MARCA_LIDA(4);
 call MARCA_EXCLUIDA_REMETENTE(4);
 call MARCA_EXCLUIDA_DESTINATARIO(4);
-call CADASTRO(54321,'logando','senhando','nomeando','sobrenomeando','aluno');
+call CADASTRO(5321,'lgando','enhando','omeando','sbrenomeando','aluno');
+select CADASTROf(1234567,'esseloginn','essasenhaa','essenomee','essesobrenomee','aluno');
+select VALIDA_LOG('testi') as existe; -- (teste) existe (testi) nao existe
+select VALIDA_RM('17300') as existe; -- (17305) existe (17300) nao existe
 call LOGIN('teste','4967');
+select LOGINf('teste','4967');
 call RM('teste','4967');
+select RMf('teste','4967') as rm;
 call NOME('17308');
+select NOMEf(17308);
 /*SESSAO DE PROCEDURES - UTILIZAÇÃO##################################################################################################################################*/
 select * from mensagem where conteudo like '%Cesar%';
 select * from login;
 
 select * from LOGIN where login = 'teste' && senha = '4967';
 select tipo from TIPO_USUARIO as t join PESSOA as p on p.tipo_fk = t.id_tipo where p.rm = '17305';
-select * from pessoa;
+select * from PESSOA;
