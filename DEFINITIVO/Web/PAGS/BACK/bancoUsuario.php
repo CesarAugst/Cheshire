@@ -1,7 +1,7 @@
 <?php
 
 function efetuarLogin($conexao,$user,$senha){
-    $sql = "call LOGIN('{$user}','{$senha}');";
+    $sql = "select LOGINf('{$user}','{$senha}');";
     //$sql = "select * from usuario where user='{$user}'"
     //        . "and senha='{$senha}'";
     $resultado = mysqli_query($conexao, $sql);
@@ -10,8 +10,8 @@ function efetuarLogin($conexao,$user,$senha){
 
 function buscaRm($conexao, $user,$senha) {
 
-    $sql = "select rm from PESSOA where login_fk= (select id_login from LOGIN where login= '$user' && senha= '$senha')";
-
+    $sql= "select RMf('teste','4967') as rm";
+    //$sql = "select rm from PESSOA where login_fk= (select id_login from LOGIN where login= '$user' && senha= '$senha')";
     //$sql = "call RM('$user','$senha');";
     // $sql = "select cod_usuario from usuario where user='{$user}'"
     // . "and senha='{$senha}'";
@@ -20,7 +20,9 @@ function buscaRm($conexao, $user,$senha) {
 }
 
 function buscaNome($conexao, $cod) {
-    $sql = "select r.nome from REGISTRO as r join PESSOA as p on p.registro_fk = r.id_registro where p.rm = $cod";
+    
+    $sql = "select NOMEf($cod) as nome";
+    //$sql = "select r.nome from REGISTRO as r join PESSOA as p on p.registro_fk = r.id_registro where p.rm = $cod";
     //$sql = "call NOME('$cod');";
     // $sql = "select nome from usuario where cod_usuario ='{$cod}'";
     $resultado = mysqli_query($conexao,$sql);
