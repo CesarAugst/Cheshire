@@ -629,7 +629,7 @@ end //
 DELIMITER ;
 
 DELIMITER //
-drop function if exists NOME //
+drop function if exists NOMEf //
 create function NOMEf(cod_rm varchar(255))
 returns varchar(255)
 main:begin
@@ -641,30 +641,47 @@ main:begin
 end //
 DELIMITER ;
 -- PROCEDURE - NOME ----------------------------------------------------------
+-- FUNÇÃO - TIPO ----------------------------------------------------------------------------
+DELIMITER //
+drop function if exists BUSCA_TIPOf //
+create function BUSCA_TIPOf(cod_rm varchar(255))
+returns varchar(255)
+main:begin
+	declare tipo_usu varchar(255);
+    
+	set tipo_usu = (select tipo from TIPO_USUARIO as t join PESSOA as p on p.tipo_fk = t.id_tipo where p.rm = cod_rm);
+    
+    return tipo_usu;
+end //
+DELIMITER ;
+-- FUNÇÃO - TIPO ----------------------------------------------------------------------------
 
 /*SESSAO DE PROCEDURES - CRIAÇÃO##################################################################################################################################*/
 
-/*SESSAO DE PROCEDURES - UTILIZAÇÃO##################################################################################################################################*/
-call CAIXA_ENTRADA(17308);
-call CAIXA_LIDAS(17305);
-call CAIXA_ENVIADAS(17308);
-call MARCA_LIDA(4);
-call MARCA_EXCLUIDA_REMETENTE(4);
-call MARCA_EXCLUIDA_DESTINATARIO(4);
-call CADASTRO(5321,'lgando','enhando','omeando','sbrenomeando','aluno');
-select CADASTROf(1234567,'esseloginn','essasenhaa','essenomee','essesobrenomee','aluno');
-select VALIDA_LOG('testi') as existe; -- (teste) existe (testi) nao existe
-select VALIDA_RM('17300') as existe; -- (17305) existe (17300) nao existe
-call LOGIN('teste','4967');
-select LOGINf('teste','4967');
-call RM('teste','4967');
-select RMf('teste','4967') as rm;
-call NOME('17308');
-select NOMEf(17308);
-/*SESSAO DE PROCEDURES - UTILIZAÇÃO##################################################################################################################################*/
-select * from mensagem where conteudo like '%Cesar%';
-select * from login;
+/*SESSAO DE PROCEDURES E FUNÇÕES- UTILIZAÇÃO##################################################################################################################################*/
+-- ---- Mensagem ------
+-- call CAIXA_ENTRADA(17308);
+-- call CAIXA_LIDAS(17305);
+-- call CAIXA_ENVIADAS(17308);
+-- call MARCA_LIDA(4);
+-- call MARCA_EXCLUIDA_REMETENTE(4);
+-- call MARCA_EXCLUIDA_DESTINATARIO(4);
+-- ---- Mensagem ------
 
-select * from LOGIN where login = 'teste' && senha = '4967';
-select tipo from TIPO_USUARIO as t join PESSOA as p on p.tipo_fk = t.id_tipo where p.rm = '17305';
-select * from LOGIN;
+-- ---- Usuario -------
+-- call CADASTRO(5321,'lgando','enhando','omeando','sbrenomeando','aluno');
+-- select CADASTROf(1234567,'esseloginn','essasenhaa','essenomee','essesobrenomee','aluno');
+-- select VALIDA_LOG('testi') as existe; -- (teste) existe (testi) nao existe
+-- select VALIDA_RM('17300') as existe; -- (17305) existe (17300) nao existe
+-- call LOGIN('teste','4967');
+-- select LOGINf('teste','4967');
+-- call RM('teste','4967');
+-- select RMf('teste','4967') as rm;
+-- call NOME('17308');
+-- select NOMEf(17308);
+-- select BUSCA_TIPOf('17305');
+-- ---- Usuario -------
+/*SESSAO DE PROCEDURES E FUNÇÕES - UTILIZAÇÃO##################################################################################################################################*/
+select * from mensagem where conteudo like '%Cesar%';
+select * from tipo_usuario;
+select * from login;
