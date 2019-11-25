@@ -1,5 +1,5 @@
 	<!DOCTYPE html>
-	<html lang="zxx" class="no-js">
+	<html lang="pt-BR" class="no-js">
 
 	<head>
 		<!-- Mobile Specific Meta -->
@@ -31,6 +31,7 @@
 		<link rel="stylesheet" href="../../csspg/owl.carousel.css">
 		<link rel="stylesheet" href="../../csspg/jquery-ui.css">
 		<link rel="stylesheet" href="../../csspg/main.css">
+		<link rel="stylesheet" type="text/css" href="meuCss/estiloso.css">
 	</head>
 
 	<body>

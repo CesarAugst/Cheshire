@@ -6,7 +6,7 @@ if ($_SESSION['log'] != 'ativo') {
 	header("location: pagLogin.php");
 }
 ?>
-<h<html lang="zxx" class="no-js">
+<html lang="pt-BR" class="no-js">
 
 	<head>
 		<!-- Mobile Specific Meta -->
@@ -38,6 +38,7 @@ if ($_SESSION['log'] != 'ativo') {
 		<link rel="stylesheet" href="../../csspg/owl.carousel.css">
 		<link rel="stylesheet" href="../../csspg/jquery-ui.css">
 		<link rel="stylesheet" href="../../csspg/main.css">
+		<link rel="stylesheet" type="text/css" href="meuCss/estiloso.css">
 	</head>
 
 	<body>
