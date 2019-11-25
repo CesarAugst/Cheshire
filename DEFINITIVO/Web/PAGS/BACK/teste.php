@@ -4,6 +4,6 @@ include('bancoUsuario.php');
 
 $login = 'testi';
 $senha = '4967';
-$cod = '17300';
+$cod = '17308';
 
-var_dump(efetuarLogin($conexao,$login,$senha));
+var_dump(buscaTipo($conexao,$cod));

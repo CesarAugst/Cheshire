@@ -52,7 +52,7 @@ function buscaNome($conexao, $cod) {
 }
 
 function buscaTipo($conexao, $cod) {
-    $sql = "select tipo from TIPO_USUARIO as t join PESSOA as p on p.tipo_fk = t.id_tipo where p.rm = $cod";
+    $sql = "select BUSCA_TIPOf('$cod') as tipo_usuario";
     //$sql = "select tipo from usuario where cod_usuario = '{$cod}'";
     $resultado = mysqli_query($conexao,$sql);
     return mysqli_fetch_assoc($resultado);

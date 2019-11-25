@@ -17,8 +17,8 @@
     <form method="POST" action="../BACK/verificaEnvio.php">
         <?php
         session_start();
-        $nome = $_SESSION['rm'];
-
+        $nome = $_SESSION['nome'];
+        var_dump($_SESSION['tipo']);
         if ($_SESSION['tipo'] == 'orientador') {
             include_once('includes/EnviarMensagem/envOri.inc');
         } else {

@@ -47,8 +47,8 @@ CREATE TABLE IF NOT EXISTS PESSOA (
     anamnese_fk INT,
 		FOREIGN KEY (anamnese_fk) references ANAMNESE(id_anamnese)
 );
-insert into PESSOA values(17308,1,1,1,1,1);
-insert into PESSOA values(17305,2,2,2,2,2);
+insert into PESSOA values(17308,1,1,1,2,1);
+insert into PESSOA values(17305,2,2,2,1,2);
 -- Tabela pessoa 2.0
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela telefone 2.1
@@ -685,3 +685,4 @@ DELIMITER ;
 select * from mensagem where conteudo like '%Cesar%';
 select * from tipo_usuario;
 select * from login;
+select * from PESSOA;

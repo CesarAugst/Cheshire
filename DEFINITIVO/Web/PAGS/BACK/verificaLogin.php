@@ -11,7 +11,7 @@
             $_SESSION['log'] = 'ativo';
             $_SESSION['rm'] = buscaRm($conexao,$login,$senha)['rm'];
             $_SESSION['nome'] = buscaNome($conexao,$_SESSION['rm'])['nome'];
-            $_SESSION['tipo'] = buscaTipo($conexao,$_SESSION['rm'])['tipo'];
+            $_SESSION['tipo'] = buscaTipo($conexao,$_SESSION['rm'])['tipo_usuario'];
             header("location: ../FRONT/pagInicio.php");
             die();
                                                            
