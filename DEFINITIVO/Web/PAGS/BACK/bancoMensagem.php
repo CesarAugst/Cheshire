@@ -23,6 +23,12 @@
         return mysqli_query($conexao,$sql);
     }
 
+    function excluirRemetente($conexao, $cod_mensagem) {
+        $sql = "call MARCA_EXCLUIDA_REMETENTE('$cod_mensagem')";
+        //$sql = "delete from mensagem where cod_mensagem = $cod_mensagem";
+        return mysqli_query($conexao,$sql);
+    }
+
     function listaMensagensRecebidas($conexao, $cod) {
         $mensagens = array();
         $resultado = mysqli_query($conexao, "call CAIXA_ENTRADA('$cod')");//select * from mensagem where (remetente =  '$cod' || destinatario = '$cod') && (stautsLida = 'N' && statusExcluida = 'N')"

@@ -29,6 +29,7 @@ session_start();
                 <td>Conteudo</td>
                 <td>Anonimato</td>
                 <td>Enviada</td>
+                <td></td>
 
             </tr>
 
@@ -46,6 +47,9 @@ session_start();
                     <td><?php echo $mensagem['conteudo'] ?></td>
                     <td><?php echo $mensagem['anonimato'] ?></td>
                     <td><?php echo $mensagem['data_enviada'] ?></td>
+                    <td><a class="btn btn-outline-success" href="../BACK/excluidaRemetente.php?cod_mensagem=
+                       <?php echo $mensagem['id_mensagem'] ?>">Excluir</a>
+                    </td>
                 </tr>
             <?php
             endforeach;
