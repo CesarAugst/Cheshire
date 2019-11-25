@@ -201,7 +201,7 @@ if ($_SESSION['log'] != 'ativo') {
 					<div class="widget-wrap">
 
 						<div class="single-sidebar-widget user-info-widget">
-							<img src="../../img/cheshire_.png" height="100" width="150" alt="">
+							<img src="../../img/cheshire1.png" height="100" width="150" alt="">
 							<a href="#">
 								<h4>Projeto Cheshire</h4>
 							</a>

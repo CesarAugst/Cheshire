@@ -23,7 +23,6 @@ if ($_SESSION['log'] != 'ativo') {
 
     <form method="POST" action="../BACK/verificaEnvio.php">
         <?php
-        session_start();
         $nome = $_SESSION['nome'];
         if ($_SESSION['tipo'] == 'orientador') {
             include_once('includes/EnviarMensagem/envOri.inc');

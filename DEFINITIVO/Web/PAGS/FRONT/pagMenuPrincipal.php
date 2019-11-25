@@ -3,7 +3,7 @@
 session_start();
 if ($_SESSION['log'] != "ativo") {
     session_destroy();
-    header("location: pag_login.php");
+    header("location: pagLogin.php");
 }
 echo "<nav class = 'navbar navbar-light bg-dark text-light'>
     <a class = 'navbar-brand'> Olá, <em><b>" . $_SESSION['nome'] .
