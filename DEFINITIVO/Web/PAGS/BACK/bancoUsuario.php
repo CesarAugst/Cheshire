@@ -1,7 +1,7 @@
 <?php
 
 function efetuarLogin($conexao,$user,$senha){
-    $sql = "select LOGINf('{$user}','{$senha}');";
+    $sql = "select LOGINf('{$user}','{$senha}') as possui";
     //$sql = "select * from usuario where user='{$user}'"
     //        . "and senha='{$senha}'";
     $resultado = mysqli_query($conexao, $sql);

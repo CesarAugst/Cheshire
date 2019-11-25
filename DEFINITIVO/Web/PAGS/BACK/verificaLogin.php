@@ -6,12 +6,12 @@
         $login = $_POST['txtlogin'];
         $senha = $_POST['txtsenha'];
         session_start();
-        $_SESSION['rm'] = buscaRm($conexao,$login,$senha)['rm'];
-        $_SESSION['nome'] = buscaNome($conexao,$_SESSION['rm'])['nome'];
-        $_SESSION['tipo'] = buscaTipo($conexao,$_SESSION['rm'])['tipo'];
-        if (efetuarLogin($conexao, $login, $senha)){
+        if (efetuarLogin($conexao, $login, $senha)['possui']!="0"){
 
             $_SESSION['log'] = 'ativo';
+            $_SESSION['rm'] = buscaRm($conexao,$login,$senha)['rm'];
+            $_SESSION['nome'] = buscaNome($conexao,$_SESSION['rm'])['nome'];
+            $_SESSION['tipo'] = buscaTipo($conexao,$_SESSION['rm'])['tipo'];
             header("location: ../FRONT/pagInicio.php");
             die();
                                                            
