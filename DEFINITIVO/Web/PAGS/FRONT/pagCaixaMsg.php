@@ -51,8 +51,7 @@ session_start();
                     <td><a class="btn btn-info" href="../BACK/lida.php?cod_mensagem=
                         <?php echo $mensagem['id_mensagem'] ?>">Marcar como lida</a>
                     </td>
-                    <td><a class="btn btn-info" href="pagEnviar.php?cod_mensagem=
-                        <?php echo $mensagem['id_mensagem'] ?>">Responder esta mensagem</a></td>
+                    <td><a class="btn btn-info" href="pagResponderMsg.php?cod_mensagem=<?php echo $mensagem['id_mensagem']?>">Responder</a></td>
                 </tr>
             <?php
             endforeach;

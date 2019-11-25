@@ -17,8 +17,9 @@
         return mysqli_query($conexao,$sql);
     }
     
-    function excluir($conexao, $cod_mensagem) {
-        $sql = "delete from mensagem where cod_mensagem = $cod_mensagem";
+    function excluirDestinatario($conexao, $cod_mensagem) {
+        $sql = "call MARCA_EXCLUIDA_DESTINATARIO('$cod_mensagem')";
+        //$sql = "delete from mensagem where cod_mensagem = $cod_mensagem";
         return mysqli_query($conexao,$sql);
     }
 

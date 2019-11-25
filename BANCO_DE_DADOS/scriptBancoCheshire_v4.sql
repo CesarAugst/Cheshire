@@ -339,15 +339,15 @@ create procedure CAIXA_ENVIADAS(id varchar(255))
 main:begin
 declare remetente_n, remetente_s, destinatario_n, destinatario_s varchar(255);
 
-set destinatario_n = (select nome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = id);
-set destinatario_s = (select sobrenome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = id);
+set remetente_n = (select nome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = id);
+set remetente_s = (select sobrenome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = id);
 
 select 
 m.id_mensagem,
-(select nome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = m.remetente_fk) as nome_remetente,
-(select sobrenome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = m.remetente_fk) as sobrenome_remetente,
-destinatario_n as nome_destinatario,
-destinatario_s as sobrenome_destinatario,
+(select nome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = m.destinatario_fk) as nome_destinatario,
+(select sobrenome from PESSOA as p join REGISTRO as r on p.registro_fk = r.id_registro where p.rm = m.destinatario_fk) as sobrenome_destinatario,
+remetente_n as nome_remetente,
+remetente_s as sobrenome_remetente,
 m.conteudo, 
 m.anonimato, 
 m.data_enviada
