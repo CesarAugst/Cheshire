@@ -1465,6 +1465,8 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 20px;
 }
 
+
+
 .single-input-primary:focus {
   outline: none;
   border: 1px solid #69be00;
@@ -2081,10 +2083,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .header-top .header-top-right {
   text-align: right;
+  color: #69be00;
 }
 
 .top-head-btn {
-  background: #69be00;
+  background:#3d7a48;
   padding: 9px 26px;
 }
 
@@ -2379,7 +2382,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .primary-btn {
-  background: #69be00;
+  background: #578520;
   line-height: 42px;
   padding-left: 30px;
   padding-right: 30px;
@@ -3201,9 +3204,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .accordion > dt > a.active {
-  color: #69be00;
+  color: #3d7a48;
   border-color:#69be00;
-  background: #69be00;
+  background: #3d7a48;
   cursor: default;
 }
 
@@ -3231,7 +3234,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .accordion > dt > a.active:after,
 .accordion > dt > a.active:hover:after {
   content: "\f106";
-  color:#69be00;
+  color:#3d7a48;
 }
 
 .accordion > dt > a:hover:after {
@@ -3296,7 +3299,7 @@ dl.accordion.time-line:before {
   text-transform: none;
   font-size: 20px;
   text-align: center;
-  color: #69be00;
+  color: #3d7a48;
   -webkit-font-smoothing: antialiased;
   background: #222;
   padding-left: 3px;
@@ -3305,7 +3308,7 @@ dl.accordion.time-line:before {
 .accordion.time-line > dt > a.active:after,
 .accordion.time-line > dt > a.active:hover:after {
   content: "\e641";
-  color: #69be00;
+  color: #3d7a48;
 }
 
 .accordion.time-line > dt > a {
@@ -3345,7 +3348,7 @@ dl.accordion.time-line:before {
 .accordion > dt > a.active {
   color: #fff;
   border-color: #ddd;
-  background: #69be00;
+  background: #3d7a48;
   cursor: default;
 }
 
