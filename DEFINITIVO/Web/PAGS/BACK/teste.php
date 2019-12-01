@@ -10,6 +10,9 @@ $senha = '4967';
 $cod = '17308';
 $cod_men = '1';
 
-var_dump($mensagem);
-var_dump($mensagem['remetente_fk']);
+if(!is_numeric($cod)){
+    echo 'sim';
+}else{
+    echo 'nao';
+}
 

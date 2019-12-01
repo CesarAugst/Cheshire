@@ -661,9 +661,9 @@ DELIMITER ;
 /*SESSAO DE PROCEDURES E FUNÇÕES- UTILIZAÇÃO##################################################################################################################################*/
 -- ---- Mensagem ------
 -- call CAIXA_ENTRADA(17308);
--- call CAIXA_LIDAS(17305);
+-- call CAIXA_LIDAS(17308);
 -- call CAIXA_ENVIADAS(17308);
--- call MARCA_LIDA(4);
+-- call MARCA_LIDA(5);
 -- call MARCA_EXCLUIDA_REMETENTE(4);
 -- call MARCA_EXCLUIDA_DESTINATARIO(4);
 -- ---- Mensagem ------
@@ -671,8 +671,8 @@ DELIMITER ;
 -- ---- Usuario -------
 -- call CADASTRO(5321,'lgando','enhando','omeando','sbrenomeando','aluno');
 -- select CADASTROf(1234567,'esseloginn','essasenhaa','essenomee','essesobrenomee','aluno');
--- select VALIDA_LOG('testi') as existe; -- (teste) existe (testi) nao existe
--- select VALIDA_RM('17300') as existe; -- (17305) existe (17300) nao existe
+-- select VALIDA_LOG('teste') as existe; -- (teste) existe (testi) nao existe
+-- select VALIDA_RM('17308') as existe; -- (17305) existe (17300) nao existe
 -- call LOGIN('teste','4967');
 -- select LOGINf('teste','4967');
 -- call RM('teste','4967');
