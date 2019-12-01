@@ -110,7 +110,7 @@ if ($_SESSION['log'] != 'ativo') {
             </div>
         </div>
     </section>
-    <div class="container">
+    <div class="container mb-5">
         <div class="row align-items-top">
             <div class="col-sm-2 border-right"><br>
                 <nav class="nav flex-column">
