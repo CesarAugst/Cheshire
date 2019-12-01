@@ -15,7 +15,7 @@ CREATE TABLE IF NOT EXISTS MENSAGEM
     destinatario_fk INT,
 		FOREIGN KEY (destinatario_fk) references PESSOA(rm),
     conteudo TEXT,
-    anonimato ENUM('s', 'n'),
+    anonimato ENUM('s', 'n') default('n'),
     data_enviada DATETIME default(now()),
     lida ENUM('s', 'n'),
     data_lida DATETIME,
@@ -655,30 +655,17 @@ main:begin
 end //
 DELIMITER ;
 -- FUNÇÃO - TIPO ----------------------------------------------------------------------------
-select ANAMNESE_UM(17305);
+call ANAMNESE_UM(17305);
+select * from IDENTIFICACAO_ALUNO;
 -- FUNÇÃO - ANAMNESE COMPLETA ----------------------------------------------------------------
 DELIMITER //
-drop function if exists ANAMNESE_UM //
-create function ANAMNESE_UM(cod_rm varchar(255))
-returns varchar(255)
+drop procedure if exists ANAMNESE_UM //
+create procedure ANAMNESE_UM(cod_rm varchar(255))
 main:begin
-declare id_aluno, id_anam int;
-declare tb_aluno varchar(255);
-declare f_rm, f_cpf, f_nome, f_snome, f_dt_nas, f_nat, f_sex, f_end varchar(255);
+declare cod int;
 
-set id_anam = (select id_anamnese from anamnese where id_anamnese = (select anamnese_fk from pessoa where rm = cod_rm));
-set id_aluno = (select identificacao_aluno_fk from anamnese where id_anamnese = id_anam);
+set cod = (select anamnese_fk from pessoa where rm = cod_rm);
 
-set f_rm = (select rm from IDENTIFICACAO_ALUNO where rm = id_aluno);
-set f_cpf = (select cpf from IDENTIFICACAO_ALUNO where rm = id_aluno);
-set f_nom = (select nome from IDENTIFICACAO_ALUNO where rm = id_aluno);
-set f_snom = (select sobrenome from IDENTIFICACAO_ALUNO where rm = id_aluno);
-set f_dt_nas = (select dt_nascimento from IDENTIFICACAO_ALUNO where rm = id_aluno);
-set f_nat = (select naturalidade from IDENTIFICACAO_ALUNO where rm = id_aluno);
-set f_sex = (select sexo from IDENTIFICACAO_ALUNO where rm = id_aluno);
-set f_end = (select endereco_fk from IDENTIFICACAO_ALUNO where rm = id_aluno);
-
-return (f_rm, f_cpf, f_nome, f_snome, f_dt_nas, f_nat, f_sex, f_end);
 end //
 delimiter ;
 -- FUNÇÃO - ANAMNESE COMPLETA ----------------------------------------------------------------

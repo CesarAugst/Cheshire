@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<html lang="pt-BR" class="no-js">
 <?php
 include("../BACK/conexao.php");
 include("../BACK/bancoMensagem.php");
@@ -58,7 +57,7 @@ if ($_SESSION['log'] != 'ativo') {
                     </div>
                     <div class="col-lg-6 col-sm-6 col-8 header-top-right">
                         <?php
-                        echo "Bem Vindo! <b>" . $_SESSION['nome'] . " </b>";
+                        echo "Olá, <b>" . $_SESSION['nome'] . " </b>";
                         ?>
                         <a href="../BACK/logout.php" class="primary-btn text-uppercase ml-5">Logout</a>
                     </div>
