@@ -2,8 +2,8 @@
 <?php
 session_start();
 if ($_SESSION['log'] != 'ativo') {
-	session_destroy();
-	header("location: pagLogin.php");
+    session_destroy();
+    header("location: pagLogin.php");
 }
 ?>
 <html lang="pt-BR" class="no-js">
@@ -74,9 +74,17 @@ if ($_SESSION['log'] != 'ativo') {
                             </ul>
                         </li>
                         <li><a href="pagDefasagem.php">Defasagem</a></li>
+                        <li><a href="pagDesmotivação.php">Desmotivação</a></li>
                         <li><a href="pagProblemasFamiliares.php">Problemas familiares</a></li>
                         <li><a href="pagContato.php">Contato</a></li>
-                        <li><a href="pagMenuPrincipal.php">Mensagens</a></li>
+                        <li class="menu-has-children"><a href="">Mensagens</a>
+                            <ul>
+                                <li><a href="pagCaixaMsg.php">Mensagens recebidas</a></li>
+                                <li><a href="pagEnviar.php">Enviar mensagem</a></li>
+                                <li><a href="pagMsgLida.php">Mensagens lidas</a></li>
+                                <li><a href="pagCaixaMsgEnv.php">Mensagens enviadas</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav><!-- #nav-menu-container -->
             </div>
@@ -178,9 +186,9 @@ if ($_SESSION['log'] != 'ativo') {
                 <h3 class="mb-30">Trabalho</h3>
                 <div class="row">
                     <div class="col-md-9">
-                        <p class="text-right" align=justify>Muitas pessoas acabam tendo que trabalhar muito cedo para complementar a renda familiar, por conta disso nota-se dificuldade dessas pessoas em conciliar seu trabalho com os estudos e outros alfazeres
+                        <p class="text-justify" align="justify">Muitas pessoas acabam tendo que trabalhar muito cedo para complementar a renda familiar, por conta disso nota-se dificuldade dessas pessoas em conciliar seu trabalho com os estudos e outros alfazeres
                             por estarem extremamente cansados por conta do trabalho. Rotinas como acordar cedo para trabalhar, enfretar diversas dificuldades durante o caminho, e ter um grande expediente de trabalho são a principal causa geradora do cansaço e desmotivação no trabalho.</p>
-                        <p class="text-right">Entenda que as pessoas acertam, erram, decepcionam e despertam orgulho. Não exija perfeição no seu trabalho e, acima de tudo, preserve sua saúde mental e fisica.</p>
+                        <p class="text-justify">Entenda que as pessoas acertam, erram, decepcionam e despertam orgulho. Não exija perfeição no seu trabalho e, acima de tudo, preserve sua saúde mental e fisica.</p>
                     </div>
                     <div class="col-md-3">
                         <img src="../../img/trabalho.jpg" alt="" height="164px" width="250px">

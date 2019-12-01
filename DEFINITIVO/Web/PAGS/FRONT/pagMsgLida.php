@@ -2,8 +2,8 @@
 <?php
 session_start();
 if ($_SESSION['log'] != 'ativo') {
-    session_destroy();
-    header("location: pagLogin.php");
+	session_destroy();
+	header("location: pagLogin.php");
 }
 include("../BACK/conexao.php");
 include("../BACK/bancoMensagem.php");
@@ -80,7 +80,14 @@ include("../BACK/bancoMensagem.php");
 						<li><a href="pagDesmotivação.php">Desmotivação</a></li>
 						<li><a href="pagProblemasFamiliares">Problemas familiares</a></li>
 						<li><a href="pagContato.php">Contato</a></li>
-						<li><a href="pagMenuPrincipal.php">Mensagens</a></li>
+						<li class="menu-has-children"><a href="">Mensagens</a>
+							<ul>
+								<li><a href="pagCaixaMsg.php">Mensagens recebidas</a></li>
+								<li><a href="pagEnviar.php">Enviar mensagem</a></li>
+								<li><a href="pagMsgLida.php">Mensagens lidas</a></li>
+								<li><a href="pagCaixaMsgEnv.php">Mensagens enviadas</a></li>
+							</ul>
+						</li>
 					</ul>
 				</nav><!-- #nav-menu-container -->
 			</div>
@@ -101,64 +108,64 @@ include("../BACK/bancoMensagem.php");
 			</div>
 		</div>
 	</section>
-    <div class="container text-center">
+	<div class="container text-center">
 
 
-        <table class="table table-hover table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">id da Mensagem</th>
-                    <th scope="col">Remetente</th>
-                    <th scope="col">Destinatario</th>
-                    <th scope="col">Conteudo</th>
-                    <th scope="col">Anonimato</th>
-                    <th scope="col">Excluir</th>
-                    <th scope="col">Responder</th>
-                </tr>
-            </thead>
-            <?php
-            $mensagens = listaMensagensLidas($conexao, $_SESSION['rm']);
-            foreach ($mensagens as $mensagem) :
-                ?>
-                <tbody>
-                    <tr>
-                        <th scope="row"><?php echo $mensagem['id_mensagem'] ?></th>
-                        <td><?php echo $mensagem['nome_remetente'] ?></td>
-                        <td><?php echo $mensagem['nome_destinatario'] ?></td>
-                        <td><?php echo $mensagem['conteudo'] ?></td>
-                        <td><?php echo $mensagem['anonimato'] ?></td>
-                        <td><a class="btn btn-outline-danger" href="../BACK/excluidaDestinatario.php?cod_mensagem=
+		<table class="table table-hover table-striped">
+			<thead>
+				<tr>
+					<th scope="col">id da Mensagem</th>
+					<th scope="col">Remetente</th>
+					<th scope="col">Destinatario</th>
+					<th scope="col">Conteudo</th>
+					<th scope="col">Anonimato</th>
+					<th scope="col">Excluir</th>
+					<th scope="col">Responder</th>
+				</tr>
+			</thead>
+			<?php
+			$mensagens = listaMensagensLidas($conexao, $_SESSION['rm']);
+			foreach ($mensagens as $mensagem) :
+				?>
+				<tbody>
+					<tr>
+						<th scope="row"><?php echo $mensagem['id_mensagem'] ?></th>
+						<td><?php echo $mensagem['nome_remetente'] ?></td>
+						<td><?php echo $mensagem['nome_destinatario'] ?></td>
+						<td><?php echo $mensagem['conteudo'] ?></td>
+						<td><?php echo $mensagem['anonimato'] ?></td>
+						<td><a class="btn btn-outline-danger" href="../BACK/excluidaDestinatario.php?cod_mensagem=
                        <?php echo $mensagem['id_mensagem'] ?>">Excluir</a>
-                        </td>
-                        <td><a class="btn btn-outline-success" href="pagResponderMsg.php?cod_mensagem=
+						</td>
+						<td><a class="btn btn-outline-success" href="pagResponderMsg.php?cod_mensagem=
                        <?php echo $mensagem['id_mensagem'] ?>">Responder</a></td>
-                    </tr>
+					</tr>
 
-                <?php endforeach; ?>
-                </tbody>
-        </table>
-    </div>
+				<?php endforeach; ?>
+				</tbody>
+		</table>
+	</div>
 
 </body>
 <footer class="footer-area section-gap	">
-    <div class="container">
-        <div class="text-center">
-            <img class="d-block" src="../../img/logo_cps2.png">
-        </div>
-        <div class="row footer-bottom d-flex justify-content-between">
-            <p class="col-lg-8 col-sm-12 footer-text m-0">
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                Copyright &copy;<script>
-                    document.write(new Date().getFullYear());
-                </script> Etec de Cotia <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.cps.sp.gov.br" target="_blank">Centro Paula Souza</a>
-                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            </p>
-            <div class="col-lg-4 col-sm-12 footer-social">
-                <a href="https://www.facebook.com/etecdecotia"><i class="fa fa-facebook"></i></a>
-                <a href="https://twitter.com/etecdecotia"><i class="fa fa-twitter"></i></a>
-            </div>
-        </div>
-    </div>
+	<div class="container">
+		<div class="text-center">
+			<img class="d-block" src="../../img/logo_cps2.png">
+		</div>
+		<div class="row footer-bottom d-flex justify-content-between">
+			<p class="col-lg-8 col-sm-12 footer-text m-0">
+				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				Copyright &copy;<script>
+					document.write(new Date().getFullYear());
+				</script> Etec de Cotia <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.cps.sp.gov.br" target="_blank">Centro Paula Souza</a>
+				<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+			</p>
+			<div class="col-lg-4 col-sm-12 footer-social">
+				<a href="https://www.facebook.com/etecdecotia"><i class="fa fa-facebook"></i></a>
+				<a href="https://twitter.com/etecdecotia"><i class="fa fa-twitter"></i></a>
+			</div>
+		</div>
+	</div>
 </footer>
 <!-- End footer Area -->
 

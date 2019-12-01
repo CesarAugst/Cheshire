@@ -65,7 +65,7 @@ if ($_SESSION['log'] != 'ativo') {
 				<div id="logo">
 					<a href="pagInicio.php"><img src="../../img/cheshire1.png" width="130px" height="100px" alt="" title="" /></a>
 					<img src="../../img/cps50a.png" height="90px" width="200px">
-                    <img src="../../img/eteccotia.png" height="90px" width="200px">
+					<img src="../../img/eteccotia.png" height="90px" width="200px">
 				</div>
 				<nav id="nav-menu-container">
 					<ul class="nav-menu">
@@ -79,7 +79,14 @@ if ($_SESSION['log'] != 'ativo') {
 						<li><a href="pagDesmotivação.php">Desmotivação</a></li>
 						<li><a href="pagProblemasFamiliares">Problemas familiares</a></li>
 						<li><a href="pagContato.php">Contato</a></li>
-						<li><a href="pagMenuPrincipal.php">Mensagens</a></li>
+						<li class="menu-has-children"><a href="">Mensagens</a>
+							<ul>
+								<li><a href="pagCaixaMsg.php">Mensagens recebidas</a></li>
+								<li><a href="pagEnviar.php">Enviar mensagem</a></li>
+								<li><a href="pagMsgLida.php">Mensagens lidas</a></li>
+								<li><a href="pagCaixaMsgEnv.php">Mensagens enviadas</a></li>
+							</ul>
+						</li>
 					</ul>
 				</nav><!-- #nav-menu-container -->
 			</div>
@@ -102,23 +109,23 @@ if ($_SESSION['log'] != 'ativo') {
 	</section>
 
 	<div class="row justify-content-between align-items-center pb-120 appointment-wrap">
-        <div class="container text-center" >
-            <div class="col-md-12">
-                <br><br>
-                <h1>Bem vindo ao sistema</h1><br><br>
-                <a class="primary-btn btn-block mb-2" href="pagCaixaMsg" title="Visualizar mensagens recebidas">Mensagens recebidas</a><br>
-                <a class="primary-btn btn-block mb-2" href="pagEnviar.php">Enviar mensagem</a><br>
-                <a class="primary-btn btn-block mb-2" href="pagMsgLida.php">Visualizar mensagens lidas</a><br>
-                <a class="primary-btn btn-block mb-2" href="pagCaixaMsgEnv.php">Visualizar mensagens enviadas</a><br>
-               <!-- <a class="primary-btn btn-block mb-2 btn-danger" href="pagInicio.php">Sair do menu de mensagens</a><br> -->
-            </div>
-        </div>
-</div>
+		<div class="container text-center">
+			<div class="col-md-12">
+				<br><br>
+				<h1>Bem vindo ao sistema</h1><br><br>
+				<a class="primary-btn btn-block mb-2" href="pagCaixaMsg" title="Visualizar mensagens recebidas">Mensagens recebidas</a><br>
+				<a class="primary-btn btn-block mb-2" href="pagEnviar.php">Enviar mensagem</a><br>
+				<a class="primary-btn btn-block mb-2" href="pagMsgLida.php">Visualizar mensagens lidas</a><br>
+				<a class="primary-btn btn-block mb-2" href="pagCaixaMsgEnv.php">Visualizar mensagens enviadas</a><br>
+				<!-- <a class="primary-btn btn-block mb-2 btn-danger" href="pagInicio.php">Sair do menu de mensagens</a><br> -->
+			</div>
+		</div>
+	</div>
 
 
 	<!-- Fim banner Area -->
 
-		<!-- Menu de páginas -->
+	<!-- Menu de páginas -->
 
 	<!--<br><br>
 	<center>
@@ -136,10 +143,10 @@ if ($_SESSION['log'] != 'ativo') {
 							<a href="pagDefasagem.php"> -->
 
 
-								<!--target="_blank"> para abrir em outra guia-->
+	<!--target="_blank"> para abrir em outra guia-->
 
 
-								<!--<div class="thumb">
+	<!--<div class="thumb">
 									<img class="content-image img-fluid d-block mx-auto" src="../../img/defasagem.jpg" alt="">
 								</div>
 								<div class="content-details">
@@ -250,48 +257,48 @@ if ($_SESSION['log'] != 'ativo') {
 						</div>
 
 						<d </div> </div> </div> </div> </div> </section> -->
-						
-						<!-- End post-content Area -->
 
-							<!-- start footer Area -->
-							<footer class="footer-area section-gap	">
-								<div class="container">
-								<div class="text-center">
-									<img class="d-block" src="../../img/logo_cps2.png">
-								</div>
-									<div class="row footer-bottom d-flex justify-content-between">
-										<p class="col-lg-8 col-sm-12 footer-text m-0">
-											<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-											Copyright &copy;<script>
-												document.write(new Date().getFullYear());
-											</script> Etec de Cotia <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.cps.sp.gov.br" target="_blank">Centro Paula Souza</a>
-											<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-										</p>
-										<div class="col-lg-4 col-sm-12 footer-social">
-											<a href="https://www.facebook.com/etecdecotia"><i class="fa fa-facebook"></i></a>
-											<a href="https://twitter.com/etecdecotia"><i class="fa fa-twitter"></i></a>
-										</div>
-									</div>
-								</div>
-							</footer>
-							<!-- End footer Area -->
+	<!-- End post-content Area -->
+
+	<!-- start footer Area -->
+	<footer class="footer-area section-gap	">
+		<div class="container">
+			<div class="text-center">
+				<img class="d-block" src="../../img/logo_cps2.png">
+			</div>
+			<div class="row footer-bottom d-flex justify-content-between">
+				<p class="col-lg-8 col-sm-12 footer-text m-0">
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+					Copyright &copy;<script>
+						document.write(new Date().getFullYear());
+					</script> Etec de Cotia <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://www.cps.sp.gov.br" target="_blank">Centro Paula Souza</a>
+					<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+				</p>
+				<div class="col-lg-4 col-sm-12 footer-social">
+					<a href="https://www.facebook.com/etecdecotia"><i class="fa fa-facebook"></i></a>
+					<a href="https://twitter.com/etecdecotia"><i class="fa fa-twitter"></i></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- End footer Area -->
 
 
-							<script src="../../js/vendor/jquery-2.2.4.min.js"></script>
-							<script src="../../js/popper.min.js"></script>
-							<script src="../../js/vendor/bootstrap.min.js"></script>
-							<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-							<script src="../../js/jquery-ui.js"></script>
-							<script src="../../js/easing.min.js"></script>
-							<script src="../../js/hoverIntent.js"></script>
-							<script src="../../js/superfish.min.js"></script>
-							<script src="../../js/jquery.ajaxchimp.min.js"></script>
-							<script src="../../js/jquery.magnific-popup.min.js"></script>
-							<script src="../../js/jquery.tabs.min.js"></script>
-							<script src="../../js/jquery.nice-select.min.js"></script>
-							<script src="../../js/owl.carousel.min.js"></script>
-							<script src="../../js/mail-script.js"></script>
-							<script src="../../js/main.js"></script>
+	<script src="../../js/vendor/jquery-2.2.4.min.js"></script>
+	<script src="../../js/popper.min.js"></script>
+	<script src="../../js/vendor/bootstrap.min.js"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
+	<script src="../../js/jquery-ui.js"></script>
+	<script src="../../js/easing.min.js"></script>
+	<script src="../../js/hoverIntent.js"></script>
+	<script src="../../js/superfish.min.js"></script>
+	<script src="../../js/jquery.ajaxchimp.min.js"></script>
+	<script src="../../js/jquery.magnific-popup.min.js"></script>
+	<script src="../../js/jquery.tabs.min.js"></script>
+	<script src="../../js/jquery.nice-select.min.js"></script>
+	<script src="../../js/owl.carousel.min.js"></script>
+	<script src="../../js/mail-script.js"></script>
+	<script src="../../js/main.js"></script>
 </body>
 
 </html>

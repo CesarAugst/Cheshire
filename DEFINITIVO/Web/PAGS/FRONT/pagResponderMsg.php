@@ -83,7 +83,14 @@ $mensagem = busca($conexao, $cod_mensagem);
                         <li><a href="pagDesmotivação.php">Desmotivação</a></li>
                         <li><a href="pagProblemasFamiliares">Problemas familiares</a></li>
                         <li><a href="pagContato.php">Contato</a></li>
-                        <li><a href="pagMenuPrincipal.php">Mensagens</a></li>
+                        <li class="menu-has-children"><a href="">Mensagens</a>
+                            <ul>
+                                <li><a href="pagCaixaMsg.php">Mensagens recebidas</a></li>
+                                <li><a href="pagEnviar.php">Enviar mensagem</a></li>
+                                <li><a href="pagMsgLida.php">Mensagens lidas</a></li>
+                                <li><a href="pagCaixaMsgEnv.php">Mensagens enviadas</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav><!-- #nav-menu-container -->
             </div>

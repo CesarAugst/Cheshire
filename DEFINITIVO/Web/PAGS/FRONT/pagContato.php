@@ -2,8 +2,8 @@
 <?php
 session_start();
 if ($_SESSION['log'] != 'ativo') {
-	session_destroy();
-	header("location: pagLogin.php");
+    session_destroy();
+    header("location: pagLogin.php");
 }
 ?>
 <html lang="pt-BR" class="no-js">
@@ -69,14 +69,21 @@ if ($_SESSION['log'] != 'ativo') {
                         <li class="menu-has-children"><a href="">Transtornos</a>
                             <ul>
                                 <li><a href="pagTranstornoEmocional.php">Emocionais</a></li>
-                                <li><a href="pagTranstornoAlimentar.php">Alimentares</a></li>                           
+                                <li><a href="pagTranstornoAlimentar.php">Alimentares</a></li>
                             </ul>
                         </li>
                         <li><a href="pagDefasagem.php">Defasagem</a></li>
                         <li><a href="pagDesmotivação.php">Desmotivação</a></li>
                         <li><a href="pagProblemasFamiliares.php">Problemas familiares</a></li>
                         <li><a href="pagContato.php">Contato</a></li>
-                        <li><a href="pagMenuPrincipal.php">Mensagens</a></li>
+                        <li class="menu-has-children"><a href="">Mensagens</a>
+                            <ul>
+                                <li><a href="pagCaixaMsg.php">Mensagens recebidas</a></li>
+                                <li><a href="pagEnviar.php">Enviar mensagem</a></li>
+                                <li><a href="pagMsgLida.php">Mensagens lidas</a></li>
+                                <li><a href="pagCaixaMsgEnv.php">Mensagens enviadas</a></li>
+                            </ul>
+                        </li>
 
                     </ul>
                 </nav><!-- #nav-menu-container -->

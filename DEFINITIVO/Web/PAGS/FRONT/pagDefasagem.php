@@ -2,8 +2,8 @@
 <?php
 session_start();
 if ($_SESSION['log'] != 'ativo') {
-	session_destroy();
-	header("location: pagLogin.php");
+    session_destroy();
+    header("location: pagLogin.php");
 }
 ?>
 <html lang="pt-BR" class="no-js">
@@ -69,14 +69,21 @@ if ($_SESSION['log'] != 'ativo') {
                         <li class="menu-has-children"><a href="">Transtornos</a>
                             <ul>
                                 <li><a href="pagTranstornoEmocional.php">Emocionais</a></li>
-                                <li><a href="pagTranstornoAlimentar.php">Alimentares</a></li>                             
+                                <li><a href="pagTranstornoAlimentar.php">Alimentares</a></li>
                             </ul>
                         </li>
                         <li><a href="pagDefasagem.php">Defasagem</a></li>
                         <li><a href="pagDesmotivação.php">Desmotivação</a></li>
                         <li><a href="pagProblemasFamiliares.php">Problemas familiares</a></li>
                         <li><a href="pagContato.php">Contato</a></li>
-                        <li><a href="pagMenuPrincipal.php">Mensagens</a></li>
+                        <li class="menu-has-children"><a href="">Mensagens</a>
+                            <ul>
+                                <li><a href="pagCaixaMsg.php">Mensagens recebidas</a></li>
+                                <li><a href="pagEnviar.php">Enviar mensagem</a></li>
+                                <li><a href="pagMsgLida.php">Mensagens lidas</a></li>
+                                <li><a href="pagCaixaMsgEnv.php">Mensagens enviadas</a></li>
+                            </ul>
+                        </li>
                     </ul>
                 </nav><!-- #nav-menu-container -->
             </div>
@@ -125,19 +132,19 @@ if ($_SESSION['log'] != 'ativo') {
                                 <a href="">Fragilidade da escola</a>
                             </dt>
                             <dd align=justify>
-                            Uma instituição que não passa por avaliações frequentes pode deixar de oferecer um ensino de qualidade. Quando os valores e conhecimentos não são passados de forma adequada para os educadores, casos de fracasso escolar se tornam mais comuns.
+                                Uma instituição que não passa por avaliações frequentes pode deixar de oferecer um ensino de qualidade. Quando os valores e conhecimentos não são passados de forma adequada para os educadores, casos de fracasso escolar se tornam mais comuns.
                             </dd>
                             <dt>
                                 <a href="">Material didático</a>
                             </dt>
                             <dd>
-                            As dificuldades de aprendizado podem ser decorrentes da maneira como o material didático é distribuído. Ainda que os professores tenham um bom método de ensino, a falta de um bom material escolar pode acarretar em dificuldade de absorção para os alunos.
+                                As dificuldades de aprendizado podem ser decorrentes da maneira como o material didático é distribuído. Ainda que os professores tenham um bom método de ensino, a falta de um bom material escolar pode acarretar em dificuldade de absorção para os alunos.
                             </dd>
                             <dt>
                                 <a href="">Corpo docente</a>
                             </dt>
                             <dd>
-                              Os professores são elementos fundamentais para o aprendizado e desenvolvimento do aluno. Se os educadores não se sentirem motivados e inspirados a dar aula, a turma também não demonstrará vontade de aprender.
+                                Os professores são elementos fundamentais para o aprendizado e desenvolvimento do aluno. Se os educadores não se sentirem motivados e inspirados a dar aula, a turma também não demonstrará vontade de aprender.
                             </dd>
 
                         </dl>
@@ -202,15 +209,15 @@ if ($_SESSION['log'] != 'ativo') {
                 <div class="row">
                     <div class="col-lg-12 text-black">
                         <blockquote class="generic-blockquote" align=justify>
-                        Evasão escolar é o ato de deixar de frequentar as aulas, ou seja, abandonar o ensino em decorrência de qualquer motivo.
+                            Evasão escolar é o ato de deixar de frequentar as aulas, ou seja, abandonar o ensino em decorrência de qualquer motivo.
 
-Esse problema social que, infelizmente, é comum no Brasil, afeta principalmente os alunos do Ensino Médio.
+                            Esse problema social que, infelizmente, é comum no Brasil, afeta principalmente os alunos do Ensino Médio.
 
-De acordo com um estudo do Fundo das Nações Unidas pela Infância e Adolescência (Unicef), existem hoje no país 2,8 milhões de crianças e adolescentes fora da escola. Isso nos faz questionar muitos aspectos da educação brasileira: a qualidade do ensino, o papel do professor e os conteúdos da Educação Básica brasileira. Afinal, a educação é a base comum da inclusão social e do êxito de um indivíduo em sociedade.
+                            De acordo com um estudo do Fundo das Nações Unidas pela Infância e Adolescência (Unicef), existem hoje no país 2,8 milhões de crianças e adolescentes fora da escola. Isso nos faz questionar muitos aspectos da educação brasileira: a qualidade do ensino, o papel do professor e os conteúdos da Educação Básica brasileira. Afinal, a educação é a base comum da inclusão social e do êxito de um indivíduo em sociedade.
 
-Várias podem ser as razões da evasão escolar: pobreza, violência, gravidez, acesso limitado, qualidade da educação, clima escolar, mercado de trabalho, atividades ilegais… Um estudante que abandonou a escola é, na maioria das vezes, um estudante cujo desempenho acadêmico, formação acadêmica ou perspectiva de ter e construir uma vida ativa não é intelectualmente interessante. Tudo isso leva ao abandono escolar, mas também e especialmente a um declínio na autoestima, uma grande dificuldade em medir as suas habilidades e uma visão pessimista e fatalista de sua vida.
+                            Várias podem ser as razões da evasão escolar: pobreza, violência, gravidez, acesso limitado, qualidade da educação, clima escolar, mercado de trabalho, atividades ilegais… Um estudante que abandonou a escola é, na maioria das vezes, um estudante cujo desempenho acadêmico, formação acadêmica ou perspectiva de ter e construir uma vida ativa não é intelectualmente interessante. Tudo isso leva ao abandono escolar, mas também e especialmente a um declínio na autoestima, uma grande dificuldade em medir as suas habilidades e uma visão pessimista e fatalista de sua vida.
 
-O professor deve ser um aliado nesse processo, contribuindo para que o aluno não seja levado ao abandono escolar, melhorando sua autoestima, refinando suas habilidades e apostando nas futuras perspectivas. Porque sim, um aluno que abandonou a escola não pode ser esquecido; é preciso resgatá-lo e reinseri-lo no ambiente escolar por meio de uma estratégia que combine vários fatores.
+                            O professor deve ser um aliado nesse processo, contribuindo para que o aluno não seja levado ao abandono escolar, melhorando sua autoestima, refinando suas habilidades e apostando nas futuras perspectivas. Porque sim, um aluno que abandonou a escola não pode ser esquecido; é preciso resgatá-lo e reinseri-lo no ambiente escolar por meio de uma estratégia que combine vários fatores.
                         </blockquote>
                     </div>
                 </div>
