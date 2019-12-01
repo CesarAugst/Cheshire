@@ -655,22 +655,6 @@ main:begin
 end //
 DELIMITER ;
 -- FUNÇÃO - TIPO ----------------------------------------------------------------------------
-call ANAMNESE_UM(17305);
-select * from IDENTIFICACAO_ALUNO;
--- FUNÇÃO - ANAMNESE COMPLETA ----------------------------------------------------------------
-DELIMITER //
-drop procedure if exists ANAMNESE_UM //
-create procedure ANAMNESE_UM(cod_rm varchar(255))
-main:begin
-declare cod int;
-
-set cod = (select anamnese_fk from pessoa where rm = cod_rm);
-
-end //
-delimiter ;
--- FUNÇÃO - ANAMNESE COMPLETA ----------------------------------------------------------------
-(select id_anamnese from anamnese where id_anamnese = (select anamnese_fk from pessoa where rm = 17305));
-select * from identificacao_aluno;
 
 /*SESSAO DE PROCEDURES - CRIAÇÃO##################################################################################################################################*/
 
