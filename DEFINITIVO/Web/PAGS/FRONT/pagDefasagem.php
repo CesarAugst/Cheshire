@@ -54,7 +54,7 @@ if ($_SESSION['log'] != 'ativo') {
                         <?php
                         echo "Bem Vindo! <b>" . $_SESSION['nome'] . " </b>";
                         ?>
-                        <a href="../BACK/logout.php" class="primary-btn text-uppercase">Logout</a>
+                        <a href="../BACK/logout.php" class="primary-btn text-uppercase" id="header-top-right">Logout</a>
                     </div>
                 </div>
             </div>
