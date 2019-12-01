@@ -143,8 +143,8 @@ CREATE TABLE IF NOT EXISTS ANAMNESE (
     escolarizacao_fk INT,
 		FOREIGN KEY (escolarizacao_fk) references ESCOLARIZACAO(id_escolarizacao)
 );
-insert into ANAMNESE values(default, 1,1,1,1,1);
-insert into ANAMNESE values(default, 2,2,2,2,2);
+insert into ANAMNESE values(default, 17308,1,1,1,1);
+insert into ANAMNESE values(default, 17305,2,2,2,2);
 -- Tabela anamnese 3.0
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela identificacao_aluno 3.1
@@ -655,6 +655,35 @@ main:begin
 end //
 DELIMITER ;
 -- FUNÇÃO - TIPO ----------------------------------------------------------------------------
+select ANAMNESE_UM(17305);
+-- FUNÇÃO - ANAMNESE COMPLETA ----------------------------------------------------------------
+DELIMITER //
+drop function if exists ANAMNESE_UM //
+create function ANAMNESE_UM(cod_rm varchar(255))
+returns varchar(255)
+main:begin
+declare id_aluno, id_anam int;
+declare tb_aluno varchar(255);
+declare f_rm, f_cpf, f_nome, f_snome, f_dt_nas, f_nat, f_sex, f_end varchar(255);
+
+set id_anam = (select id_anamnese from anamnese where id_anamnese = (select anamnese_fk from pessoa where rm = cod_rm));
+set id_aluno = (select identificacao_aluno_fk from anamnese where id_anamnese = id_anam);
+
+set f_rm = (select rm from IDENTIFICACAO_ALUNO where rm = id_aluno);
+set f_cpf = (select cpf from IDENTIFICACAO_ALUNO where rm = id_aluno);
+set f_nom = (select nome from IDENTIFICACAO_ALUNO where rm = id_aluno);
+set f_snom = (select sobrenome from IDENTIFICACAO_ALUNO where rm = id_aluno);
+set f_dt_nas = (select dt_nascimento from IDENTIFICACAO_ALUNO where rm = id_aluno);
+set f_nat = (select naturalidade from IDENTIFICACAO_ALUNO where rm = id_aluno);
+set f_sex = (select sexo from IDENTIFICACAO_ALUNO where rm = id_aluno);
+set f_end = (select endereco_fk from IDENTIFICACAO_ALUNO where rm = id_aluno);
+
+return (f_rm, f_cpf, f_nome, f_snome, f_dt_nas, f_nat, f_sex, f_end);
+end //
+delimiter ;
+-- FUNÇÃO - ANAMNESE COMPLETA ----------------------------------------------------------------
+(select id_anamnese from anamnese where id_anamnese = (select anamnese_fk from pessoa where rm = 17305));
+select * from identificacao_aluno;
 
 /*SESSAO DE PROCEDURES - CRIAÇÃO##################################################################################################################################*/
 
@@ -682,7 +711,3 @@ DELIMITER ;
 -- select BUSCA_TIPOf('17305');
 -- ---- Usuario -------
 /*SESSAO DE PROCEDURES E FUNÇÕES - UTILIZAÇÃO##################################################################################################################################*/
-select * from mensagem where conteudo like '%Cesar%';
-select * from tipo_usuario;
-select * from login;
-select * from PESSOA;
