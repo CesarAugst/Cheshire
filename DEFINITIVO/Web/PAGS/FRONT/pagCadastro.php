@@ -52,7 +52,8 @@
 			<div class="container main-menu">
 				<div class="row align-items-center justify-content-between d-flex">
 					<div id="logo">
-						<a href="pagInicio.php"><img src="../../img/cheshire1.png" width="100px" height="80px" alt="" title="" /></a>
+					<a href="pagInicio.php"><img src="../../img/cheshire1.png" width="130px" height="100px" alt="" title="" /></a>
+                    <img src="../../img/cps50a.png" height="90px" width="200px">
 					</div>
 
 				</div>
