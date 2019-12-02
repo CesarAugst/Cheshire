@@ -144,3 +144,10 @@ function desenvolvimento($conexao,$rm) {
     $resultado = mysqli_query($conexao,$sql);
     return mysqli_fetch_assoc($resultado);
 }
+
+// -- escolarizacao -- //
+function escolarizacao($conexao,$rm) {
+    $sql = "select * from ESCOLARIZACAO where id_escolarizacao = (select escolarizacao_fk from anamnese where id_anamnese = (select anamnese_fk from pessoa where rm = '$rm'))";
+    $resultado = mysqli_query($conexao,$sql);
+    return mysqli_fetch_assoc($resultado);
+}

@@ -128,28 +128,28 @@ if ($_SESSION['log'] != 'ativo') {
                     Escolarização do Aluno:<br><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Escola Anterior:<br>
+                    Escola Anterior: <?= escolarizacao($conexao, $_SESSION['rm'])['escola_anterior']?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Relacionamento c/ Professores:<br>
+                    Relacionamento c/ Professores: <?= escolarizacao($conexao, $_SESSION['rm'])['relacionamento_professores']?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Relacionamento c/ Colegas:<br>
+                    Relacionamento c/ Colegas: <?= escolarizacao($conexao, $_SESSION['rm'])['relacionamento_colegas']?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Dificuldades de Aprendizagem:<br>
+                    Dificuldades de Aprendizagem: <?= escolarizacao($conexao, $_SESSION['rm'])['dificuldade_aprendizagem']?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Apoio pedagogico:<br>
+                    Apoio pedagogico: <?= escolarizacao($conexao, $_SESSION['rm'])['apoio_pedagogico']?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Avaliação Profissional:<br>
+                    Avaliação Profissional: <?= escolarizacao($conexao, $_SESSION['rm'])['avaliacao_profissional']?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Acompanhamento Profissional:<br>
+                    Acompanhamento Profissional: <?= escolarizacao($conexao, $_SESSION['rm'])['acompanhamento_profissional']?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Necessita Apoio:<br>
+                    Necessita Apoio: <?= escolarizacao($conexao, $_SESSION['rm'])['necessita_apoio']?><br>
                 </h5>
             </div>
         </div>
