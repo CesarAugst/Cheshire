@@ -131,3 +131,10 @@ function endereco_res($conexao,$id) {
     return mysqli_fetch_assoc($resultado);
 }
 
+// -- saude -- //
+function saude($conexao,$rm) {
+    $sql = "select * from HISTORICO_SAUDE where id_historico_saude = (select historico_saude_fk from anamnese where id_anamnese = (select anamnese_fk from pessoa where rm = '$rm'))";
+    $resultado = mysqli_query($conexao,$sql);
+    return mysqli_fetch_assoc($resultado);
+}
+

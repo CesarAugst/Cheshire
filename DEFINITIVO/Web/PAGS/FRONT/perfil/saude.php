@@ -128,28 +128,28 @@ if ($_SESSION['log'] != 'ativo') {
                     Historico de Saúde<br><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Cuidados medicos:<br>
+                    Cuidados medicos: <?= saude($conexao, $_SESSION['rm'])['cuidados_medicos'] ?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Alergias:<br>
+                    Alergias: <?= saude($conexao, $_SESSION['rm'])['alergias'] ?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Medicação:<br>
+                    Medicação: <?= saude($conexao, $_SESSION['rm'])['medicacao'] ?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    pode praticar Ed. Física:<br>
+                    pode praticar Ed. Física: <?= saude($conexao, $_SESSION['rm'])['ed_fisica'] ?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Acidente:<br>
+                    Acidente: <?= saude($conexao, $_SESSION['rm'])['acidente'] ?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    CIrurgia:<br>
+                    Cirurgia: <?= saude($conexao, $_SESSION['rm'])['cirurgia'] ?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Convulções:
+                    Convulções: <?= saude($conexao, $_SESSION['rm'])['convulcoes'] ?>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Problemas neurológicos:
+                    Problemas neurológicos: <?= saude($conexao, $_SESSION['rm'])['problemas_neurologicos'] ?>
                 </h5>
             </div>
         </div>
