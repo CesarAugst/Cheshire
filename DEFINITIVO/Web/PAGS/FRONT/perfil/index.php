@@ -126,25 +126,23 @@ if ($_SESSION['log'] != 'ativo') {
       <!--<div class="col-sm-2 border-right">--><br>
       <div class="col-2 border-left"><br>
         <img src="img/perfil.jpg" class="rounded-circle border" width="150px" height="150px">
-        <h3 class="text-center">Nome <br>
-          e<br>
-          Sobrenome</h3>
+        <h3 class="text-center"><?= nome($conexao,$_SESSION['rm'])['nome'] ?><br><?= snome($conexao,$_SESSION['rm'])['sobrenome'] ?></h3>
       </div>
       <div class="col-8"><br>
         <h5 class="bg-light border rounded nav-link">
-          Idade:<br>
+          Idade: <?=idade($conexao,$_SESSION['rm'])['idade'] ?><br>
         </h5>
         <h5 class="bg-light border rounded nav-link">
-          Sexo:<br>
+          Sexo: <?php sexo($conexao,$_SESSION['rm'])['sexo'] == 'm'? $s= "Masculino": $s="Feminino";echo $s?><br>
         </h5>
         <h5 class="bg-light border rounded nav-link">
-          Celular:<br>
+          Celular: (<?= celular($conexao,$_SESSION['rm'])['ddd']?>)<?=celular($conexao,$_SESSION['rm'])['numero']?><br>
         </h5>
         <h5 class="bg-light border rounded nav-link">
-          email:<br>
+          email: <?= email($conexao,$_SESSION['rm'])['endereco'] ?><br>
         </h5>
         <h5 class="bg-light border rounded nav-link">
-          Cidade:
+          Naturalidade: <?= naturalidade($conexao,$_SESSION['rm'])['naturalidade'] ?>
         </h5>
       </div>
 
