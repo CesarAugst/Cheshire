@@ -112,7 +112,7 @@ if ($_SESSION['log'] != 'ativo') {
         </div>
     </section>
   <div class="container mb-5">
-  <?php if($_SESSION['tipo'] == 'orientador'){echo "<form method='POST' action='indexp.php'><label>Pesquisar por RM: <input type='text' name='rm'></label><input type='submit' value='Pesquisar'></form>";} ?>
+  <?php if($_SESSION['tipo'] == 'orientador'){echo "<form method='POST' action='indexp.php'><label>Pesquisar por RM: <input type='text' name='rm'></label><input class='primary-btn text-uppercase ml-5' type='submit' value='Pesquisar'></form>";} ?>
     <div class="row align-items-top">
       <div class="col-sm-2 border-right"><br>
         <nav class="nav flex-column">
