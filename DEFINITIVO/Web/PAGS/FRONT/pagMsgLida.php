@@ -131,7 +131,7 @@ include("../BACK/bancoMensagem.php");
 				<tbody>
 					<tr>
 						<th scope="row"><?php echo $mensagem['id_mensagem'] ?></th>
-						<td><?php echo $mensagem['nome_remetente'] ?></td>
+						<td><?php if($mensagem['anonimato'] != 's'){echo $mensagem['nome_remetente'];}else{echo "Anônimo";} ?></td>
 						<td><?php echo $mensagem['nome_destinatario'] ?></td>
 						<td><?php echo $mensagem['conteudo'] ?></td>
 						<td><?php echo $mensagem['anonimato'] ?></td>
