@@ -1,5 +1,5 @@
 <?php
-// -- Desenvolvimento -- //
+// -- index -- //
 
 function nome($conexao,$rm) {
     $sql = "select nome from IDENTIFICACAO_ALUNO where rm = '$rm'";
@@ -37,7 +37,7 @@ function naturalidade($conexao,$rm) {
     return mysqli_fetch_assoc($resultado);
 }
 
-// pag 2
+// -- anamnese -- //
 function nascimento($conexao,$rm) {
     $sql = "select dt_nascimento from REGISTRO where id_registro = (select registro_fk from PESSOA where rm = '$rm')";
     $resultado = mysqli_query($conexao,$sql);
@@ -75,6 +75,58 @@ function cidade($conexao,$rm) {
 }
 function estado($conexao,$rm) {
     $sql = "select estado from ENDERECO where id_endereco = (select endereco_fk from PESSOA where rm = '$rm')";
+    $resultado = mysqli_query($conexao,$sql);
+    return mysqli_fetch_assoc($resultado);
+}
+
+// -- familia -- //
+function d_familiar($conexao,$rm) {
+    $sql = "select * from DADOS_FAMILIARES where id_familiar = (select dados_familiares_fk from anamnese where id_anamnese = (select anamnese_fk from pessoa where rm = '$rm'))";
+    $resultado = mysqli_query($conexao,$sql);
+    return mysqli_fetch_assoc($resultado);
+}
+function d_mae($conexao,$id) {
+    $sql = "select * from dados_mae where id_mae = $id";
+    $resultado = mysqli_query($conexao,$sql);
+    return mysqli_fetch_assoc($resultado);
+}
+function contato_mae($conexao,$id) {
+    $sql = "select * from telefone where id_telefone = $id";
+    $resultado = mysqli_query($conexao,$sql);
+    return mysqli_fetch_assoc($resultado);
+}
+function endereco_mae($conexao,$id) {
+    $sql = "select * from endereco where id_endereco = $id";
+    $resultado = mysqli_query($conexao,$sql);
+    return mysqli_fetch_assoc($resultado);
+}
+function d_pai($conexao,$id) {
+    $sql = "select * from dados_pai where id_mae = $id";
+    $resultado = mysqli_query($conexao,$sql);
+    return mysqli_fetch_assoc($resultado);
+}
+function contato_pai($conexao,$id) {
+    $sql = "select * from telefone where id_telefone = $id";
+    $resultado = mysqli_query($conexao,$sql);
+    return mysqli_fetch_assoc($resultado);
+}
+function endereco_pai($conexao,$id) {
+    $sql = "select * from endereco where id_endereco = $id";
+    $resultado = mysqli_query($conexao,$sql);
+    return mysqli_fetch_assoc($resultado);
+}
+function d_res($conexao,$id) {
+    $sql = "select * from dados_responsavel where id_responsavel = $id";
+    $resultado = mysqli_query($conexao,$sql);
+    return mysqli_fetch_assoc($resultado);
+}
+function contato_res($conexao,$id) {
+    $sql = "select * from telefone where id_telefone = $id";
+    $resultado = mysqli_query($conexao,$sql);
+    return mysqli_fetch_assoc($resultado);
+}
+function endereco_res($conexao,$id) {
+    $sql = "select * from endereco where id_endereco = $id";
     $resultado = mysqli_query($conexao,$sql);
     return mysqli_fetch_assoc($resultado);
 }

@@ -128,70 +128,115 @@ if ($_SESSION['log'] != 'ativo') {
                     Dados da mãe<br><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Nome completo:<br>
+                    Nome completo:<?= d_mae($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_mae_fk'])['nome_mae']?> <?= d_mae($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_mae_fk'])['sobrenome_mae']?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Data de nascimento:<br>
+                    Data de nascimento: <?= date('d/m/Y',strtotime(d_mae($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_mae_fk'])['dt_nasc_mae'])) ?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Profissão:<br>
+                    Profissão: <?= d_mae($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_mae_fk'])['profissao_mae']?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Contato:<br>
+                    Contato: (<?= contato_mae($conexao,d_mae($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_mae_fk'])['contato_mae_fk'])['ddd']?>) <?= contato_mae($conexao,d_mae($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_mae_fk'])['contato_mae_fk'])['numero']?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Endereço:<br>
+                    CEP:<?= endereco_mae($conexao,d_mae($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_mae_fk'])['endereco_mae_fk'])['cep']?><br>
+                </h5>
+                <h5 class="bg-light border rounded nav-link">
+                    Logradouro: <?= endereco_mae($conexao,d_mae($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_mae_fk'])['endereco_mae_fk'])['lograduro']?><br>
+                </h5>
+                <h5 class="bg-light border rounded nav-link">
+                    Numero:<?= endereco_mae($conexao,d_mae($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_mae_fk'])['endereco_mae_fk'])['numero']?><br>
+                </h5>
+                <h5 class="bg-light border rounded nav-link">
+                    Bairro: <?= endereco_mae($conexao,d_mae($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_mae_fk'])['endereco_mae_fk'])['bairro']?><br>
+                </h5>
+                <h5 class="bg-light border rounded nav-link">
+                    Cidade: <?= endereco_mae($conexao,d_mae($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_mae_fk'])['endereco_mae_fk'])['cidade']?><br>
+                </h5>
+                <h5 class="bg-light border rounded nav-link">
+                    Estado: <?= endereco_mae($conexao,d_mae($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_mae_fk'])['endereco_mae_fk'])['estado']?><br>
                 </h5>
                 <hr>
                 <h5 class="border rounded nav-link text-center">
                     Dados do pai<br><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Nome completo:<br>
+                    Nome completo: <?= d_pai($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_pai_fk'])['nome_pai']?> <?= d_pai($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_pai_fk'])['sobrenome_pai']?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Data de nascimento:<br>
+                    Data de nascimento: <?= date('d/m/Y',strtotime(d_pai($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_pai_fk'])['dt_nasc_pai'])) ?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Profissão:<br>
+                    Profissão: <?= d_pai($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_pai_fk'])['profissao_pai']?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Contato:<br>
+                    Contato: (<?= contato_pai($conexao,d_pai($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_pai_fk'])['contato_pai_fk'])['ddd']?>) <?= contato_pai($conexao,d_pai($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_pai_fk'])['contato_pai_fk'])['numero']?><br>
+                    </h5>
+                <h5 class="bg-light border rounded nav-link">
+                    CEP:<?= endereco_pai($conexao,d_pai($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_pai_fk'])['endereco_pai_fk'])['cep']?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Endereço:<br>
+                    Logradouro: <?= endereco_pai($conexao,d_pai($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_pai_fk'])['endereco_pai_fk'])['lograduro']?><br>
+                </h5>
+                <h5 class="bg-light border rounded nav-link">
+                    Numero:<?= endereco_pai($conexao,d_pai($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_pai_fk'])['endereco_pai_fk'])['numero']?><br>
+                </h5>
+                <h5 class="bg-light border rounded nav-link">
+                    Bairro: <?= endereco_pai($conexao,d_pai($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_pai_fk'])['endereco_pai_fk'])['bairro']?><br>
+                </h5>
+                <h5 class="bg-light border rounded nav-link">
+                    Cidade: <?= endereco_pai($conexao,d_pai($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_pai_fk'])['endereco_pai_fk'])['cidade']?><br>
+                </h5>
+                <h5 class="bg-light border rounded nav-link">
+                    Estado: <?= endereco_pai($conexao,d_pai($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_pai_fk'])['endereco_pai_fk'])['estado']?><br>
                 </h5>
                 <hr>
                 <h5 class="border rounded nav-link text-center">
                     Dados do Responsável<br><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Nome completo:<br>
+                    Nome completo: <?= d_res($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_responsavel_fk'])['nome_responsavel']?> <?= d_res($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_responsavel_fk'])['sobrenome_responsavel']?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Data de nascimento:<br>
+                    Data de nascimento: <?= date('d/m/Y',strtotime(d_res($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_responsavel_fk'])['dt_nasc_responsavel'])) ?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Profissão:<br>
+                    Profissão: <?= d_res($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_responsavel_fk'])['profissao_responsavel']?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Contato:<br>
+                    Contato: (<?= contato_res($conexao,d_res($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_responsavel_fk'])['contato_responsavel_fk'])['ddd']?>) <?= contato_res($conexao,d_res($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_responsavel_fk'])['contato_responsavel_fk'])['numero']?><br>
+                    </h5>
+                <h5 class="bg-light border rounded nav-link">
+                    CEP:<?= endereco_res($conexao,d_res($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_responsavel_fk'])['endereco_responsavel_fk'])['cep']?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Endereço:<br>
+                    Logradouro: <?= endereco_res($conexao,d_res($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_responsavel_fk'])['endereco_responsavel_fk'])['lograduro']?><br>
+                </h5>
+                <h5 class="bg-light border rounded nav-link">
+                    Numero:<?= endereco_res($conexao,d_res($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_responsavel_fk'])['endereco_responsavel_fk'])['numero']?><br>
+                </h5>
+                <h5 class="bg-light border rounded nav-link">
+                    Bairro: <?= endereco_res($conexao,d_res($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_responsavel_fk'])['endereco_responsavel_fk'])['bairro']?><br>
+                </h5>
+                <h5 class="bg-light border rounded nav-link">
+                    Cidade: <?= endereco_res($conexao,d_res($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_responsavel_fk'])['endereco_responsavel_fk'])['cidade']?><br>
+                </h5>
+                <h5 class="bg-light border rounded nav-link">
+                    Estado: <?= endereco_res($conexao,d_res($conexao,d_familiar($conexao,$_SESSION['rm'])['dados_responsavel_fk'])['endereco_responsavel_fk'])['estado']?><br>
                 </h5>
                 <hr>
                 <h5 class="border rounded nav-link text-center">
                     Relação dos pais<br><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Estado civil:<br>
+                    Estado civil: <?= d_familiar($conexao, $_SESSION['rm'])['relacao_pais']?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Moram juntos:<br>
+                    Moram juntos: <?= d_familiar($conexao, $_SESSION['rm'])['moram_juntos']?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Com quem mora:<br>
+                    Com quem mora: <?= d_familiar($conexao, $_SESSION['rm'])['quem_mora']?><br>
                 </h5>
             </div>
         </div>
