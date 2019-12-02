@@ -64,7 +64,7 @@ if ($_SESSION['log'] != 'ativo') {
                 </div>
             </div>
         </div>
-        <div class="container main-menu ">
+        <div class="container main-menu">
             <div class="row align-items-center justify-content-between d-flex">
                 <div id="logo">
                     <a href="pagInicio.php"><img src="../../../img/cheshire1.png" width="130px" height="100px" alt="" title="" /></a>
@@ -111,46 +111,51 @@ if ($_SESSION['log'] != 'ativo') {
             </div>
         </div>
     </section>
-  <div class="container mb-5">
-  <?php if($_SESSION['tipo'] == 'orientador'){echo "<form method='POST' action='indexp.php'><label>Pesquisar por RM: <input type='text' name='rm'></label><input type='submit' value='Pesquisar'></form>";} ?>
-    <div class="row align-items-top">
-      <div class="col-sm-2 border-right"><br>
-        <nav class="nav flex-column">
-          <a class="nav-link text-dark bg-success border rounded" href="index.php">Perfil</a>
-          <a class="nav-link text-light bg-secondary border rounded" href="anamnese.php">Mais informações</a>
-          <a class="nav-link text-light bg-secondary border rounded" href="familia.php">Familia</a>
-          <a class="nav-link text-light bg-secondary border rounded" href="saude.php">Saúde</a>
-          <a class="nav-link text-light bg-secondary border rounded" href="desenvolvimento.php">Desenvolvimento</a>
-          <a class="nav-link text-light bg-secondary border rounded" href="escolarizacao.php">Escolarização</a>
-        </nav>
-      </div>
-      <!--<div class="col-sm-2 border-right">--><br>
-      <div class="col-2 border-left"><br>
-        <img src="img/perfil.jpg" class="rounded-circle border" width="150px" height="150px">
-        <h3 class="text-center"><?= nome($conexao,$_SESSION['rm'])['nome'] ?><br><?= snome($conexao,$_SESSION['rm'])['sobrenome'] ?></h3>
-      </div>
-      <div class="col-8"><br>
-        <h5 class="bg-light border rounded nav-link">
-          Idade: <?=idade($conexao,$_SESSION['rm'])['idade'] ?><br>
-        </h5>
-        <h5 class="bg-light border rounded nav-link">
-          Sexo: <?php sexo($conexao,$_SESSION['rm'])['sexo'] == 'm'? $s= "Masculino": $s="Feminino";echo $s?><br>
-        </h5>
-        <h5 class="bg-light border rounded nav-link">
-          Celular: (<?= celular($conexao,$_SESSION['rm'])['ddd']?>)<?=celular($conexao,$_SESSION['rm'])['numero']?><br>
-        </h5>
-        <h5 class="bg-light border rounded nav-link">
-          email: <?= email($conexao,$_SESSION['rm'])['endereco'] ?><br>
-        </h5>
-        <h5 class="bg-light border rounded nav-link">
-          Naturalidade: <?= naturalidade($conexao,$_SESSION['rm'])['naturalidade'] ?>
-        </h5>
-      </div>
+    <div class="container mb-5">
+        <div class="row align-items-top">
+            <div class="col-sm-2 border-right"><br>
+                <nav class="nav flex-column">
+                    <a class="nav-link text-light bg-secondary border rounded" href="indexp.php">Perfil</a>
+                    <a class="nav-link text-light bg-secondary border rounded" href="anamnesep.php">Mais informações</a>
+                    <a class="nav-link text-light bg-secondary border rounded" href="familiap.php">Familia</a>
+                    <a class="nav-link text-dark bg-success border rounded" href="saudep.php">Saúde</a>
+                    <a class="nav-link text-light bg-secondary border rounded" href="desenvolvimentop.php">Desenvolvimento</a>
+                    <a class="nav-link text-light bg-secondary border rounded" href="escolarizacaop.php">Escolarização</a>
+                </nav>
+            </div>
+            <div class="col-8"><br>
+                <h5 class="border rounded nav-link text-center">
+                    Historico de Saúde<br><br>
+                </h5>
+                <h5 class="bg-light border rounded nav-link">
+                    Cuidados medicos: <?= saude($conexao, $_SESSION['rmp'])['cuidados_medicos'] ?><br>
+                </h5>
+                <h5 class="bg-light border rounded nav-link">
+                    Alergias: <?= saude($conexao, $_SESSION['rmp'])['alergias'] ?><br>
+                </h5>
+                <h5 class="bg-light border rounded nav-link">
+                    Medicação: <?= saude($conexao, $_SESSION['rmp'])['medicacao'] ?><br>
+                </h5>
+                <h5 class="bg-light border rounded nav-link">
+                    pode praticar Ed. Física: <?= saude($conexao, $_SESSION['rmp'])['ed_fisica'] ?><br>
+                </h5>
+                <h5 class="bg-light border rounded nav-link">
+                    Acidente: <?= saude($conexao, $_SESSION['rmp'])['acidente'] ?><br>
+                </h5>
+                <h5 class="bg-light border rounded nav-link">
+                    Cirurgia: <?= saude($conexao, $_SESSION['rmp'])['cirurgia'] ?><br>
+                </h5>
+                <h5 class="bg-light border rounded nav-link">
+                    Convulções: <?= saude($conexao, $_SESSION['rmp'])['convulcoes'] ?>
+                </h5>
+                <h5 class="bg-light border rounded nav-link">
+                    Problemas neurológicos: <?= saude($conexao, $_SESSION['rmp'])['problemas_neurologicos'] ?>
+                </h5>
+            </div>
+        </div>
 
     </div>
-
-  </div>
-  <footer class="footer-area section-gap	">
+    <footer class="footer-area section-gap	">
         <div class="container">
             <div class="text-center">
                 <img class="d-block" src="../../../img/logo_cps2.png">

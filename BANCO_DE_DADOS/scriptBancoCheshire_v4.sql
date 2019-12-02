@@ -258,10 +258,11 @@ CREATE TABLE IF NOT EXISTS DESENVOLVIMENTO(
     fala VARCHAR(255) DEFAULT('nao'),
     visao VARCHAR(255) DEFAULT('nao'),
     audicao VARCHAR(255) DEFAULT('nao'),
-    problemas_neurologicos VARCHAR(255) DEFAULT('nao')
+    atencao VARCHAR(255) DEFAULT('nao'),
+    anciosidade VARCHAR(255) DEFAULT('nao')
 );
-insert into DESENVOLVIMENTO values(default,default, default, 'miopia', default,default);
-insert into DESENVOLVIMENTO values(default,default, default, default, default,default);
+insert into DESENVOLVIMENTO values(default,default, default, 'miopia', default,default,'sim');
+insert into DESENVOLVIMENTO values(default,default, default, default, default,default,default);
 -- Tabela desenvolvimento 3.4
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela escolarizacao 3.5
@@ -682,3 +683,8 @@ DELIMITER ;
 -- select BUSCA_TIPOf('17305');
 -- ---- Usuario -------
 /*SESSAO DE PROCEDURES E FUNÇÕES - UTILIZAÇÃO##################################################################################################################################*/
+show tables;
+select * from dados_familiares;
+select * from dados_mae where id_mae = 1;
+select * from endereco where id_endereco = 1;
+

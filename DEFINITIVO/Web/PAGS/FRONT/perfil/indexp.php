@@ -8,6 +8,7 @@ if ($_SESSION['log'] != 'ativo') {
     session_destroy();
     header("location: pagLogin.php");
 }
+$_SESSION['rmp'] = $_POST['rm'];
 ?>
 
 <html lang="pt-BR" class="no-js">
@@ -116,34 +117,34 @@ if ($_SESSION['log'] != 'ativo') {
     <div class="row align-items-top">
       <div class="col-sm-2 border-right"><br>
         <nav class="nav flex-column">
-          <a class="nav-link text-dark bg-success border rounded" href="index.php">Perfil</a>
-          <a class="nav-link text-light bg-secondary border rounded" href="anamnese.php">Mais informações</a>
-          <a class="nav-link text-light bg-secondary border rounded" href="familia.php">Familia</a>
-          <a class="nav-link text-light bg-secondary border rounded" href="saude.php">Saúde</a>
-          <a class="nav-link text-light bg-secondary border rounded" href="desenvolvimento.php">Desenvolvimento</a>
-          <a class="nav-link text-light bg-secondary border rounded" href="escolarizacao.php">Escolarização</a>
+          <a class="nav-link text-dark bg-success border rounded" href="indexp.php">Perfil</a>
+          <a class="nav-link text-light bg-secondary border rounded" href="anamnesep.php">Mais informações</a>
+          <a class="nav-link text-light bg-secondary border rounded" href="familiap.php">Familia</a>
+          <a class="nav-link text-light bg-secondary border rounded" href="saudep.php">Saúde</a>
+          <a class="nav-link text-light bg-secondary border rounded" href="desenvolvimentop.php">Desenvolvimento</a>
+          <a class="nav-link text-light bg-secondary border rounded" href="escolarizacaop.php">Escolarização</a>
         </nav>
       </div>
       <!--<div class="col-sm-2 border-right">--><br>
       <div class="col-2 border-left"><br>
         <img src="img/perfil.jpg" class="rounded-circle border" width="150px" height="150px">
-        <h3 class="text-center"><?= nome($conexao,$_SESSION['rm'])['nome'] ?><br><?= snome($conexao,$_SESSION['rm'])['sobrenome'] ?></h3>
+        <h3 class="text-center"><?= nome($conexao,$_SESSION['rmp'])['nome'] ?><br><?= snome($conexao,$_SESSION['rmp'])['sobrenome'] ?></h3>
       </div>
       <div class="col-8"><br>
         <h5 class="bg-light border rounded nav-link">
-          Idade: <?=idade($conexao,$_SESSION['rm'])['idade'] ?><br>
+          Idade: <?=idade($conexao,$_SESSION['rmp'])['idade'] ?><br>
         </h5>
         <h5 class="bg-light border rounded nav-link">
-          Sexo: <?php sexo($conexao,$_SESSION['rm'])['sexo'] == 'm'? $s= "Masculino": $s="Feminino";echo $s?><br>
+          Sexo: <?php sexo($conexao,$_SESSION['rmp'])['sexo'] == 'm'? $s= "Masculino": $s="Feminino";echo $s?><br>
         </h5>
         <h5 class="bg-light border rounded nav-link">
-          Celular: (<?= celular($conexao,$_SESSION['rm'])['ddd']?>)<?=celular($conexao,$_SESSION['rm'])['numero']?><br>
+          Celular: (<?= celular($conexao,$_SESSION['rmp'])['ddd']?>)<?=celular($conexao,$_SESSION['rm'])['numero']?><br>
         </h5>
         <h5 class="bg-light border rounded nav-link">
-          email: <?= email($conexao,$_SESSION['rm'])['endereco'] ?><br>
+          email: <?= email($conexao,$_SESSION['rmp'])['endereco'] ?><br>
         </h5>
         <h5 class="bg-light border rounded nav-link">
-          Naturalidade: <?= naturalidade($conexao,$_SESSION['rm'])['naturalidade'] ?>
+          Naturalidade: <?= naturalidade($conexao,$_SESSION['rmp'])['naturalidade'] ?>
         </h5>
       </div>
 

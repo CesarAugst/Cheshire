@@ -108,18 +108,7 @@ if ($_SESSION['log'] != 'ativo') {
         </div>
     </section>
     <div class="container form-group text-center col-md-6 mt-5 mb-5" align="center">
-        <form method="POST" action="../BACK/verificaEnvio.php">
-            <?php
-            $nome = $_SESSION['nome'];
-            if ($_SESSION['tipo'] == 'orientador') {
-                include_once('includes/EnviarMensagem/envOri.inc');
-            } else {
-                include_once('includes/EnviarMensagem/envAlu.inc');
-            }
-            ?>
-        </form>
-        <!-- <label>Não sabe o RM? clique <a href="pagPesquisa.php">aqui</a> para pesquisar</label> -->
-        </form>
+
     </div>
 </body>
 <footer class="footer-area section-gap	">
