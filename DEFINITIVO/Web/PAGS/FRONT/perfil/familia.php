@@ -2,6 +2,7 @@
 <?php
 include("../../BACK/conexao.php");
 include("../../BACK/bancoUsuario.php");
+include("../../BACK/bancoAnamnese.php");
 session_start();
 if ($_SESSION['log'] != 'ativo') {
     session_destroy();
