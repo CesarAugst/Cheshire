@@ -128,22 +128,22 @@ if ($_SESSION['log'] != 'ativo') {
                     Desenvolvimento do Aluno:<br><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Locomoção:<br>
+                    Locomoção: <?= desenvolvimento($conexao, $_SESSION['rm'])['locomocao'] ?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Fala:<br>
+                    Fala: <?= desenvolvimento($conexao, $_SESSION['rm'])['fala'] ?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Visão:<br>
+                    Visão: <?= desenvolvimento($conexao, $_SESSION['rm'])['visao'] ?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Audição:<br>
+                    Audição: <?= desenvolvimento($conexao, $_SESSION['rm'])['audicao'] ?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Atenção:<br>
+                    Atenção: <?= desenvolvimento($conexao, $_SESSION['rm'])['atencao'] ?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Anciosidade:<br>
+                    Anciosidade: <?= desenvolvimento($conexao, $_SESSION['rm'])['anciosidade'] ?><br>
                 </h5>
             </div>
         </div>

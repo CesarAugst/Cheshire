@@ -138,3 +138,9 @@ function saude($conexao,$rm) {
     return mysqli_fetch_assoc($resultado);
 }
 
+// -- desenvolvimento -- //
+function desenvolvimento($conexao,$rm) {
+    $sql = "select * from DESENVOLVIMENTO where id_desenvolvimento = (select desenvolvimento_fk from anamnese where id_anamnese = (select anamnese_fk from pessoa where rm = '$rm'))";
+    $resultado = mysqli_query($conexao,$sql);
+    return mysqli_fetch_assoc($resultado);
+}

@@ -8,7 +8,7 @@ $senha = '4967';
 $cod = '17308';
 $cod_men = '1';
 
-print_r(saude($conexao,$cod));
+print_r(desenvolvimento($conexao,$cod));
 
 
 
