@@ -123,43 +123,43 @@ if ($_SESSION['log'] != 'ativo') {
                 </nav>
             </div>
             <div class="col-8"><br>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Nome completo:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Data de Nascimento:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Celular:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     email:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     CPF:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Sexo:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Naturalidade:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     CEP:
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Logradouro:
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Número:
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Bairro:
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Cidade:
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Estado:
                 </h5>
             </div>

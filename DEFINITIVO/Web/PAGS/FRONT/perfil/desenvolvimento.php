@@ -126,22 +126,22 @@ if ($_SESSION['log'] != 'ativo') {
                 <h5 class="border rounded nav-link text-center">
                     Desenvolvimento do Aluno:<br><br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Locomoção:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Fala:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Visão:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Audição:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Atenção:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Anciosidade:<br>
                 </h5>
             </div>

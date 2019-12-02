@@ -126,28 +126,28 @@ if ($_SESSION['log'] != 'ativo') {
                 <h5 class="border rounded nav-link text-center">
                     Historico de Saúde<br><br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Cuidados medicos:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Alergias:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Medicação:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     pode praticar Ed. Física:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Acidente:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     CIrurgia:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Convulções:
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Problemas neurológicos:
                 </h5>
             </div>

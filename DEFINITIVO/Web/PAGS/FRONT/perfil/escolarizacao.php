@@ -126,28 +126,28 @@ if ($_SESSION['log'] != 'ativo') {
                 <h5 class="border rounded nav-link text-center">
                     Escolarização do Aluno:<br><br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Escola Anterior:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Relacionamento c/ Professores:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Relacionamento c/ Colegas:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Dificuldades de Aprendizagem:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Apoio pedagogico:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Avaliação Profissional:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Acompanhamento Profissional:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Necessita Apoio:<br>
                 </h5>
             </div>

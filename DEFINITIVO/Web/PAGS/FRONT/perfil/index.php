@@ -130,19 +130,19 @@ if ($_SESSION['log'] != 'ativo') {
           Sobrenome</h3>
       </div>
       <div class="col-8"><br>
-        <h5 class="bg-info border rounded nav-link">
+        <h5 class="bg-light border rounded nav-link">
           Idade:<br>
         </h5>
-        <h5 class="bg-info border rounded nav-link">
+        <h5 class="bg-light border rounded nav-link">
           Sexo:<br>
         </h5>
-        <h5 class="bg-info border rounded nav-link">
+        <h5 class="bg-light border rounded nav-link">
           Celular:<br>
         </h5>
-        <h5 class="bg-info border rounded nav-link">
+        <h5 class="bg-light border rounded nav-link">
           email:<br>
         </h5>
-        <h5 class="bg-info border rounded nav-link">
+        <h5 class="bg-light border rounded nav-link">
           Cidade:
         </h5>
       </div>

@@ -126,70 +126,70 @@ if ($_SESSION['log'] != 'ativo') {
                 <h5 class="border rounded nav-link text-center">
                     Dados da mãe<br><br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Nome completo:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Data de nascimento:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Profissão:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Contato:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Endereço:<br>
                 </h5>
                 <hr>
                 <h5 class="border rounded nav-link text-center">
                     Dados do pai<br><br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Nome completo:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Data de nascimento:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Profissão:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Contato:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Endereço:<br>
                 </h5>
                 <hr>
                 <h5 class="border rounded nav-link text-center">
                     Dados do Responsável<br><br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Nome completo:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Data de nascimento:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Profissão:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Contato:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Endereço:<br>
                 </h5>
                 <hr>
                 <h5 class="border rounded nav-link text-center">
                     Relação dos pais<br><br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Estado civil:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Moram juntos:<br>
                 </h5>
-                <h5 class="bg-info border rounded nav-link">
+                <h5 class="bg-light border rounded nav-link">
                     Com quem mora:<br>
                 </h5>
             </div>
