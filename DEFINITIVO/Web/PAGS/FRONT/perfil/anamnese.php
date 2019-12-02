@@ -125,43 +125,43 @@ if ($_SESSION['log'] != 'ativo') {
             </div>
             <div class="col-8"><br>
                 <h5 class="bg-light border rounded nav-link">
-                    Nome completo:<br>
+                    Nome completo: <?= nome($conexao,$_SESSION['rm'])['nome'] ?> <?= snome($conexao,$_SESSION['rm'])['sobrenome'] ?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Data de Nascimento:<br>
+                    Data de Nascimento: <?= date('d/m/Y',strtotime(nascimento($conexao,$_SESSION['rm'])['dt_nascimento'])) ?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Celular:<br>
+                    Celular: (<?= celular($conexao,$_SESSION['rm'])['ddd']?>)<?=celular($conexao,$_SESSION['rm'])['numero']?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    email:<br>
+                    email: <?= email($conexao,$_SESSION['rm'])['endereco'] ?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    CPF:<br>
+                    CPF: <?= cpf($conexao,$_SESSION['rm'])['cpf']?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Sexo:<br>
+                    Sexo: <?php sexo($conexao,$_SESSION['rm'])['sexo'] == 'm'? $s= "Masculino": $s="Feminino";echo $s?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Naturalidade:<br>
+                    Naturalidade: <?= naturalidade($conexao,$_SESSION['rm'])['naturalidade'] ?><br>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    CEP:
+                    CEP: <?= cep($conexao,$_SESSION['rm'])['cep'] ?>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Logradouro:
+                    Logradouro: <?= logradouro($conexao,$_SESSION['rm'])['lograduro'] ?>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Número:
+                    Número: <?= numero($conexao,$_SESSION['rm'])['numero'] ?>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Bairro:
+                    Bairro: <?= bairro($conexao,$_SESSION['rm'])['bairro'] ?>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Cidade:
+                    Cidade: <?= cidade($conexao,$_SESSION['rm'])['cidade'] ?>
                 </h5>
                 <h5 class="bg-light border rounded nav-link">
-                    Estado:
+                    Estado: <?= estado($conexao,$_SESSION['rm'])['estado'] ?>
                 </h5>
             </div>
         </div>

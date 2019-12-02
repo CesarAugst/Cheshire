@@ -37,4 +37,45 @@ function naturalidade($conexao,$rm) {
     return mysqli_fetch_assoc($resultado);
 }
 
+// pag 2
+function nascimento($conexao,$rm) {
+    $sql = "select dt_nascimento from REGISTRO where id_registro = (select registro_fk from PESSOA where rm = '$rm')";
+    $resultado = mysqli_query($conexao,$sql);
+    return mysqli_fetch_assoc($resultado);
+}
+function cpf($conexao,$rm) {
+    $sql = "select cpf from IDENTIFICACAO_ALUNO where rm = '$rm'";
+    $resultado = mysqli_query($conexao,$sql);
+    return mysqli_fetch_assoc($resultado);
+}
+function cep($conexao,$rm) {
+    $sql = "select cep from ENDERECO where id_endereco = (select endereco_fk from PESSOA where rm = '$rm')";
+    $resultado = mysqli_query($conexao,$sql);
+    return mysqli_fetch_assoc($resultado);
+}
+function logradouro($conexao,$rm) {
+    $sql = "select lograduro from ENDERECO where id_endereco = (select endereco_fk from PESSOA where rm = '$rm')";
+    $resultado = mysqli_query($conexao,$sql);
+    return mysqli_fetch_assoc($resultado);
+}
+function numero($conexao,$rm) {
+    $sql = "select numero from ENDERECO where id_endereco = (select endereco_fk from PESSOA where rm = '$rm')";
+    $resultado = mysqli_query($conexao,$sql);
+    return mysqli_fetch_assoc($resultado);
+}
+function bairro($conexao,$rm) {
+    $sql = "select bairro from ENDERECO where id_endereco = (select endereco_fk from PESSOA where rm = '$rm')";
+    $resultado = mysqli_query($conexao,$sql);
+    return mysqli_fetch_assoc($resultado);
+}
+function cidade($conexao,$rm) {
+    $sql = "select cidade from ENDERECO where id_endereco = (select endereco_fk from PESSOA where rm = '$rm')";
+    $resultado = mysqli_query($conexao,$sql);
+    return mysqli_fetch_assoc($resultado);
+}
+function estado($conexao,$rm) {
+    $sql = "select estado from ENDERECO where id_endereco = (select endereco_fk from PESSOA where rm = '$rm')";
+    $resultado = mysqli_query($conexao,$sql);
+    return mysqli_fetch_assoc($resultado);
+}
 

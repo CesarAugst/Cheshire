@@ -8,7 +8,7 @@ $senha = '4967';
 $cod = '17308';
 $cod_men = '1';
 
-print_r(celular($conexao,$cod));
+print_r(nascimento($conexao,$cod));
 
 
 
