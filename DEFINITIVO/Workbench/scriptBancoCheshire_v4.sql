@@ -125,8 +125,8 @@ senha varchar(11),
 nome varchar(20),
 sobrenome varchar(20),
 tipo enum('orientador','aluno'));
-insert into usuario values('17308','Cesarr','42942544830','cesar','August','aluno');
-insert into usuario values('17305','Moniquee','14604818878','monique','Rufino','orientador');
+insert into usuario values('17308','Cesarr','41946584889','cezar','Augusto','aluno');
+insert into usuario values('17305','Moniquee','14907615838','monique','Rufino','orientador');
 -- -----------------------------------------------------------------------------------------------------------------------------------------------------
 select * from usuario;
 -- Cria a tabela das mensagens -------------------------------------------------------------------------------------------------------------------------
