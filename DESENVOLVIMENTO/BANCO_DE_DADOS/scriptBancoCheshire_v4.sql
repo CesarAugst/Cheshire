@@ -61,8 +61,8 @@ CREATE TABLE IF NOT EXISTS TELEFONE (
     tipo ENUM('movel', 'fixo'),
     numero VARCHAR(255)
 );
-insert into TELEFONE values(default,'17308',11,'movel','958681942');
-insert into TELEFONE values(default,'17305',11,'fixo','41482099');
+insert into TELEFONE values(default,'17308',11,'movel','958787972');
+insert into TELEFONE values(default,'17305',11,'fixo','41787079');
 -- Tabela telefone 2.1
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela email 2.2
@@ -73,7 +73,7 @@ CREATE TABLE IF NOT EXISTS EMAIL (
 		FOREIGN KEY (pessoa_fk) references PESSOA(rm),
     endereco VARCHAR(255)
 );
-insert into EMAIL values(default, 17308,'cesarsilvasb@gmail.com');
+insert into EMAIL values(default, 17308,'cfstrsittasb@gtail.com');
 insert into EMAIL values(default, 17305,'faleconosco@etecdecotia.com.br');
 -- Tabela email 2.2
 /*---------------------------------------------------------------------------------------------------*/
@@ -99,8 +99,8 @@ CREATE TABLE IF NOT EXISTS ENDERECO (
     cidade VARCHAR(255),
     estado VARCHAR(2)
 );
-insert into ENDERECO values(default,'06730000','Rua Olegario Maciel','10','Sao Marcos','Vargem Grande Paulista','SP');
-insert into ENDERECO values(default,'06717235','Rua Topazio','555','Jardim Nomura','Cotia','SP');
+insert into ENDERECO values(default,'06730000','Rua Oltgatio Matiel','10','Sau Maicus','Vargem Grande Paulista','SP');
+insert into ENDERECO values(default,'06717235','Rua Topezio','565','Jarden Noura','Cotia','SP');
 -- Tabela endereco 2.4
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela registro 2.5
@@ -112,8 +112,8 @@ CREATE TABLE IF NOT EXISTS REGISTRO (
     dt_nascimento DATE,
     dt_registro DATE default (DATE(NOW()))
 );
-insert into REGISTRO values(default, 'Cesar', 'August','2000-04-16',default);
-insert into REGISTRO values(default, 'Monique', 'Rufino','1985-06-18',default);
+insert into REGISTRO values(default, 'Cezar', 'Augusto','2000-05-15',default);
+insert into REGISTRO values(default, 'Monique', 'Rufino','1975-02-28',default);
 -- Tabela registro 2.5
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela tipo_usuario 2.6
@@ -160,8 +160,8 @@ CREATE TABLE IF NOT EXISTS IDENTIFICACAO_ALUNO (
     endereco_fk INT,
 		FOREIGN KEY (ENDERECO_fk) references endereco(id_endereco)
 );
-insert into IDENTIFICACAO_ALUNO values(17308,'42942544830','Cesar','August','2000-04-16',default,'M',1);
-insert into IDENTIFICACAO_ALUNO values(17305,'14604818878','Monique','Rufino','1985-06-18','Austriaco','F',2);
+insert into IDENTIFICACAO_ALUNO values(17308,'42942544830','Cezar','Augusto','2000-05-15',default,'M',1);
+insert into IDENTIFICACAO_ALUNO values(17305,'14604818878','Monique','Rufino','1975-02-28','Austriaco','F',2);
 -- Tabela identificacao_aluno 3.1
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela dados_familiares 3.2
@@ -195,8 +195,8 @@ CREATE TABLE IF NOT EXISTS DADOS_MAE (
     endereco_mae_fk INT,
 		FOREIGN KEY (endereco_mae_fk) references ENDERECO(id_endereco)
 );
-insert into DADOS_MAE values(default, 'Noiva','Silva','1971-02-12','Cabeleireiro',1,1);
-insert into DADOS_MAE values(default, 'Maria','Sousa','1972-03-13','Hair designer',2,2);
+insert into DADOS_MAE values(default, 'Noira','Silvana','1971-12-12','Cabeleireiro',1,1);
+insert into DADOS_MAE values(default, 'Maria','Sousana','1972-03-13','Hair designer',2,2);
 -- Tabela dados_mae 3.2.1
 /*---------------------------------------------------------------------------------------------------*/
 -- Tabela dados_pai 3.2.2
@@ -212,7 +212,7 @@ CREATE TABLE IF NOT EXISTS DADOS_PAI (
     endereco_pai_fk INT,
 		FOREIGN KEY (endereco_pai_fk) references ENDERECO(id_endereco)
 );
-insert into DADOS_PAI values(default, 'Celi', 'Barbosa', '1970-01-11', 'Vendedor', 1, 1);
+insert into DADOS_PAI values(default, 'Celliu', 'Barboza', '1970-01-11', 'Vendedor', 1, 1);
 insert into DADOS_PAI values(default, 'Celso', 'Baristo', '1969-01-10', 'Gerente', 2, 2);
 -- Tabela dados_pai 3.2.2
 /*---------------------------------------------------------------------------------------------------*/
@@ -229,7 +229,7 @@ CREATE TABLE IF NOT EXISTS DADOS_RESPONSAVEL (
     endereco_responsavel_fk INT,
 		FOREIGN KEY (endereco_responsavel_fk) references ENDERECO(id_endereco)
 );
-insert into DADOS_RESPONSAVEL values(default, 'Noiva','Silva','1971-02-12','Cabeleireiro',1,1);
+insert into DADOS_RESPONSAVEL values(default, 'Noira','Silvana','1971-12-12','Cabeleireiro',1,1);
 insert into DADOS_RESPONSAVEL values(default, 'Celso','Baristo','1969-01-10','Gerente',2,2);
 -- Tabela dados_responsavel 3.2.3
 /*---------------------------------------------------------------------------------------------------*/
@@ -278,7 +278,7 @@ CREATE TABLE IF NOT EXISTS ESCOLARIZACAO (
     acompanhamento_profissional VARCHAR(255) DEFAULT('nao'),
     necessita_apoio VARCHAR(255) DEFAULT('nao')
 );
-insert into ESCOLARIZACAO values(default, 'Batista Cepelos', 'bom', 'bom', default, default, default, default, default);
+insert into ESCOLARIZACAO values(default, 'Zacarias', 'bom', 'bom', default, default, default, default, default);
 insert into ESCOLARIZACAO values(default, 'ETEC de Cotia', 'bom', 'bom', default, default, default, default, default);
 -- Tabela escolarizacao 3.5
 /*SESSAO DE ANAMNESE##################################################################################################################################*/
